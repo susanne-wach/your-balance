@@ -528,7 +528,7 @@
           <input type="hidden" name="m" value="0" />
           <input type="hidden" name="act" value="sub" />
           <input type="hidden" name="v" value="2" />
-          <input type="hidden" name="or" value="735b745c-772f-44b8-a852-655b046b4770" />
+          <input type="hidden" name="or" value="474cb6e1-c906-4c37-8b20-c89871964cb4" />
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label" for="firstname">Vorname</label>
@@ -544,8 +544,8 @@
             <input class="form-input" type="email" id="email" name="email" placeholder="deine@email.at" required />
           </div>
           <div class="form-group">
-            <label class="form-label" for="thema">Womit kann ich dich begleiten?</label>
-            <select class="form-select" id="thema" name="thema">
+            <label class="form-label" for="field[17]">Womit kann ich dich begleiten?</label>
+            <select class="form-select" id="field[17]" name="field[17]">
               <option value="">Bitte wählen...</option>
               <option value="theta">ThetaHealing® (innere Muster, Blockaden)</option>
               <option value="akasha">Akasha Reading (Einordnung, Orientierung)</option>
@@ -556,12 +556,12 @@
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label" for="nachricht">Was möchtest du mir mitgeben? (optional)</label>
-            <textarea class="form-textarea" id="nachricht" name="nachricht" placeholder="Ein paar Sätze, was dich gerade bewegt – oder einfach nichts. Beides ist gut."></textarea>
+            <label class="form-label" for="field[18]">Was möchtest du mir mitgeben? (optional)</label>
+            <textarea class="form-textarea" id="field[18]" name="field[18]" placeholder="Ein paar Sätze, was dich gerade bewegt – oder einfach nichts. Beides ist gut."></textarea>
           </div>
           <div class="form-group">
-            <label class="form-label" for="format">Bevorzugtes Format</label>
-            <select class="form-select" id="format" name="format">
+            <label class="form-label" for="field[19]">Bevorzugtes Format</label>
+            <select class="form-select" id="field[19]" name="field[19]">
               <option value="">Bitte wählen...</option>
               <option value="online">Online (Zoom)</option>
               <option value="vor-ort">Vor Ort in Nüziders (Vorarlberg)</option>
@@ -729,6 +729,7 @@
 
 <!-- ═══ ACTIVECAMPAIGN FORMULAR-SUBMIT ═══ -->
 <script>
+window.cfields = {"17":"thema","18":"nachricht","19":"format"};
 (function() {
   // Nach erfolgreichem Absenden → Danke-Seite
   window._show_thank_you = function() {
