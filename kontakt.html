@@ -519,7 +519,12 @@
           Ich melde mich persönlich bei dir und wir schauen gemeinsam, was sinnvoll ist.
         </p>
 
-        <form class="kontakt-form" action="mailto:susanne@your-balance.at" method="post" enctype="text/plain">
+        <form class="kontakt-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <!-- Formspree: nach dem Absenden weiterleiten zur Danke-Seite -->
+          <input type="hidden" name="_next" value="https://your-balance.at/danke.html" />
+          <input type="hidden" name="_subject" value="✦ Neue Terminanfrage – Your Balance" />
+          <!-- Honeypot-Spam-Schutz -->
+          <input type="text" name="_gotcha" style="display:none" />
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label" for="name">Vorname</label>
