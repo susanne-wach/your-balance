@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block legal/admin pages from indexing
+Disallow: /danke.html
+Disallow: /ai.html
+
+Sitemap: https://your-balance.at/sitemap.xml

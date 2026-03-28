@@ -1,0 +1,14 @@
+# Claude Code interne Dateien
+.claude/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Temporäre Dateien
+*.tmp
+*.log
+Thumbs.db

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+  <!-- ═══ COOKIEBOT – DSGVO Cookie Banner ═══ -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+          data-cbid="1726067f-291c-417e-8fe4-2ab4307108f3"
+          data-blockingmode="auto" type="text/javascript"></script>
+
+  <!-- ═══ GOOGLE ANALYTICS (GA4) – nur nach Zustimmung ═══ -->
+  <script type="text/plain" data-cookieconsent="statistics" async
+          src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+  <script type="text/plain" data-cookieconsent="statistics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NPPS5VX6GB');
+  </script>
+
+  <!-- ═══ META PIXEL – nur nach Zustimmung ═══ -->
+  <script type="text/plain" data-cookieconsent="marketing">
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','626079095228912');
+    fbq('track','PageView');
+  </script>
+  <noscript type="text/plain" data-cookieconsent="marketing"><img height="1" width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=626079095228912&ev=PageView&noscript=1"/></noscript>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Your Balance – Susanne Wachter</title>
+  <meta name="description" content="Gedanken, Einblicke und Impulse rund um energetische Begleitung, Nervensystemregulation und innere Ordnung." />
+    <link rel="canonical" href="https://your-balance.at/blog.html" />
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Your Balance – Susanne Wachter" />
+  <meta property="og:locale"      content="de_AT" />
+  <meta property="og:url"         content="https://your-balance.at/blog.html" />
+  <meta property="og:title"       content="Blog | Your Balance – Susanne Wachter" />
+  <meta property="og:description" content="Gedanken, Einblicke und Impulse rund um energetische Begleitung, Nervensystemregulation und innere Ordnung." />
+  <meta property="og:image"       content="https://your-balance.at/assets/images/blog-sehnsucht-seelenpartner.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Blog | Your Balance – Susanne Wachter" />
+  <meta name="twitter:description" content="Gedanken, Einblicke und Impulse rund um energetische Begleitung, Nervensystemregulation und innere Ordnung." />
+  <meta name="twitter:image"       content="https://your-balance.at/assets/images/blog-sehnsucht-seelenpartner.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .blog-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(201,168,76,0.12);
+      transition: transform 0.4s var(--ease), box-shadow 0.4s;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover { transform: translateY(-8px); box-shadow: 0 24px 64px rgba(42,31,14,0.12); }
+    .blog-card-img {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+    .blog-card-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease);
+    }
+    .blog-card:hover .blog-card-img img { transform: scale(1.05); }
+
+    .blog-card-body { padding: 32px; flex: 1; display: flex; flex-direction: column; }
+    .blog-card-cat {
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .blog-card-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .blog-card-excerpt {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+    .blog-card-date {
+      font-size: 11px;
+      color: var(--text-light);
+      letter-spacing: 1px;
+    }
+    .blog-read-more {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .blog-read-more:hover { color: var(--gold-light); }
+
+    /* Featured post */
+    .blog-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(201,168,76,0.12);
+      margin-bottom: 64px;
+    }
+    .blog-featured-img { overflow: hidden; }
+    .blog-featured-img img { width: 100%; height: 100%; object-fit: cover; }
+    .blog-featured-body {
+      padding: 56px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .blog-featured-label {
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+    .filter-btn {
+      padding: 10px 24px;
+      border-radius: 50px;
+      border: 1.5px solid rgba(201,168,76,0.25);
+      background: transparent;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      cursor: none;
+      transition: all 0.3s;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+
+    @media (max-width: 900px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-featured-img { aspect-ratio: 16/9; }
+    }
+
+    /* Dropdown nav */
+    .nav-has-dropdown { position: relative; }
+    .nav-has-dropdown:hover .nav-sub,
+    .nav-has-dropdown:focus-within .nav-sub { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-sub {
+      position: absolute; top: 100%; left: 0;
+      transform: translateY(-6px);
+      background: #1C1408; border: 1px solid rgba(180,152,90,0.25);
+      border-radius: 12px; padding: 14px 0 10px; min-width: 260px;
+      list-style: none; margin: 0; opacity: 0; visibility: hidden;
+      transition: opacity 0.2s ease, transform 0.2s ease; z-index: 200;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .nav-sub li a {
+      display: block; padding: 11px 22px; font-family: var(--sans);
+      font-size: 13px; color: rgba(255,255,255,0.75); text-decoration: none;
+      transition: color 0.2s, background 0.2s; white-space: nowrap;
+    }
+    .nav-sub li a:hover { color: var(--gold); background: rgba(255,255,255,0.04); }
+
+    /* Nav – dunkle Schrift für hellen Hero */
+    .nav .nav-link { color: var(--text-dark); }
+    .nav .nav-link:hover, .nav .nav-link.active { color: var(--gold); }
+
+    /* Cream Blog Hero */
+    .blog-hero {
+      background: var(--cream);
+      padding: 140px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .blog-hero-inner { position: relative; z-index: 1; }
+    .blog-hero-eyebrow {
+      font-family: var(--sans); font-size: 10px; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 20px;
+    }
+    .blog-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(40px, 5vw, 72px);
+      font-weight: 300; color: var(--text);
+      line-height: 1.1; margin-bottom: 20px;
+    }
+    .blog-hero h1 em { color: var(--gold); font-style: italic; }
+    .blog-hero p {
+      font-family: var(--sans); font-size: 16px;
+      color: var(--text-mid); max-width: 440px;
+      margin: 0 auto; line-height: 1.8;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <img class="loader-logo" src="assets/images/logo.png" alt="Your Balance" />
+  <div class="loader-line"></div>
+</div>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="Your Balance" /></a>
+    <ul class="nav-links">
+      <li><a href="persoenliche-begleitung.html" class="nav-link">Begleitung</a></li>
+      <li><a href="seelenpartner.html" class="nav-link">Seelenpartner</a></li>
+      <li class="nav-has-dropdown">
+        <a href="angebote.html" class="nav-link">Angebote ▾</a>
+        <ul class="nav-sub">
+          <li><a href="einzeltermine.html">Persönlicher Termin</a></li>
+          <li><a href="online-kurse-fuer-innere-regulation-beziehungsklaerung.html">Online-Kurse</a></li>
+          <li><a href="online-kurse-seelenpartner-beziehungsprozesse.html">Seelenpartner-Kurse</a></li>
+        </ul>
+      </li>
+      <li><a href="ueber-mich.html" class="nav-link">Über mich</a></li>
+      <li><a href="einzeltermine.html" class="nav-link">Termin buchen</a></li>
+      <li><a href="blog.html" class="nav-link active">Blog</a></li>
+      <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+    </ul>
+    <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener" class="btn btn-gold nav-cta" data-magnetic>Deine Kurse</a>
+    <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- BLOG HERO -->
+<section class="blog-hero">
+  <div class="container-sm blog-hero-inner">
+    <span class="blog-hero-eyebrow">Blog</span>
+    <div class="ornament" style="margin-bottom:24px;">
+      <div class="ornament-line"></div>
+      <div class="ornament-gem" style="color:var(--gold);">✦</div>
+      <div class="ornament-line"></div>
+    </div>
+    <h1>Gedanken.<br /><em>Impulse. Einblicke.</em></h1>
+    <p>Rund um Nervensystem, energetische Ordnung und innere Veränderung.</p>
+  </div>
+</section>
+
+<!-- BLOG CONTENT -->
+<section class="section">
+  <div class="container">
+
+    <!-- FEATURED -->
+    <div class="blog-featured">
+      <div class="blog-featured-img">
+        <img src="assets/images/blog-sehnsucht-seelenpartner.jpg" alt="Warum deine Sehnsucht nach dem Seelenpartner kein Zufall ist" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" />
+      </div>
+      <div class="blog-featured-body">
+        <div class="blog-featured-label">✦ Aktuell · Seelenpartner</div>
+        <div class="gold-line" style="margin-bottom:24px;"></div>
+        <h2 style="font-family:var(--serif);font-size:clamp(24px,2.5vw,34px);font-weight:400;color:var(--text);line-height:1.3;margin-bottom:16px;">
+          Warum deine Sehnsucht nach dem Seelenpartner kein Zufall ist
+        </h2>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:28px;">
+          Manchmal spürst du dieses leise Ziehen im Brustkorb. Ein Sehnen, das du nicht erklären kannst. Du funktionierst im Alltag, du hast schon so viel erreicht – und doch bleibt da diese Lücke. Diese Sehnsucht ist kein Zufall. Sie ist der Ruf deiner Seele.
+        </p>
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:11px;color:var(--text-light);letter-spacing:1px;">April 2025</span>
+          <a href="blog-sehnsucht-seelenpartner.html" class="btn btn-gold btn-arrow btn-sm" data-magnetic>Weiterlesen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTER -->
+    <div class="filter-bar">
+      <button class="filter-btn active">Alle</button>
+      <button class="filter-btn">ThetaHealing®</button>
+      <button class="filter-btn">Seelenpartner</button>
+      <button class="filter-btn">Persönlichkeit</button>
+      <button class="filter-btn">Nervensystem</button>
+      <button class="filter-btn">Selbstliebe</button>
+      <button class="filter-btn">Akasha Chronik</button>
+      <button class="filter-btn">Bioresonanz</button>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid">
+
+      <div class="blog-card" data-cat="Selbstliebe">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-selbstliebe.jpg" alt="Selbstliebe im Alltag" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Selbstliebe</div>
+          <div class="blog-card-title">Selbstliebe im Alltag: Kleine Rituale, die dein Leben verändern</div>
+          <p class="blog-card-excerpt">Kleine tägliche Rituale, die dich wieder mit dir selbst verbinden – wenn du das Gefühl hast, dich im Trubel des Alltags verloren zu haben.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Jänner 2025</span>
+            <a href="blog-selbstliebe-im-alltag.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Persönlichkeit">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-weiblichkeit.jpg" alt="Weiblichkeit leben" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Persönlichkeit</div>
+          <div class="blog-card-title">Weiblichkeit leben: Wie ich meine wahre Stärke entdeckte</div>
+          <p class="blog-card-excerpt">Ich dachte, ich müsse hart sein, um zu bestehen. Wie ich lernte, dass meine Weiblichkeit keine Schwäche ist – sondern meine tiefste Kraft.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">November 2024</span>
+            <a href="blog-weiblichkeit-leben.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Persönlichkeit">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-sei-mutig.jpg" alt="Sei mutig und echt" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Persönlichkeit</div>
+          <div class="blog-card-title">Sei mutig und echt: Lerne dein wahres Ich zu leben</div>
+          <p class="blog-card-excerpt">Jahrelang habe ich Rollen gespielt, die nicht zu mir passten. Wie ich meine Masken ablegte und endlich die Frau wurde, die ich wirklich bin.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">November 2024</span>
+            <a href="blog-sei-mutig-und-echt.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Akasha Chronik">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-seelenbuch.jpg" alt="Ein liebevoller Blick in dein Seelenbuch" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Akasha Chronik</div>
+          <div class="blog-card-title">Ein liebevoller Blick in dein Seelenbuch</div>
+          <p class="blog-card-excerpt">Warum wiederholen sich bestimmte Muster in deinem Leben? Die Akasha Chronik gibt Antworten – ein persönlicher Einblick in diese heilige Quelle der Weisheit.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Oktober 2024</span>
+            <a href="blog-seelenbuch.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="ThetaHealing®">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-alte-fesseln.jpg" alt="Alte Fesseln lösen" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">ThetaHealing®</div>
+          <div class="blog-card-title">Alte Fesseln lösen: Wie ich mich von den Mustern meiner Ahnen befreite</div>
+          <p class="blog-card-excerpt">Wir tragen nicht nur unsere eigenen Muster – sondern auch die unserer Vorfahren. Wie ThetaHealing® dabei hilft, diese zu erkennen und zu transformieren.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Oktober 2024</span>
+            <a href="blog-alte-fesseln-loesen.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="ThetaHealing®">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-krise-klarheit.jpg" alt="Von der Krise zur Klarheit" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">ThetaHealing®</div>
+          <div class="blog-card-title">Von der Krise zur Klarheit: Wie ich meine innere Stimme wiederfand</div>
+          <p class="blog-card-excerpt">Als mein Leben auseinanderbrach, fand ich durch ThetaHealing® einen Weg zurück zu mir selbst. Eine persönliche Geschichte über Schmerz und Transformation.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">September 2024</span>
+            <a href="blog-krise-zur-klarheit.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WEITERE ARTIKEL -->
+    <div class="blog-grid" style="margin-top:32px;">
+
+      <div class="blog-card" data-cat="Persönlichkeit">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-marsmensch.jpg" alt="Fühlst du dich manchmal wie ein Marsmensch?" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Persönlichkeit</div>
+          <div class="blog-card-title">Fühlst du dich manchmal wie ein Marsmensch?</div>
+          <p class="blog-card-excerpt">Das Gefühl, nicht dazuzugehören, anders zu sein – und wie ich gelernt habe, meine Einzigartigkeit als Geschenk zu sehen.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">November 2024</span>
+            <a href="blog-marsmensch.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="ThetaHealing®">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-loslassen.jpg" alt="Loslassen und heilen" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">ThetaHealing®</div>
+          <div class="blog-card-title">Loslassen und heilen: Wie ich mich von der Vergangenheit befreit habe</div>
+          <p class="blog-card-excerpt">Loslassen klingt einfach – ist aber eines der mutigsten Dinge, die wir tun können. Ein persönlicher Erfahrungsbericht.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Oktober 2024</span>
+            <a href="blog-loslassen-und-heilen.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Seelenpartner">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-magie-der-liebe.jpg" alt="Die Magie der Liebe" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Seelenpartner</div>
+          <div class="blog-card-title">Die Magie der Liebe in der neuen Zeitlinie</div>
+          <p class="blog-card-excerpt">Von der Sehnsucht zur Erfüllung: Wie ich alte Liebeswunden heilte und lernte, mich selbst wirklich zu lieben.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">September 2024</span>
+            <a href="blog-magie-der-liebe.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Nervensystem">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-nervensystem.jpg" alt="Wenn das Nervensystem nicht mehr abschaltet" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Nervensystem</div>
+          <div class="blog-card-title">Wenn das Nervensystem nicht mehr abschaltet – was dann?</div>
+          <p class="blog-card-excerpt">Du liegst im Bett und schläfst nicht. Du machst Urlaub – und dein Körper macht trotzdem nicht Pause. Was das bedeutet und was hilft.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">März 2026</span>
+            <a href="blog-nervensystem-abschalten.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="ThetaHealing®">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-thetahealing.jpg" alt="ThetaHealing – was steckt dahinter?" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">ThetaHealing®</div>
+          <div class="blog-card-title">ThetaHealing® – was steckt wirklich dahinter?</div>
+          <p class="blog-card-excerpt">Viele hören den Begriff zum ersten Mal und fragen sich: Was ist das eigentlich? Ein ehrlicher Einblick in die Methode, die im Mittelpunkt meiner Arbeit steht.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Februar 2026</span>
+            <a href="blog-thetahealing-was-steckt-dahinter.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Nervensystem">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-erschoepfung.jpg" alt="Wenn Erschöpfung tiefer geht als Müdigkeit" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Nervensystem</div>
+          <div class="blog-card-title">Wenn Erschöpfung tiefer geht als Müdigkeit</div>
+          <p class="blog-card-excerpt">Es gibt eine Art von Erschöpfung, die sich nicht durch Schlafen löst. Die bleibt, auch nach dem Urlaub. Die sitzt tiefer – im System selbst.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Jänner 2026</span>
+            <a href="blog-erschoepfung-tiefer-als-muedigkeit.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Seelenpartner">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-seelenpartner-energie.jpg" alt="Seelenpartner – eine energetische Perspektive" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Beziehungen</div>
+          <div class="blog-card-title">Seelenpartner – eine energetische Perspektive</div>
+          <p class="blog-card-excerpt">Was ist ein Seelenpartner wirklich? Nicht der Traumpartner aus dem Film – sondern jemand, der dein energetisches Feld auf eine kaum erklärbare Art berührt.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Dezember 2025</span>
+            <a href="blog-seelenpartner-energetische-perspektive.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Bioresonanz">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-bioresonanz.jpg" alt="Was Bioresonanz kann" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Bioresonanz</div>
+          <div class="blog-card-title">Was Bioresonanz kann – und was nicht</div>
+          <p class="blog-card-excerpt">Bioresonanz ist keine Wundermedizin. Aber sie kann etwas, was viele andere Methoden nicht können: sie liest, was das Körpersystem zeigt.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">November 2025</span>
+            <a href="blog-bioresonanz-was-sie-kann.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Persönlichkeit">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-kein-zusammenbruch.jpg" alt="Du brauchst keinen Zusammenbruch" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Persönlichkeit</div>
+          <div class="blog-card-title">Du brauchst keinen Zusammenbruch, um Hilfe zu verdienen</div>
+          <p class="blog-card-excerpt">Warum warten wir so lang? Warum muss es erst „schlimm genug" sein, bevor wir Unterstützung annehmen dürfen? Ein Text über das Erlauben.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Oktober 2025</span>
+            <a href="blog-kein-zusammenbruch-noetig.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="ThetaHealing®">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-glaubenssaetze.jpg" alt="Glaubenssätze, die unsichtbar wirken" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">ThetaHealing®</div>
+          <div class="blog-card-title">Glaubenssätze, die unsichtbar wirken</div>
+          <p class="blog-card-excerpt">„Ich bin nicht gut genug." „Erfolg ist gefährlich." Glaubenssätze sitzen tiefer als der Verstand reicht – deshalb hilft reines Denken oft nicht.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">September 2025</span>
+            <a href="blog-glaubenssaetze-unsichtbar-wirken.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-cat="Energetik">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-weg-zur-heilung.jpg" alt="Der Weg zur Heilung" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Energetik</div>
+          <div class="blog-card-title">Der Weg zur Heilung – Eine unendliche Reise</div>
+          <p class="blog-card-excerpt">Heilung ist kein Ziel, das man erreicht – sie ist eine lebenslange Reise. Ein persönlicher Einblick in energetische Auflösungsarbeit und inneren Frieden.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Dezember 2023</span>
+            <a href="blog-weg-zur-heilung.html" class="blog-read-more">Lesen →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  var btns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.blog-card');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      var cat = this.textContent.trim();
+      cards.forEach(function(card) {
+        if (cat === 'Alle' || card.dataset.cat === cat) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+</script>
+
+<!-- ════════════════════════════════════════════
+     NEWSLETTER
+════════════════════════════════════════════ -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-text">
+        <span class="newsletter-label">Newsletter</span>
+        <h2 class="newsletter-title">Inspiration für deine innere Balance</h2>
+        <p class="newsletter-desc">Gedanken, Impulse und Einladungen – direkt in dein Postfach.<br>Kein Spam. Nur das, was wirklich zählt.</p>
+      </div>
+      <div class="newsletter-form-wrap">
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <input type="hidden" name="u" value="21" />
+          <input type="hidden" name="f" value="21" />
+          <input type="hidden" name="s" value="" />
+          <input type="hidden" name="c" value="0" />
+          <input type="hidden" name="m" value="0" />
+          <input type="hidden" name="act" value="sub" />
+          <input type="hidden" name="v" value="2" />
+          <input type="hidden" name="or" value="6bb9e1df-c751-4e00-a614-7ee38f6c3c8a" />
+          <div class="newsletter-fields">
+            <input type="text" name="fullname" placeholder="Dein Name" class="newsletter-input" autocomplete="name" />
+            <input type="email" name="email" placeholder="Deine E-Mail-Adresse" class="newsletter-input" required autocomplete="email" />
+            <button type="submit" class="btn btn-gold newsletter-btn">Anmelden ✦</button>
+          </div>
+          <label class="newsletter-consent">
+            <input type="checkbox" name="consent" required />
+            <span>Ich stimme der Verarbeitung meiner Daten für den Newsletter zu. Abmeldung jederzeit möglich. <a href="datenschutz.html">Datenschutz</a></span>
+          </label>
+          <div class="newsletter-error" id="newsletter-error" style="display:none;">Bitte E-Mail ausfüllen und Datenschutz bestätigen.</div>
+        </form>
+        <div class="newsletter-success" id="newsletter-success" style="display:none;">
+          <p class="newsletter-success-icon">✦</p>
+          <p class="newsletter-success-title">Danke!</p>
+          <p class="newsletter-success-text">Bitte bestätige deine Anmeldung per E-Mail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function() {
+  var form = document.getElementById('newsletter-form');
+  var success = document.getElementById('newsletter-success');
+  var error = document.getElementById('newsletter-error');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = form.querySelector('input[name="email"]');
+    var consent = form.querySelector('input[name="consent"]');
+    if (!email.value || !email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) || !consent.checked) {
+      error.style.display = 'block'; return;
+    }
+    error.style.display = 'none';
+    var btn = form.querySelector('.newsletter-btn');
+    btn.disabled = true; btn.textContent = 'Wird gesendet …';
+    var serialized = Array.from(new FormData(form)).map(function(p){return encodeURIComponent(p[0])+'='+encodeURIComponent(p[1]);}).join('&');
+    var script = document.createElement('script');
+    script.src = 'https://your-balance61093.activehosted.com/proc.php?' + serialized + '&jsonp=true';
+    script.onload = script.onerror = function() { form.style.display = 'none'; success.style.display = 'block'; };
+    document.head.appendChild(script);
+  });
+})();
+</script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/images/logo.png" alt="Your Balance" /></div>
+        <div class="footer-tagline">Susanne Wachter</div>
+        <p class="footer-desc">Energetische Begleitung für Menschen, deren System Entlastung braucht.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/YourBalanceSusanne" class="footer-social-link" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/your.balance.at" class="footer-social-link" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCdzkl65FEgZ6rUauSJAxz2w" class="footer-social-link" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42A2.78 2.78 0 0 0 20.6 4.48C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Startseite</a></li>
+          <li><a href="persoenliche-begleitung.html" class="footer-link">Persönliche Begleitung</a></li>
+          <li><a href="seelenpartner.html" class="footer-link">Seelenpartner-Begleitung</a></li>
+          <li><a href="angebote.html" class="footer-link">Ergänzende Angebote</a></li>
+          <li><a href="kurse.html" class="footer-link">Kurse</a></li>
+          <li><a href="ueber-mich.html" class="footer-link">Über mich</a></li>
+          <li><a href="blog.html" class="footer-link">Blog</a></li>
+          <li><a href="kontakt.html" class="footer-link">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4368120739923" class="footer-link">+43 681 2073 9923</a></li>
+          <li><a href="mailto:susanne@your-balance.at" class="footer-link">susanne@your-balance.at</a></li>
+        </ul>
+        <div style="margin-top:28px;">
+          <div class="footer-col-title">Jetzt starten</div>
+          <a href="kontakt.html" class="btn btn-gold btn-sm" style="margin-top:8px;">Erstgespräch anfragen</a>
+        </div>
+      </div>
+    </div>
+    <div class="ornament"><div class="ornament-line"></div><div class="ornament-gem">✦</div><div class="ornament-line"></div></div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 <span>Your Balance</span> – Susanne Wachter. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

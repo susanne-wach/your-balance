@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seite nicht gefunden | Your Balance – Susanne Wachter</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .error-page::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(201,168,76,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .error-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .error-ornament {
+      display: flex; align-items: center; gap: 16px;
+      justify-content: center; margin-bottom: 40px;
+    }
+    .error-ornament-line {
+      width: 50px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    .error-ornament-line:last-child {
+      background: linear-gradient(270deg, transparent, var(--gold));
+    }
+    .error-num {
+      font-family: var(--serif);
+      font-size: clamp(80px, 15vw, 140px);
+      font-weight: 300;
+      color: var(--nude);
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -4px;
+    }
+    .error-label {
+      font-family: var(--sans);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 24px;
+    }
+    .error-title {
+      font-family: var(--serif);
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .error-text {
+      font-family: var(--sans);
+      font-size: 15px; line-height: 1.85;
+      color: var(--text-mid);
+      margin-bottom: 48px;
+    }
+    .error-actions {
+      display: flex; gap: 16px;
+      justify-content: center; flex-wrap: wrap;
+    }
+    @media (max-width: 600px) {
+      .error-actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="Your Balance" /></a>
+    <ul class="nav-links">
+      <li><a href="persoenliche-begleitung.html" class="nav-link">Begleitung</a></li>
+      <li><a href="seelenpartner.html" class="nav-link">Seelenpartner</a></li>
+      <li><a href="angebote.html" class="nav-link">Angebote</a></li>
+      <li><a href="ueber-mich.html" class="nav-link">Über mich</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+    </ul>
+    <a href="einzeltermine.html" class="btn btn-gold nav-cta">Termin buchen</a>
+    <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<main>
+  <section class="error-page">
+    <div class="error-inner">
+
+      <div class="error-ornament">
+        <div class="error-ornament-line"></div>
+        <span style="color:var(--gold);font-size:14px;">✦</span>
+        <div class="error-ornament-line"></div>
+      </div>
+
+      <div class="error-num">404</div>
+      <span class="error-label">Seite nicht gefunden</span>
+
+      <h1 class="error-title">
+        Diese Seite gibt es<br>leider nicht mehr.
+      </h1>
+
+      <p class="error-text">
+        Vielleicht wurde der Link geändert oder die Seite existiert nicht mehr.<br>
+        Kein Problem – du findest alles Wichtige hier:
+      </p>
+
+      <div class="error-actions">
+        <a href="index.html" class="btn btn-gold">Zur Startseite ✦</a>
+        <a href="blog.html" class="btn btn-outline">Zum Blog</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

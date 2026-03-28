@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+  <!-- ═══ COOKIEBOT – DSGVO Cookie Banner ═══ -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+          data-cbid="1726067f-291c-417e-8fe4-2ab4307108f3"
+          data-blockingmode="auto" type="text/javascript"></script>
+
+  <!-- ═══ GOOGLE ANALYTICS (GA4) – nur nach Zustimmung ═══ -->
+  <script type="text/plain" data-cookieconsent="statistics" async
+          src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+  <script type="text/plain" data-cookieconsent="statistics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NPPS5VX6GB');
+  </script>
+
+  <!-- ═══ META PIXEL – nur nach Zustimmung ═══ -->
+  <script type="text/plain" data-cookieconsent="marketing">
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','626079095228912');
+    fbq('track','PageView');
+  </script>
+  <noscript type="text/plain" data-cookieconsent="marketing"><img height="1" width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=626079095228912&ev=PageView&noscript=1"/></noscript>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online-Kurse & Selbststudium | Your Balance – Susanne Wachter</title>
+  <meta name="description" content="Online-Kurse zu ThetaHealing®, Nervensystem-Regulation und energetischer Selbstfürsorge – Wissen, das du in deinem eigenen Tempo aufnimmst." />
+    <link rel="canonical" href="https://your-balance.at/kurse.html" />
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Your Balance – Susanne Wachter" />
+  <meta property="og:locale"      content="de_AT" />
+  <meta property="og:url"         content="https://your-balance.at/kurse.html" />
+  <meta property="og:title"       content="Online-Kurse & Selbststudium | Your Balance – Susanne Wachter" />
+  <meta property="og:description" content="Online-Kurse zu ThetaHealing®, Nervensystem-Regulation und energetischer Selbstfürsorge – Wissen, das du in deinem eigenen Tempo aufnimmst." />
+  <meta property="og:image"       content="https://your-balance.at/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Online-Kurse & Selbststudium | Your Balance – Susanne Wachter" />
+  <meta name="twitter:description" content="Online-Kurse zu ThetaHealing®, Nervensystem-Regulation und energetischer Selbstfürsorge – Wissen, das du in deinem eigenen Tempo aufnimmst." />
+  <meta name="twitter:image"       content="https://your-balance.at/assets/images/og-image.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .course-card {
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid rgba(201,168,76,0.12);
+      transition: transform 0.4s var(--ease), box-shadow 0.4s;
+      display: flex;
+      flex-direction: column;
+    }
+    .course-card:hover { transform: translateY(-8px); box-shadow: 0 24px 64px rgba(42,31,14,0.12); }
+    .course-card-top { padding: 48px 36px 32px; flex: 1; }
+    .course-card-bottom { padding: 24px 36px 32px; border-top: 1px solid rgba(201,168,76,0.1); }
+    .course-num { font-family: var(--serif); font-size: 80px; font-weight: 300; color: rgba(201,168,76,0.15); line-height: 0.8; margin-bottom: 20px; }
+    .course-tag {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .courses-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Dropdown nav */
+    .nav-has-dropdown { position: relative; }
+    .nav-has-dropdown:hover .nav-sub,
+    .nav-has-dropdown:focus-within .nav-sub { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-sub {
+      position: absolute; top: 100%; left: 0;
+      transform: translateY(-6px);
+      background: #1C1408; border: 1px solid rgba(180,152,90,0.25);
+      border-radius: 12px; padding: 14px 0 10px; min-width: 260px;
+      list-style: none; margin: 0; opacity: 0; visibility: hidden;
+      transition: opacity 0.2s ease, transform 0.2s ease; z-index: 200;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .nav-sub li a {
+      display: block; padding: 11px 22px; font-family: var(--sans);
+      font-size: 13px; color: rgba(255,255,255,0.75); text-decoration: none;
+      transition: color 0.2s, background 0.2s; white-space: nowrap;
+    }
+    .nav-sub li a:hover { color: var(--gold); background: rgba(255,255,255,0.04); }
+
+    /* Nav – dunkle Schrift für hellen Hero */
+    .nav .nav-link { color: var(--text-dark); }
+    .nav .nav-link:hover, .nav .nav-link.active { color: var(--gold); }
+
+  </style>
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <img class="loader-logo" src="assets/images/logo.png" alt="Your Balance" />
+  <div class="loader-line"></div>
+</div>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="Your Balance" /></a>
+    <ul class="nav-links">
+      <li><a href="persoenliche-begleitung.html" class="nav-link">Begleitung</a></li>
+      <li><a href="seelenpartner.html" class="nav-link">Seelenpartner</a></li>
+      <li class="nav-has-dropdown">
+        <a href="angebote.html" class="nav-link">Angebote ▾</a>
+        <ul class="nav-sub">
+          <li><a href="einzeltermine.html">Persönlicher Termin</a></li>
+          <li><a href="online-kurse-fuer-innere-regulation-beziehungsklaerung.html">Online-Kurse</a></li>
+          <li><a href="online-kurse-seelenpartner-beziehungsprozesse.html">Seelenpartner-Kurse</a></li>
+        </ul>
+      </li>
+      <li><a href="ueber-mich.html" class="nav-link">Über mich</a></li>
+      <li><a href="einzeltermine.html" class="nav-link">Termin buchen</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+    </ul>
+    <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener" class="btn btn-gold nav-cta" data-magnetic>Deine Kurse</a>
+    <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container-sm" style="text-align:center;position:relative;z-index:2;">
+    <span class="eyebrow page-hero-eyebrow" data-reveal>Online-Kurse & Selbststudium</span>
+    <div class="gold-line gold-line-center" data-reveal data-delay="1"></div>
+    <h1 class="h1" style="color:var(--white);margin-bottom:24px;" data-reveal data-delay="2">
+      Deine Kurse
+    </h1>
+    <p class="body-lg" style="color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto 40px;" data-reveal data-delay="3">
+      Wissen, das du in deinem eigenen Tempo aufnimmst.
+    </p>
+    <p class="body" style="color:rgba(255,255,255,0.5);max-width:480px;margin:0 auto 40px;" data-reveal data-delay="4">
+      Kein Druck. Kein fixer Zeitplan.<br />
+      Du beginnst, wenn es sich stimmig anfühlt.
+    </p>
+    <a href="kontakt.html" class="btn btn-gold btn-arrow" data-reveal data-delay="5" data-magnetic>Jetzt anfragen</a>
+    <div style="margin-top:20px;font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);" data-reveal data-delay="6">online · in deinem Tempo · auf Anfrage</div>
+  </div>
+</section>
+
+<!-- KURSE SECTION -->
+<section class="section" id="kurse">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 72px;">
+      <span class="eyebrow" data-reveal>Kursangebot</span>
+      <div class="gold-line gold-line-center" data-reveal data-delay="1"></div>
+      <h2 class="h2" data-reveal data-delay="2">
+        Online-Kurse &<br /><em>Selbststudium</em>
+      </h2>
+      <p class="body" data-reveal data-delay="3" style="margin-top:16px;">
+        Fundiertes Wissen, das du in deinem eigenen Tempo aufnimmst – ohne Termindruck und ohne Vorkenntnisse.
+      </p>
+    </div>
+
+    <div class="courses-grid">
+
+      <!-- Kurs 1 -->
+      <div class="course-card" data-reveal data-delay="1">
+        <div class="course-card-top">
+          <div class="course-num">01</div>
+          <span class="course-tag">ThetaHealing® · online</span>
+          <h3 class="h4" style="margin-bottom:12px;">ThetaHealing® Grundkurs</h3>
+          <p class="body-sm" style="margin-bottom:20px;">
+            Eine fundierte Einführung in die Welt des ThetaHealings®. Du lernst, wie tiefe Überzeugungen wirken, woher sie kommen – und wie du sanft beginnen kannst, sie zu verändern. Kein Vorwissen nötig. Nur die Bereitschaft, dich selbst besser kennenzulernen.
+          </p>
+          <ul class="spark-list">
+            <li>Grundlagen des ThetaHealing®</li>
+            <li>Glaubenssätze erkennen & verstehen</li>
+            <li>Einfache Techniken für den Alltag</li>
+            <li>Geführte Übungen zum Selbststudium</li>
+          </ul>
+        </div>
+        <div class="course-card-bottom">
+          <p class="body-sm" style="font-style:italic;color:var(--text-light);margin-bottom:16px;">
+            Ideal als erster Schritt – bevor du in die persönliche Begleitung gehst.
+          </p>
+          <a href="kontakt.html" class="btn btn-gold btn-arrow btn-sm" data-magnetic>Auf Anfrage</a>
+        </div>
+      </div>
+
+      <!-- Kurs 2 -->
+      <div class="course-card" style="background:var(--dark);border-color:rgba(201,168,76,0.2);" data-reveal data-delay="2">
+        <div class="course-card-top">
+          <div class="course-num" style="color:rgba(201,168,76,0.2);">02</div>
+          <span class="course-tag" style="color:var(--gold-pale);">Nervensystem · online</span>
+          <h3 class="h4" style="margin-bottom:12px;color:var(--white);">Nervensystem-Regulation</h3>
+          <p class="body-sm" style="color:rgba(255,255,255,0.6);margin-bottom:20px;">
+            Dein Nervensystem steuert, wie du die Welt wahrnimmst – und wie viel Ruhe du wirklich findest. In diesem Kurs lernst du, was hinter chronischer Anspannung steckt, wie Regulation funktioniert, und welche einfachen Übungen dir helfen, wieder in dein Gleichgewicht zu kommen.
+          </p>
+          <ul class="spark-list">
+            <li style="color:rgba(255,255,255,0.65);">Grundlagen des autonomen Nervensystems</li>
+            <li style="color:rgba(255,255,255,0.65);">Polyvagaltheorie verständlich erklärt</li>
+            <li style="color:rgba(255,255,255,0.65);">Praktische Regulationsübungen</li>
+            <li style="color:rgba(255,255,255,0.65);">Umgang mit Trigger-Reaktionen</li>
+          </ul>
+        </div>
+        <div class="course-card-bottom" style="border-color:rgba(255,255,255,0.08);">
+          <p class="body-sm" style="font-style:italic;color:rgba(255,255,255,0.4);margin-bottom:16px;">
+            Für alle, die verstehen wollen, warum sie nicht abschalten können.
+          </p>
+          <a href="kontakt.html" class="btn btn-ghost btn-arrow btn-sm" data-magnetic>Auf Anfrage</a>
+        </div>
+      </div>
+
+      <!-- Kurs 3 -->
+      <div class="course-card" data-reveal data-delay="3">
+        <div class="course-card-top">
+          <div class="course-num">03</div>
+          <span class="course-tag">Energie · Selbstfürsorge · online</span>
+          <h3 class="h4" style="margin-bottom:12px;">Energetische Selbstfürsorge</h3>
+          <p class="body-sm" style="margin-bottom:20px;">
+            Selbstfürsorge ist mehr als Pausen machen. In diesem Kurs geht es darum, wie du dein energetisches System aktiv stärken und schützen kannst – mit Methoden, die wirklich bei dir ankommen. Kein Wellness-Programm. Sondern echte Unterstützung für dein System.
+          </p>
+          <ul class="spark-list">
+            <li>Energetische Grundprinzipien verstehen</li>
+            <li>Schutz & Stärkung im Alltag</li>
+            <li>Einfache Rituale mit Wirkung</li>
+            <li>Intuitives Wahrnehmen schulen</li>
+          </ul>
+        </div>
+        <div class="course-card-bottom">
+          <p class="body-sm" style="font-style:italic;color:var(--text-light);margin-bottom:16px;">
+            Für Menschen, die spüren, dass sie sich selbst mehr Aufmerksamkeit schenken möchten.
+          </p>
+          <a href="kontakt.html" class="btn btn-gold btn-arrow btn-sm" data-magnetic>Auf Anfrage</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hinweis -->
+    <div style="margin-top:56px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto;" data-reveal>
+      <p class="body-sm" style="color:var(--text-light);border-top:1px solid rgba(201,168,76,0.15);padding-top:32px;line-height:1.8;">
+        <strong style="color:var(--text-mid);">Hinweis:</strong> Alle Kurse sind aktuell auf Anfrage verfügbar. Schreib mir einfach, welchen Kurs du interessiert – ich melde mich persönlich bei dir.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-block">
+  <p class="quote-text" data-reveal>
+    „Manchmal ist ein Kurs der erste Schritt –<br />
+    bevor du in die persönliche Begleitung gehst."
+  </p>
+  <span class="quote-author" data-reveal data-delay="2">— Susanne Wachter</span>
+</div>
+
+<!-- INFO SECTION -->
+<section class="section section-nude">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="eyebrow" data-reveal>Wie die Kurse funktionieren</span>
+        <div class="gold-line" data-reveal data-delay="1"></div>
+        <h2 class="h2" data-reveal data-delay="2" style="margin-bottom:28px;">
+          Dein Tempo,<br /><em>dein Weg.</em>
+        </h2>
+        <p class="body" data-reveal data-delay="3" style="margin-bottom:20px;">
+          Alle Kurse sind so gestaltet, dass du sie vollständig in deinem eigenen Rhythmus durcharbeiten kannst. Kein Livestream, kein Zeitdruck, keine Deadline.
+        </p>
+        <ul class="check-list" data-reveal data-delay="4" style="margin-bottom:36px;">
+          <li><span class="check-icon">✦</span>Vollständig online zugänglich</li>
+          <li><span class="check-icon">✦</span>In deinem eigenen Tempo</li>
+          <li><span class="check-icon">✦</span>Kein Vorwissen erforderlich</li>
+          <li><span class="check-icon">✦</span>Persönliche Begleitung auf Wunsch</li>
+        </ul>
+        <a href="kontakt.html" class="btn btn-gold btn-arrow" data-reveal data-delay="5" data-magnetic>Jetzt anfragen</a>
+      </div>
+      <div data-reveal="right">
+        <div style="padding:40px 48px;background:linear-gradient(135deg,var(--dark),#2E1E08);border-radius:16px;color:var(--white);margin-bottom:24px;">
+          <p style="font-family:var(--serif);font-size:20px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.6;margin-bottom:20px;">
+            „Selbststudium bedeutet nicht,<br />allein zu sein. Es bedeutet,<br />in deinem eigenen Raum anzukommen."
+          </p>
+          <span style="font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">— Susanne Wachter</span>
+        </div>
+        <div style="background:var(--cream-dark);border-radius:16px;padding:32px 40px;border-left:3px solid var(--gold);">
+          <h4 class="h4" style="margin-bottom:12px;color:var(--text);">Du hast Fragen?</h4>
+          <p class="body-sm" style="margin-bottom:16px;color:var(--text-mid);">
+            Ich beantworte gerne alle Fragen zu den Kursinhalten, zum Ablauf oder dazu, welcher Kurs am besten zu dir passt.
+          </p>
+          <a href="mailto:susanne@your-balance.at" class="btn btn-outline btn-sm">susanne@your-balance.at</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="background:linear-gradient(160deg,var(--cream) 0%,var(--cream-dark) 100%);padding:120px 0;text-align:center;">
+  <div class="container-xs" style="position:relative;z-index:1;">
+    <div class="signature" data-reveal style="margin-bottom:24px;">Susanne Wachter</div>
+    <h2 class="h2" data-reveal data-delay="2" style="margin-bottom:20px;">
+      Bereit für<br /><em>deinen ersten Schritt?</em>
+    </h2>
+    <p class="body-lg" data-reveal data-delay="3" style="margin-bottom:40px;">
+      Schreib mir einfach, welcher Kurs dich interessiert – oder ob du unsicher bist, wo du anfangen sollst. Ich helfe dir, den richtigen Einstieg zu finden.
+    </p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;" data-reveal data-delay="4">
+      <a href="kontakt.html" class="btn btn-gold btn-lg btn-arrow" data-magnetic>Kurs anfragen</a>
+      <a href="persoenliche-begleitung.html" class="btn btn-outline btn-lg">Zur persönlichen Begleitung</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/images/logo.png" alt="Your Balance" /></div>
+        <div class="footer-tagline">Susanne Wachter</div>
+        <p class="footer-desc">Energetische Begleitung für Menschen, deren System Entlastung braucht – nicht noch mehr Arbeit an sich selbst.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/YourBalanceSusanne" class="footer-social-link" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/your.balance.at" class="footer-social-link" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCdzkl65FEgZ6rUauSJAxz2w" class="footer-social-link" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42A2.78 2.78 0 0 0 20.6 4.48C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/susanne-wachter-macierzynski" class="footer-social-link" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Startseite</a></li>
+          <li><a href="persoenliche-begleitung.html" class="footer-link">Persönliche Begleitung</a></li>
+          <li><a href="seelenpartner.html" class="footer-link">Seelenpartner-Begleitung</a></li>
+          <li><a href="angebote.html" class="footer-link">Ergänzende Angebote</a></li>
+          <li><a href="kurse.html" class="footer-link">Kurse</a></li>
+          <li><a href="ueber-mich.html" class="footer-link">Über mich</a></li>
+          <li><a href="blog.html" class="footer-link">Blog</a></li>
+          <li><a href="kontakt.html" class="footer-link">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4368120739923" class="footer-link">+43 681 2073 9923</a></li>
+          <li><a href="mailto:susanne@your-balance.at" class="footer-link">susanne@your-balance.at</a></li>
+          <li class="footer-link" style="color:rgba(255,255,255,0.2);">Österreich · auch online</li>
+        </ul>
+        <div style="margin-top:28px;">
+          <div class="footer-col-title">Jetzt starten</div>
+          <a href="kontakt.html" class="btn btn-gold btn-sm" style="margin-top:8px;">Erstgespräch anfragen</a>
+        </div>
+      </div>
+    </div>
+    <div class="ornament"><div class="ornament-line"></div><div class="ornament-gem">✦</div><div class="ornament-line"></div></div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 <span>Your Balance</span> – Susanne Wachter. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
