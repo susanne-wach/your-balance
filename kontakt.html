@@ -519,20 +519,24 @@
           Ich melde mich persönlich bei dir und wir schauen gemeinsam, was sinnvoll ist.
         </p>
 
-        <form class="kontakt-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <!-- Formspree: nach dem Absenden weiterleiten zur Danke-Seite -->
-          <input type="hidden" name="_next" value="https://your-balance.at/danke.html" />
-          <input type="hidden" name="_subject" value="✦ Neue Terminanfrage – Your Balance" />
-          <!-- Honeypot-Spam-Schutz -->
-          <input type="text" name="_gotcha" style="display:none" />
+        <form class="kontakt-form" action="https://your-balance61093.activehosted.com/proc.php" method="POST" id="_form_23_" novalidate>
+          <!-- ActiveCampaign hidden fields -->
+          <input type="hidden" name="u" value="23" />
+          <input type="hidden" name="f" value="23" />
+          <input type="hidden" name="s" value="" />
+          <input type="hidden" name="c" value="0" />
+          <input type="hidden" name="m" value="0" />
+          <input type="hidden" name="act" value="sub" />
+          <input type="hidden" name="v" value="2" />
+          <input type="hidden" name="or" value="735b745c-772f-44b8-a852-655b046b4770" />
           <div class="form-grid-2">
             <div class="form-group">
-              <label class="form-label" for="name">Vorname</label>
-              <input class="form-input" type="text" id="name" name="name" placeholder="Dein Vorname" required />
+              <label class="form-label" for="firstname">Vorname</label>
+              <input class="form-input" type="text" id="firstname" name="firstname" placeholder="Dein Vorname" required />
             </div>
             <div class="form-group">
-              <label class="form-label" for="nachname">Nachname</label>
-              <input class="form-input" type="text" id="nachname" name="nachname" placeholder="Dein Nachname" />
+              <label class="form-label" for="lastname">Nachname</label>
+              <input class="form-input" type="text" id="lastname" name="lastname" placeholder="Dein Nachname" />
             </div>
           </div>
           <div class="form-group">
@@ -722,5 +726,60 @@
 </button>
 
 <script src="assets/js/main.js"></script>
+
+<!-- ═══ ACTIVECAMPAIGN FORMULAR-SUBMIT ═══ -->
+<script>
+(function() {
+  // Nach erfolgreichem Absenden → Danke-Seite
+  window._show_thank_you = function() {
+    window.location.href = 'https://your-balance.at/danke.html';
+  };
+  window._show_error = function(id, msg) {
+    var btn = document.querySelector('#_form_23_ button[type="submit"]');
+    if (btn) { btn.disabled = false; btn.textContent = 'Termin anfragen'; }
+    var form = document.getElementById('_form_23_');
+    var old = form.querySelector('._ac_error');
+    if (old) old.remove();
+    var err = document.createElement('p');
+    err.className = '_ac_error';
+    err.style.cssText = 'color:#c0392b;margin-top:12px;font-size:14px;';
+    err.textContent = msg || 'Fehler beim Senden – bitte versuche es erneut oder schreib mir direkt.';
+    btn.parentNode.insertBefore(err, btn.nextSibling);
+  };
+
+  var form = document.getElementById('_form_23_');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Einfache Pflichtfeld-Validierung
+    var email = form.querySelector('input[name="email"]');
+    var firstname = form.querySelector('input[name="firstname"]');
+    if (!email || !email.value.trim()) { email && email.focus(); return; }
+    if (!firstname || !firstname.value.trim()) { firstname && firstname.focus(); return; }
+
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Wird gesendet …';
+
+    // Formulardaten serialisieren
+    var params = [];
+    Array.from(form.elements).forEach(function(el) {
+      if (!el.name) return;
+      if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) return;
+      params.push(encodeURIComponent(el.name) + '=' + encodeURIComponent(el.value));
+    });
+
+    // JSONP-Request an ActiveCampaign
+    var script = document.createElement('script');
+    script.src = 'https://your-balance61093.activehosted.com/proc.php?' + params.join('&') + '&jsonp=true';
+    script.onerror = function() {
+      window._show_error('23', 'Verbindungsfehler – bitte versuche es erneut.');
+    };
+    document.head.appendChild(script);
+  });
+})();
+</script>
 </body>
 </html>
