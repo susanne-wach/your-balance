@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die 5 Seelen-Schlüssel – Kostenlos von Susanne Wachter</title>
+
+<!-- COOKIEBOT -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+        data-cbid="1726067f-291c-417e-8fe4-2ab4307108f3"
+        data-blockingmode="auto" type="text/javascript"></script>
+
+<!-- GA4 -->
+<script type="text/plain" data-cookieconsent="statistics" async
+        src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+<script type="text/plain" data-cookieconsent="statistics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NPPS5VX6GB');
+</script>
+
+<!-- META PIXEL -->
+<script type="text/plain" data-cookieconsent="marketing">
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '626079095228912');
+  fbq('track', 'PageView');
+</script>
+<noscript type="text/plain" data-cookieconsent="marketing"><img height="1" width="1"
+  style="display:none" src="https://www.facebook.com/tr?id=626079095228912&ev=PageView&noscript=1"/></noscript>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark: #3A2E3D;
+    --pink: #DD3089;
+    --warm: #F9F5EE;
+    --pink-light: rgba(234,209,215,0.25);
+    --gold: #C9A84C;
+    --text: #3A2E3D;
+    --text-muted: #6B5E6E;
+    --white: #fff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--warm);
+    font-size: 17px;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  .label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+
+  img { display: block; max-width: 100%; }
+
+  /* ========== HERO – Split Layout ========== */
+  .hero {
+    background: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
+    gap: 60px;
+  }
+
+  .hero-text { flex: 1; max-width: 600px; }
+
+  .hero-text .label { color: var(--gold); margin-bottom: 24px; display: block; }
+
+  .hero-text h1 {
+    font-size: 50px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  .hero-text h1 em { color: var(--gold); font-style: italic; }
+
+  .hero-text .hero-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .hero-image { width: 380px; flex-shrink: 0; }
+
+  .hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 12px;
+  }
+
+  /* ========== EMAIL FORM ========== */
+  .email-form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .email-form input[type="text"],
+  .email-form input[type="email"] {
+    font-family: 'Montserrat', sans-serif;
+    padding: 16px 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.08);
+    color: var(--white);
+    width: 100%;
+  }
+
+  .email-form input::placeholder {
+    color: rgba(255,255,255,0.35);
+  }
+
+  .email-form input:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.12);
+  }
+
+  /* Light background form variant */
+  .section.warm .email-form input[type="text"],
+  .section.warm .email-form input[type="email"] {
+    background: var(--white);
+    border: 1px solid rgba(58,46,61,0.15);
+    color: var(--text);
+  }
+
+  .section.warm .email-form input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .section.warm .email-form input:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px rgba(221,48,137,0.08);
+  }
+
+  /* ========== BUTTONS ========== */
+  .btn {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--pink);
+    padding: 18px 44px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  .hero-text .form-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    margin-top: 12px;
+  }
+
+  /* ========== SECTIONS ========== */
+  .section { padding: 80px 60px; }
+  .section-inner { max-width: 820px; margin: 0 auto; }
+
+  .section.warm { background: var(--warm); }
+  .section.pink-light { background: var(--pink-light); }
+  .section.dark { background: var(--dark); color: var(--white); }
+  .section.dark h2, .section.dark h3 { color: var(--white); }
+  .section.dark p { color: rgba(255,255,255,0.65); }
+
+  .section h2 { font-size: 42px; color: var(--text); margin-bottom: 24px; line-height: 1.15; }
+  .section h2 em { color: var(--pink); font-style: italic; }
+  .section .label { color: var(--gold); margin-bottom: 24px; display: block; }
+  .section p { color: var(--text-muted); margin-bottom: 18px; line-height: 1.85; }
+
+  .text-center { text-align: center; }
+
+  /* ========== SECTION 2: EMPATHIE / PAIN POINTS ========== */
+  .pain-points {
+    margin-top: 36px;
+  }
+
+  .pain-point {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    line-height: 1.8;
+    font-size: 16px;
+  }
+
+  .pain-point:last-child { border-bottom: none; }
+
+  .pain-point .heart { color: var(--pink); font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+
+  .pain-closing {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.8;
+    font-weight: 500;
+  }
+
+  /* ========== SECTION 3: WHAT YOU GET ========== */
+  .day-list {
+    margin-top: 36px;
+  }
+
+  .day-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .day-item:last-child { border-bottom: none; }
+
+  .day-item .check { color: var(--pink); font-weight: 600; font-size: 18px; flex-shrink: 0; margin-top: 0px; }
+
+  .accent-text {
+    margin-top: 32px;
+    padding: 24px;
+    background: rgba(221,48,137,0.08);
+    border-left: 3px solid var(--pink);
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.8;
+    font-style: italic;
+  }
+
+  .section-cta {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ========== SECTION 4: ABOUT ========== */
+  .about-split { display: flex; gap: 50px; align-items: flex-start; }
+  .about-image { width: 340px; flex-shrink: 0; }
+  .about-image img { width: 100%; height: 440px; object-fit: cover; object-position: center 15%; border-radius: 8px; }
+  .about-text { flex: 1; }
+  .about-text h2 em { color: var(--pink); }
+  .about-text p { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.85; }
+
+  /* ========== SECTION 5: TESTIMONIALS ========== */
+  .testimonial-grid { max-width: 700px; margin: 36px auto 0; }
+
+  .testimonial-card {
+    background: var(--white);
+    border-left: 3px solid var(--pink);
+    border-radius: 0 10px 10px 0;
+    padding: 28px 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+
+  .testimonial-card blockquote {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .testimonial-card .testi-author { font-size: 13px; font-style: italic; color: #999; }
+
+  .placeholder-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 24px;
+    font-style: italic;
+  }
+
+  /* ========== SECTION 6: FINAL CTA ========== */
+  .final-section { background: var(--dark); padding: 80px 60px; text-align: center; }
+  .final-section h2 { font-size: 42px; color: var(--white); margin-bottom: 16px; }
+  .final-section h2 em { color: var(--gold); }
+  .final-section .subtitle { font-size: 16px; color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto 32px; line-height: 1.8; }
+
+  .final-form {
+    max-width: 500px;
+    margin: 0 auto 32px;
+  }
+
+  .final-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 16px;
+  }
+
+  .ps-box {
+    margin-top: 40px;
+    background: rgba(255,255,255,0.05);
+    border-left: 3px solid var(--gold);
+    padding: 24px 28px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .ps-box strong { color: var(--gold); }
+
+  /* ========== FOOTER ========== */
+  .footer {
+    background: var(--dark);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 30px 60px;
+    text-align: center;
+  }
+
+  .footer p { font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.8; }
+  .footer a { color: var(--gold); text-decoration: none; }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 960px) {
+    .hero { flex-direction: column; padding: 40px 30px; gap: 40px; }
+    .hero-image { width: 100%; }
+    .hero-image img { height: 350px; }
+    .hero-text h1 { font-size: 36px; }
+    .section { padding: 60px 28px; }
+    .section h2 { font-size: 32px; }
+    .about-split { flex-direction: column; }
+    .about-image { width: 100%; }
+    .about-image img { height: 350px; }
+    .final-section { padding: 60px 28px; }
+    .ps-box { max-width: 100%; padding: 20px 24px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 30px 20px; }
+    .hero-text h1 { font-size: 28px; }
+    .hero-image { width: 100%; }
+    .hero-image img { height: 280px; }
+    .section { padding: 40px 20px; }
+    .section h2 { font-size: 26px; }
+    .btn { font-size: 13px; padding: 15px 32px; }
+    .final-section h2 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SECTION 1: HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="label">Kostenloses PDF + 5-Tage-Ritual</span>
+    <h1>Spürst du, dass da <em>mehr</em> in dir ist?</h1>
+    <p class="hero-desc">Die 5 Seelen-Schlüssel zeigen dir den Weg zurück zu deiner weiblichen Urkraft – in nur 5 Tagen.</p>
+
+    <!-- ActiveCampaign Formular (ID 24) -->
+    <form class="email-form" method="POST" action="https://your-balance61093.activehosted.com/proc.php" id="_form_hero_24_" novalidate>
+      <input type="hidden" name="u" value="24" />
+      <input type="hidden" name="f" value="24" />
+      <input type="hidden" name="s" />
+      <input type="hidden" name="c" value="0" />
+      <input type="hidden" name="m" value="0" />
+      <input type="hidden" name="act" value="sub" />
+      <input type="hidden" name="v" value="2" />
+      <input type="hidden" name="or" value="53db91fa-c87e-4207-a15f-d3684b59daa4" />
+      <input type="text" name="firstname" placeholder="Dein Vorname" required>
+      <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+      <button type="submit" class="btn">Ja, ich will die 5 Seelen-Schlüssel! →</button>
+      <p class="form-note">100% kostenlos. Kein Spam. Du kannst dich jederzeit abmelden.</p>
+    </form>
+    <div class="form-thank-you" style="display:none; margin-top: 24px; text-align: center;">
+      <p style="font-size: 20px; color: var(--gold); font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; margin-bottom: 12px;">Wundervoll – deine 5 Seelen-Schlüssel sind auf dem Weg! ✨</p>
+      <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Schau gleich in dein E-Mail-Postfach (und auch in den Spam-Ordner, falls du nichts findest).</p>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=85" alt="Die 5 Seelen-Schlüssel PDF Mockup">
+  </div>
+</section>
+
+<!-- SECTION 2: EMPATHIE / PAIN POINTS -->
+<section class="section warm">
+  <div class="section-inner">
+    <span class="label">Kennst du das?</span>
+    <h2>Du gibst und gibst – aber wer gibt <em>dir?</em></h2>
+
+    <div class="pain-points">
+      <div class="pain-point">
+        <span class="heart">♥</span>
+        <p>Du funktionierst im Alltag, aber innerlich fühlst du dich leer und abgetrennt von dir selbst.</p>
+      </div>
+      <div class="pain-point">
+        <span class="heart">♥</span>
+        <p>Du sehnst dich nach einer tieferen Verbindung – zu dir, zu deiner Weiblichkeit, zu deiner Seele – aber weißt nicht, wo du anfangen sollst.</p>
+      </div>
+      <div class="pain-point">
+        <span class="heart">♥</span>
+        <p>Du hast das Gefühl, dass in dir eine Kraft schlummert, die du schon lange nicht mehr gespürt hast.</p>
+      </div>
+    </div>
+
+    <div class="pain-closing">Wenn du dich in mindestens einem Punkt wiedererkennst, sind die 5 Seelen-Schlüssel genau für dich.</div>
+  </div>
+</section>
+
+<!-- SECTION 3: WAS DU BEKOMMST -->
+<section class="section pink-light">
+  <div class="section-inner">
+    <span class="label">Das erwartet dich</span>
+    <h2>In 5 Tagen zurück zu deiner <em>Urkraft</em></h2>
+
+    <div class="day-list">
+      <div class="day-item">
+        <span class="check">✓</span>
+        <p><strong>Tag 1: Der Schlüssel der Stille</strong> – Ankommen bei dir und deinem Herzen</p>
+      </div>
+      <div class="day-item">
+        <span class="check">✓</span>
+        <p><strong>Tag 2: Der Schlüssel der Wahrheit</strong> – Dich selbst erkennen, jenseits aller Rollen</p>
+      </div>
+      <div class="day-item">
+        <span class="check">✓</span>
+        <p><strong>Tag 3: Der Schlüssel der Vergebung</strong> – Loslassen, was dich festhält</p>
+      </div>
+      <div class="day-item">
+        <span class="check">✓</span>
+        <p><strong>Tag 4: Der Schlüssel der Weiblichkeit</strong> – Deine weibliche Urkraft aktivieren</p>
+      </div>
+      <div class="day-item">
+        <span class="check">✓</span>
+        <p><strong>Tag 5: Der Schlüssel des Leuchtfeuers</strong> – Dein inneres Licht entzünden</p>
+      </div>
+    </div>
+
+    <div class="accent-text">Jeder Tag: Eine kraftvolle Übung (10–15 Min) + geführte Reflexionsfragen</div>
+
+    <div class="section-cta">
+      <button type="submit" class="btn" style="width: auto; padding: 18px 44px;">Ja, ich will die 5 Seelen-Schlüssel! →</button>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: ABOUT SUSANNE -->
+<section class="section dark">
+  <div style="max-width: 1040px; margin: 0 auto;">
+    <div class="about-split">
+      <div class="about-image">
+        <img src="Bilder/susanne-portrait.jpg" alt="Susanne Wachter">
+      </div>
+      <div class="about-text">
+        <span class="label">Deine Begleiterin</span>
+        <h2>Hi, ich bin <em>Susanne</em></h2>
+        <p>Ich bin Mentorin für Frauen, die bereit sind, sich an ihre wahre Kraft zu erinnern. Seit Jahren begleite ich Frauen auf ihrem Weg zu innerer Stabilität, Herzöffnung und Seelenverbindung – durch Meditationen, Energiearbeit und tiefe Transformationsprozesse. Die 5 Seelen-Schlüssel sind mein Geschenk an dich. Ein erster Schritt auf einem wundervollen Weg.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: SOCIAL PROOF / TESTIMONIALS -->
+<section class="section warm">
+  <div class="section-inner">
+    <h2 class="text-center">Was Frauen sagen, die mit mir <em>gearbeitet</em> haben</h2>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <blockquote>Seit ich mit Susanne arbeite, habe ich endlich wieder Zugang zu meiner inneren Kraft gefunden. Ich fühle mich wie eine neue Frau.</blockquote>
+        <p class="testi-author">– Maria K.</p>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>Die Meditationen von Susanne haben mein Leben verändert. So viel Tiefe und Wärme.</blockquote>
+        <p class="testi-author">– Christina S.</p>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>Ich hätte nie gedacht, dass ich mich so schnell wieder mit mir verbunden fühlen kann.</blockquote>
+        <p class="testi-author">– Anna M.</p>
+      </div>
+    </div>
+
+    <p class="placeholder-note">(Platzhalter – hier kommen echte Testimonials hin)</p>
+  </div>
+</section>
+
+<!-- SECTION 6: FINAL CTA -->
+<section class="final-section">
+  <h2>Deine Seele hat dich <em>hierher</em> geführt.</h2>
+  <p class="subtitle">Vertraue ihr. Die 5 Seelen-Schlüssel warten auf dich.</p>
+
+  <!-- ActiveCampaign Formular (ID 24) – unteres Formular -->
+  <form class="final-form email-form" method="POST" action="https://your-balance61093.activehosted.com/proc.php" id="_form_bottom_24_" novalidate>
+    <input type="hidden" name="u" value="24" />
+    <input type="hidden" name="f" value="24" />
+    <input type="hidden" name="s" />
+    <input type="hidden" name="c" value="0" />
+    <input type="hidden" name="m" value="0" />
+    <input type="hidden" name="act" value="sub" />
+    <input type="hidden" name="v" value="2" />
+    <input type="hidden" name="or" value="53db91fa-c87e-4207-a15f-d3684b59daa4" />
+    <input type="text" name="firstname" placeholder="Dein Vorname" required>
+    <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+    <button type="submit" class="btn">Ja, ich will die 5 Seelen-Schlüssel! →</button>
+    <p class="final-note">100% kostenlos · Sofort per E-Mail · Kein Spam</p>
+  </form>
+  <div class="form-thank-you-bottom" style="display:none; margin-top: 24px; text-align: center;">
+    <p style="font-size: 20px; color: var(--gold); font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; margin-bottom: 12px;">Wundervoll – deine 5 Seelen-Schlüssel sind auf dem Weg! ✨</p>
+    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Schau gleich in dein E-Mail-Postfach (und auch in den Spam-Ordner, falls du nichts findest).</p>
+  </div>
+
+  <div class="ps-box">
+    <strong>P.S.</strong> Die 5 Seelen-Schlüssel sind der perfekte Einstieg. Wenn du bereit bist für die volle Transformation, erzähle ich dir in meinen E-Mails mehr darüber. ♥
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© Susanne Wachter · Your Balance · your-balance.at · <a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+</footer>
+
+<!-- ============================================
+     FORMULAR-LOGIK: ActiveCampaign Submit + Danke-Nachricht + Meta Pixel Lead Event
+     ============================================ -->
+<script>
+document.querySelectorAll('form.email-form').forEach(function(form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var firstname = form.querySelector('input[name="firstname"]');
+    var email = form.querySelector('input[name="email"]');
+
+    // Einfache Validierung
+    if (!firstname.value.trim()) { firstname.focus(); return; }
+    if (!email.value.trim() || !email.value.includes('@')) { email.focus(); return; }
+
+    var btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Wird gesendet...';
+    btn.disabled = true;
+
+    // Daten an ActiveCampaign senden
+    var formData = new FormData(form);
+
+    fetch('https://your-balance61093.activehosted.com/proc.php?jsonp=true', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(function() {
+      // Formular verstecken, Danke-Nachricht zeigen
+      form.style.display = 'none';
+      var thankYou = form.nextElementSibling;
+      if (thankYou && thankYou.classList.contains('form-thank-you') || thankYou.classList.contains('form-thank-you-bottom')) {
+        thankYou.style.display = 'block';
+      }
+
+      // Meta Pixel: Lead Event feuern
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+          content_name: '5-Seelen-Schluessel-Freebie',
+          content_category: 'Freebie Download'
+        });
+      }
+
+      // Google Analytics: Event senden
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'generate_lead', {
+          event_category: 'Freebie',
+          event_label: '5-Seelen-Schluessel'
+        });
+      }
+    }).catch(function() {
+      // Fallback: Formular normal absenden
+      form.submit();
+    });
+  });
+});
+</script>
+
+</body>
+</html>
