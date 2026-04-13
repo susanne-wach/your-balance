@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dein Herzöffnungs-Kompass – Kostenloses Workbook | Your Balance</title>
+    <meta name="description" content="7 kraftvolle Impulse für Frauen, die sich nach innerer Tiefe und echter Verbindung sehnen. Kostenloses Workbook von Susanne Wachter.">
+    <link rel="icon" type="image/png" href="Bilder/Logo.png">
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NPPS5VX6GB');
+    </script>
+
+    <!-- META PIXEL -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '626079095228912');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1"
+      style="display:none" src="https://www.facebook.com/tr?id=626079095228912&ev=PageView&noscript=1"/></noscript>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --cream: #FBF7F0;
+            --cream-warm: #FAF6F0;
+            --cream-deep: #F8F3ED;
+            --gold: #C9A84C;
+            --gold-light: #D4AF37;
+            --gold-pale: #E8D08A;
+            --text: #2a2a2a;
+            --text-soft: #6B5D4A;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Nunito Sans', Arial, sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 48px 0 56px;
+            background: var(--white);
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-eyebrow {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.6em;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 strong {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            font-weight: 300;
+            color: var(--text-soft);
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+
+        .hero-subtitle strong {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #C9A84C, #D4AF37);
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
+        }
+
+        .btn-cta .small {
+            display: block;
+            font-size: 12px;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-top: 2px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        .hero-image {
+            flex: 0 0 380px;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        }
+
+        .hero-image .badge-gratis {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: var(--gold);
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+        }
+
+        /* ===== BENEFITS BAR ===== */
+        .benefits-bar {
+            background: var(--cream-warm);
+            padding: 48px 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .benefit-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25em;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .benefit-text {
+            font-size: 14px;
+            color: var(--text-soft);
+            line-height: 1.6;
+        }
+
+        /* ===== PERFECT SECTION ===== */
+        .perfect-section {
+            padding: 72px 0;
+            background: var(--white);
+        }
+
+        .perfect-section .container {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .perfect-image {
+            flex: 0 0 400px;
+        }
+
+        .perfect-image img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .perfect-content {
+            flex: 1;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2em;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 24px;
+            line-height: 1.25;
+        }
+
+        .section-title strong {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .check-list li {
+            padding: 12px 0;
+            padding-left: 36px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.6;
+            border-bottom: 1px solid var(--cream-warm);
+        }
+
+        .check-list li:last-child {
+            border-bottom: none;
+        }
+
+        .check-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 16px;
+        }
+
+        .check-detail {
+            display: block;
+            font-size: 13px;
+            color: var(--text-soft);
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background: var(--cream-deep);
+            padding: 72px 0;
+        }
+
+        .about .container {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 0 0 340px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+        }
+
+        .about-content p {
+            font-size: 15px;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .about-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            font-style: italic;
+            color: var(--gold);
+            border-left: 3px solid var(--gold);
+            padding-left: 20px;
+            margin: 24px 0;
+            line-height: 1.5;
+        }
+
+        .about-list {
+            list-style: none;
+            margin: 16px 0;
+        }
+
+        .about-list li {
+            padding: 6px 0 6px 24px;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .about-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* ===== CTA FINAL SECTION ===== */
+        .cta-final {
+            padding: 72px 0;
+            background: linear-gradient(135deg, #2A1F0E 0%, #1C1208 100%);
+            color: var(--white);
+        }
+
+        .cta-final .container {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .cta-text {
+            flex: 1;
+        }
+
+        .cta-text .section-title {
+            color: var(--white);
+        }
+
+        .cta-text .section-title strong {
+            color: var(--gold-pale);
+        }
+
+        .cta-text p {
+            color: rgba(255,255,255,0.85);
+            font-size: 15px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .cta-text .cta-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .cta-text .cta-list li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: rgba(255,255,255,0.9);
+            font-size: 15px;
+        }
+
+        .cta-text .cta-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold-pale);
+            font-weight: 700;
+        }
+
+        .cta-price {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gold-pale);
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* ===== FORM STYLING ===== */
+        .form-wrapper {
+            flex: 0 0 420px;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 36px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .form-wrapper h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .form-wrapper .form-subtitle {
+            font-size: 14px;
+            color: var(--text-soft);
+            text-align: center;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .form-wrapper label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .form-wrapper input[type="text"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d4cfc7;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: 'Nunito Sans', sans-serif;
+            margin-bottom: 16px;
+            transition: border-color 0.3s;
+            background: #FAFAFA;
+        }
+
+        .form-wrapper input[type="text"]:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: white;
+        }
+
+        .form-wrapper .dsgvo-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 16px 0 20px;
+        }
+
+        .form-wrapper .dsgvo-row input[type="checkbox"] {
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .form-wrapper .dsgvo-row label {
+            font-size: 12px;
+            font-weight: 300;
+            color: var(--text-soft);
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .form-wrapper button[type="submit"] {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #C9A84C, #D4AF37);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Nunito Sans', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
+        }
+
+        .form-wrapper button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
+        }
+
+        .form-privacy {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-soft);
+            margin-top: 12px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--cream-deep);
+            padding: 24px 0;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-soft);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero .container,
+            .perfect-section .container,
+            .about .container,
+            .cta-final .container {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .hero-image, .perfect-image, .about-image, .form-wrapper {
+                flex: none;
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .hero h1 { font-size: 2em; }
+            .section-title { font-size: 1.6em; }
+            .benefits-grid { grid-template-columns: 1fr; gap: 28px; }
+
+            .about .container {
+                flex-direction: column-reverse;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <p class="hero-eyebrow">An alle Frauen, die mehr sp&uuml;ren als sie zeigen</p>
+            <h1>Entdecke deinen <strong>Herz&ouml;ffnungs-Kompass</strong> &ndash; und finde zur&uuml;ck zu deiner inneren Kraft</h1>
+            <p class="hero-subtitle">Mit diesem <strong>kostenlosen Workbook</strong> lernst du, wie du dein Herz wieder &ouml;ffnen kannst &ndash; f&uuml;r dich selbst, f&uuml;r echte Verbindung und f&uuml;r ein erf&uuml;lltes Leben.</p>
+            <a href="#anmelden" class="btn-cta">
+                Ich m&ouml;chte das Workbook haben &raquo;
+                <span class="small">Hier klicken</span>
+            </a>
+            <p class="hero-badge">Gratis &bull; 27 Seiten &bull; Sofort per E-Mail</p>
+        </div>
+        <div class="hero-image">
+            <span class="badge-gratis">Gratis</span>
+            <img src="Bilder/soft_warm_golden-hour_portrait_of_a_woman_positioned_in_the_lower_third_of_the_frame_leaving_a_large_89a171af-053f-4210-95a8-cf7b882d0394 (1).webp" alt="Herz&ouml;ffnungs-Kompass Workbook von Susanne Wachter" style="object-fit: cover; height: 460px; object-position: center 35%;">
+        </div>
+    </div>
+</section>
+
+<!-- ===== BENEFITS BAR ===== -->
+<section class="benefits-bar">
+    <div class="container">
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">&#10047;</div>
+                <div class="benefit-title">Erkenne deine innere Stimme</div>
+                <p class="benefit-text">Lerne, wieder auf dein Bauchgef&uuml;hl zu h&ouml;ren und den Weg zu finden, der wirklich zu dir passt.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">&#10047;</div>
+                <div class="benefit-title">Praktische &Uuml;bungen f&uuml;r sofort</div>
+                <p class="benefit-text">7 kraftvolle Impulse mit konkreten &Uuml;bungen, einem Herz&ouml;ffnungs-Ritual und einem pers&ouml;nlichen SOS-Plan.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">&#10047;</div>
+                <div class="benefit-title">Finde inneren Frieden</div>
+                <p class="benefit-text">Sp&uuml;re die tiefe Verbundenheit mit dir selbst &ndash; auch wenn das &auml;u&szlig;ere Leben herausfordernd ist.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PERFECT FOR YOU SECTION ===== -->
+<section class="perfect-section">
+    <div class="container">
+        <div class="perfect-image">
+            <img src="Bilder/a_woman_practicing_meditation_on_a_beach_at_sunrise_adult_asian_woman_30s_with_a_neat_bun_hairstyle_n0kqkpcawgtawknnfx77_3 (1).png" alt="Frau in friedlicher Meditation am See" style="height: 500px; object-fit: cover; object-position: center 45%;">
+        </div>
+        <div class="perfect-content">
+            <h2 class="section-title"><strong>Dieses Workbook</strong> ist perfekt f&uuml;r dich, falls:</h2>
+            <ul class="check-list">
+                <li>
+                    Du eine stille Sehnsucht nach mehr Tiefe sp&uuml;rst
+                    <span class="check-detail">Du funktionierst im Alltag, aber abends fragst du dich: &bdquo;Ist das wirklich alles?&ldquo;</span>
+                </li>
+                <li>
+                    Du dich oft von &Auml;ngsten, Zweifeln oder Zukunftssorgen leiten l&auml;sst
+                    <span class="check-detail">Du wei&szlig;t, was du willst &ndash; aber alte Muster halten dich zur&uuml;ck.</span>
+                </li>
+                <li>
+                    Du dir innere Gelassenheit w&uuml;nschst, die nicht von anderen abh&auml;ngt
+                    <span class="check-detail">Wenn es hektisch wird, verlierst du deine innere Mitte und f&uuml;hlst dich ausgeliefert.</span>
+                </li>
+                <li>
+                    Du bereit bist, den ersten Schritt zu dir selbst zu gehen
+                    <span class="check-detail">Du sp&uuml;rst, dass in dir eine Kraft schlummert &ndash; du wei&szlig;t nur noch nicht, wie du sie weckst.</span>
+                </li>
+            </ul>
+            <a href="#anmelden" class="btn-cta">Ich m&ouml;chte das Workbook haben &raquo;</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="section-title">Ich bin <strong>Susanne</strong> &ndash;</h2>
+            <p style="font-size: 17px; color: var(--text-soft); margin-bottom: 20px;">Begleiterin f&uuml;r innere Balance und tiefe Seelenverbindung</p>
+            <p>Ich begleite seit vielen Jahren Frauen dabei, ihre innere Balance und wahre Kraft zu entdecken. Mit meiner <strong>Seelenlichtmethode</strong> habe ich einen sanften, wirkungsvollen Weg entwickelt, der dich zur&uuml;ck zu deinem Herzen f&uuml;hrt.</p>
+            <ul class="about-list">
+                <li>Langj&auml;hrige Erfahrung im Bereich energetischer Heilmethoden</li>
+                <li>Entwicklerin der einzigartigen Seelenlichtmethode</li>
+                <li>Begleitung von Frauen auf dem Weg zur inneren Freiheit</li>
+            </ul>
+            <p>Durch meine Ausbildungen und Erfahrungen habe ich erkannt, wie kraftvoll es ist, wenn wir den Mut haben, unser Herz zu &ouml;ffnen &ndash; Schritt f&uuml;r Schritt.</p>
+            <blockquote class="about-quote">
+                &bdquo;Es geht nicht darum, ihn zur&uuml;ckzubekommen. Es geht darum, DICH zur&uuml;ckzubekommen.&ldquo;
+            </blockquote>
+        </div>
+        <div class="about-image">
+            <img src="Bilder/schwarzer Blazer.PNG" alt="Susanne Wachter - Begleiterin f&uuml;r innere Balance" style="object-fit: cover; height: 440px; object-position: center 18%;">
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA + FORM SECTION ===== -->
+<section class="cta-final" id="anmelden">
+    <div class="container">
+        <div class="cta-text">
+            <h2 class="section-title">Innerer Frieden beginnt mit <strong>einem einzigen Schritt</strong></h2>
+            <p><strong style="color: var(--gold-pale);">Innere Klarheit und tiefe Herz&ouml;ffnung</strong> &ndash; mit dem kostenlosen Workbook wird es m&ouml;glich. Sichere es dir jetzt f&uuml;r 0&euro;.</p>
+            <ul class="cta-list">
+                <li>7 kraftvolle Impulse, die dich zur&uuml;ck zu deiner inneren Stimme f&uuml;hren</li>
+                <li>Ein t&auml;gliches 20-Minuten Herz&ouml;ffnungs-Ritual</li>
+                <li>Einen SOS-Plan f&uuml;r Momente der &Uuml;berw&auml;ltigung</li>
+                <li>Einen Selbst-Test, um zu erkennen, wo du gerade stehst</li>
+                <li>Dein pers&ouml;nliches 7-Tage-Programm</li>
+            </ul>
+            <p class="cta-price">100% kostenlos &bull; 27 Seiten &bull; Sofort in deinem Postfach</p>
+        </div>
+
+        <div class="form-wrapper">
+            <form method="POST" action="https://your-balance61093.activehosted.com/proc.php" id="_form_29_" class="_form _form_29 _inline-form _dark" novalidate data-styles-version="5">
+                <input type="hidden" name="u" value="29" />
+                <input type="hidden" name="f" value="29" />
+                <input type="hidden" name="s" />
+                <input type="hidden" name="c" value="0" />
+                <input type="hidden" name="m" value="0" />
+                <input type="hidden" name="act" value="sub" />
+                <input type="hidden" name="v" value="2" />
+                <input type="hidden" name="or" value="810df072-69a2-4c5a-b91d-71a5e6a73244" />
+
+                <h3>Dein Herz&ouml;ffnungs-Kompass</h3>
+                <p class="form-subtitle">7 Impulse f&uuml;r ein erf&uuml;lltes Leben &ndash; kostenlos per E-Mail.</p>
+
+                <label for="firstname">Vorname</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Dein Vorname" />
+
+                <label for="email">E-Mail <span style="color: #C9A84C;">*</span></label>
+                <input type="text" id="email" name="email" placeholder="Deine E-Mail-Adresse" required />
+
+                <input data-autofill="false" type="hidden" id="field[16][]" name="field[16][]" value="~|">
+                <div class="dsgvo-row">
+                    <input id="field_16dsgvo" type="checkbox" name="field[16][]" value="Wenn du dieses Kästchen anklickst bestätigst du meine Datenschutzerklärung und dass du Emails von mir erhalten möchtest." class="any" required>
+                    <label for="field_16dsgvo">Wenn du dieses K&auml;stchen anklickst best&auml;tigst du meine <a href="https://your-balance.at/datenschutz" target="_blank" style="color: var(--gold);">Datenschutzerkl&auml;rung</a> und dass du E-Mails von mir erhalten m&ouml;chtest.</label>
+                </div>
+
+                <button id="_form_29_submit" type="submit">Workbook kostenlos anfordern &raquo;</button>
+            </form>
+            <p class="form-privacy">Deine Daten sind sicher. Kein Spam &ndash; Abmeldung jederzeit m&ouml;glich.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Your Balance &ndash; Susanne Wachter | <a href="https://your-balance.at">your-balance.at</a> | <a href="https://your-balance.at/datenschutz">Datenschutz</a> | <a href="https://your-balance.at/impressum">Impressum</a></p>
+    </div>
+</footer>
+
+<script>
+window.cfields = {"16":"dsgvo"};
+window._show_thank_you = function(id, message, trackcmp_url, email) {
+    var form = document.getElementById('_form_' + id + '_');
+    var formWrapper = form.closest('.form-wrapper');
+    var thank_you = formWrapper.querySelector('._form-thank-you');
+    if (!thank_you) {
+        thank_you = document.createElement('div');
+        thank_you.className = '_form-thank-you';
+        formWrapper.appendChild(thank_you);
+    }
+    form.style.display = 'none';
+    var privacyNote = formWrapper.querySelector('.form-privacy');
+    if (privacyNote) privacyNote.style.display = 'none';
+    thank_you.innerHTML = '<div style="padding:24px;text-align:center;"><h3 style="font-family:Cormorant Garamond,Georgia,serif;font-size:1.6rem;margin-bottom:12px;color:#C9A84C;">Wundersch\u00f6n, dass du dabei bist!</h3><p style="color:#6B5D4A;line-height:1.7;">Dein Workbook ist auf dem Weg in dein Postfach.<br>Schau bitte auch im Spam-Ordner nach.</p></div>';
+    thank_you.style.display = 'block';
+    // GA4 Lead Event
+    if (typeof gtag === 'function') { gtag('event', 'generate_lead', { currency: 'EUR', value: 0 }); }
+    // Meta Pixel Lead Event
+    if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+    var vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') {
+        visitorObject('setEmail', email);
+        visitorObject('update');
+    } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+        _load_script(trackcmp_url);
+    }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+};
+window._show_error = function(id, message, html) {
+    var form = document.getElementById('_form_' + id + '_'),
+        err = document.createElement('div'),
+        button = form.querySelector('button[type="submit"]'),
+        old_error = form.querySelector('._form_error');
+    if (old_error) old_error.parentNode.removeChild(old_error);
+    err.innerHTML = message;
+    err.className = '_error-inner _form_error _no_arrow';
+    err.style.cssText = 'color:#c0392b;font-size:14px;padding:8px 0;';
+    var wrapper = document.createElement('div');
+    wrapper.className = '_form-inner';
+    wrapper.appendChild(err);
+    button.parentNode.insertBefore(wrapper, button);
+    button.disabled = false;
+    button.classList.remove('processing');
+};
+window._load_script = function(url, callback, isSubmit) {
+    var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+    var submitButton = document.querySelector('#_form_29_submit');
+    script.charset = 'utf-8';
+    script.src = url;
+    if (callback) {
+        script.onload = script.onreadystatechange = function() {
+            if (!r && (!this.readyState || this.readyState == 'complete')) { r = true; callback(); }
+        };
+    }
+    script.onerror = function() {
+        if (isSubmit) {
+            if (script.src.length > 10000) {
+                _show_error("29", "Deine Anmeldung konnte nicht gesendet werden. Bitte k\u00fcrze deine Eingaben und versuche es erneut.");
+            } else {
+                _show_error("29", "Deine Anmeldung konnte nicht gesendet werden. Bitte versuche es erneut.");
+            }
+            submitButton.disabled = false;
+            submitButton.classList.remove('processing');
+        }
+    }
+    head.appendChild(script);
+};
+(function() {
+    if (window.location.search.search("excludeform") !== -1) return false;
+    var addEvent = function(element, event, func) {
+        if (element.addEventListener) { element.addEventListener(event, func); }
+        else { var oldFunc = element['on' + event]; element['on' + event] = function() { oldFunc.apply(this, arguments); func.apply(this, arguments); }; }
+    };
+    var _removed = false;
+    var form_to_submit = document.getElementById('_form_29_');
+    var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+    var remove_tooltips = function() { for (var i = 0; i < tooltips.length; i++) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); } tooltips = []; };
+    var remove_tooltip = function(elem) { for (var i = 0; i < tooltips.length; i++) { if (tooltips[i].elem === elem) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); tooltips.splice(i, 1); return; } } };
+    var create_tooltip = function(elem, text) {
+        var tooltip = document.createElement('div'), new_tooltip = {};
+        if (elem.type != 'radio' && (elem.type != 'checkbox' || elem.name === 'sms_consent')) {
+            tooltip.className = '_error'; tooltip.innerHTML = text;
+            tooltip.style.cssText = 'color:#c0392b;font-size:13px;margin-top:4px;';
+            elem.parentNode.appendChild(tooltip);
+        } else {
+            tooltip.className = '_error-inner _no_arrow'; tooltip.innerHTML = text;
+            tooltip.style.cssText = 'color:#c0392b;font-size:13px;margin-bottom:8px;';
+            elem.parentNode.insertBefore(tooltip, elem);
+            new_tooltip.no_arrow = true;
+        }
+        new_tooltip.tip = tooltip; new_tooltip.elem = elem; tooltips.push(new_tooltip);
+        return new_tooltip;
+    };
+    var validate_field = function(elem, remove) {
+        var tooltip = null, value = elem.value, no_error = true;
+        remove ? remove_tooltip(elem) : false;
+        if (elem.getAttribute('required') !== null) {
+            if (elem.type == 'radio' || (elem.type == 'checkbox' && /any/.test(elem.className))) {
+                var elems = form_to_submit.elements[elem.name];
+                if (!(elems instanceof NodeList || elems instanceof HTMLCollection) || elems.length <= 1) { no_error = elem.checked; }
+                else { no_error = false; for (var i = 0; i < elems.length; i++) { if (elems[i].checked) no_error = true; } }
+                if (!no_error) { tooltip = create_tooltip(elem, "Bitte best\u00e4tige die Datenschutzerkl\u00e4rung."); }
+            } else if (value === undefined || value === null || value === '') {
+                no_error = false; tooltip = create_tooltip(elem, "Bitte f\u00fclle dieses Feld aus.");
+            }
+        }
+        if (no_error && elem.name == 'email') {
+            if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+                no_error = false; tooltip = create_tooltip(elem, "Bitte gib eine g\u00fcltige E-Mail-Adresse ein.");
+            }
+        }
+        return no_error;
+    };
+    var needs_validate = function(el) {
+        if (el.getAttribute('required') !== null) return true;
+        if (el.name === 'email' && el.value !== "") return true;
+        return false;
+    };
+    var validate_form = function(e) {
+        var no_error = true;
+        if (!submitted) {
+            submitted = true;
+            for (var i = 0; i < allInputs.length; i++) {
+                var input = allInputs[i];
+                if (needs_validate(input)) {
+                    if (input.type == 'text') {
+                        addEvent(input, 'blur', function() { this.value = this.value.trim(); validate_field(this, true); });
+                        addEvent(input, 'input', function() { validate_field(this, true); });
+                    } else if (input.type == 'checkbox') {
+                        (function(el) { addEvent(el, 'change', function() { validate_field(el, true); }); })(input);
+                    }
+                }
+            }
+        }
+        remove_tooltips();
+        for (var i = 0; i < allInputs.length; i++) {
+            var elem = allInputs[i];
+            if (needs_validate(elem)) {
+                if (elem.tagName.toLowerCase() !== "select") elem.value = elem.value.trim();
+                validate_field(elem) ? true : no_error = false;
+            }
+        }
+        if (!no_error && e) e.preventDefault();
+        return no_error;
+    };
+    var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return}var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
+    var form_submit = function(e) {
+        e.preventDefault();
+        if (validate_form()) {
+            var submitButton = e.target.querySelector('#_form_29_submit');
+            submitButton.disabled = true;
+            submitButton.classList.add('processing');
+            var serialized = _form_serialize(document.getElementById('_form_29_')).replace(/%0A/g, '\\n');
+            var err = form_to_submit.querySelector('._form_error');
+            err ? err.parentNode.removeChild(err) : false;
+            _load_script('https://your-balance61093.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
+        }
+        return false;
+    };
+    addEvent(form_to_submit, 'submit', form_submit);
+})();
+</script>
+
+</body>
+</html>
