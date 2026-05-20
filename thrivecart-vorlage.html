@@ -1,0 +1,423 @@
+<!--
+════════════════════════════════════════════════════════════
+  YOUR BALANCE – THRIVECART CHECKOUT VORLAGE
+  Susanne Wachter · your-balance.at
+════════════════════════════════════════════════════════════
+
+  WIE VERWENDEN:
+  1. In ThriveCart: Produkt → Edit → Checkout → Page Design
+  2. "Custom HTML" oder "Body HTML" Bereich öffnen
+  3. Diesen Code hineinkopieren
+  4. Alle [PLATZHALTER] durch deine echten Inhalte ersetzen
+  5. Speichern → fertig!
+
+  PLATZHALTER (suche & ersetze):
+  [KURSNAME]          → z.B. "HerzErinnerung"
+  [UNTERTITEL]        → z.B. "In 5 Minuten zurück in dir"
+  [KURZBESCHREIBUNG]  → 1–2 Sätze was der Kurs ist
+  [PREIS]             → z.B. "29"
+  [INHALT_1–4]        → Was ist enthalten
+  [FUER_WEN]          → Für wen ist es
+  [TESTIMONIAL_1–2]   → Kundenstimmen
+  [FAQ_FRAGE/ANT_1–2] → Häufige Fragen
+
+════════════════════════════════════════════════════════════
+-->
+
+<!-- ═══ FONTS ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ═══ STYLES ═══ -->
+<style>
+#yb-checkout {
+  font-family: 'Montserrat', sans-serif;
+  color: #2A1F0E;
+  background: #FBF7F0;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ── Allgemein ── */
+#yb-checkout * { box-sizing: border-box; }
+#yb-checkout h1, #yb-checkout h2, #yb-checkout h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  line-height: 1.15;
+}
+#yb-checkout p { line-height: 1.85; }
+
+/* ── Ornament ── */
+.yb-ornament {
+  display: flex; align-items: center; gap: 14px;
+  justify-content: center; margin: 32px 0;
+}
+.yb-ornament-line {
+  flex: 1; height: 1px; max-width: 80px;
+  background: linear-gradient(90deg, transparent, #C9A84C);
+}
+.yb-ornament-line:last-child {
+  background: linear-gradient(270deg, transparent, #C9A84C);
+}
+.yb-ornament-gem { color: #C9A84C; font-size: 14px; }
+
+/* ── Label ── */
+.yb-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: #C9A84C; display: block;
+  text-align: center; margin-bottom: 16px;
+}
+
+/* ── Hero ── */
+#yb-hero {
+  text-align: center;
+  padding: 48px 20px 40px;
+  background: linear-gradient(180deg, #FBF7F0 0%, #F2EBE0 100%);
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+#yb-hero h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  color: #1A1208;
+  margin: 0 0 16px;
+}
+#yb-hero h1 em {
+  font-style: italic;
+  background: linear-gradient(135deg, #9A7A10 0%, #C9A224 30%, #E8CE7A 60%, #C9A224 80%, #9A7A10 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+#yb-hero .yb-subtitle {
+  font-size: 16px; color: #5C4B35;
+  max-width: 560px; margin: 0 auto 28px;
+  line-height: 1.8;
+}
+#yb-hero .yb-price-tag {
+  display: inline-block;
+  background: #1C1208;
+  color: #C9A84C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 10px 24px; border-radius: 100px;
+  margin-bottom: 24px;
+}
+.yb-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #9A7A10, #C9A224, #E8CE7A, #C9A224, #9A7A10);
+  background-size: 200% auto;
+  color: #1C1208 !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 16px 36px; border-radius: 100px;
+  text-decoration: none;
+  transition: background-position 0.4s ease, transform 0.2s ease;
+  cursor: pointer; border: none;
+}
+.yb-btn:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+}
+
+/* ── Was bekommst du ── */
+#yb-inhalte {
+  margin-bottom: 40px;
+}
+#yb-inhalte h2 {
+  font-size: clamp(26px, 4vw, 40px);
+  text-align: center; margin-bottom: 28px;
+  color: #1A1208;
+}
+.yb-inhalte-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.yb-inhalt-card {
+  background: #fff;
+  border: 1px solid #E8DDD0;
+  border-top: 3px solid #C9A84C;
+  border-radius: 12px;
+  padding: 24px 20px;
+}
+.yb-inhalt-card .yb-inhalt-icon {
+  font-size: 24px; margin-bottom: 10px; display: block;
+}
+.yb-inhalt-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 400;
+  margin: 0 0 8px; color: #1A1208;
+}
+.yb-inhalt-card p {
+  font-size: 13px; color: #5C4B35;
+  margin: 0; line-height: 1.7;
+}
+
+/* ── Für wen ── */
+#yb-fuerwen {
+  background: linear-gradient(135deg, rgba(201,168,76,0.06), rgba(201,168,76,0.02));
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin-bottom: 40px;
+}
+#yb-fuerwen h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  margin: 0 0 24px; color: #1A1208;
+  text-align: center;
+}
+.yb-check-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.yb-check-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 14px; color: #2A1F0E; line-height: 1.7;
+}
+.yb-check-list li::before {
+  content: '✦';
+  color: #C9A84C; font-size: 12px;
+  flex-shrink: 0; margin-top: 3px;
+}
+
+/* ── Preis-Box ── */
+#yb-preis {
+  background: #1C1208;
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#yb-preis .yb-preis-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(201,168,76,0.7); display: block; margin-bottom: 16px;
+}
+#yb-preis .yb-preis-zahl {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 8vw, 80px);
+  font-weight: 300; color: #C9A84C;
+  line-height: 1; margin-bottom: 8px;
+}
+#yb-preis .yb-preis-zahl span {
+  font-size: 28px; vertical-align: top; margin-top: 12px; display: inline-block;
+}
+#yb-preis .yb-preis-info {
+  font-size: 13px; color: rgba(255,255,255,0.55);
+  margin-bottom: 28px; letter-spacing: 1px;
+}
+#yb-preis .yb-btn { font-size: 14px; padding: 18px 48px; }
+
+/* ── Testimonials ── */
+#yb-testimonials {
+  margin-bottom: 40px;
+}
+#yb-testimonials h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  text-align: center; margin-bottom: 28px; color: #1A1208;
+}
+.yb-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.yb-testimonial {
+  background: #fff;
+  border: 1px solid #E8DDD0;
+  border-radius: 14px;
+  padding: 24px 22px;
+}
+.yb-testimonial-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-style: italic;
+  line-height: 1.75; color: #2A1F0E;
+  margin: 0 0 16px;
+}
+.yb-testimonial-name {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #C9A84C;
+}
+
+/* ── FAQ ── */
+#yb-faq {
+  margin-bottom: 48px;
+}
+#yb-faq h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  text-align: center; margin-bottom: 24px; color: #1A1208;
+}
+.yb-faq-item {
+  border-bottom: 1px solid #E8DDD0;
+  padding: 20px 0;
+}
+.yb-faq-frage {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 400;
+  color: #1A1208; margin: 0 0 10px;
+}
+.yb-faq-antwort {
+  font-size: 14px; color: #5C4B35;
+  line-height: 1.8; margin: 0;
+}
+
+/* ── Garantie ── */
+#yb-garantie {
+  text-align: center;
+  padding: 28px;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 14px;
+  margin-bottom: 40px;
+}
+#yb-garantie p {
+  font-size: 14px; color: #5C4B35; margin: 0; line-height: 1.8;
+}
+#yb-garantie strong { color: #2A1F0E; }
+
+/* ── Trenner vor Checkout ── */
+#yb-checkout-trenner {
+  text-align: center;
+  margin: 40px 0 8px;
+}
+#yb-checkout-trenner p {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: #8A7260; margin: 0 0 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .yb-inhalte-grid,
+  .yb-testimonials-grid { grid-template-columns: 1fr; }
+  #yb-fuerwen { padding: 28px 20px; }
+  #yb-preis { padding: 32px 20px; }
+}
+</style>
+
+<!-- ═══ INHALT ═══ -->
+<div id="yb-checkout">
+
+  <!-- HERO -->
+  <div id="yb-hero">
+    <span class="yb-label">Your Balance · Susanne Wachter</span>
+    <h1><em>[KURSNAME]</em></h1>
+    <p class="yb-subtitle">[UNTERTITEL]<br>[KURZBESCHREIBUNG]</p>
+    <div class="yb-price-tag">Einmalig [PREIS] € · Kein Abo · Sofortiger Zugang</div><br>
+    <a href="#yb-checkout-form" class="yb-btn">Jetzt sichern ✦</a>
+  </div>
+
+  <!-- WAS BEKOMMST DU -->
+  <div id="yb-inhalte">
+    <h2>Das bekommst du</h2>
+    <div class="yb-inhalte-grid">
+
+      <div class="yb-inhalt-card">
+        <span class="yb-inhalt-icon">🎥</span>
+        <h4>[INHALT_1_TITEL]</h4>
+        <p>[INHALT_1_BESCHREIBUNG]</p>
+      </div>
+
+      <div class="yb-inhalt-card">
+        <span class="yb-inhalt-icon">📄</span>
+        <h4>[INHALT_2_TITEL]</h4>
+        <p>[INHALT_2_BESCHREIBUNG]</p>
+      </div>
+
+      <div class="yb-inhalt-card">
+        <span class="yb-inhalt-icon">✍️</span>
+        <h4>[INHALT_3_TITEL]</h4>
+        <p>[INHALT_3_BESCHREIBUNG]</p>
+      </div>
+
+      <div class="yb-inhalt-card">
+        <span class="yb-inhalt-icon">🎁</span>
+        <h4>[INHALT_4_TITEL]</h4>
+        <p>[INHALT_4_BESCHREIBUNG]</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FÜR WEN -->
+  <div id="yb-fuerwen">
+    <h2>Für dich – wenn du …</h2>
+    <ul class="yb-check-list">
+      <li>[FUER_WEN_1]</li>
+      <li>[FUER_WEN_2]</li>
+      <li>[FUER_WEN_3]</li>
+      <li>[FUER_WEN_4]</li>
+    </ul>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div id="yb-testimonials">
+    <h2>Was andere sagen</h2>
+    <div class="yb-testimonials-grid">
+
+      <div class="yb-testimonial">
+        <p class="yb-testimonial-text">„[TESTIMONIAL_1_TEXT]"</p>
+        <span class="yb-testimonial-name">[TESTIMONIAL_1_NAME]</span>
+      </div>
+
+      <div class="yb-testimonial">
+        <p class="yb-testimonial-text">„[TESTIMONIAL_2_TEXT]"</p>
+        <span class="yb-testimonial-name">[TESTIMONIAL_2_NAME]</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PREIS -->
+  <div id="yb-preis">
+    <span class="yb-preis-label">Deine Investition</span>
+    <div class="yb-preis-zahl"><span>€</span>[PREIS]</div>
+    <p class="yb-preis-info">Einmalig · Kein Abo · Für immer deins</p>
+    <a href="#yb-checkout-form" class="yb-btn">Jetzt [KURSNAME] sichern ✦</a>
+  </div>
+
+  <!-- FAQ -->
+  <div id="yb-faq">
+    <h2>Häufige Fragen</h2>
+
+    <div class="yb-faq-item">
+      <h3 class="yb-faq-frage">[FAQ_FRAGE_1]</h3>
+      <p class="yb-faq-antwort">[FAQ_ANTWORT_1]</p>
+    </div>
+
+    <div class="yb-faq-item">
+      <h3 class="yb-faq-frage">[FAQ_FRAGE_2]</h3>
+      <p class="yb-faq-antwort">[FAQ_ANTWORT_2]</p>
+    </div>
+
+    <div class="yb-faq-item">
+      <h3 class="yb-faq-frage">[FAQ_FRAGE_3]</h3>
+      <p class="yb-faq-antwort">[FAQ_ANTWORT_3]</p>
+    </div>
+
+  </div>
+
+  <!-- GARANTIE -->
+  <div id="yb-garantie">
+    <p>🔒 <strong>Sicher & geschützt.</strong> Deine Daten werden verschlüsselt übertragen.<br>
+    Bei Fragen erreichst du mich unter <strong>susanne@your-balance.at</strong></p>
+  </div>
+
+  <!-- TRENNER VOR CHECKOUT-FORMULAR -->
+  <div id="yb-checkout-trenner">
+    <div class="yb-ornament">
+      <div class="yb-ornament-line"></div>
+      <span class="yb-ornament-gem">✦</span>
+      <div class="yb-ornament-line"></div>
+    </div>
+    <p>Sichere Zahlung · SSL-verschlüsselt</p>
+  </div>
+
+  <!-- AB HIER KOMMT AUTOMATISCH DAS THRIVECART ZAHLUNGSFORMULAR -->
+
+</div>
+<!-- Ende #yb-checkout -->
