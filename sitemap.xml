@@ -3,7 +3,7 @@
 
   <!-- ═══ HAUPT-HUBS (höchste Priorität) ═══ -->
   <url>
-    <loc>https://your-balance.at/index.html</loc>
+    <loc>https://your-balance.at/</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
