@@ -12,3 +12,8 @@
 *.tmp
 *.log
 Thumbs.db
+
+# Internal documentation - nicht öffentlich
+Your-Balance-Branding-Guide.docx
+branding-guide.md
+thrivecart-vorlage.html
