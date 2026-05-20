@@ -767,10 +767,12 @@
 
   </style>
 
-  <!-- ═══ STRUCTURED DATA: LOCAL SERVICE (THETAHEALING VORARLBERG) ═══ -->
+  <!-- ═══ STRUCTURED DATA: LOCAL SERVICE + FAQPAGE ═══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@graph": [
+    {
     "@type": "Service",
     "@id": "https://your-balance.at/einzeltermine.html#service",
     "name": "ThetaHealing Vorarlberg – Einzeltermine",
@@ -805,6 +807,39 @@
         {"@type":"Offer","itemOffered":{"@type":"Service","name":"Bioresonanz","description":"Vor Ort in Nüziders, Vorarlberg – körperliche Frequenz-Regulation"}}
       ]
     }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://your-balance.at/einzeltermine.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie lange dauert ein ThetaHealing-Einzeltermin in Vorarlberg?",
+          "acceptedAnswer": {"@type":"Answer","text":"In der Regel 60 Minuten – für ThetaHealing®, Akasha Reading und Bioresonanz gleich. Damit hast du genug Zeit, um anzukommen, zu arbeiten und ruhig wieder zu gehen."}
+        },
+        {
+          "@type": "Question",
+          "name": "ThetaHealing, Akasha Reading oder Bioresonanz – welche Methode wähle ich?",
+          "acceptedAnswer": {"@type":"Answer","text":"Wenn dich ein inneres Muster festhält, das du verstanden, aber nicht aufgelöst hast, passt ThetaHealing®. Wenn du Orientierung suchst, ist Akasha Reading der richtige Weg. Wenn dein Körper deutlich reagiert, ist Bioresonanz vor Ort in Nüziders sinnvoll. Susanne Wachter empfiehlt dir das passende Format."}
+        },
+        {
+          "@type": "Question",
+          "name": "Funktioniert ThetaHealing online genauso wie vor Ort in Vorarlberg?",
+          "acceptedAnswer": {"@type":"Answer","text":"Ja, identisch. ThetaHealing® und Akasha Reading wirken energetisch – die Verbindung ist nicht an einen Raum gebunden. Nur Bioresonanz ist vor Ort in Nüziders (Vorarlberg) möglich."}
+        },
+        {
+          "@type": "Question",
+          "name": "Wie buche ich einen Termin bei Susanne Wachter?",
+          "acceptedAnswer": {"@type":"Answer","text":"Du wählst dein Format (ThetaHealing®, Akasha Reading oder Bioresonanz) und buchst direkt über den Kalender auf der jeweiligen Karte. Bezahlung erfolgt im Vorfeld online. Bei Unsicherheit kannst du Susanne Wachter über die Kontakt-Seite schreiben."}
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich einen Termin umbuchen oder absagen?",
+          "acceptedAnswer": {"@type":"Answer","text":"Ja. Umbuchungen sind bis 24 Stunden vor dem Termin möglich – direkt im Buchungslink oder per E-Mail an Susanne Wachter. Bei kurzfristigen Absagen wird der Termin in Rechnung gestellt."}
+        }
+      ]
+    }
+    ]
   }
   </script>
 </head>
@@ -1111,6 +1146,43 @@
         <li>Buchung und Bezahlung erfolgen im Vorfeld – du erhältst alle Details per Mail.</li>
         <li>Umbuchungen sind bis 24 Stunden vor dem Termin möglich.</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     FAQ – Häufige Fragen zum ThetaHealing-Termin in Vorarlberg
+════════════════════════════════════════════ -->
+<section class="section" style="background:var(--cream);">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto 56px;">
+      <span class="eyebrow" data-reveal>Häufige Fragen</span>
+      <div class="gold-line gold-line-center" data-reveal data-delay="1"></div>
+      <h2 class="h2" data-reveal data-delay="2">
+        ThetaHealing in Vorarlberg –<br /><em>deine Fragen.</em>
+      </h2>
+    </div>
+    <div style="max-width:760px;margin:0 auto;">
+      <div style="border-top:1px solid rgba(201,168,76,0.15);padding:28px 0;border-bottom:1px solid rgba(201,168,76,0.15);" data-reveal>
+        <h3 style="font-family:var(--serif);font-size:20px;font-weight:400;color:var(--text);margin-bottom:12px;">Wie lange dauert ein Einzeltermin?</h3>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.7;">In der Regel 60 Minuten – für ThetaHealing®, Akasha Reading und Bioresonanz gleich. Damit hast du genug Zeit, um anzukommen, zu arbeiten und ruhig wieder zu gehen.</p>
+      </div>
+      <div style="padding:28px 0;border-bottom:1px solid rgba(201,168,76,0.15);" data-reveal>
+        <h3 style="font-family:var(--serif);font-size:20px;font-weight:400;color:var(--text);margin-bottom:12px;">ThetaHealing, Akasha oder Bioresonanz – wie wähle ich?</h3>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.7;">Du musst nicht alleine entscheiden. Wenn dich ein inneres Muster festhält, das du verstanden, aber nicht aufgelöst hast, passt ThetaHealing®. Wenn du Orientierung suchst, ist Akasha Reading der richtige Weg. Wenn dein Körper deutlich reagiert, ist Bioresonanz vor Ort in Nüziders sinnvoll. Schreib einfach kurz, was los ist – Susanne empfiehlt dir das passende Format.</p>
+      </div>
+      <div style="padding:28px 0;border-bottom:1px solid rgba(201,168,76,0.15);" data-reveal>
+        <h3 style="font-family:var(--serif);font-size:20px;font-weight:400;color:var(--text);margin-bottom:12px;">Funktioniert ThetaHealing online genauso wie vor Ort in Vorarlberg?</h3>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.7;">Ja, identisch. ThetaHealing® und Akasha Reading wirken energetisch – die Verbindung ist nicht an einen Raum gebunden. Die meisten Klientinnen wählen online, weil es entspannter ist. Nur Bioresonanz ist vor Ort in Nüziders (Vorarlberg) möglich.</p>
+      </div>
+      <div style="padding:28px 0;border-bottom:1px solid rgba(201,168,76,0.15);" data-reveal>
+        <h3 style="font-family:var(--serif);font-size:20px;font-weight:400;color:var(--text);margin-bottom:12px;">Wie buche ich einen Termin?</h3>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.7;">Du wählst dein Format (ThetaHealing®, Akasha Reading oder Bioresonanz) und buchst direkt über den Kalender auf der jeweiligen Karte. Bezahlung erfolgt im Vorfeld online – du bekommst alle Details per Mail. Falls du dir unsicher bist, schreib Susanne über die Kontakt-Seite.</p>
+      </div>
+      <div style="padding:28px 0;" data-reveal>
+        <h3 style="font-family:var(--serif);font-size:20px;font-weight:400;color:var(--text);margin-bottom:12px;">Kann ich einen Termin umbuchen oder absagen?</h3>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.7;">Ja. Umbuchungen sind bis 24 Stunden vor dem Termin möglich – einfach direkt im Buchungslink oder per E-Mail. Bei kurzfristigen Absagen behalte ich mir vor, den Termin in Rechnung zu stellen.</p>
+      </div>
     </div>
   </div>
 </section>
