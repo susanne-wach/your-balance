@@ -132,7 +132,20 @@
     }
     .blog-read-more:hover { color: var(--gold-light); }
 
-    /* Featured post */
+    /* Karte als Link (für die neue Serie) */
+    .blog-card--link {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    .blog-card--link:hover .blog-read-more { color: var(--gold-light); }
+
+    /* Versteckt, bis Veröffentlichungs-Datum erreicht */
+    .blog-card[data-publish].is-scheduled { display: none; }
+    /* Versteckt, weil bereits im Featured promotet */
+    .blog-card.is-featured-hidden { display: none; }
+
+    /* Featured post – kompakt (halbe Höhe) */
     .blog-featured {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -142,14 +155,24 @@
       overflow: hidden;
       border: 1px solid rgba(207,172,94,0.12);
       margin-bottom: 64px;
+      max-height: 380px;
     }
-    .blog-featured-img { overflow: hidden; }
+    .blog-featured-img { overflow: hidden; max-height: 380px; }
     .blog-featured-img img { width: 100%; height: 100%; object-fit: cover; }
     .blog-featured-body {
-      padding: 56px 48px;
+      padding: 36px 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+    .blog-featured-body h2 {
+      font-size: clamp(20px, 2vw, 26px) !important;
+      margin-bottom: 12px !important;
+    }
+    .blog-featured-body p {
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+      margin-bottom: 20px !important;
     }
     .blog-featured-label {
       font-family: var(--sans);
@@ -190,8 +213,8 @@
 
     @media (max-width: 900px) {
       .blog-grid { grid-template-columns: 1fr; }
-      .blog-featured { grid-template-columns: 1fr; }
-      .blog-featured-img { aspect-ratio: 16/9; }
+      .blog-featured { grid-template-columns: 1fr; max-height: none; }
+      .blog-featured-img { aspect-ratio: 16/9; max-height: 280px; }
     }
 
     /* Dropdown nav */
@@ -355,6 +378,7 @@
     </div>
     <h1>Gedanken.<br /><em>Impulse. Einblicke.</em></h1>
     <p>Blog von Susanne Wachter rund um Seelenpartner, Selbstliebe, Nervensystem, energetische Ordnung und innere Veränderung.</p>
+    <p style="font-family:var(--sans);font-size:13px;color:var(--text-mid);margin-top:18px;letter-spacing:0.5px;">✦ Jeden <strong>Freitag um 18:00 Uhr</strong> erscheint ein neuer Beitrag</p>
     <h6 style="font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:24px 0 0;">Seelenpartner · Selbstliebe · Nervensystem · ThetaHealing® · Akasha · Bioresonanz</h6>
   </div>
 </section>
@@ -363,26 +387,26 @@
 <section class="section">
   <div class="container">
 
-    <!-- FEATURED -->
-    <div class="blog-featured">
+    <!-- FEATURED – wird per JavaScript dynamisch mit dem neuesten Beitrag befüllt -->
+    <a href="blog-warum-zieht-er-sich-zurueck.html" class="blog-featured" id="featured-post" style="text-decoration:none;color:inherit;display:grid;">
       <div class="blog-featured-img">
-        <img src="assets/images/blog-sehnsucht-seelenpartner.jpg" alt="Warum deine Sehnsucht nach dem Seelenpartner kein Zufall ist" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" />
+        <img id="featured-img" src="assets/images/susanne-couch-fragend.png" alt="Warum zieht er sich plötzlich zurück" style="width:100%;height:100%;object-fit:cover;object-position:center 18%;" />
       </div>
       <div class="blog-featured-body">
-        <div class="blog-featured-label">✦ Aktuell · Seelenpartner</div>
+        <div class="blog-featured-label" id="featured-label">✦ Aktuell · Seelenpartner</div>
         <div class="gold-line" style="margin-bottom:24px;"></div>
-        <h2 style="font-family:var(--serif);font-size:clamp(24px,2.5vw,34px);font-weight:400;color:var(--text);line-height:1.3;margin-bottom:16px;">
-          Warum deine Sehnsucht nach dem Seelenpartner kein Zufall ist
+        <h2 id="featured-title" style="font-family:var(--serif);font-size:clamp(24px,2.5vw,34px);font-weight:400;color:var(--text);line-height:1.3;margin-bottom:16px;">
+          Warum zieht er sich plötzlich zurück – obwohl alles schön war?
         </h2>
-        <p style="font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:28px;">
-          Manchmal spürst du dieses leise Ziehen im Brustkorb. Ein Sehnen, das du nicht erklären kannst. Du funktionierst im Alltag, du hast schon so viel erreicht – und doch bleibt da diese Lücke. Diese Sehnsucht ist kein Zufall. Sie ist der Ruf deiner Seele.
+        <p id="featured-excerpt" style="font-size:15px;color:var(--text-mid);line-height:1.7;margin-bottom:28px;">
+          Wenn plötzlich Distanz entsteht und du dich selbst verlierst – und nicht weißt, warum dich sein Rückzug so trifft. Wie du wieder emotionale Stabilität findest, ohne dein Herz verschließen zu müssen.
         </p>
         <div style="display:flex;align-items:center;justify-content:space-between;">
-          <span style="font-size:11px;color:var(--text-light);letter-spacing:1px;">April 2025</span>
-          <a href="blog-sehnsucht-seelenpartner.html" class="btn btn-gold btn-arrow btn-sm" data-magnetic>Weiterlesen</a>
+          <span id="featured-date" style="font-size:11px;color:var(--text-light);letter-spacing:1px;">SA. 23. MAI 2026</span>
+          <span class="btn btn-gold btn-arrow btn-sm" data-magnetic>Weiterlesen</span>
         </div>
       </div>
-    </div>
+    </a>
 
     <!-- FILTER -->
     <div class="filter-bar">
@@ -398,6 +422,176 @@
 
     <!-- BLOG GRID -->
     <div class="blog-grid">
+
+      <!-- ═══ Neue Serie: 10 Beiträge mit data-publish ═══ -->
+      <!-- Karten mit data-publish in der Zukunft werden per JS ausgeblendet.
+           Die jeweils jüngste veröffentlichte Karte promoviert per JS automatisch ins Featured. -->
+
+      <a href="blog-warum-zieht-er-sich-zurueck.html" class="blog-card blog-card--link" data-publish="2026-05-23T00:00:00+02:00" data-cat="Seelenpartner">
+        <div class="blog-card-img">
+          <img src="assets/images/susanne-couch-fragend.png" alt="Warum zieht er sich plötzlich zurück" style="width:100%;height:100%;object-fit:cover;object-position:center 18%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Seelenpartner</div>
+          <h3 class="blog-card-title">Warum zieht er sich plötzlich zurück – obwohl alles schön war?</h3>
+          <p class="blog-card-excerpt">Wenn plötzlich Distanz entsteht und du dich selbst verlierst – und nicht weißt, warum dich sein Rückzug so trifft.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Sa. 23. Mai 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog-funkstille-triggert-nervensystem.html" class="blog-card blog-card--link" data-publish="2026-05-29T18:00:00+02:00" data-cat="Nervensystem">
+        <div class="blog-card-img">
+          <img src="assets/images/susanne-bett-handy.png" alt="Warum triggert mich Funkstille so extrem" style="width:100%;height:100%;object-fit:cover;object-position:center 38%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Nervensystem</div>
+          <h3 class="blog-card-title">Warum triggert mich Funkstille so extrem? Die Wahrheit über dein Nervensystem</h3>
+          <p class="blog-card-excerpt">Was in deinem Nervensystem passiert, wenn keine Nachricht kommt – und wie du wieder Sicherheit in dir findest.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Fr. 29. Mai 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog-emotionale-abhaengigkeit-loesen.html" class="blog-card blog-card--link" data-publish="2026-06-05T18:00:00+02:00" data-cat="Seelenpartner">
+        <div class="blog-card-img">
+          <img src="assets/images/susanne-blumenwiese.jpg" alt="Emotionale Abhängigkeit lösen" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Seelenpartner</div>
+          <h3 class="blog-card-title">Emotionale Abhängigkeit lösen – ohne dein Herz verschließen zu müssen</h3>
+          <p class="blog-card-excerpt">Du musst dich nicht zwischen Liebe und dir selbst entscheiden. Wie du dich aus emotionaler Abhängigkeit löst – ohne hart zu werden.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Fr. 5. Juni 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog-emotional-nicht-loslassen.html" class="blog-card blog-card--link" data-publish="2026-06-12T18:00:00+02:00" data-cat="Seelenpartner">
+        <div class="blog-card-img">
+          <img src="assets/images/frau-felsen-see.png" alt="Emotional nicht loslassen" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Seelenpartner</div>
+          <h3 class="blog-card-title">Warum kann ich ihn emotional nicht loslassen – obwohl ich weiß, dass es mir nicht guttut?</h3>
+          <p class="blog-card-excerpt">Warum dein Körper anders entscheidet als dein Verstand – und was wirklich hilft, wenn Loslassen sich wie Verlust anfühlt.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Fr. 12. Juni 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog-seelenpartner-oder-emotionale-abhaengigkeit.html" class="blog-card blog-card--link" data-publish="2026-06-19T18:00:00+02:00" data-cat="Seelenpartner">
+        <div class="blog-card-img">
+          <img src="assets/images/couple-stars-moon.jpg" alt="Seelenpartner oder emotionale Abhängigkeit" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Seelenpartner</div>
+          <h3 class="blog-card-title">Seelenpartner oder emotionale Abhängigkeit? Der Unterschied, den kaum jemand erklärt</h3>
+          <p class="blog-card-excerpt">Beides fühlt sich tief an. Beides fühlt sich besonders an. Wie du den entscheidenden Unterschied erkennst.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Fr. 19. Juni 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog-nicht-auf-nachricht-warten.html" class="blog-card blog-card--link" data-publish="2026-06-26T18:00:00+02:00" data-cat="Nervensystem">
+        <div class="blog-card-img">
+          <img src="assets/images/frau-bett-handy.png" alt="Auf seine Nachricht warten" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Nervensystem</div>
+          <h3 class="blog-card-title">Wie du aufhörst, ständig auf eine Nachricht von ihm zu warten</h3>
+          <p class="blog-card-excerpt">Du schaust ständig aufs Handy und es kommt nichts? So unterbrichst du den Automatismus und holst deinen inneren Frieden zurück.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Fr. 26. Juni 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog-erfolgreiche-frauen-emotionale-abhaengigkeit.html" class="blog-card blog-card--link" data-publish="2026-07-03T18:00:00+02:00" data-cat="Persönlichkeit">
+        <div class="blog-card-img">
+          <img src="assets/images/susanne-business.jpg" alt="Erfolgreiche Frauen in emotionalen Beziehungen" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Persönlichkeit</div>
+          <h3 class="blog-card-title">Warum erfolgreiche Frauen sich besonders schnell in emotionalen Beziehungen verlieren</h3>
+          <p class="blog-card-excerpt">Im Job klar und strukturiert – und in der Liebe verloren? Warum gerade erfolgreiche Frauen besonders anfällig sind.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Fr. 3. Juli 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog-nervensystem-beruhigen.html" class="blog-card blog-card--link" data-publish="2026-07-10T18:00:00+02:00" data-cat="Nervensystem">
+        <div class="blog-card-img">
+          <img src="assets/images/susanne-couch-meditation.png" alt="Nervensystem beruhigen" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Nervensystem</div>
+          <h3 class="blog-card-title">Wie du dein Nervensystem beruhigst, wenn er sich zurückzieht</h3>
+          <p class="blog-card-excerpt">Konkrete Übungen, wenn dein System im Alarm ist. Sanft. Sofort umsetzbar. Wirkungsvoll.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Fr. 10. Juli 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog-on-off-beziehungen-wahrheit.html" class="blog-card blog-card--link" data-publish="2026-07-17T18:00:00+02:00" data-cat="Seelenpartner">
+        <div class="blog-card-img">
+          <img src="assets/images/susanne-bergsee-portrait.png" alt="On-Off-Beziehungen" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Seelenpartner</div>
+          <h3 class="blog-card-title">Die Wahrheit über On-Off-Beziehungen: Warum du emotional nicht rauskommst</h3>
+          <p class="blog-card-excerpt">Es ist aus. Wieder. Dann meldet er sich. Warum dein System nicht rauskommt – und was wirklich verändert.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Fr. 17. Juli 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog-loslassen-aber-verbindung-nicht-verlieren.html" class="blog-card blog-card--link" data-publish="2026-07-24T18:00:00+02:00" data-cat="Seelenpartner">
+        <div class="blog-card-img">
+          <img src="assets/images/couple-gras-intim.jpg" alt="Loslassen, aber Verbindung nicht verlieren" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Seelenpartner</div>
+          <h3 class="blog-card-title">Ich will loslassen – aber ich will die Verbindung nicht verlieren</h3>
+          <p class="blog-card-excerpt">Du musst dich nicht entscheiden zwischen Loslassen und Verbindung. Wie du beides darfst – gleichzeitig.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">Fr. 24. Juli 2026</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ═══ Sehnsucht Seelenpartner (war vorher Featured) ═══ -->
+      <a href="blog-sehnsucht-seelenpartner.html" class="blog-card blog-card--link" data-cat="Seelenpartner">
+        <div class="blog-card-img">
+          <img src="assets/images/blog-sehnsucht-seelenpartner.jpg" alt="Warum deine Sehnsucht nach dem Seelenpartner kein Zufall ist" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" />
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-cat">Seelenpartner</div>
+          <h3 class="blog-card-title">Warum deine Sehnsucht nach dem Seelenpartner kein Zufall ist</h3>
+          <p class="blog-card-excerpt">Manchmal spürst du dieses leise Ziehen im Brustkorb. Ein Sehnen, das du nicht erklären kannst. Diese Sehnsucht ist kein Zufall – sie ist der Ruf deiner Seele.</p>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">April 2025</span>
+            <span class="blog-read-more">Lesen →</span>
+          </div>
+        </div>
+      </a>
 
       <div class="blog-card" data-cat="Selbstliebe">
         <div class="blog-card-img">
@@ -664,6 +858,60 @@
 </section>
 
 <script>
+/* ════════════════════════════════════════════
+   ZEITGESTEUERTE VERÖFFENTLICHUNG
+   • Karten mit data-publish in der Zukunft werden ausgeblendet
+   • Der jüngste veröffentlichte Beitrag wird automatisch ins
+     "große erste Feld" (Featured) promoviert
+   • Jeden Freitag um 18:00 Uhr erscheint dort automatisch der neue
+════════════════════════════════════════════ */
+(function() {
+  var now = Date.now();
+  var allTimed = document.querySelectorAll('.blog-card[data-publish]');
+
+  // 1) Zukünftige Karten ausblenden
+  allTimed.forEach(function(card) {
+    var pub = new Date(card.dataset.publish).getTime();
+    if (pub > now) card.classList.add('is-scheduled');
+  });
+
+  // 2) Jüngsten veröffentlichten Beitrag finden
+  var published = Array.prototype.filter.call(allTimed, function(c) {
+    return new Date(c.dataset.publish).getTime() <= now;
+  });
+  if (!published.length) return;
+  published.sort(function(a, b) {
+    return new Date(b.dataset.publish).getTime() - new Date(a.dataset.publish).getTime();
+  });
+  var latest = published[0];
+
+  // 3) Featured-Block mit Inhalten der jüngsten Karte befüllen
+  var featured = document.getElementById('featured-post');
+  if (!featured) return;
+
+  var img = latest.querySelector('.blog-card-img img');
+  var cat = latest.querySelector('.blog-card-cat');
+  var title = latest.querySelector('.blog-card-title');
+  var excerpt = latest.querySelector('.blog-card-excerpt');
+  var date = latest.querySelector('.blog-card-date');
+
+  featured.setAttribute('href', latest.getAttribute('href'));
+  var fImg = document.getElementById('featured-img');
+  fImg.src = img.src;
+  fImg.alt = img.alt;
+  fImg.style.objectPosition = img.style.objectPosition || 'center';
+  document.getElementById('featured-label').textContent = '✦ Aktuell · ' + cat.textContent;
+  document.getElementById('featured-title').textContent = title.textContent;
+  document.getElementById('featured-excerpt').textContent = excerpt.textContent;
+  document.getElementById('featured-date').textContent = date.textContent.toUpperCase();
+
+  // 4) Diese Karte aus dem Grid ausblenden (damit sie nicht doppelt erscheint)
+  latest.classList.add('is-featured-hidden');
+})();
+
+/* ════════════════════════════════════════════
+   FILTER nach Kategorie
+════════════════════════════════════════════ */
 (function() {
   var btns = document.querySelectorAll('.filter-btn');
   var cards = document.querySelectorAll('.blog-card');
@@ -673,6 +921,10 @@
       this.classList.add('active');
       var cat = this.textContent.trim();
       cards.forEach(function(card) {
+        // Karten in is-scheduled/is-featured-hidden bleiben versteckt
+        if (card.classList.contains('is-scheduled') || card.classList.contains('is-featured-hidden')) {
+          return;
+        }
         if (cat === 'Alle' || card.dataset.cat === cat) {
           card.style.display = '';
         } else {
