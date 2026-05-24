@@ -310,6 +310,53 @@
   }
   .btn-outline::after { content: ''; }
 
+  /* PROSE */
+  .prose {
+    max-width: 580px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  .prose p {
+    font-family: var(--serif);
+    font-size: clamp(17px, 2.2vw, 20px);
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--text-mid);
+    margin-bottom: 24px;
+  }
+  .prose p em {
+    font-style: italic;
+    color: var(--text);
+    font-weight: 400;
+  }
+  .prose .statement {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.8vw, 26px);
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 32px 0;
+  }
+
+  /* PROGRAM CARD */
+  .card-program { margin-top: 0; }
+  .card-program .card-title {
+    font-size: clamp(22px, 3vw, 30px);
+    margin-bottom: 20px;
+  }
+  .card-nudge {
+    font-family: var(--serif) !important;
+    font-size: clamp(17px, 2vw, 20px) !important;
+    font-style: normal;
+    color: var(--text-mid) !important;
+    margin-top: 24px !important;
+    line-height: 1.7 !important;
+  }
+  .card-nudge em {
+    font-style: italic;
+    color: var(--text);
+  }
+
   /* ORNAMENT */
   .ornament {
     display: flex;
@@ -396,29 +443,98 @@
   <section class="body-section">
     <div class="body-inner">
 
+      <!-- PDF unterwegs -->
       <div class="card">
-        <p class="card-title">Deine <em>Emotional Stability Analyse™</em><br>ist auf dem Weg zu dir.</p>
-        <p>In wenigen Minuten erh&auml;ltst du eine E-Mail mit dem pers&ouml;nlichen Link zu deiner Emotional Stability Analyse™.</p>
-
+        <p class="card-title">🌙 Bevor du weitergehst &hellip;</p>
+        <p>Deine pers&ouml;nliche Auswertung ist gerade unterwegs zu dir.<br>
+        Du findest sie in den n&auml;chsten Minuten in deinem Postfach &mdash;<br>
+        als PDF, in Ruhe f&uuml;r dich zum Lesen.</p>
         <div class="info-box">
           <span class="info-icon">📬</span>
-          <p><strong>Schau auch im Spam-Ordner nach</strong>, falls die Mail nicht innerhalb von 5 Minuten ankommt. Manchmal landet sie dort.</p>
+          <p>Falls die Mail nicht innerhalb von 10 Minuten ankommt,<br>schau bitte auch in deinem <strong>Spam- oder Werbe-Ordner</strong> nach.</p>
         </div>
+      </div>
 
-        <p class="contact-line" style="margin-top:22px;">
-          Bei Fragen: <a href="mailto:susanne@your-balance.at">susanne@your-balance.at</a>
-        </p>
+      <!-- Emotionaler Text -->
+      <div class="prose">
+        <p>m&ouml;chte ich dir zuerst etwas sagen:</p>
+
+        <p class="statement">Mit dir stimmt nichts nicht.</p>
+
+        <p>Wirklich nicht.<br>Und ich meine das genau so.</p>
+
+        <p>Vielleicht hast du dich gerade in deinem Ergebnis sehr erkannt.<br>
+        Vielleicht sogar mehr, als dir lieb war.</p>
+
+        <p>Vielleicht hast du zum ersten Mal verstanden:<br>
+        <em>&bdquo;Oh wow &hellip; genau DAS passiert gerade in mir.&ldquo;</em></p>
+
+        <p>Warum du feh&auml;ngst.<br>
+        Warum Funkstille dich so destabilisiert.<br>
+        Warum Loslassen sich so schwer anf&uuml;hlt.</p>
+
+        <p>Und vielleicht auch:<br>
+        warum du dich selbst gerade ein St&uuml;ck verloren f&uuml;hlst.</p>
+
+        <p>Aber bitte h&ouml;re mich hier:</p>
+
+        <p class="statement">Du bist nicht kaputt.<br>Nicht schwach.<br>Nicht &bdquo;zu sensibel&ldquo;.<br>Und auch nicht falsch.</p>
+
+        <p>Gerade feinfühlige Frauen erleben emotionale Verbindung unglaublich tief.<br>
+        Und genau deshalb kann R&uuml;ckzug sich anf&uuml;hlen,<br>
+        als w&uuml;rde innerlich etwas zusammenbrechen.</p>
+
+        <p>Vor allem,<br>
+        wenn dein Nervensystem seit l&auml;ngerer Zeit versucht,<br>
+        Sicherheit zur&uuml;ckzubekommen.</p>
+
+        <p>Und vielleicht merkst du gerade:<br>
+        <em>&bdquo;Ich m&ouml;chte so nicht weitermachen.&ldquo;</em></p>
+
+        <p>Nicht weiter warten.<br>
+        Nicht weiter hoffen.<br>
+        Nicht weiter dich selbst verlieren.</p>
+
+        <p>Und wei&szlig;t du was?<br>
+        Das musst du auch nicht.</p>
+
+        <p>Denn Ver&auml;nderung beginnt nicht damit,<br>
+        dass du pl&ouml;tzlich nichts mehr f&uuml;hlst.<br>
+        Oder h&auml;rter wirst.</p>
+
+        <p>Sondern:<br>
+        Wenn du lernst, bei dir zu bleiben &mdash; auch wenn du f&uuml;hlst.</p>
+
+        <p>Und genau deshalb m&ouml;chte ich dir etwas zeigen.</p>
+
+        <p>Ein Weg zur&uuml;ck zu dir.<br>
+        Nicht &uuml;ber Druck.<br>
+        Nicht &uuml;ber toxische Positivit&auml;t.<br>
+        Nicht &uuml;ber: &bdquo;Vergiss ihn einfach.&ldquo;</p>
+
+        <p>Sondern &uuml;ber echte emotionale Sicherheit.</p>
+      </div>
+
+      <!-- Programm-Card -->
+      <div class="card card-program">
+        <p class="card-title">🌿 From Heartbreak To Her</p>
+        <p>Ein gesch&uuml;tzter Raum f&uuml;r feinfühlige Frauen,<br>
+        die sich aus emotionaler Abh&auml;ngigkeit, Funkstille und Selbstverlust l&ouml;sen m&ouml;chten &mdash;<br>
+        ohne ihr Herz verschlie&szlig;en zu m&uuml;ssen.</p>
+
+        <p class="card-nudge">👇 Wenn du sp&uuml;rst:<br>
+        <em>&bdquo;Ich m&ouml;chte mich nicht l&auml;nger verlieren.&ldquo;</em><br><br>
+        Dann schau dir hier den n&auml;chsten Schritt an:</p>
+
+        <div class="cta-wrap" style="margin-top: 28px; margin-bottom: 0;">
+          <a href="https://your-balance.thrivecart.com/from-heartbreak-to-her/" class="btn" target="_blank" rel="noopener">Mehr erfahren</a>
+        </div>
       </div>
 
       <div class="signature-block">
         <div class="from">Von Herzen,</div>
         <div class="name">Susanne</div>
         <div class="brand">Your Balance</div>
-      </div>
-
-      <div class="cta-wrap">
-        <a href="https://www.your-balance.at" class="btn">Zur&uuml;ck zu Your Balance</a>
-        <a href="blog.html" class="btn btn-outline">Zum Blog</a>
       </div>
 
       <div class="ornament">
