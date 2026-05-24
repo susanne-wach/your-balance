@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Vielen Dank für deinen Kauf · Your Balance</title>
+<link rel="icon" type="image/png" href="assets/images/favicon-neu.png">
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NPPS5VX6GB');
+  gtag('event', 'purchase', { currency: 'EUR', transaction_id: Date.now().toString() });
+</script>
+
+<!-- META PIXEL -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '626079095228912');
+  fbq('track', 'PageView');
+  fbq('track', 'Purchase', { currency: 'EUR', value: 0 });
+</script>
+<noscript><img height="1" width="1"
+  style="display:none" src="https://www.facebook.com/tr?id=626079095228912&ev=PageView&noscript=1"/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --cream:      #FBF7F0;
+    --dark:       #1C1208;
+    --gold:       #C9A84C;
+    --gold-pale:  #E8D08A;
+    --text:       #2A1F0E;
+    --text-mid:   #5C4B35;
+    --text-light: #8A7260;
+    --white:      #FFFFFF;
+    --serif:      'Cormorant Garamond', Georgia, serif;
+    --sans:       'Montserrat', sans-serif;
+    --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(160deg, #3A2810 0%, #2A1C0A 60%, #1C1208 100%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; height: 500px;
+    background: radial-gradient(ellipse, rgba(201,168,76,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 80px;
+    background: linear-gradient(to top, var(--cream) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .hero-logo {
+    display: block;
+    margin: 0 auto 32px;
+    height: 60px;
+    width: auto;
+    opacity: 0.95;
+  }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-pale);
+    display: block;
+    margin-bottom: 20px;
+  }
+  .gold-line {
+    width: 48px;
+    height: 1.5px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-pale));
+    border-radius: 2px;
+    margin: 0 auto 28px;
+  }
+  .sparkle {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+    line-height: 1;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  /* BODY */
+  .body-section {
+    flex: 1;
+    padding: 72px 0 56px;
+    background: var(--cream);
+  }
+  .body-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 32px;
+    text-align: center;
+  }
+
+  /* MAIN CARD */
+  .card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 48px 48px 40px;
+    border: 1px solid rgba(201,168,76,0.18);
+    box-shadow: 0 8px 40px rgba(42,31,14,0.07);
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-pale), var(--gold));
+    border-radius: 20px 20px 0 0;
+  }
+  .card-title {
+    font-family: var(--serif);
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  .card-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .card p {
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 0;
+  }
+
+  /* INFO BOX */
+  .info-box {
+    background: rgba(201,168,76,0.07);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .info-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .info-box p {
+    font-size: 14px !important;
+    color: var(--text-mid) !important;
+    margin: 0 !important;
+    line-height: 1.7 !important;
+  }
+
+  /* CONTACT */
+  .contact-line {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 28px;
+  }
+  .contact-line a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .contact-line a:hover { color: var(--text); }
+
+  /* SIGNATURE */
+  .signature-block {
+    text-align: center;
+    margin: 44px 0 40px;
+  }
+  .signature-block .from {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .signature-block .name {
+    font-family: var(--serif);
+    font-size: 38px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .signature-block .brand {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  /* CTA */
+  .cta-wrap { text-align: center; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 44px;
+    border-radius: 50px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--gold), #A8872A);
+    box-shadow: 0 6px 28px rgba(201,168,76,0.35);
+    text-decoration: none;
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+  }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(201,168,76,0.5);
+  }
+  .btn::after { content: '\2192'; font-size: 14px; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--dark);
+    padding: 32px 0;
+    text-align: center;
+  }
+  .footer-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .footer-tagline {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .footer-info {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.8;
+  }
+  .footer-info a {
+    color: var(--gold-pale);
+    text-decoration: none;
+  }
+  .footer-info a:hover { color: var(--gold); }
+  .footer-divider {
+    width: 36px; height: 1px;
+    background: rgba(201,168,76,0.25);
+    margin: 12px auto;
+  }
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(255,255,255,0.2);
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 90px 0 60px; }
+    .card { padding: 32px 24px 28px; }
+    .body-section { padding: 48px 0 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <img class="hero-logo"
+      src="https://your-balance61093.activehosted.com/content/JPnYM3/2024/10/30/76ad3083-a219-4d0e-9aad-d2080a54e48a.png?id=376146"
+      alt="Your Balance">
+    <span class="eyebrow">Bestellung best&auml;tigt</span>
+    <div class="gold-line"></div>
+    <span class="sparkle">&#10024;</span>
+    <h1>Vielen Dank f&uuml;r<br><em>deinen Kauf!</em></h1>
+  </div>
+</section>
+
+<!-- BODY -->
+<section class="body-section">
+  <div class="body-inner">
+
+    <div class="card">
+      <h2 class="card-title">Deine <em>Emotional Stability Analyse&trade;</em><br>ist auf dem Weg zu dir.</h2>
+      <p>
+        In wenigen Minuten erh&auml;ltst du eine E-Mail mit dem pers&ouml;nlichen
+        Link zu deiner Emotional Stability Analyse&trade;.
+      </p>
+
+      <div class="info-box">
+        <span class="info-icon">📬</span>
+        <p>
+          <strong>Schau auch im Spam-Ordner nach</strong>, falls die Mail nicht innerhalb
+          von 5 Minuten ankommt. Manchmal landet sie dort.
+        </p>
+      </div>
+
+      <p class="contact-line">
+        Bei Fragen: <a href="mailto:susanne@your-balance.at">susanne@your-balance.at</a>
+      </p>
+    </div>
+
+    <div class="signature-block">
+      <div class="from">Von Herzen,</div>
+      <div class="name">Susanne</div>
+      <div class="brand">Your Balance</div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="https://your-balance.at" class="btn">Zur&uuml;ck zu Your Balance</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-tagline">Your Balance &middot; Susanne Wachter</div>
+    <div class="footer-info">
+      N&uuml;ziders, Vorarlberg
+      <div class="footer-divider"></div>
+      <a href="https://your-balance.at">www.your-balance.at</a> &middot;
+      <a href="mailto:susanne@your-balance.at">susanne@your-balance.at</a>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-copy">&copy; 2026 Your Balance. Alle Rechte vorbehalten.</div>
+  </div>
+</footer>
+
+</body>
+</html>
