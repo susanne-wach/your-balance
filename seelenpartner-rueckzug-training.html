@@ -71,10 +71,11 @@
 
   /* ── HERO ── */
   .hero {
-    padding: 80px 0 0;
+    padding: 80px 0 80px;
     background: linear-gradient(160deg, var(--dark) 0%, var(--dark-deep) 60%, var(--dark-deeper) 100%);
     position: relative;
     overflow: hidden;
+    text-align: center;
   }
   .hero::before {
     content: '';
@@ -85,24 +86,27 @@
     background: radial-gradient(ellipse, rgba(207,172,94,0.14) 0%, transparent 70%);
     pointer-events: none;
   }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 80px;
+    background: linear-gradient(to top, var(--cream) 0%, transparent 100%);
+    pointer-events: none;
+  }
   .hero-inner {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 720px;
     margin: 0 auto;
     padding: 0 32px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-    padding-bottom: 80px;
   }
   .hero-logo {
     display: block;
-    height: 48px;
+    height: 52px;
     width: auto;
     opacity: 0.9;
-    margin-bottom: 36px;
+    margin: 0 auto 36px;
   }
   .eyebrow {
     font-family: var(--sans);
@@ -118,7 +122,7 @@
     width: 40px; height: 1.5px;
     background: linear-gradient(90deg, var(--gold), var(--gold-pale));
     border-radius: 2px;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
   }
   .hero h1 {
     font-family: var(--serif);
@@ -167,7 +171,10 @@
   .hero-benefits {
     list-style: none;
     padding: 0;
-    margin-bottom: 32px;
+    margin: 0 auto 32px;
+    max-width: 480px;
+    text-align: left;
+    display: inline-block;
   }
   .hero-benefits li {
     font-family: var(--sans);
@@ -200,14 +207,19 @@
     line-height: 1.5;
   }
 
-  /* ── FORM COLUMN ── */
-  .form-col { padding-top: 8px; }
+  /* ── FORM SECTION ── */
+  .form-section {
+    background: var(--cream);
+    padding: 0 32px 60px;
+  }
   .form-card {
     background: var(--white);
     border-radius: 20px;
-    padding: 36px 32px 32px;
-    box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+    padding: 44px 44px 36px;
+    box-shadow: 0 16px 60px rgba(91,42,74,0.12);
     position: relative;
+    max-width: 520px;
+    margin: -48px auto 0;
   }
   .form-card::before {
     content: '';
@@ -468,16 +480,12 @@
   }
 
   /* Responsive */
-  @media (max-width: 700px) {
-    .hero-inner {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding-bottom: 0;
-    }
-    .form-col { padding-bottom: 60px; }
-    .hero h1 { font-size: 30px; }
-    .form-card { padding: 28px 24px; }
+  @media (max-width: 600px) {
+    .hero { padding: 60px 0 60px; }
+    .hero h1 { font-size: 28px; }
+    .form-card { padding: 28px 20px; margin-top: -32px; }
     .objection-card { padding: 28px 24px; }
+    .hero-benefits { display: block; }
   }
 </style>
 </head>
@@ -486,85 +494,80 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
+      <img class="hero-logo" src="assets/images/logo-neu-dunkel.png" alt="Your Balance">
+      <span class="eyebrow">Kostenloses Training</span>
+      <div class="gold-line"></div>
 
-      <!-- Left: Copy -->
-      <div class="hero-copy">
-        <img class="hero-logo" src="assets/images/logo-neu-dunkel.png" alt="Your Balance">
-        <span class="eyebrow">Kostenloses Training</span>
-        <div class="gold-line"></div>
+      <h1>Die Wahrheit über<br><em>Seelenpartner-Rückzug</em></h1>
+      <p class="hero-tagline">Warum du emotional festhängst &mdash;<br>obwohl dein Verstand längst weiter will</p>
 
-        <h1>Die Wahrheit über<br><em>Seelenpartner-Rückzug</em></h1>
-        <p class="hero-tagline">Warum du emotional festhängst &mdash;<br>obwohl dein Verstand längst weiter will</p>
+      <p class="hero-intro">Wenn du dich gerade fragst:</p>
+      <p class="hero-question">&bdquo;Warum betrifft mich das so extrem?&ldquo;<br>oder<br>&bdquo;Warum komme ich emotional einfach nicht frei?&ldquo;</p>
 
-        <p class="hero-intro">Wenn du dich gerade fragst:</p>
-        <p class="hero-question">&bdquo;Warum betrifft mich das so extrem?&ldquo;<br>oder<br>&bdquo;Warum komme ich emotional einfach nicht frei?&ldquo;</p>
+      <p class="hero-body">Dann bist du nicht allein.<br>Und vor allem: <strong style="color: var(--white); font-weight: 500;">Mit dir stimmt nichts nicht.</strong></p>
 
-        <p class="hero-body">Dann bist du nicht allein.<br>Und vor allem: <strong style="color: var(--white); font-weight: 500;">Mit dir stimmt nichts nicht.</strong></p>
+      <p class="hero-body" style="margin-bottom: 20px;">In diesem kostenlosen Training verstehst du:</p>
 
-        <p class="hero-body" style="margin-bottom: 20px;">In diesem kostenlosen Training verstehst du:</p>
+      <ul class="hero-benefits">
+        <li>warum Funkstille sich emotional und körperlich so belastend anf&uuml;hlt</li>
+        <li>warum du emotional festhängst &mdash; obwohl du es rational l&auml;ngst verstanden hast</li>
+        <li>warum Verstehen allein oft nicht reicht</li>
+        <li>wie du Schritt f&uuml;r Schritt zur&uuml;ck in emotionale Sicherheit findest</li>
+      </ul>
 
-        <ul class="hero-benefits">
-          <li>warum Funkstille sich emotional und körperlich so belastend anfühlt</li>
-          <li>warum du emotional festhängst &mdash; obwohl du es rational längst verstanden hast</li>
-          <li>warum Verstehen allein oft nicht reicht</li>
-          <li>wie du Schritt für Schritt zurück in emotionale Sicherheit findest</li>
-        </ul>
+      <p class="hero-not">Nicht: &bdquo;Vergiss ihn einfach.&ldquo;</p>
+      <p class="hero-not" style="margin-bottom: 16px;">Nicht: toxische Hoffnung.</p>
+      <p class="hero-yes">Sondern: Tiefe, Verst&auml;ndnis und echte Orientierung.</p>
+    </div>
+  </section>
 
-        <p class="hero-not">Nicht: &bdquo;Vergiss ihn einfach.&ldquo;</p>
-        <p class="hero-not" style="margin-bottom: 16px;">Nicht: toxische Hoffnung.</p>
-        <p class="hero-yes">Sondern: Tiefe, Verständnis<br>und echte Orientierung.</p>
-      </div>
+  <!-- FORM SECTION -->
+  <section class="form-section">
+    <div class="form-card">
+      <span class="form-card-label">Kostenlos ansehen</span>
+      <h2>Sofortiger Zugang<br>zum Training</h2>
+      <p class="form-card-sub">Trage deinen Vornamen und deine E-Mail ein<br>und erhalte sofort Zugang.</p>
 
-      <!-- Right: Form -->
-      <div class="form-col">
-        <div class="form-card">
-          <span class="form-card-label">Kostenlos ansehen</span>
-          <h2>Sofortiger Zugang<br>zum Training</h2>
-          <p class="form-card-sub">Trage deinen Vornamen und deine E-Mail ein und erhalte sofort Zugang.</p>
-
-          <!-- ActiveCampaign Form -->
-          <form method="POST" action="https://your-balance61093.activehosted.com/proc.php" id="_form_31_" class="_form _form_31 _inline-form _dark" novalidate data-styles-version="5">
-            <input type="hidden" name="u" value="31" />
-            <input type="hidden" name="f" value="31" />
-            <input type="hidden" name="s" />
-            <input type="hidden" name="c" value="0" />
-            <input type="hidden" name="m" value="0" />
-            <input type="hidden" name="act" value="sub" />
-            <input type="hidden" name="v" value="2" />
-            <input type="hidden" name="or" value="bc656c7a-8620-434e-be22-e5905b9b915e" />
-            <div class="_form-content">
-              <div class="_form_element _x49125066 _full_width">
-                <label for="firstname" class="_form-label">Vorname</label>
-                <div class="_field-wrapper">
-                  <input type="text" id="firstname" name="firstname" placeholder="Dein Vorname" />
-                </div>
-              </div>
-              <div class="_form_element _x52012701 _full_width">
-                <label for="email" class="_form-label">E-Mail<span class="field-required">*</span></label>
-                <div class="_field-wrapper">
-                  <input type="text" id="email" name="email" placeholder="deine@email.com" required />
-                </div>
-              </div>
-              <div class="_button-wrapper _full_width">
-                <button id="_form_31_submit" class="_submit" type="submit">
-                  ✨ Ja — ich möchte das kostenlose Training ansehen
-                </button>
-              </div>
-              <div class="_clear-element"></div>
+      <!-- ActiveCampaign Form -->
+      <form method="POST" action="https://your-balance61093.activehosted.com/proc.php" id="_form_31_" class="_form _form_31 _inline-form _dark" novalidate data-styles-version="5">
+        <input type="hidden" name="u" value="31" />
+        <input type="hidden" name="f" value="31" />
+        <input type="hidden" name="s" />
+        <input type="hidden" name="c" value="0" />
+        <input type="hidden" name="m" value="0" />
+        <input type="hidden" name="act" value="sub" />
+        <input type="hidden" name="v" value="2" />
+        <input type="hidden" name="or" value="bc656c7a-8620-434e-be22-e5905b9b915e" />
+        <div class="_form-content">
+          <div class="_form_element _x49125066 _full_width">
+            <label for="firstname" class="_form-label">Vorname</label>
+            <div class="_field-wrapper">
+              <input type="text" id="firstname" name="firstname" placeholder="Dein Vorname" />
             </div>
-            <div class="_form-thank-you" style="display:none;"></div>
-          </form>
-
-          <!-- Trust badges -->
-          <div class="trust-badges">
-            <span class="trust-badge">100 % kostenlos</span>
-            <span class="trust-badge">sofortiger Zugriff</span>
-            <span class="trust-badge">kein Spam</span>
-            <span class="trust-badge">speziell für feinfühlige Frauen</span>
           </div>
+          <div class="_form_element _x52012701 _full_width">
+            <label for="email" class="_form-label">E-Mail<span class="field-required">*</span></label>
+            <div class="_field-wrapper">
+              <input type="text" id="email" name="email" placeholder="deine@email.com" required />
+            </div>
+          </div>
+          <div class="_button-wrapper _full_width">
+            <button id="_form_31_submit" class="_submit" type="submit">
+              ✨ Ja — ich möchte das kostenlose Training ansehen
+            </button>
+          </div>
+          <div class="_clear-element"></div>
         </div>
-      </div>
+        <div class="_form-thank-you" style="display:none;"></div>
+      </form>
 
+      <!-- Trust badges -->
+      <div class="trust-badges">
+        <span class="trust-badge">100 % kostenlos</span>
+        <span class="trust-badge">sofortiger Zugriff</span>
+        <span class="trust-badge">kein Spam</span>
+        <span class="trust-badge">speziell für feinfühlige Frauen</span>
+      </div>
     </div>
   </section>
 
