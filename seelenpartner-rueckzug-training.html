@@ -209,25 +209,26 @@
 
   /* ── FORM SECTION ── */
   .form-section {
-    background: var(--cream);
-    padding: 0 32px 60px;
+    background: linear-gradient(to bottom, var(--cream) 0%, var(--cream-dark) 100%);
+    padding: 0 32px 72px;
   }
   .form-card {
     background: var(--white);
-    border-radius: 20px;
-    padding: 44px 44px 36px;
-    box-shadow: 0 16px 60px rgba(91,42,74,0.12);
+    border-radius: 24px;
+    padding: 48px 48px 40px;
+    box-shadow: 0 20px 80px rgba(91,42,74,0.14), 0 4px 20px rgba(91,42,74,0.06);
     position: relative;
     max-width: 520px;
-    margin: -48px auto 0;
+    margin: -56px auto 0;
+    border: 1px solid rgba(207,172,94,0.12);
   }
   .form-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--gold), var(--gold-pale));
-    border-radius: 20px 20px 0 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-pale), var(--gold));
+    border-radius: 24px 24px 0 0;
   }
   .form-card-label {
     font-family: var(--sans);
@@ -483,7 +484,7 @@
   @media (max-width: 600px) {
     .hero { padding: 60px 0 60px; }
     .hero h1 { font-size: 28px; }
-    .form-card { padding: 28px 20px; margin-top: -32px; }
+    .form-card { padding: 32px 24px; margin-top: -36px; }
     .objection-card { padding: 28px 24px; }
     .hero-benefits { display: block; }
   }
@@ -618,7 +619,7 @@
   window._show_thank_you = function(id, message, trackcmp_url, email) {
       var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
       form.querySelector('._form-content').style.display = 'none';
-      thank_you.innerHTML = message;
+      thank_you.innerHTML = '<div style="text-align:center;padding:12px 0 8px;"><div style="font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Fast geschafft</div><p style="font-family:var(--serif);font-size:22px;font-style:italic;color:var(--text);line-height:1.5;margin-bottom:16px;">Nur noch ein Klick &mdash;<br>dann geh&ouml;rst du dazu.</p><p style="font-family:var(--sans);font-size:13px;color:var(--text-mid);line-height:1.7;margin-bottom:12px;">Ich habe dir gerade eine E-Mail geschickt.<br>Klick auf den Best&auml;tigungslink darin &mdash; und du landest direkt bei deinem Video und den Folien.</p><p style="font-family:var(--sans);font-size:12px;color:var(--text-light);line-height:1.6;">Keine Mail erhalten? Schau bitte im Spam-Ordner<br>oder bei &bdquo;Werbung&ldquo; (Gmail) nach.</p><p style="font-family:var(--serif);font-size:17px;font-style:italic;color:var(--text-mid);margin-top:16px;">Ich freue mich, dass du da bist.<br>Susanne</p></div>';
       thank_you.style.display = 'block';
       // GA4 Lead Event
       if (typeof gtag !== 'undefined') {
