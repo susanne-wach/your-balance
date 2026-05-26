@@ -435,6 +435,9 @@
       *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     }
 
+  /* reCAPTCHA Badge ausblenden – Hinweis steht im Formular */
+  .grecaptcha-badge { visibility: hidden !important; }
+
   </style>
 
   <!-- ═══ STRUCTURED DATA: CONTACT + LOCAL BUSINESS + FAQ ═══ -->
@@ -508,6 +511,9 @@
     ]
   }
   </script>
+
+  <!-- ═══ GOOGLE reCAPTCHA v3 ═══ -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Ld1M_0sAAAAAFiBSD87ppRy8AeCZe1Py-ya5NDV"></script>
 </head>
 <body>
 
@@ -667,6 +673,11 @@
           <button type="submit" class="btn btn-gold btn-arrow btn-lg" style="align-self:flex-start;" data-magnetic>
             Termin anfragen
           </button>
+          <p style="font-family:var(--sans);font-size:11px;color:var(--text-light);margin-top:12px;line-height:1.6;">
+            Diese Seite ist durch reCAPTCHA geschützt.
+            Es gelten die <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--gold);">Datenschutzerklärung</a>
+            und <a href="https://policies.google.com/terms" target="_blank" rel="noopener" style="color:var(--gold);">Nutzungsbedingungen</a> von Google.
+          </p>
         </form>
       </div>
 
@@ -871,21 +882,34 @@ window.cfields = {"17":"thema","18":"nachricht","19":"format"};
     btn.disabled = true;
     btn.textContent = 'Wird gesendet …';
 
-    // Formulardaten serialisieren (Honeypot-Feld ausschließen)
-    var params = [];
-    Array.from(form.elements).forEach(function(el) {
-      if (!el.name || el.name === 'hp_website') return;
-      if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) return;
-      params.push(encodeURIComponent(el.name) + '=' + encodeURIComponent(el.value));
-    });
+    // ── reCAPTCHA v3 Token holen ──────────────────────────
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6Ld1M_0sAAAAAFiBSD87ppRy8AeCZe1Py-ya5NDV', {action: 'contact'}).then(function(token) {
 
-    // JSONP-Request an ActiveCampaign
-    var script = document.createElement('script');
-    script.src = 'https://your-balance61093.activehosted.com/proc.php?' + params.join('&') + '&jsonp=true';
-    script.onerror = function() {
-      window._show_error('23', 'Verbindungsfehler – bitte versuche es erneut.');
-    };
-    document.head.appendChild(script);
+        // Formulardaten serialisieren (Honeypot + reCAPTCHA-Token ausschließen)
+        var params = [];
+        Array.from(form.elements).forEach(function(el) {
+          if (!el.name || el.name === 'hp_website' || el.name === 'g-recaptcha-response') return;
+          if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) return;
+          params.push(encodeURIComponent(el.name) + '=' + encodeURIComponent(el.value));
+        });
+
+        // JSONP-Request an ActiveCampaign
+        var script = document.createElement('script');
+        script.src = 'https://your-balance61093.activehosted.com/proc.php?' + params.join('&') + '&jsonp=true';
+        script.onerror = function() {
+          btn.disabled = false;
+          btn.textContent = 'Termin anfragen';
+          window._show_error('23', 'Verbindungsfehler – bitte versuche es erneut.');
+        };
+        document.head.appendChild(script);
+
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = 'Termin anfragen';
+        window._show_error('23', 'Sicherheitsprüfung fehlgeschlagen – bitte Seite neu laden und erneut versuchen.');
+      });
+    });
   });
 })();
 </script>
