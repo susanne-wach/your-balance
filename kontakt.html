@@ -616,6 +616,11 @@
           <input type="hidden" name="act" value="sub" />
           <input type="hidden" name="v" value="2" />
           <input type="hidden" name="or" value="474cb6e1-c906-4c37-8b20-c89871964cb4" />
+          <!-- Honeypot – für Menschen unsichtbar, Bots füllen es aus -->
+          <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;height:0;width:0;" aria-hidden="true">
+            <label for="hp_website">Website (nicht ausfüllen)</label>
+            <input type="text" id="hp_website" name="hp_website" tabindex="-1" autocomplete="off" />
+          </div>
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label" for="firstname">Vorname</label>
@@ -838,10 +843,25 @@ window.cfields = {"17":"thema","18":"nachricht","19":"format"};
   var form = document.getElementById('_form_23_');
   if (!form) return;
 
+  // Zeitstempel beim Laden der Seite – Bots sind zu schnell
+  var _formLoadTime = Date.now();
+
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Einfache Pflichtfeld-Validierung
+    // ── Honeypot-Prüfung ──────────────────────────────────
+    var hp = form.querySelector('input[name="hp_website"]');
+    if (hp && hp.value.trim() !== '') {
+      // Stilles Abbrechen – Bot merkt nichts
+      return;
+    }
+
+    // ── Zeitprüfung: unter 3 Sekunden = wahrscheinlich Bot ─
+    if (Date.now() - _formLoadTime < 3000) {
+      return;
+    }
+
+    // ── Pflichtfeld-Validierung ───────────────────────────
     var email = form.querySelector('input[name="email"]');
     var firstname = form.querySelector('input[name="firstname"]');
     if (!email || !email.value.trim()) { email && email.focus(); return; }
@@ -851,10 +871,10 @@ window.cfields = {"17":"thema","18":"nachricht","19":"format"};
     btn.disabled = true;
     btn.textContent = 'Wird gesendet …';
 
-    // Formulardaten serialisieren
+    // Formulardaten serialisieren (Honeypot-Feld ausschließen)
     var params = [];
     Array.from(form.elements).forEach(function(el) {
-      if (!el.name) return;
+      if (!el.name || el.name === 'hp_website') return;
       if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) return;
       params.push(encodeURIComponent(el.name) + '=' + encodeURIComponent(el.value));
     });
