@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Willkommen · The Anchored Soul · Your Balance</title>
+<link rel="icon" type="image/png" href="assets/images/favicon-neu.png">
+
+<!-- GA4 – direkt, kein Cookiebot auf Danke-Seiten -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NPPS5VX6GB');
+  gtag('event', 'purchase', { currency: 'EUR', value: 247, transaction_id: Date.now().toString() });
+</script>
+
+<!-- META PIXEL -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','626079095228912');
+  fbq('track','PageView');
+  fbq('track','Purchase', {currency: 'EUR', value: 247});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=626079095228912&ev=Purchase&noscript=1"/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream:       #FBF5EC;
+  --cream-dark:  #F3EBDC;
+  --nude:        #E8DDD0;
+  --dark:        #5B2A4A;
+  --dark-deep:   #3D1A30;
+  --dark-deeper: #2A0F20;
+  --gold:        #CFAC5E;
+  --gold-pale:   #E9D7A4;
+  --text:        #5B2A4A;
+  --text-mid:    #7E5E72;
+  --text-light:  #A98FA0;
+  --white:       #FFFFFF;
+  --serif:       'Cormorant Garamond', Georgia, serif;
+  --sans:        'Montserrat', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-deep) 60%, var(--dark-deeper) 100%);
+  padding: 80px 0 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 700px;
+  background: radial-gradient(ellipse, rgba(207,172,94,0.13) 0%, transparent 68%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0; height: 90px;
+  background: linear-gradient(to top, var(--cream) 0%, transparent 100%);
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.hero-logo {
+  display: block;
+  height: 48px;
+  width: auto;
+  margin: 0 auto 44px;
+  opacity: 0.9;
+}
+.gold-line {
+  width: 36px; height: 1.5px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-pale));
+  border-radius: 2px;
+  margin: 0 auto 28px;
+}
+.hero-preheader {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4.5vw, 54px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-subline {
+  font-family: var(--serif);
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+.hero-body {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.95;
+}
+.hero-body strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+/* ── SECTIONS ── */
+.section { padding: 72px 0; }
+.section--alt { background: var(--cream-dark); }
+.inner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.section-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 20px;
+}
+.section-ornament {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 160px;
+  margin: 52px auto 0;
+}
+.orn-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(207,172,94,0.3), transparent); }
+.orn-dot { color: var(--gold-pale); font-size: 6px; letter-spacing: 5px; }
+
+/* ── AUDIO CARD ── */
+.audio-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 40px 36px;
+  box-shadow: 0 12px 48px rgba(91,42,74,0.1);
+  border: 1px solid rgba(207,172,94,0.14);
+  position: relative;
+  text-align: center;
+}
+.audio-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-pale), var(--gold));
+  border-radius: 20px 20px 0 0;
+}
+.audio-card h2 {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.audio-card-meta {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--text-light);
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+.audio-card-desc {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 28px;
+}
+.audio-card-desc em { font-style: italic; font-family: var(--serif); font-size: 16px; }
+.audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--gold), #B08E3A);
+  color: var(--white);
+  text-decoration: none;
+  padding: 18px 36px;
+  border-radius: 50px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 32px rgba(207,172,94,0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  border: none;
+}
+.audio-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(207,172,94,0.55); }
+.audio-btn-icon { font-size: 16px; }
+/* Embedded audio player */
+.audio-embed-wrapper {
+  margin-top: 28px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ── TIMELINE ── */
+.timeline { display: flex; flex-direction: column; gap: 0; margin: 28px 0; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0 24px;
+  position: relative;
+  padding-bottom: 32px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 59px;
+  top: 36px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(207,172,94,0.4), rgba(207,172,94,0.05));
+}
+.timeline-time {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-top: 2px;
+  text-align: right;
+  padding-right: 0;
+}
+.timeline-dot {
+  width: 10px; height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: absolute;
+  left: 53px; top: 5px;
+  box-shadow: 0 0 0 3px rgba(207,172,94,0.15);
+}
+.timeline-content {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+.timeline-content strong { color: var(--text); font-weight: 600; }
+
+/* ── TIPP BOX (dunkel) ── */
+.tipp-box {
+  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-deep) 100%);
+  border-radius: 20px;
+  padding: 44px 44px 40px;
+  text-align: center;
+  box-shadow: 0 12px 48px rgba(91,42,74,0.22);
+}
+.tipp-eyebrow {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  display: block;
+  margin-bottom: 20px;
+}
+.tipp-quote {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(207,172,94,0.2);
+}
+.tipp-quote em { font-style: normal; color: var(--gold); }
+.tipp-body {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.9;
+}
+.tipp-body strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+.tipp-close {
+  font-family: var(--serif);
+  font-size: clamp(17px, 2vw, 21px);
+  font-style: italic;
+  color: var(--gold-pale);
+  margin-top: 20px;
+  line-height: 1.5;
+  display: block;
+}
+
+/* ── PRAKTISCHES ── */
+.praktisches-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+.praktisches-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 12px rgba(91,42,74,0.05);
+}
+.praktisches-dot {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.praktisches-item p {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+.praktisches-item p strong { color: var(--text); font-weight: 600; }
+.praktisches-item p a { color: var(--gold); text-decoration: none; }
+.praktisches-item p a:hover { text-decoration: underline; }
+
+/* ── PERSÖNLICH ── */
+.personal-wrap { text-align: center; }
+.personal-photo {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid rgba(207,172,94,0.3);
+  box-shadow: 0 6px 24px rgba(91,42,74,0.12);
+  margin: 0 auto 28px;
+  display: block;
+}
+.personal-text {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+}
+.personal-text em { font-style: italic; color: var(--dark); }
+.personal-signature {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-style: italic;
+  color: var(--dark);
+  display: block;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--dark-deeper);
+  padding: 28px 0 24px;
+  text-align: center;
+  margin-top: auto;
+}
+.footer-inner { max-width: 640px; margin: 0 auto; padding: 0 32px; }
+.footer-info {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.8;
+}
+.footer-info a { color: var(--gold-pale); text-decoration: none; }
+.footer-info a:hover { color: var(--gold); }
+.footer-copy { font-family: var(--sans); font-size: 11px; color: rgba(255,255,255,0.2); margin-top: 8px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .hero { padding: 60px 0 80px; }
+  .hero-inner, .inner, .footer-inner { padding: 0 20px; }
+  .section { padding: 52px 0; }
+  .audio-card { padding: 28px 22px; }
+  .tipp-box { padding: 32px 22px; }
+  .timeline-item { grid-template-columns: 90px 1fr; }
+  .timeline-item:not(:last-child)::after { left: 44px; }
+  .timeline-dot { left: 38px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 01 · WÜRDIGUNG
+     ══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <img src="assets/images/logo-neu-dunkel.png" alt="Your Balance" class="hero-logo">
+    <div class="gold-line"></div>
+    <span class="hero-preheader">Dein Zugang &middot; Bestätigt</span>
+    <h1>Du bist da.<br><em>Du hast dich gerade gewählt.</em></h1>
+    <p class="hero-subline">Und das war kein kleiner Schritt.</p>
+    <p class="hero-body">
+      Vielleicht hast du gezögert, bevor du auf den Button geklickt hast.<br>
+      Vielleicht hat eine Stimme in dir gesagt:<br>
+      <strong>„Lohnt sich das? Schaffe ich das? Bin ich überhaupt bereit?"</strong><br><br>
+      Und du hast es trotzdem getan.<br>
+      Das ist Mut. Mehr Mut, als du dir vielleicht zugestehst.
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 02 · DEIN ERSTES AUDIO
+     ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="inner">
+    <span class="section-label">Jetzt gleich</span>
+
+    <div class="audio-card">
+      <h2>Dein Welcome-Audio<br>wartet auf dich.</h2>
+      <p class="audio-card-meta">7 Minuten &middot; Im Mitgliederbereich</p>
+      <p class="audio-card-desc">
+        Es heißt: <em>„Du bist da. Das beginnt jetzt."</em><br><br>
+        Du bekommst gerade eine E-Mail mit deinem persönlichen Zugangslink. Sobald du drin bist, findest du das Welcome-Audio als erstes — direkt auf der Startseite deines Mitgliederbereichs.<br><br>
+        Wenn du heute noch eine Sache machen darfst, ist es das: rein, einloggen, hören. Mehr nicht.
+      </p>
+      <div style="background:var(--cream-dark); border-radius:12px; padding:18px 22px; text-align:left; margin-top:4px;">
+        <p style="font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--text-light); margin-bottom:8px;">So kommst du rein</p>
+        <p style="font-family:var(--sans); font-size:13.5px; color:var(--text-mid); line-height:1.8;">
+          <strong style="color:var(--text);">1.</strong> Schau in deinen Posteingang — die E-Mail kommt in den nächsten Minuten.<br>
+          <strong style="color:var(--text);">2.</strong> Klick auf den Link darin → du landest direkt im Mitgliederbereich.<br>
+          <strong style="color:var(--text);">3.</strong> Los geht's.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-ornament">
+      <div class="orn-line"></div>
+      <span class="orn-dot">• • •</span>
+      <div class="orn-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 03 · SO GEHT ES WEITER
+     ══════════════════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="inner">
+    <span class="section-label">Deine nächsten 21 Tage</span>
+    <h2 style="font-family:var(--serif); font-size:clamp(24px,3vw,36px); font-weight:300; line-height:1.2; color:var(--text); margin-bottom:8px;">
+      Du musst dir gerade nichts merken.
+    </h2>
+    <p style="font-family:var(--serif); font-size:clamp(16px,1.8vw,20px); font-style:italic; color:var(--text-mid); margin-bottom:32px;">
+      Hier ist alles, was passiert:
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">Jetzt sofort</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <strong>Welcome-Audio</strong> (oben) + <strong>Bestätigungs-E-Mail</strong> in deinem Postfach mit deinem Zugangslink zum Mitgliederbereich.
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">In 24 h</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <strong>Tag 1 deiner Reise</strong> wird freigeschaltet — <em style="font-family:var(--serif); font-style:italic;">&bdquo;Du bist hier. Ich bin hier.&ldquo;</em> (10 Min). Du bekommst eine E-Mail mit dem direkten Link.
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">Jeden Tag</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          Ein neues Audio. In deinem Tempo. Bis Tag 21. Plus die <strong>7 SOS-Audios</strong>, die schon jetzt im Mitgliederbereich für dich bereitliegen — für jeden Akut-Moment.
+        </div>
+      </div>
+    </div>
+
+    <div class="section-ornament">
+      <div class="orn-line"></div>
+      <span class="orn-dot">• • •</span>
+      <div class="orn-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 04 · MEIN TIPP FÜR JETZT
+     ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="inner">
+    <div class="tipp-box">
+      <span class="tipp-eyebrow">Mein Tipp für jetzt</span>
+      <p class="tipp-quote">
+        In den nächsten Stunden:<br>
+        <em>nichts.</em>
+      </p>
+      <p class="tipp-body">
+        Mach dir einen Tee. Setz dich ans Fenster. Atme.<br><br>
+        Du musst heute nicht stark sein. Nicht funktionieren. Nicht produktiv sein.<br><br>
+        <strong>Du hast gerade einen Schritt getan, der dein Nervensystem berührt hat.</strong><br>
+        Lass das wirken.
+      </p>
+      <span class="tipp-close">Tag 1 wartet morgen.<br>Du musst heute nichts mehr.</span>
+    </div>
+
+    <div class="section-ornament">
+      <div class="orn-line"></div>
+      <span class="orn-dot">• • •</span>
+      <div class="orn-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 05 · PRAKTISCHES
+     ══════════════════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="inner">
+    <span class="section-label">Falls du etwas brauchst</span>
+
+    <div class="praktisches-list">
+      <div class="praktisches-item">
+        <div class="praktisches-dot"></div>
+        <p><strong>Login zum Mitgliederbereich:</strong> Der direkte Link steht in deiner Bestätigungs-E-Mail. Deine Login-E-Mail ist die, mit der du gekauft hast.</p>
+      </div>
+      <div class="praktisches-item">
+        <div class="praktisches-dot"></div>
+        <p><strong>Etwas funktioniert nicht?</strong> Schreib mir kurz an <a href="mailto:susanne@your-balance.at">susanne@your-balance.at</a> — ich melde mich persönlich.</p>
+      </div>
+    </div>
+
+    <div class="section-ornament">
+      <div class="orn-line"></div>
+      <span class="orn-dot">• • •</span>
+      <div class="orn-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 06 · PERSÖNLICH
+     ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="inner">
+    <div class="personal-wrap">
+      <img src="assets/images/susanne-smile.png" alt="Susanne Wachter" class="personal-photo">
+      <p class="personal-text">
+        Ich freue mich, dass du da bist. <em>Wirklich.</em><br><br>
+        Wir gehen das jetzt 21 Tage gemeinsam. In deinem Tempo. Mit allem, was du mitbringst — auch dem leisen Zweifel, ob das alles richtig war.<br><br>
+        Geh sanft mit dir.
+      </p>
+      <span class="personal-signature">— Susanne</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-info">
+      Your Balance &middot; Susanne Wachter &middot; Nüziders, Vorarlberg<br>
+      <a href="impressum.html">Impressum</a> &middot;
+      <a href="datenschutz.html">Datenschutz</a> &middot;
+      <a href="agb.html">AGB</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Your Balance. Alle Rechte vorbehalten.</div>
+  </div>
+</footer>
+
+</body>
+</html>
