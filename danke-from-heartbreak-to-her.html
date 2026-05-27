@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Willkommen Zuhause · From Heartbreak To Her · Your Balance</title>
+<link rel="icon" type="image/png" href="assets/images/favicon-neu.png">
+
+<!-- GA4 – direkt, kein Cookiebot auf Danke-Seiten -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NPPS5VX6GB');
+  gtag('event', 'purchase', {
+    currency: 'EUR',
+    value: 1999,
+    transaction_id: Date.now().toString()
+  });
+</script>
+
+<!-- META PIXEL -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','626079095228912');
+  fbq('track','PageView');
+  fbq('track','Purchase', {currency: 'EUR', value: 1999});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=626079095228912&ev=Purchase&noscript=1"/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream:       #FBF5EC;
+  --cream-dark:  #F3EBDC;
+  --nude:        #E8DDD0;
+  --dark:        #5B2A4A;
+  --dark-deep:   #3D1A30;
+  --dark-deeper: #2A0F20;
+  --gold:        #CFAC5E;
+  --gold-pale:   #E9D7A4;
+  --gold-ultra:  #F7EDCC;
+  --text:        #5B2A4A;
+  --text-mid:    #7E5E72;
+  --text-light:  #A98FA0;
+  --white:       #FFFFFF;
+  --serif:       'Cormorant Garamond', Georgia, serif;
+  --sans:        'Montserrat', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-deep) 60%, var(--dark-deeper) 100%);
+  padding: 80px 0 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 700px;
+  background: radial-gradient(ellipse, rgba(207,172,94,0.13) 0%, transparent 68%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0; height: 90px;
+  background: linear-gradient(to top, var(--cream) 0%, transparent 100%);
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.hero-logo {
+  display: block;
+  height: 48px;
+  width: auto;
+  margin: 0 auto 44px;
+  opacity: 0.9;
+}
+.gold-line {
+  width: 36px; height: 1.5px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-pale));
+  border-radius: 2px;
+  margin: 0 auto 28px;
+}
+.hero-eyebrow {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  display: block;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(34px, 4.5vw, 58px);
+  font-weight: 300;
+  line-height: 1.12;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-sub {
+  font-family: var(--serif);
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+  margin-top: 20px;
+}
+.hero-tagline {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.35);
+  margin-top: 36px;
+}
+
+/* ── SHARED LAYOUT ── */
+.section {
+  padding: 72px 0;
+}
+.section--alt { background: var(--cream-dark); }
+.section--white { background: var(--white); }
+.section-inner {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.section-ornament {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 200px;
+  margin: 56px auto 0;
+}
+.ornament-line {
+  flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(207,172,94,0.35), transparent);
+}
+.ornament-dot { color: var(--gold-pale); font-size: 6px; letter-spacing: 6px; }
+
+/* ── TYPOGRAPHY ── */
+.section-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 24px;
+}
+h2.serif {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+h2.serif em { font-style: italic; }
+.prose p {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--text-mid);
+  margin-bottom: 18px;
+}
+.prose p:last-child { margin-bottom: 0; }
+.prose p strong { color: var(--text); font-weight: 600; }
+
+/* ── STATEMENT ── */
+.statement {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-style: italic;
+  color: var(--dark);
+  text-align: center;
+  line-height: 1.5;
+  padding: 28px 0;
+  border-top: 1px solid rgba(207,172,94,0.2);
+  border-bottom: 1px solid rgba(207,172,94,0.2);
+  margin: 32px 0;
+}
+
+/* ── INFO BOX (Was jetzt passiert) ── */
+.info-box {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 44px;
+  box-shadow: 0 8px 40px rgba(91,42,74,0.09);
+  border: 1px solid rgba(207,172,94,0.14);
+  position: relative;
+}
+.info-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-pale));
+  border-radius: 20px 20px 0 0;
+}
+.info-box-title {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.info-box-title em {
+  font-style: normal;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--dark);
+  display: block;
+  margin-bottom: 6px;
+}
+.info-box-meta {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+.info-box-meta strong { color: var(--text-mid); font-weight: 600; }
+.info-list { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
+.info-list li {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-mid);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.6;
+}
+.info-list li::before { content: '·'; color: var(--gold); font-size: 20px; flex-shrink: 0; line-height: 1.3; font-weight: 700; }
+.info-box-note {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.8;
+  border-top: 1px solid var(--nude);
+  padding-top: 18px;
+}
+.info-box-note a { color: var(--gold); text-decoration: none; }
+.info-box-note a:hover { text-decoration: underline; }
+
+/* ── ATEMÜBUNG ── */
+.breath-box {
+  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-deep) 100%);
+  border-radius: 20px;
+  padding: 44px 44px 40px;
+  text-align: center;
+  box-shadow: 0 12px 48px rgba(91,42,74,0.2);
+  margin: 8px 0;
+}
+.breath-eyebrow {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  display: block;
+  margin-bottom: 20px;
+}
+.breath-instruction {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.breath-instruction em { font-style: italic; color: var(--gold); }
+.breath-mantra {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.6;
+  margin: 28px 0;
+  padding: 24px 0;
+  border-top: 1px solid rgba(207,172,94,0.2);
+  border-bottom: 1px solid rgba(207,172,94,0.2);
+}
+.breath-close {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.8;
+  margin-top: 20px;
+}
+.breath-close strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+
+/* ── PHASEN ── */
+.phase-list { display: flex; flex-direction: column; gap: 20px; margin: 32px 0; }
+.phase-item {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 24px 28px;
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 2px 16px rgba(91,42,74,0.06);
+}
+.phase-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+  display: block;
+}
+.phase-name {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.phase-desc {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+.module0-box {
+  background: rgba(207,172,94,0.08);
+  border: 1px solid rgba(207,172,94,0.22);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin: 32px 0;
+}
+.module0-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
+}
+.module0-title {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.module0-desc {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+.recommendation {
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.8vw, 19px);
+  font-style: italic;
+  color: var(--text-mid);
+  text-align: center;
+  line-height: 1.7;
+  margin-top: 28px;
+  padding: 24px 0 0;
+  border-top: 1px solid rgba(207,172,94,0.2);
+}
+.recommendation em { font-style: normal; color: var(--dark); }
+
+/* ── COMMUNITY & LIVE-CALLS ── */
+.community-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.community-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 24px rgba(91,42,74,0.07);
+  position: relative;
+  overflow: hidden;
+}
+.community-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-pale));
+}
+.community-card-icon {
+  font-size: 22px;
+  margin-bottom: 14px;
+  display: block;
+}
+.community-card-title {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 14px;
+  display: block;
+}
+.community-card p {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+
+/* ── ABSCHLUSS ── */
+.closing { padding: 80px 0 60px; background: var(--cream); }
+.closing-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+  text-align: center;
+}
+.closing h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--dark);
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+.closing-body {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-mid);
+  margin-bottom: 16px;
+}
+.closing-signature {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-style: italic;
+  color: var(--dark);
+  margin-top: 28px;
+  display: block;
+}
+.closing-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin: 28px auto 0;
+  display: block;
+  border: 3px solid rgba(207,172,94,0.3);
+  box-shadow: 0 6px 24px rgba(91,42,74,0.12);
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--dark-deeper);
+  padding: 28px 0 24px;
+  text-align: center;
+  margin-top: auto;
+}
+.footer-inner {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.footer-info {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.8;
+}
+.footer-info a { color: var(--gold-pale); text-decoration: none; }
+.footer-info a:hover { color: var(--gold); }
+.footer-copy {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: rgba(255,255,255,0.2);
+  margin-top: 8px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .hero { padding: 60px 0 80px; }
+  .hero-inner { padding: 0 20px; }
+  .section { padding: 52px 0; }
+  .section-inner { padding: 0 20px; }
+  .info-box { padding: 28px 24px; }
+  .breath-box { padding: 32px 24px; }
+  .community-grid { grid-template-columns: 1fr; }
+  .closing-inner { padding: 0 20px; }
+  .footer-inner { padding: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 1 · HERO
+     ══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <img src="assets/images/logo-neu-dunkel.png" alt="Your Balance" class="hero-logo">
+    <div class="gold-line"></div>
+    <span class="hero-eyebrow">From Heartbreak To Her</span>
+    <h1>Du bist hier.<br><em>Und das ist nicht klein.</em></h1>
+    <p class="hero-sub">
+      Was du gerade getan hast, ist mehr,<br>
+      als die meisten Menschen tun.
+    </p>
+    <p class="hero-sub" style="margin-top:10px;">
+      Du hast aufgehört zu warten.<br>
+      Du hast eine Entscheidung getroffen,<br>
+      die nichts mit ihm zu tun hat —<br>
+      und alles mit dir.
+    </p>
+    <p class="hero-tagline">Susanne Wachter &middot; Your Balance</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 2 · ANERKENNUNG
+     ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-inner">
+
+    <div class="prose">
+      <p>Vielleicht sitzt du gerade da und fragst dich, ob du das Richtige getan hast. Ob 1.999 Euro nicht doch zu viel waren. Ob du wirklich dafür Zeit hast. Ob es diesmal anders sein wird.</p>
+
+      <p>Diese Gedanken kommen oft genau jetzt. Und sie bedeuten nicht, dass deine Entscheidung falsch war.</p>
+
+      <p>Sie bedeuten, dass dein altes System sich meldet — das, das sich an die letzte Enttäuschung erinnert.</p>
+
+      <p>Du musst diese Gedanken nicht wegmachen.<br>
+      Lass sie ruhig da sein. Und lass diesen Satz hier auch da sein:</p>
+    </div>
+
+    <div class="statement">
+      Heute hast du eine Frau gewählt —<br>und das warst du selbst.
+    </div>
+
+    <div class="section-ornament">
+      <div class="ornament-line"></div>
+      <span class="ornament-dot">• • •</span>
+      <div class="ornament-line"></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 3 · WAS JETZT PASSIERT
+     ══════════════════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="section-inner">
+    <span class="section-label">Was jetzt passiert</span>
+
+    <div class="info-box">
+      <div class="info-box-title">
+        <em>In den nächsten fünf Minuten bekommst du eine E-Mail.</em>
+      </div>
+      <div class="info-box-meta">
+        <strong>Absender:</strong> Susanne Wachter — Your Balance<br>
+        <strong>Betreff:</strong> Willkommen Zuhause — dein Zugang zu From Heartbreak To Her
+      </div>
+      <p style="font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:1px;color:var(--text-mid);margin-bottom:12px;text-transform:uppercase;letter-spacing:2px;">In dieser E-Mail findest du:</p>
+      <ul class="info-list">
+        <li>Deinen persönlichen Login-Link zum Mitgliederbereich</li>
+        <li>Deine Zugangsdaten (falls Erstanmeldung)</li>
+        <li>Den Link zu unserer geschützten Community</li>
+        <li>Das Datum unseres nächsten Live-Calls</li>
+      </ul>
+      <div class="info-box-note">
+        <strong style="color:var(--text-mid);">Keine E-Mail im Posteingang?</strong><br>
+        Schau bitte einmal in deinen Spam- oder Werbeordner. Manchmal landet die Willkommens-Mail dort, weil sie Anhänge enthält.<br><br>
+        Wenn du sie auch dort nicht findest, schreib mir direkt:<br>
+        <a href="mailto:support@your-balance.at">support@your-balance.at</a> — ich antworte spätestens innerhalb von 24 Stunden.
+      </div>
+    </div>
+
+    <div class="section-ornament">
+      <div class="ornament-line"></div>
+      <span class="ornament-dot">• • •</span>
+      <div class="ornament-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 4 · DEIN ERSTER SCHRITT
+     ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-inner">
+    <span class="section-label">Dein erster Schritt</span>
+    <h2 class="serif">Bevor du irgendetwas<br>anderes tust.</h2>
+
+    <div class="breath-box">
+      <span class="breath-eyebrow">Jetzt. Für dich.</span>
+
+      <p class="breath-instruction">
+        Atme einmal <em>aus</em>.<br>
+        Länger als du eingeatmet hast.
+      </p>
+
+      <p class="breath-instruction" style="font-size:clamp(15px,1.7vw,18px); color:rgba(255,255,255,0.65); margin-top:16px;">
+        Wenn du magst, leg eine Hand auf deinen Brustraum.<br>
+        Nicht perfekt. So, wie es sich gerade gut anfühlt.
+      </p>
+
+      <div class="breath-mantra">
+        „Ich muss heute nichts lösen.<br>
+        Ich darf erstmal nur ankommen."
+      </div>
+
+      <p class="breath-close">
+        Das, was du gerade gemacht hast, ist nicht klein.<br>
+        Es ist die erste Mikro-Bewegung des Programms.<br><br>
+        <strong>Du hast soeben Modul 0 begonnen —<br>
+        auch wenn du noch kein Video gestartet hast.</strong><br><br>
+        Du bist Teil dieser Reise.
+      </p>
+    </div>
+
+    <div class="section-ornament">
+      <div class="ornament-line"></div>
+      <span class="ornament-dot">• • •</span>
+      <div class="ornament-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 5 · WAS DICH ERWARTET
+     ══════════════════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="section-inner">
+    <span class="section-label">Was dich erwartet</span>
+    <h2 class="serif">In den nächsten zwölf Wochen<br>begleiten wir gemeinsam drei Phasen.</h2>
+
+    <div class="phase-list">
+      <div class="phase-item">
+        <span class="phase-label">Phase 1</span>
+        <div class="phase-name">Regulate</div>
+        <p class="phase-desc">Dein Nervensystem darf zur Ruhe kommen. Du bekommst die ersten Werkzeuge für Trigger, Funkstille, schlaflose Nächte.</p>
+      </div>
+      <div class="phase-item">
+        <span class="phase-label">Phase 2</span>
+        <div class="phase-name">Release</div>
+        <p class="phase-desc">Wir gehen tiefer in das, was unter dem Schmerz liegt. Selbstverlust, Hoffnungsschleifen, alte Wunden — sanft begleitet, nie überfordernd.</p>
+      </div>
+      <div class="phase-item">
+        <span class="phase-label">Phase 3</span>
+        <div class="phase-name">Return to Her</div>
+        <p class="phase-desc">Du wirst wieder zur Frau deines eigenen Lebens. Mit Selbstwert, der nicht von außen abhängt. Mit Standards, die nicht hart sind. Mit einem Herzen, das offen bleiben darf.</p>
+      </div>
+    </div>
+
+    <div class="module0-box">
+      <span class="module0-label">Womit du sofort starten kannst</span>
+      <div class="module0-title">Modul 0 — Welcome Home</div>
+      <p class="module0-desc">Fünf kurze Videos, die dich ankommen lassen. Jedes Video sieben bis zehn Minuten. Du musst sie nicht heute alle schauen. <strong>Eines reicht.</strong></p>
+    </div>
+
+    <p class="recommendation">
+      <em>Eine Empfehlung von mir, von Frau zu Frau:</em><br>
+      Mach das hier nicht nebenbei. Nicht zwischen Stress. Nicht im Multitasking.<br>
+      Such dir einen Moment, einen Ort, eine Tasse Tee.<br>
+      Behandle den ersten Schritt wie ein Date — <em>mit dir selbst.</em>
+    </p>
+
+    <div class="section-ornament">
+      <div class="ornament-line"></div>
+      <span class="ornament-dot">• • •</span>
+      <div class="ornament-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 6 · COMMUNITY & LIVE-CALLS
+     ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-inner">
+    <span class="section-label">Du bist nicht allein</span>
+    <h2 class="serif" style="margin-bottom:32px;">Community und Begleitung.</h2>
+
+    <div class="community-grid">
+      <div class="community-card">
+        <span class="community-card-icon">🌿</span>
+        <span class="community-card-title">Die Community</span>
+        <p>Du bist nicht allein. In unserer geschützten Community findest du Frauen, die genau das fühlen, was du fühlst. Keine Verurteilung. Kein „vergiss ihn doch." Ein Raum, in dem du nichts erklären musst.</p>
+        <p style="margin-top:12px; font-size:12px; color:var(--text-light);">Den Link findest du in deiner Willkommens-Mail.</p>
+      </div>
+      <div class="community-card">
+        <span class="community-card-icon">✦</span>
+        <span class="community-card-title">Der wöchentliche Live-Call</span>
+        <p>Jeden Donnerstag treffen wir uns live. Eine Stunde. Du musst nicht sprechen, wenn du nicht willst — du darfst auch nur dabei sein und zuhören.</p>
+        <p style="margin-top:12px; font-size:12px; color:var(--text-light);">Der nächste Termin steht in deiner Willkommens-Mail.</p>
+      </div>
+    </div>
+
+    <div class="section-ornament">
+      <div class="ornament-line"></div>
+      <span class="ornament-dot">• • •</span>
+      <div class="ornament-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 7 · ABSCHLUSS
+     ══════════════════════════════════════════════════════ -->
+<section class="closing">
+  <div class="closing-inner">
+    <h2>Bis gleich.</h2>
+
+    <p class="closing-body">
+      Eine letzte Sache, bevor du diese Seite schließt.
+    </p>
+    <p class="closing-body">
+      Du musst das nicht mehr alleine tragen.<br>
+      Wir sehen uns drinnen.
+    </p>
+
+    <span class="closing-signature">Deine Susanne</span>
+
+    <img
+      src="assets/images/susanne-warm.png"
+      alt="Susanne Wachter"
+      class="closing-photo"
+    >
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-info">
+      Your Balance &middot; Susanne Wachter &middot; Nüziders, Vorarlberg<br>
+      <a href="impressum.html">Impressum</a> &middot;
+      <a href="datenschutz.html">Datenschutz</a> &middot;
+      <a href="agb.html">AGB</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Your Balance. Alle Rechte vorbehalten.</div>
+  </div>
+</footer>
+
+</body>
+</html>
