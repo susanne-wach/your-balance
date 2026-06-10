@@ -918,9 +918,30 @@
                 var submitButton = e.target.querySelector('#_form_31_submit');
                 submitButton.disabled = true; submitButton.classList.add('processing');
                 submitButton.innerText = 'Wird gesendet...';
+
+                // ── PIXEL-EVENTS SOFORT FEUERN (nicht warten auf AC-Callback) ──
+                try {
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead');
+                        fbq('track', 'CompleteRegistration');
+                    }
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'generate_lead', { currency: 'EUR', value: 0, source: 'freebie_seelenpartner_rueckzug' });
+                    }
+                } catch (pixelErr) { console.warn('Pixel tracking error:', pixelErr); }
+
                 var serialized = _form_serialize(document.getElementById('_form_31_')).replace(/%0A/g, '\\n');
                 var err = form_to_submit.querySelector('._form_error'); err ? err.parentNode.removeChild(err) : false;
                 _load_script('https://your-balance61093.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
+
+                // ── BUTTON-RESET nach 8 Sek (falls AC-Callback nicht zurückkommt) ──
+                setTimeout(function() {
+                    if (submitButton.disabled && submitButton.innerText === 'Wird gesendet...') {
+                        submitButton.disabled = false;
+                        submitButton.classList.remove('processing');
+                        submitButton.innerText = 'Jetzt Zugang sichern';
+                    }
+                }, 8000);
             }
             return false;
         };
