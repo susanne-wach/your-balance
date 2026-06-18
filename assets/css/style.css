@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ================================================================
    YOUR BALANCE – SUSANNE WACHTER
    Premium CSS Design System
@@ -1120,9 +1121,25 @@ textarea.form-input { resize: vertical; min-height: 140px; }
 }
 .footer-copy { font-size: 13px; color: rgba(255,255,255,0.25); }
 .footer-copy span { color: var(--gold); }
-.footer-legal { display: flex; gap: 24px; }
+.footer-legal { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
 .footer-legal a { font-size: 12px; color: rgba(255,255,255,0.25); transition: color var(--t-fast); letter-spacing: 0.5px; }
 .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+.footer-legal a[href="widerruf.html"] {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1px solid rgba(207,172,94,0.45);
+  border-radius: 20px;
+  color: rgba(207,172,94,0.75);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: border-color var(--t-fast), color var(--t-fast), background var(--t-fast);
+}
+.footer-legal a[href="widerruf.html"]:hover {
+  border-color: rgba(207,172,94,0.8);
+  color: var(--gold);
+  background: rgba(207,172,94,0.07);
+}
 
 /* ----------------------------------------------------------------
    21. SCROLL-TO-TOP
