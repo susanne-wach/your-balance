@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung bestätigt · Warum komme ich nicht von ihm los? · Your Balance</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="assets/images/logo-neu-icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: {
+            fontFamily: { sans:['"Plus Jakarta Sans"','sans-serif'], serif:['"Cormorant Garamond"','serif'] },
+            colors: { burgundy:{deep:'#2D0A1F',medium:'#5B2A4A',dark:'#1F0514'}, gold:{DEFAULT:'#CFAC5E',light:'#E5C383',dark:'#B89243'}, roseWarm:'#E8A5B8', cream:{soft:'#FBF5EC',dark:'#F3EAE0'} }
+        } } }
+    </script>
+    <style>
+        .gold-button{background:linear-gradient(135deg,#CFAC5E 0%,#B89243 100%);color:#2D0A1F;box-shadow:0 4px 20px rgba(207,172,94,.25);transition:all .3s cubic-bezier(.23,1,.32,1);}
+        .gold-button:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(207,172,94,.45);}
+        .gold-divider{width:70px;height:2px;background:linear-gradient(90deg,transparent,#CFAC5E,transparent);margin:22px auto;border:none;}
+    </style>
+</head>
+<body class="bg-cream-soft text-burgundy-deep font-sans antialiased">
+    <section class="min-h-screen flex items-center justify-center px-6 py-16">
+        <div class="max-w-xl w-full bg-burgundy-deep text-cream-soft rounded-3xl shadow-2xl px-8 md:px-12 py-12 text-center">
+            <img src="assets/images/logo-neu-quer-dunkel.png" alt="Your Balance — Susanne Wachter" class="h-12 w-auto mx-auto mb-6">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold/15 text-gold mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-serif font-light text-cream-soft">Deine Anmeldung ist bestätigt</h1>
+            <p class="text-roseWarm font-serif italic text-lg mt-2">Schön, dass du dabei bist.</p>
+            <div class="gold-divider"></div>
+
+            <p class="text-cream-soft/90 font-light leading-relaxed">
+                Dein Platz für den kostenfreien Live-Impuls-Abend
+                <span class="text-gold">„Warum komme ich nicht von ihm los?“</span>
+                ist gesichert.
+            </p>
+
+            <div class="bg-burgundy-medium/60 border border-gold/20 rounded-2xl px-6 py-5 mt-6 text-left">
+                <p class="text-sm text-cream-soft/90"><span class="text-gold">Wann:</span> Mittwoch, 26. August 2026, 19:00 Uhr</p>
+                <p class="text-sm text-cream-soft/90 mt-1"><span class="text-gold">Wo:</span> live über Zoom</p>
+            </div>
+
+            <div class="mt-7 space-y-3">
+                <a href="https://us06web.zoom.us/j/88043907378?pwd=ivHc2oUx9KEY3QH8TDMMeRsQZK6ha0.1" class="block w-full h-13 py-4 gold-button font-medium text-sm tracking-widest uppercase rounded-full">Zum Live-Abend (Zoom)</a>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Warum+komme+ich+nicht+von+ihm+los%3F+%E2%80%93+Live-Impuls-Abend&dates=20260826T170000Z/20260826T183000Z&details=Dein+Zoom-Link%3A+https%3A%2F%2Fus06web.zoom.us%2Fj%2F88043907378%3Fpwd%3DivHc2oUx9KEY3QH8TDMMeRsQZK6ha0.1&location=Zoom" class="block w-full border border-gold/40 text-gold hover:bg-gold/10 font-medium text-sm tracking-widest uppercase px-6 py-3.5 rounded-full transition">Termin in den Kalender</a>
+            </div>
+
+            <p class="text-xs text-cream-soft/60 font-light mt-7 leading-relaxed">
+                Alle Infos bekommst du gleich auch per E-Mail. Wir sehen uns am 26. August.<br>Von Herzen, Susanne
+            </p>
+        </div>
+    </section>
+</body>
+</html>
