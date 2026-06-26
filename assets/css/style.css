@@ -101,11 +101,11 @@ button { cursor: none; }
    4. PAGE LOADER
    ---------------------------------------------------------------- */
 .loader {
+  display: none; /* Lade-Splash entfernt - Inhalt erscheint sofort */
   position: fixed;
   inset: 0;
   z-index: 10000;
   background: var(--dark);
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
