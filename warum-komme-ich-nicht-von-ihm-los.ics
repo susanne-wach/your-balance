@@ -9,8 +9,8 @@ DTSTAMP:20260621T000000Z
 DTSTART:20260826T170000Z
 DTEND:20260826T183000Z
 SUMMARY:Warum komme ich nicht von ihm los? – Live-Impuls-Abend
-DESCRIPTION:Dein Zoom-Link: https://us06web.zoom.us/j/88043907378?pwd=ivHc2oUx9KEY3QH8TDMMeRsQZK6ha0.1
-LOCATION:Zoom
+DESCRIPTION:Dein Zugang: https://your-balance.at/warteraum-countdown.html
+LOCATION:Online (Your Balance)
 BEGIN:VALARM
 TRIGGER:-PT1H
 ACTION:DISPLAY
