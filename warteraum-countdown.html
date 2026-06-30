@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der Live-Abend beginnt in Kürze · Your Balance</title>
+<style>
+  :root{ --burgund:#5b2a4a; --gold:#cfac5e; --magenta:#dd3089; --aubergine:#5b2a4a; --creme:#fbf5ec; --rosa:#faedf1; }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--creme);font-family:Georgia,'Times New Roman',serif;color:var(--burgund);}
+  .wrap{max-width:680px;margin:0 auto;padding:40px 18px 60px;}
+  .card{background:#fff;border-radius:20px;box-shadow:0 8px 40px rgba(91,42,74,.12);padding:48px 40px;text-align:center;}
+  h1{font-size:30px;line-height:1.25;margin:0 0 8px;color:var(--burgund);}
+  .sub{font-size:15px;color:#9b8a93;letter-spacing:2px;text-transform:uppercase;margin:0 0 26px;}
+  .foto{width:150px;height:150px;border-radius:50%;object-fit:cover;margin:0 auto 26px;display:block;border:3px solid var(--gold);}
+  .cd{display:flex;justify-content:center;gap:10px;margin:6px 0 22px;}
+  .seg{background:var(--burgund);color:#fff;border-radius:12px;padding:14px 10px;min-width:74px;}
+  .seg .num{font-size:34px;font-weight:bold;line-height:1;font-family:Georgia,serif;}
+  .seg .lbl{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-top:6px;display:block;}
+  .lead{font-size:17px;line-height:1.7;margin:0 0 24px;color:var(--burgund);}
+  .form{max-width:440px;margin:0 auto;}
+  .inp{width:100%;padding:15px 18px;border:1.5px solid #e5d4ae;border-radius:12px;font-size:16px;font-family:Georgia,serif;color:var(--burgund);margin-bottom:14px;background:#fff;}
+  .inp:focus{outline:none;border-color:var(--magenta);}
+  .btn{display:block;width:100%;background:var(--magenta);color:#fff;border:none;border-radius:30px;padding:17px 24px;font-size:17px;font-weight:bold;font-family:Georgia,serif;letter-spacing:.5px;cursor:pointer;text-decoration:none;}
+  .btn:hover{filter:brightness(1.05);}
+  .btn:disabled{opacity:.5;cursor:not-allowed;}
+  .live{display:none;}
+  .hint{font-size:13px;color:#b6a9af;margin-top:16px;}
+  .logo{display:block;margin:0 auto 30px;max-width:170px;}
+  /* AC-Fehlermeldungen schlicht halten */
+  ._error{display:block;font-size:13px;color:#c0392b;margin:-8px 0 12px;text-align:left;}
+  ._error-arrow{display:none;}
+  ._form-thank-you{font-size:16px;color:var(--burgund);}
+  @media(max-width:520px){ .seg{min-width:62px;} .seg .num{font-size:26px;} h1{font-size:24px;} .card{padding:34px 20px;} }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <img class="logo" src="https://your-balance.at/assets/images/logo-neu-quer-hell.png" alt="Your Balance – Susanne Wachter">
+      <p class="sub" id="state-label">Heute, 19:00 Uhr · live</p>
+      <h1 id="headline">Unser Abend beginnt in Kürze…</h1>
+      <img class="foto" src="https://your-balance.at/assets/images/gastgeberin-susanne.png" alt="Susanne Wachter">
+
+      <!-- Countdown -->
+      <div class="cd" id="countdown">
+        <div class="seg"><span class="num" id="d">00</span><span class="lbl">Tage</span></div>
+        <div class="seg"><span class="num" id="h">00</span><span class="lbl">Stunden</span></div>
+        <div class="seg"><span class="num" id="m">00</span><span class="lbl">Minuten</span></div>
+        <div class="seg"><span class="num" id="s">00</span><span class="lbl">Sekunden</span></div>
+      </div>
+
+      <!-- Vor dem Start: ActiveCampaign-Formular 41 (Tag ABEND_LIVE_DABEI + Redirect zu Zoom in AC hinterlegt) -->
+      <div id="prelive">
+        <p class="lead" id="lead-text">Bestätige kurz deine E-Mail – dann gelangst du direkt in meinen Zoom-Raum. Bis gleich. 💛</p>
+        <div class="form">
+          <form method="POST" action="https://your-balance61093.activehosted.com/proc.php" id="_form_41_" class="_form _form_41 _inline-form _dark" novalidate data-styles-version="5">
+            <input type="hidden" name="u" value="41" />
+            <input type="hidden" name="f" value="41" />
+            <input type="hidden" name="s" />
+            <input type="hidden" name="c" value="0" />
+            <input type="hidden" name="m" value="0" />
+            <input type="hidden" name="act" value="sub" />
+            <input type="hidden" name="v" value="2" />
+            <input type="hidden" name="or" value="08fa0fb9-852d-424e-aa5b-7e9a426897aa" />
+            <div class="_form-content">
+              <input class="inp" type="text" name="firstname" id="firstname" placeholder="Dein Vorname (optional)" autocomplete="given-name" />
+              <input class="inp" type="text" name="email" id="email" placeholder="deine@email.de" inputmode="email" required autocomplete="email" />
+              <button class="btn" id="_form_41_submit" type="submit">Jetzt teilnehmen</button>
+            </div>
+            <div class="_form-thank-you" style="display:none;"></div>
+          </form>
+          <p class="hint">Mach dir's schön: ruhiger Platz, eine Tasse Tee, Handy zur Seite. Dieser Abend gehört dir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Ziel: Mittwoch, 26. August 2026, 19:00 Uhr (Wien, UTC+2 im August)
+  var target = new Date("2026-08-26T19:00:00+02:00").getTime();
+  function pad(n){ return (n<10?"0":"")+n; }
+  function tick(){
+    var diff = target - Date.now();
+    if(diff <= 0){
+      // Live-Modus: Countdown ausblenden, aber das Formular bleibt stehen,
+      // damit JEDE Anmeldung erfasst wird (Tag ABEND_LIVE_DABEI) und dann zu Zoom geht.
+      document.getElementById("countdown").style.display="none";
+      document.getElementById("headline").textContent="Es geht los – wir sind live!";
+      document.getElementById("state-label").textContent="🔴 Jetzt live";
+      document.getElementById("lead-text").innerHTML="<b>Wir sind live!</b> Bestätige kurz deine E-Mail – dann kommst du direkt in den Zoom-Raum. 💛";
+      var sb=document.getElementById("_form_41_submit"); if(sb) sb.textContent="Jetzt in den Zoom-Raum";
+      clearInterval(iv);
+      return;
+    }
+    var d=Math.floor(diff/86400000), h=Math.floor(diff%86400000/3600000),
+        m=Math.floor(diff%3600000/60000), s=Math.floor(diff%60000/1000);
+    document.getElementById("d").textContent=pad(d);
+    document.getElementById("h").textContent=pad(h);
+    document.getElementById("m").textContent=pad(m);
+    document.getElementById("s").textContent=pad(s);
+  }
+  var iv=setInterval(tick,1000); tick();
+  // E-Mail/Vorname-Vorbefüllung (?email=…&firstname=…), Absenden und Weiterleitung in den
+  // Zoom-Raum übernimmt das ActiveCampaign-Formular 41 unten + die in AC hinterlegte Redirect-Aktion.
+</script>
+
+<!-- ActiveCampaign Formular 41 (Warteraum) -->
+<script>
+window.cfields = [];
+window._show_thank_you = function(id, message, trackcmp_url, email) {
+    var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+    form.querySelector('._form-content').style.display = 'none';
+    thank_you.innerHTML = message;
+    thank_you.style.display = 'block';
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') {
+        visitorObject('setEmail', email);
+        visitorObject('update');
+    } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+        _load_script(trackcmp_url);
+    }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+    thank_you.setAttribute('tabindex', '-1');
+    thank_you.focus();
+};
+window._show_error = function(id, message, html) {
+    var form = document.getElementById('_form_' + id + '_'),
+        err = document.createElement('div'),
+        button = form.querySelector('button[type="submit"]'),
+        old_error = form.querySelector('._form_error');
+    if (old_error) old_error.parentNode.removeChild(old_error);
+    err.innerHTML = message;
+    err.className = '_error-inner _form_error _no_arrow';
+    var wrapper = document.createElement('div');
+    wrapper.className = '_form-inner _show_be_error';
+    wrapper.appendChild(err);
+    button.parentNode.insertBefore(wrapper, button);
+    var submitButton = form.querySelector('[id^="_form"][id$="_submit"]');
+    submitButton.disabled = false;
+    submitButton.classList.remove('processing');
+    if (html) {
+        var div = document.createElement('div');
+        div.className = '_error-html';
+        div.innerHTML = html;
+        err.appendChild(div);
+    }
+};
+window._load_script = function(url, callback, isSubmit) {
+    var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+    var submitButton = document.querySelector('#_form_41_submit');
+    script.charset = 'utf-8';
+    script.src = url;
+    if (callback) {
+        script.onload = script.onreadystatechange = function() {
+            if (!r && (!this.readyState || this.readyState == 'complete')) { r = true; callback(); }
+        };
+    }
+    script.onerror = function() {
+        if (isSubmit) {
+            _show_error("41", "Deine Übermittlung konnte nicht gesendet werden. Bitte versuche es erneut.");
+            submitButton.disabled = false;
+            submitButton.classList.remove('processing');
+        }
+    }
+    head.appendChild(script);
+};
+(function() {
+    if (window.location.search.search("excludeform") !== -1) return false;
+    var addEvent = function(element, event, func) {
+        if (element.addEventListener) { element.addEventListener(event, func); }
+        else { var oldFunc = element['on' + event]; element['on' + event] = function() { oldFunc.apply(this, arguments); func.apply(this, arguments); }; }
+    }
+    var form_to_submit = document.getElementById('_form_41_');
+    var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+
+    var getUrlParam = function(name) {
+        if (name.toLowerCase() !== 'email') {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(name) || false;
+        }
+        var qString = window.location.search;
+        if (!qString) return false;
+        var parameters = qString.substr(1).split('&');
+        for (var i = 0; i < parameters.length; i++) {
+            var parameter = parameters[i].split('=');
+            if (parameter[0].toLowerCase() === 'email') {
+                return parameter[1] === undefined ? true : decodeURIComponent(parameter[1]);
+            }
+        }
+        return false;
+    };
+
+    for (var i = 0; i < allInputs.length; i++) {
+        allInputs[i].dataset.name = allInputs[i].name;
+        var fieldVal = getUrlParam(allInputs[i].dataset.name);
+        if (fieldVal) {
+            if (allInputs[i].dataset.autofill === "false") continue;
+            allInputs[i].value = fieldVal;
+        }
+    }
+
+    var remove_tooltips = function() { for (var i = 0; i < tooltips.length; i++) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); } tooltips = []; };
+    var remove_tooltip = function(elem) { for (var i = 0; i < tooltips.length; i++) { if (tooltips[i].elem === elem) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); tooltips.splice(i, 1); return; } } };
+    var create_tooltip = function(elem, text) {
+        var tooltip = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
+        tooltip.className = '_error'; inner.className = '_error-inner'; inner.innerHTML = text;
+        tooltip.appendChild(inner); elem.parentNode.appendChild(tooltip);
+        new_tooltip.tip = tooltip; new_tooltip.elem = elem; tooltips.push(new_tooltip); return new_tooltip;
+    };
+    var validate_field = function(elem, remove) {
+        var tooltip = null, value = elem.value, no_error = true;
+        remove ? remove_tooltip(elem) : false;
+        elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+        if (elem.getAttribute('required') !== null) {
+            if (value === undefined || value === null || value === '') {
+                elem.className = elem.className + ' _has_error'; no_error = false;
+                tooltip = create_tooltip(elem, "Bitte fülle dieses Feld aus.");
+            }
+        }
+        if (no_error && elem.name == 'email') {
+            if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+                elem.className = elem.className + ' _has_error'; no_error = false;
+                tooltip = create_tooltip(elem, "Bitte gib eine gültige E-Mail-Adresse ein.");
+            }
+        }
+        return no_error;
+    };
+    var needs_validate = function(el) {
+        if (el.getAttribute('required') !== null) return true;
+        if (el.name === 'email' && el.value !== "") return true;
+        return false;
+    };
+    var validate_form = function(e) {
+        var no_error = true;
+        if (!submitted) {
+            submitted = true;
+            for (var i = 0, len = allInputs.length; i < len; i++) {
+                var input = allInputs[i];
+                if (needs_validate(input) && (input.type == 'text')) {
+                    addEvent(input, 'blur', function() { this.value = this.value.trim(); validate_field(this, true); });
+                    addEvent(input, 'input', function() { validate_field(this, true); });
+                }
+            }
+        }
+        remove_tooltips();
+        for (var i = 0, len = allInputs.length; i < len; i++) {
+            var elem = allInputs[i];
+            if (needs_validate(elem)) { elem.value = elem.value.trim(); validate_field(elem) ? true : no_error = false; }
+        }
+        if (!no_error && e) e.preventDefault();
+        return no_error;
+    };
+
+    var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
+
+    var form_submit = function(e) {
+        e.preventDefault();
+        if (validate_form()) {
+            var submitButton = e.target.querySelector('#_form_41_submit');
+            submitButton.disabled = true;
+            submitButton.classList.add('processing');
+            var serialized = _form_serialize(document.getElementById('_form_41_')).replace(/%0A/g, '\\n');
+            _load_script('https://your-balance61093.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
+        }
+        return false;
+    };
+    addEvent(form_to_submit, 'submit', form_submit);
+})();
+</script>
+</body>
+</html>
