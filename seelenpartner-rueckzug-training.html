@@ -823,8 +823,7 @@
         form.querySelector('._form-content').style.display = 'none';
         thank_you.innerHTML = '<div style="text-align:center;padding:24px 0 8px;"><div style="width:64px;height:64px;margin:0 auto 20px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;color:#10B981;">✓</div><h3 style="font-family:\'Cormorant Garamond\',serif;font-size:24px;color:#FBF5EC;margin-bottom:14px;font-weight:300;">Wunderbar &mdash; du bist dabei!</h3><p style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:13px;color:#E8A5B8;line-height:1.7;margin-bottom:14px;">Schau bitte jetzt in dein Postfach.<br>Klick auf den Best&auml;tigungslink in der Mail &mdash;<br>und dein Training &ouml;ffnet sich direkt.</p><p style="font-family:\'Plus Jakarta Sans\',sans-serif;font-size:11px;color:rgba(251,245,236,0.5);line-height:1.6;">Keine Mail erhalten? Schau im Spam-Ordner<br>oder bei &bdquo;Werbung&ldquo; (Gmail).</p></div>';
         thank_you.style.display = 'block';
-        if (typeof gtag !== 'undefined') gtag('event', 'generate_lead', { currency: 'EUR', value: 0, source: 'freebie_seelenpartner_rueckzug' });
-        if (typeof fbq !== 'undefined') { fbq('track', 'Lead'); fbq('track', 'CompleteRegistration'); }
+        /* Lead-Events feuern NUR auf /du-bist-angemeldet.html — hier nicht, sonst zählt Meta doppelt */
         const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
         var visitorObject = window[vgoAlias];
         if (email && typeof visitorObject !== 'undefined') { visitorObject('setEmail', email); visitorObject('update'); }
