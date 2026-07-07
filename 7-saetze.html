@@ -124,72 +124,92 @@
 </head>
 <body class="bg-cream-soft text-burgundy-deep font-sans antialiased selection:bg-roseWarm/30 overflow-x-hidden">
 
+    <!-- VERSPRECHENS-BALKEN -->
+    <div class="bg-burgundy-dark text-cream-soft text-center text-xs md:text-sm font-medium tracking-wide py-3 px-4">
+        7 Sätze, die dein Nervensystem beruhigen, wenn Liebe zu viel wird &ndash; kostenlos, direkt in dein Postfach 🤍
+    </div>
+
     <!-- HEADER -->
-    <header class="absolute top-0 left-0 right-0 z-50 py-5">
+    <header class="bg-burgundy-deep py-4">
         <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
             <a href="https://www.your-balance.at" class="block">
-                <img src="assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance — Susanne Wachter" class="h-12 md:h-14 w-auto">
+                <img src="assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance — Susanne Wachter" class="h-11 md:h-12 w-auto">
             </a>
-            <button onclick="openModal()" class="border border-gold/40 text-gold hover:bg-gold/10 hover:text-cream-soft font-medium text-xs tracking-wider uppercase px-5 py-2.5 rounded-full transition-all duration-300">
+            <button onclick="openModal()" class="border border-gold/40 text-gold hover:bg-gold/10 font-medium text-xs tracking-wider uppercase px-5 py-2.5 rounded-full transition-all duration-300">
                 7 Sätze holen
             </button>
         </div>
     </header>
 
-    <!-- 1. HERO mit 3D-MOCKUP -->
-    <section class="relative bg-burgundy-deep text-cream-soft pt-32 pb-16 overflow-hidden">
+    <!-- 1. HERO: Headline mittig, Bullets links, Mockup rechts -->
+    <section class="relative bg-burgundy-deep text-cream-soft pt-12 pb-16 overflow-hidden">
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gold/5 blur-[120px] pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center space-y-6">
-            <div class="inline-flex items-center space-x-2 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full text-gold text-xs uppercase tracking-[0.2em] font-medium">
-                <i data-lucide="quote" class="w-3.5 h-3.5"></i>
-                <span>Kostenloses PDF für feinfühlige Frauen</span>
+        <div class="max-w-6xl mx-auto px-6 relative z-10 space-y-10">
+            <div class="text-center space-y-4 max-w-4xl mx-auto">
+                <h1 class="text-3xl md:text-5xl font-serif font-light tracking-wide leading-[1.2]">
+                    Schluss mit Grübeln, Warten und Kopfkino: <br class="hidden md:block">
+                    <span class="gold-shine italic font-semibold font-serif">Diese 7 Sätze beruhigen dein Nervensystem,</span> wenn Liebe zu viel wird
+                </h1>
             </div>
-            <h1 class="text-4xl md:text-6xl font-serif font-light tracking-wide leading-[1.15] text-cream-soft">
-                7 Sätze, die dein <br>
-                <span class="gold-shine italic font-semibold font-serif">Nervensystem beruhigen</span>
-            </h1>
-            <p class="text-lg md:text-2xl font-serif text-roseWarm italic max-w-3xl mx-auto font-light leading-relaxed">
-                Worte, die dich halten, wenn Liebe zu viel wird &ndash; damit dein Kopf endlich Ruhe gibt
-            </p>
-            <div class="max-w-2xl mx-auto pt-2">
-                <img src="assets/images/7-saetze-mockup.webp" alt="7 Sätze, die dein Nervensystem beruhigen — PDF-Vorschau" class="w-full h-auto rounded-2xl shadow-2xl border border-gold/20" width="1200" height="900">
-            </div>
-            <div class="pt-2 max-w-md mx-auto space-y-4">
-                <button onclick="openModal()" class="w-full h-14 gold-button font-medium text-sm tracking-widest uppercase rounded-full flex items-center justify-center gap-2">
-                    <i data-lucide="quote" class="w-4 h-4"></i> 7 Sätze kostenlos anfordern
-                </button>
-                <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-roseWarm/80 font-light tracking-wider">
-                    <span>100 % kostenlos</span>
-                    <span class="text-gold/40">•</span>
-                    <span>Kommt direkt in dein Postfach</span>
-                    <span class="text-gold/40">•</span>
-                    <span>Jederzeit abmeldbar</span>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-5 order-2 md:order-1">
+                    <p class="text-sm md:text-base text-cream-soft/90 font-light">Das erwartet dich in deinen 7 Sätzen &ndash; kostenlos und sofort anwendbar:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm md:text-base text-cream-soft/90 font-light leading-relaxed">Sieben Sätze, die dich abfangen, wenn dein Kopf wieder kreist &ndash; nachts, bei Funkstille, mitten im Alltag</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm md:text-base text-cream-soft/90 font-light leading-relaxed">Warum diese Worte dein Nervensystem beruhigen &ndash; und was sie von Durchhalte-Sprüchen unterscheidet</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm md:text-base text-cream-soft/90 font-light leading-relaxed">Die einfache 7-Tage-Anleitung: ein Satz pro Tag, eine Minute am Morgen</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm md:text-base text-cream-soft/90 font-light leading-relaxed">Zum Speichern aufs Handy und Ausdrucken &ndash; damit dein Satz da ist, wenn du ihn brauchst</span></li>
+                    </ul>
+                    <div class="space-y-3 pt-2">
+                        <button onclick="openModal()" class="w-full md:w-auto gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
+                            Jetzt die 7 Sätze kostenlos sichern
+                        </button>
+                        <div class="text-roseWarm/85"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="assets/images/7-saetze-mockup.webp" alt="7 Sätze, die dein Nervensystem beruhigen — PDF-Vorschau" class="w-full h-auto rounded-2xl shadow-2xl border border-gold/20" width="1200" height="900">
                 </div>
             </div>
         </div>
         <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
     </section>
 
-    <!-- 2. CHECKPOINTS -->
+    <!-- 2. NUTZEN: 3 Karten -->
     <section class="py-20 bg-cream-soft">
-        <div class="max-w-3xl mx-auto px-6 text-center space-y-8">
-            <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep">
-                Schluss mit Grübeln, Warten <span class="gold-shine italic font-semibold">und Kopfkino</span>
-            </h2>
-            <div class="gold-divider"></div>
-            <ul class="max-w-xl mx-auto space-y-4 text-left">
-                <li class="flex items-start space-x-3"><span class="text-gold shrink-0 mt-1 text-lg">✔</span><span class="text-sm md:text-base text-burgundy-deep/90 font-light leading-relaxed">Sieben Sätze, die dich abfangen, wenn dein Kopf wieder kreist &ndash; nachts, bei Funkstille, mitten im Alltag</span></li>
-                <li class="flex items-start space-x-3"><span class="text-gold shrink-0 mt-1 text-lg">✔</span><span class="text-sm md:text-base text-burgundy-deep/90 font-light leading-relaxed">Warum diese Worte dein Nervensystem beruhigen &ndash; und was sie von Durchhalte-Sprüchen unterscheidet</span></li>
-                <li class="flex items-start space-x-3"><span class="text-gold shrink-0 mt-1 text-lg">✔</span><span class="text-sm md:text-base text-burgundy-deep/90 font-light leading-relaxed">Die einfache 7-Tage-Anleitung: ein Satz pro Tag, eine Minute am Morgen</span></li>
-                <li class="flex items-start space-x-3"><span class="text-gold shrink-0 mt-1 text-lg">✔</span><span class="text-sm md:text-base text-burgundy-deep/90 font-light leading-relaxed">Zum Speichern aufs Handy und Ausdrucken &ndash; damit dein Satz da ist, wenn du ihn brauchst</span></li>
-            </ul>
-            <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
-                7 Sätze kostenlos anfordern
-            </button>
+        <div class="max-w-5xl mx-auto px-6 space-y-10">
+            <div class="text-center space-y-3 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep">Weniger Kopfkino, mehr Ruhe &ndash; <span class="gold-shine italic font-semibold">mit Worten, die dich halten</span></h2>
+                <p class="text-sm text-burgundy-deep/70 font-light pt-1">Durchhalte-Sprüche erreichen deinen Kopf. Diese Sätze erreichen dein Nervensystem &ndash; dort, wo das Festhalten wirklich sitzt.</p>
+                <div class="gold-divider"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-xl border border-gold/20 shadow-sm space-y-3 text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="moon" class="w-6 h-6 text-gold"></i></div>
+                    <h3 class="font-serif text-xl text-burgundy-medium font-medium">Ruhigere Nächte</h3>
+                    <p class="text-sm text-burgundy-deep/80 font-light leading-relaxed">Statt Gedankenkarussell hast du einen Satz, der dich sanft zurück zu dir holt &ndash; genau dann, wenn du ihn brauchst.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl border border-gold/20 shadow-sm space-y-3 text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="anchor" class="w-6 h-6 text-gold"></i></div>
+                    <h3 class="font-serif text-xl text-burgundy-medium font-medium">Halt bei Funkstille</h3>
+                    <p class="text-sm text-burgundy-deep/80 font-light leading-relaxed">Sein Schweigen wirft dich nicht mehr komplett um &ndash; dein Nervensystem bekommt etwas, woran es sich festhalten kann.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl border border-gold/20 shadow-sm space-y-3 text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="heart" class="w-6 h-6 text-gold"></i></div>
+                    <h3 class="font-serif text-xl text-burgundy-medium font-medium">Zurück zu dir</h3>
+                    <p class="text-sm text-burgundy-deep/80 font-light leading-relaxed">Du verstehst, warum du so tief fühlst &ndash; und wie du tief lieben kannst, ohne dich selbst zu verlieren.</p>
+                </div>
+            </div>
+            <div class="text-center space-y-3">
+                <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
+                    Jetzt die 7 Sätze kostenlos sichern
+                </button>
+                <div class="text-burgundy-deep/70"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+            </div>
         </div>
     </section>
 
-    <!-- 3. SOCIAL PROOF -->
+    <!-- 3. TRUSTPILOT-STIMMEN -->
     <section class="py-20 bg-cream-dark">
         <div class="max-w-5xl mx-auto px-6 space-y-10">
             <div class="text-center space-y-3">
@@ -199,95 +219,132 @@
             </div>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-cream-soft p-7 rounded-xl border border-gold/20 space-y-3">
-                    <div class="text-gold tracking-widest">★★★★★</div>
+                    <div class="text-emerald-500 tracking-widest">★★★★★</div>
                     <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">„Ich konnte viele Antworten finden, Altes loslassen und allem voran Vertrauen in mich und das Leben wieder gewinnen. Ohne Susanne wäre ich nie so weit gekommen.“</p>
                     <p class="text-xs text-burgundy-medium font-medium">Daniela · Trustpilot</p>
                 </div>
                 <div class="bg-cream-soft p-7 rounded-xl border border-gold/20 space-y-3">
-                    <div class="text-gold tracking-widest">★★★★★</div>
+                    <div class="text-emerald-500 tracking-widest">★★★★★</div>
                     <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">„Die letzte Sitzung brachte Klarheit, und es durfte etwas gehen, was nicht mehr zu mir gehört. Susanne ist sehr einfühlsam. Ich kann sie von Herzen weiterempfehlen.“</p>
                     <p class="text-xs text-burgundy-medium font-medium">Karin Mangold · Trustpilot</p>
                 </div>
                 <div class="bg-cream-soft p-7 rounded-xl border border-gold/20 space-y-3">
-                    <div class="text-gold tracking-widest">★★★★★</div>
+                    <div class="text-emerald-500 tracking-widest">★★★★★</div>
                     <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">„So wahrhaftig und echt und immer gut verständlich. Ich spüre, wie ich immer freier werde &ndash; und eine ganz tiefe Dankbarkeit.“</p>
                     <p class="text-xs text-burgundy-medium font-medium">P. Vogt · Trustpilot</p>
                 </div>
             </div>
-            <p class="text-center text-xs text-burgundy-deep/50 font-light">Echte Bewertungen von Trustpilot</p>
+            <div class="text-center"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
         </div>
     </section>
 
-    <!-- 4. NUTZEN -->
+    <!-- 4. AUTORITÄT: Susanne zweispaltig -->
     <section class="py-20 bg-burgundy-deep text-cream-soft relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gold/5 blur-[150px] pointer-events-none"></div>
-        <div class="max-w-5xl mx-auto px-6 relative z-10 space-y-10">
+        <div class="max-w-5xl mx-auto px-6 relative z-10 grid md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-5">
+                <div class="relative rounded-2xl overflow-hidden border border-gold/30 shadow-xl">
+                    <img src="assets/images/susanne-portrait-blazer.webp" alt="Susanne Wachter" class="w-full h-[420px] object-cover" style="object-position: center 18%;" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-burgundy-deep/40 to-transparent pointer-events-none"></div>
+                </div>
+            </div>
+            <div class="md:col-span-7 space-y-4">
+                <h2 class="text-3xl md:text-4xl font-serif font-light">Deine 7 Sätze &ndash; <span class="gold-shine italic font-semibold">dein Anker für den Alltag</span></h2>
+                <p class="text-sm md:text-base text-cream-soft/85 font-light leading-relaxed">Ich bin Susanne &ndash; ich begleite feinfühlige Frauen, die in tiefen Verbindungen mehr fühlen, als sie erklären können. Ich weiß aus eigener Erfahrung, wie es ist, wenn der Verstand längst weiß, was gut wäre, und das Herz trotzdem festhält.</p>
+                <p class="text-sm md:text-base text-cream-soft/85 font-light leading-relaxed">Die 7 Sätze sind aus dieser Arbeit entstanden. Sie helfen dir:</p>
+                <ul class="space-y-3">
+                    <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm text-cream-soft/85 font-light leading-relaxed">Bei dir zu bleiben, selbst wenn du tief fühlst &ndash; statt dich in ihm zu verlieren</span></li>
+                    <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm text-cream-soft/85 font-light leading-relaxed">Deinem Nervensystem Sicherheit zu geben, wenn Warten und Funkstille dich auffressen</span></li>
+                    <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm text-cream-soft/85 font-light leading-relaxed">Deine Feinfühligkeit als Stärke zu leben &ndash; nicht als Schwäche zu bekämpfen</span></li>
+                </ul>
+                <p class="font-serif italic gold-shine text-base font-medium pt-1">Du bist nicht zu sensibel. Du bist nicht zu viel. Du bist nicht falsch.</p>
+                <div class="space-y-3 pt-1">
+                    <button onclick="openModal()" class="gold-button px-8 h-12 font-medium text-xs tracking-wider uppercase rounded-full">
+                        Jetzt die 7 Sätze kostenlos sichern
+                    </button>
+                    <div class="text-roseWarm/85"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. EINWAND zweispaltig -->
+    <section class="py-20 bg-cream-soft">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-5">
+                <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep leading-tight">„Noch ein PDF, <span class="gold-shine italic font-semibold">das ich eh nie öffne?“</span></h2>
+                <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed"><strong class="text-burgundy-medium">Verständlich &ndash; und genau deshalb ist es anders gebaut.</strong></p>
+                <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed">Keine Affirmationen, keine Theorie, kein 80-Seiten-Ratgeber. Sieben kurze Sätze, eine Minute am Morgen, ein Satz pro Tag.</p>
+                <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed">Sie erreichen nicht nur deinen Kopf &ndash; sie sinken dorthin, wo das Festhalten wirklich sitzt: in deinen Körper.</p>
+                <p class="font-serif italic text-lg text-burgundy-medium">Worte sind Anker. Aber nur, wenn sie in deinen Körper sinken.</p>
+                <div class="space-y-3">
+                    <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
+                        Jetzt die 7 Sätze kostenlos sichern
+                    </button>
+                    <div class="text-burgundy-deep/70"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+                </div>
+            </div>
+            <div>
+                <img src="assets/images/7-saetze-cover.webp" alt="Das Cover der 7 Sätze" class="w-full max-w-sm mx-auto h-auto rounded-xl shadow-2xl border border-gold/20" loading="lazy" width="700" height="990">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. VERGLEICH -->
+    <section class="py-20 bg-cream-dark">
+        <div class="max-w-4xl mx-auto px-6 space-y-10">
             <div class="text-center space-y-3">
-                <span class="text-xs uppercase tracking-[0.25em] text-roseWarm font-semibold">Was sich verändert</span>
-                <h2 class="text-3xl md:text-4xl font-serif font-light">Wenn Worte dich <span class="gold-shine italic font-semibold">wieder halten</span></h2>
+                <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep">Durchhalte-Sprüche vs. <span class="gold-shine italic font-semibold">deine 7 Sätze</span></h2>
                 <div class="gold-divider"></div>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-burgundy-medium/60 p-7 rounded-xl border border-gold/20 space-y-3 text-center">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="moon" class="w-5 h-5 text-gold"></i></div>
-                    <h3 class="font-serif text-lg text-gold">Ruhigere Nächte</h3>
-                    <p class="text-sm text-cream-soft/80 font-light leading-relaxed">Statt Gedankenkarussell hast du einen Satz, der dich sanft zurück zu dir holt &ndash; genau dann, wenn du ihn brauchst.</p>
-                </div>
-                <div class="bg-burgundy-medium/60 p-7 rounded-xl border border-gold/20 space-y-3 text-center">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="anchor" class="w-5 h-5 text-gold"></i></div>
-                    <h3 class="font-serif text-lg text-gold">Halt bei Funkstille</h3>
-                    <p class="text-sm text-cream-soft/80 font-light leading-relaxed">Sein Schweigen wirft dich nicht mehr komplett um &ndash; dein Nervensystem bekommt etwas, woran es sich festhalten kann.</p>
-                </div>
-                <div class="bg-burgundy-medium/60 p-7 rounded-xl border border-gold/20 space-y-3 text-center">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="heart" class="w-5 h-5 text-gold"></i></div>
-                    <h3 class="font-serif text-lg text-gold">Zurück zu dir</h3>
-                    <p class="text-sm text-cream-soft/80 font-light leading-relaxed">Du verstehst, warum du so tief fühlst &ndash; und wie du tief lieben kannst, ohne dich selbst zu verlieren.</p>
-                </div>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse rounded-xl overflow-hidden shadow-sm text-sm">
+                    <thead>
+                        <tr>
+                            <th class="bg-white text-left p-4 font-medium text-burgundy-deep w-1/4"></th>
+                            <th class="bg-burgundy-medium/90 text-cream-soft p-4 font-medium">„Lass doch einfach los“</th>
+                            <th class="bg-gold text-burgundy-deep p-4 font-medium">Deine 7 Sätze</th>
+                        </tr>
+                    </thead>
+                    <tbody class="font-light">
+                        <tr class="border-b border-gold/15">
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Wo es ankommt</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ Nur im Kopf &ndash; und der weiß es ja längst</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Im Nervensystem &ndash; dort, wo das Festhalten sitzt</td>
+                        </tr>
+                        <tr class="border-b border-gold/15">
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Nachts um 3 Uhr</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ Lässt dich mit dem Karussell allein</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Dein Satz ist da und holt dich zurück</td>
+                        </tr>
+                        <tr class="border-b border-gold/15">
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Gefühl danach</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ „Reiß dich zusammen“ &ndash; du fühlst dich falsch</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Du darfst weich bleiben und bist trotzdem gehalten</td>
+                        </tr>
+                        <tr class="border-b border-gold/15">
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Aufwand</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ Ständiges Ankämpfen gegen dich selbst</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Eine Minute am Morgen, ein Satz pro Tag</td>
+                        </tr>
+                        <tr>
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Deine Tiefe</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ Wird als „zu sensibel“ abgetan</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Wird ernst genommen &ndash; und wird zu deiner Stärke</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="text-center">
+            <div class="text-center space-y-3">
                 <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
-                    7 Sätze kostenlos anfordern
+                    Jetzt die 7 Sätze kostenlos sichern
                 </button>
+                <div class="text-burgundy-deep/70"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
             </div>
         </div>
     </section>
 
-    <!-- 5. EINWAND -->
-    <section class="py-20 bg-cream-soft">
-        <div class="max-w-3xl mx-auto px-6 text-center space-y-6">
-            <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep">„Noch ein PDF, <span class="gold-shine italic font-semibold">das ich eh nie öffne?“</span></h2>
-            <div class="gold-divider"></div>
-            <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed">Verständlich &ndash; du hast wahrscheinlich schon viel gelesen. Genau deshalb sind die 7 Sätze anders: <strong class="text-burgundy-medium">keine Affirmationen, keine Theorie, kein 80-Seiten-Ratgeber.</strong></p>
-            <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed">Sieben kurze Sätze, eine Minute am Morgen, ein Satz pro Tag. Sie erreichen nicht nur deinen Kopf &ndash; sie sinken dorthin, wo das Festhalten wirklich sitzt: in deinen Körper.</p>
-            <p class="font-serif italic text-lg text-burgundy-medium">Worte sind Anker. Aber nur, wenn sie in deinen Körper sinken.</p>
-            <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
-                7 Sätze kostenlos anfordern
-            </button>
-        </div>
-    </section>
-
-    <!-- 6. ÜBER SUSANNE -->
-    <section class="py-20 bg-cream-dark">
-        <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-12 gap-10 items-center">
-            <div class="md:col-span-4">
-                <div class="relative rounded-2xl overflow-hidden border border-gold/30 shadow-xl">
-                    <img src="assets/images/susanne-portrait-blazer.webp" alt="Susanne Wachter" class="w-full h-[360px] object-cover" style="object-position: center 18%;" loading="lazy">
-                </div>
-            </div>
-            <div class="md:col-span-8 space-y-4">
-                <span class="text-xs uppercase tracking-[0.25em] text-burgundy-medium font-semibold">Deine Begleitung</span>
-                <h2 class="text-3xl font-serif font-light text-burgundy-deep">Hi, ich bin <span class="gold-shine italic font-semibold">Susanne</span>.</h2>
-                <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">Ich begleite feinfühlige Frauen, die in tiefen Verbindungen mehr fühlen, als sie erklären können &ndash; und die sich danach sehnen, dabei bei sich zu bleiben. Ich weiß aus eigener Erfahrung, wie es ist, wenn der Verstand längst weiß, was gut wäre, und das Herz trotzdem festhält.</p>
-                <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">Die 7 Sätze sind aus genau dieser Arbeit entstanden: Worte, die nicht vertrösten, sondern halten.</p>
-                <p class="font-serif italic gold-shine text-base font-medium">Du bist nicht zu sensibel. Du bist nicht zu viel. Du bist nicht falsch.</p>
-                <button onclick="openModal()" class="gold-button px-8 h-12 font-medium text-xs tracking-wider uppercase rounded-full">
-                    Jetzt kostenlos die 7 Sätze holen
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. ABSCHLUSS-CTA -->
+    <!-- 7. ABSCHLUSS -->
     <section class="py-20 bg-burgundy-deep text-cream-soft relative overflow-hidden text-center">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gold/5 blur-[150px] pointer-events-none"></div>
         <div class="max-w-2xl mx-auto px-6 relative z-10 space-y-8">
@@ -296,9 +353,12 @@
             </h2>
             <div class="gold-divider"></div>
             <p class="text-sm md:text-base text-cream-soft/80 font-light leading-relaxed">Trag dich ein &ndash; die 7 Sätze kommen direkt in dein Postfach. Heute Abend, wenn der Kopf wieder anspringt, hast du zum ersten Mal etwas, das dich hält.</p>
-            <button onclick="openModal()" class="w-full max-w-md h-14 gold-button font-medium text-sm tracking-widest uppercase rounded-full mx-auto flex items-center justify-center gap-2">
-                <i data-lucide="quote" class="w-4 h-4"></i> 7 Sätze kostenlos anfordern
-            </button>
+            <div class="space-y-3">
+                <button onclick="openModal()" class="w-full max-w-md h-14 gold-button font-medium text-sm tracking-widest uppercase rounded-full mx-auto flex items-center justify-center gap-2">
+                    <i data-lucide="quote" class="w-4 h-4"></i> Jetzt die 7 Sätze kostenlos sichern
+                </button>
+                <div class="text-roseWarm/85"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+            </div>
             <p class="text-xs text-roseWarm/70 font-light italic">P.S. Das, was wir uns für „irgendwann, wenn Ruhe ist“ aufheben, passiert fast nie. Eine Minute am Morgen &ndash; mehr braucht es nicht.</p>
         </div>
     </section>
