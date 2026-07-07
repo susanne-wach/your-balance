@@ -124,72 +124,92 @@
 </head>
 <body class="bg-cream-soft text-burgundy-deep font-sans antialiased selection:bg-roseWarm/30 overflow-x-hidden">
 
+    <!-- VERSPRECHENS-BALKEN -->
+    <div class="bg-burgundy-dark text-cream-soft text-center text-xs md:text-sm font-medium tracking-wide py-3 px-4">
+        Dein kostenloses Workbook „Die Geheimnisse der Seelenverbindung“ &ndash; zum direkten Eintragen, sofort in deinem Postfach 🤍
+    </div>
+
     <!-- HEADER -->
-    <header class="absolute top-0 left-0 right-0 z-50 py-5">
+    <header class="bg-burgundy-deep py-4">
         <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
             <a href="https://www.your-balance.at" class="block">
-                <img src="assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance — Susanne Wachter" class="h-12 md:h-14 w-auto">
+                <img src="assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance — Susanne Wachter" class="h-11 md:h-12 w-auto">
             </a>
-            <button onclick="openModal()" class="border border-gold/40 text-gold hover:bg-gold/10 hover:text-cream-soft font-medium text-xs tracking-wider uppercase px-5 py-2.5 rounded-full transition-all duration-300">
+            <button onclick="openModal()" class="border border-gold/40 text-gold hover:bg-gold/10 font-medium text-xs tracking-wider uppercase px-5 py-2.5 rounded-full transition-all duration-300">
                 Workbook holen
             </button>
         </div>
     </header>
 
-    <!-- 1. HERO mit 3D-MOCKUP -->
-    <section class="relative bg-burgundy-deep text-cream-soft pt-32 pb-16 overflow-hidden">
+    <!-- 1. HERO -->
+    <section class="relative bg-burgundy-deep text-cream-soft pt-12 pb-16 overflow-hidden">
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gold/5 blur-[120px] pointer-events-none"></div>
-        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center space-y-6">
-            <div class="inline-flex items-center space-x-2 bg-gold/10 border border-gold/30 px-4 py-1.5 rounded-full text-gold text-xs uppercase tracking-[0.2em] font-medium">
-                <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
-                <span>Kostenloses Workbook zum Eintragen</span>
+        <div class="max-w-6xl mx-auto px-6 relative z-10 space-y-10">
+            <div class="text-center space-y-4 max-w-4xl mx-auto">
+                <h1 class="text-3xl md:text-5xl font-serif font-light tracking-wide leading-[1.2]">
+                    Du bist nicht verrückt. Du bist verbunden: <br class="hidden md:block">
+                    <span class="gold-shine italic font-semibold font-serif">Verstehe, was diese tiefe Verbindung mit dir macht</span> &ndash; und bleib dabei bei dir
+                </h1>
             </div>
-            <h1 class="text-4xl md:text-6xl font-serif font-light tracking-wide leading-[1.15] text-cream-soft">
-                Die Geheimnisse der <br>
-                <span class="gold-shine italic font-semibold font-serif">Seelenverbindung</span>
-            </h1>
-            <p class="text-lg md:text-2xl font-serif text-roseWarm italic max-w-3xl mx-auto font-light leading-relaxed">
-                Verstehe, was diese tiefe Verbindung mit dir macht &ndash; und wie du darin bei dir bleibst
-            </p>
-            <div class="max-w-2xl mx-auto pt-2">
-                <img src="assets/images/seelenverbindung-workbook-mockup.webp" alt="Workbook Die Geheimnisse der Seelenverbindung — Vorschau" class="w-full h-auto rounded-2xl shadow-2xl border border-gold/20" width="1200" height="900">
-            </div>
-            <div class="pt-2 max-w-md mx-auto space-y-4">
-                <button onclick="openModal()" class="w-full h-14 gold-button font-medium text-sm tracking-widest uppercase rounded-full flex items-center justify-center gap-2">
-                    <i data-lucide="book-open" class="w-4 h-4"></i> Workbook kostenlos anfordern
-                </button>
-                <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-roseWarm/80 font-light tracking-wider">
-                    <span>100 % kostenlos</span>
-                    <span class="text-gold/40">•</span>
-                    <span>Kommt direkt in dein Postfach</span>
-                    <span class="text-gold/40">•</span>
-                    <span>Direkt ausfüllbar</span>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-5 order-2 md:order-1">
+                    <p class="text-sm md:text-base text-cream-soft/90 font-light">Das erwartet dich in deinem Workbook &ndash; kostenlos und zum direkten Hineinschreiben:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm md:text-base text-cream-soft/90 font-light leading-relaxed">Warum sich diese Verbindung so anders anfühlt als alles davor &ndash; und warum dich das nicht verrückt macht</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm md:text-base text-cream-soft/90 font-light leading-relaxed">Wie du innere Ruhe findest, ohne ständig gegen deine Gedanken ankämpfen zu müssen</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm md:text-base text-cream-soft/90 font-light leading-relaxed">Reflexionsfragen und Übungen zum direkten Ausfüllen &ndash; am Handy, am Computer oder ausgedruckt</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm md:text-base text-cream-soft/90 font-light leading-relaxed">Dein 7-Tage-Begleiter, der dich in der Tiefe der Verbindung stabil hält</span></li>
+                    </ul>
+                    <div class="space-y-3 pt-2">
+                        <button onclick="openModal()" class="w-full md:w-auto gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
+                            Jetzt das Workbook kostenlos sichern
+                        </button>
+                        <div class="text-roseWarm/85"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="assets/images/seelenverbindung-workbook-mockup.webp" alt="Workbook Die Geheimnisse der Seelenverbindung — Vorschau" class="w-full h-auto rounded-2xl shadow-2xl border border-gold/20" width="1200" height="900">
                 </div>
             </div>
         </div>
         <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
     </section>
 
-    <!-- 2. CHECKPOINTS -->
+    <!-- 2. NUTZEN -->
     <section class="py-20 bg-cream-soft">
-        <div class="max-w-3xl mx-auto px-6 text-center space-y-8">
-            <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep">
-                Du bist nicht verrückt. <span class="gold-shine italic font-semibold">Du bist verbunden.</span>
-            </h2>
-            <div class="gold-divider"></div>
-            <ul class="max-w-xl mx-auto space-y-4 text-left">
-                <li class="flex items-start space-x-3"><span class="text-gold shrink-0 mt-1 text-lg">✔</span><span class="text-sm md:text-base text-burgundy-deep/90 font-light leading-relaxed">Warum sich diese Verbindung so anders anfühlt als alles davor &ndash; und warum dich das nicht verrückt macht</span></li>
-                <li class="flex items-start space-x-3"><span class="text-gold shrink-0 mt-1 text-lg">✔</span><span class="text-sm md:text-base text-burgundy-deep/90 font-light leading-relaxed">Wie du innere Ruhe findest, ohne ständig gegen deine Gedanken ankämpfen zu müssen</span></li>
-                <li class="flex items-start space-x-3"><span class="text-gold shrink-0 mt-1 text-lg">✔</span><span class="text-sm md:text-base text-burgundy-deep/90 font-light leading-relaxed">Reflexionsfragen und Übungen zum direkten Hineinschreiben &ndash; am Handy, am Computer oder ausgedruckt</span></li>
-                <li class="flex items-start space-x-3"><span class="text-gold shrink-0 mt-1 text-lg">✔</span><span class="text-sm md:text-base text-burgundy-deep/90 font-light leading-relaxed">Dein 7-Tage-Begleiter, der dich in der Tiefe der Verbindung stabil hält</span></li>
-            </ul>
-            <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
-                Workbook kostenlos anfordern
-            </button>
+        <div class="max-w-5xl mx-auto px-6 space-y-10">
+            <div class="text-center space-y-3 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep">Weniger Rätselraten, mehr Klarheit &ndash; <span class="gold-shine italic font-semibold">ohne deine Verbindung kleinzureden</span></h2>
+                <p class="text-sm text-burgundy-deep/70 font-light pt-1">Ratgeber erklären dir, was du tun solltest. Dieses Workbook lässt dich spüren und verstehen, was wirklich in dir passiert.</p>
+                <div class="gold-divider"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-xl border border-gold/20 shadow-sm space-y-3 text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="compass" class="w-6 h-6 text-gold"></i></div>
+                    <h3 class="font-serif text-xl text-burgundy-medium font-medium">Klarheit statt Rätsel</h3>
+                    <p class="text-sm text-burgundy-deep/80 font-light leading-relaxed">Du kannst deine Verbindung einordnen, ohne sie kleinreden zu müssen &ndash; und fühlst dich nicht mehr allein damit.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl border border-gold/20 shadow-sm space-y-3 text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="moon" class="w-6 h-6 text-gold"></i></div>
+                    <h3 class="font-serif text-xl text-burgundy-medium font-medium">Ruhigere Abende</h3>
+                    <p class="text-sm text-burgundy-deep/80 font-light leading-relaxed">Erste Werkzeuge, die deine Gedanken zur Ruhe bringen &ndash; statt noch mehr Theorie, die im Kopf bleibt.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl border border-gold/20 shadow-sm space-y-3 text-center">
+                    <div class="w-14 h-14 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="heart" class="w-6 h-6 text-gold"></i></div>
+                    <h3 class="font-serif text-xl text-burgundy-medium font-medium">Zurück zu dir</h3>
+                    <p class="text-sm text-burgundy-deep/80 font-light leading-relaxed">Du nimmst die Tiefe ernst UND bleibst bei dir &ndash; dein Weg zurück zu dir selbst beginnt.</p>
+                </div>
+            </div>
+            <div class="text-center space-y-3">
+                <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
+                    Jetzt das Workbook kostenlos sichern
+                </button>
+                <div class="text-burgundy-deep/70"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+            </div>
         </div>
     </section>
 
-    <!-- 3. SOCIAL PROOF -->
+    <!-- 3. TRUSTPILOT-STIMMEN -->
     <section class="py-20 bg-cream-dark">
         <div class="max-w-5xl mx-auto px-6 space-y-10">
             <div class="text-center space-y-3">
@@ -199,95 +219,132 @@
             </div>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-cream-soft p-7 rounded-xl border border-gold/20 space-y-3">
-                    <div class="text-gold tracking-widest">★★★★★</div>
+                    <div class="text-emerald-500 tracking-widest">★★★★★</div>
                     <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">„Von Beziehungsproblemen über berufliche Themen &ndash; Susanne war und ist mir eine hervorragende Begleiterin. Sie ist mein ‚Guide‘ in menschlicher Form.“</p>
                     <p class="text-xs text-burgundy-medium font-medium">Jennifer Dornfeld · Trustpilot</p>
                 </div>
                 <div class="bg-cream-soft p-7 rounded-xl border border-gold/20 space-y-3">
-                    <div class="text-gold tracking-widest">★★★★★</div>
+                    <div class="text-emerald-500 tracking-widest">★★★★★</div>
                     <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">„Ich konnte viele Antworten finden, Altes loslassen und allem voran Vertrauen in mich und das Leben wieder gewinnen. Ohne Susanne wäre ich nie so weit gekommen.“</p>
                     <p class="text-xs text-burgundy-medium font-medium">Daniela · Trustpilot</p>
                 </div>
                 <div class="bg-cream-soft p-7 rounded-xl border border-gold/20 space-y-3">
-                    <div class="text-gold tracking-widest">★★★★★</div>
+                    <div class="text-emerald-500 tracking-widest">★★★★★</div>
                     <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">„Deine Energiearbeit berührt mich jedes Mal aufs Neue. Ich fühle mich leichter, klarer und voller Energie.“</p>
                     <p class="text-xs text-burgundy-medium font-medium">Elfriede Heinzle · Trustpilot</p>
                 </div>
             </div>
-            <p class="text-center text-xs text-burgundy-deep/50 font-light">Echte Bewertungen von Trustpilot</p>
+            <div class="text-center"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
         </div>
     </section>
 
-    <!-- 4. NUTZEN -->
+    <!-- 4. AUTORITÄT -->
     <section class="py-20 bg-burgundy-deep text-cream-soft relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gold/5 blur-[150px] pointer-events-none"></div>
-        <div class="max-w-5xl mx-auto px-6 relative z-10 space-y-10">
-            <div class="text-center space-y-3">
-                <span class="text-xs uppercase tracking-[0.25em] text-roseWarm font-semibold">Was sich verändert</span>
-                <h2 class="text-3xl md:text-4xl font-serif font-light">Wenn du deine Verbindung <span class="gold-shine italic font-semibold">endlich verstehst</span></h2>
-                <div class="gold-divider"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-burgundy-medium/60 p-7 rounded-xl border border-gold/20 space-y-3 text-center">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="compass" class="w-5 h-5 text-gold"></i></div>
-                    <h3 class="font-serif text-lg text-gold">Klarheit statt Rätsel</h3>
-                    <p class="text-sm text-cream-soft/80 font-light leading-relaxed">Du kannst deine Verbindung einordnen, ohne sie kleinreden zu müssen &ndash; und fühlst dich nicht mehr allein damit.</p>
-                </div>
-                <div class="bg-burgundy-medium/60 p-7 rounded-xl border border-gold/20 space-y-3 text-center">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="moon" class="w-5 h-5 text-gold"></i></div>
-                    <h3 class="font-serif text-lg text-gold">Ruhigere Abende</h3>
-                    <p class="text-sm text-cream-soft/80 font-light leading-relaxed">Erste Werkzeuge, die deine Gedanken zur Ruhe bringen &ndash; statt noch mehr Theorie, die im Kopf bleibt.</p>
-                </div>
-                <div class="bg-burgundy-medium/60 p-7 rounded-xl border border-gold/20 space-y-3 text-center">
-                    <div class="w-12 h-12 mx-auto rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center"><i data-lucide="heart" class="w-5 h-5 text-gold"></i></div>
-                    <h3 class="font-serif text-lg text-gold">Zurück zu dir</h3>
-                    <p class="text-sm text-cream-soft/80 font-light leading-relaxed">Du nimmst die Tiefe ernst UND bleibst bei dir &ndash; dein Weg zurück zu dir selbst beginnt.</p>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 grid md:grid-cols-12 gap-10 items-center">
+            <div class="md:col-span-5">
+                <div class="relative rounded-2xl overflow-hidden border border-gold/30 shadow-xl">
+                    <img src="assets/images/susanne-portrait-blazer.webp" alt="Susanne Wachter" class="w-full h-[420px] object-cover" style="object-position: center 18%;" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-burgundy-deep/40 to-transparent pointer-events-none"></div>
                 </div>
             </div>
-            <div class="text-center">
-                <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
-                    Workbook kostenlos anfordern
-                </button>
+            <div class="md:col-span-7 space-y-4">
+                <h2 class="text-3xl md:text-4xl font-serif font-light">Dein Workbook &ndash; <span class="gold-shine italic font-semibold">dein Weg zurück zu dir</span></h2>
+                <p class="text-sm md:text-base text-cream-soft/85 font-light leading-relaxed">Ich bin Susanne &ndash; seit meiner Kindheit nehme ich die feinen Zwischentöne wahr. Genau deshalb erkenne ich schnell die Muster und Dynamiken hinter scheinbar unerklärlichen Verbindungen. Und ich weiß aus eigener Erfahrung, wie es ist, sich in einer Verbindung selbst zu verlieren.</p>
+                <p class="text-sm md:text-base text-cream-soft/85 font-light leading-relaxed">Dieses Workbook ist aus dieser Arbeit entstanden. Es hilft dir:</p>
+                <ul class="space-y-3">
+                    <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm text-cream-soft/85 font-light leading-relaxed">Deine Verbindung ernst zu nehmen &ndash; und trotzdem zu dir zurückzukommen</span></li>
+                    <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm text-cream-soft/85 font-light leading-relaxed">Zu verstehen, was da wirklich in dir passiert &ndash; statt nachts zu grübeln, ob mit dir etwas falsch ist</span></li>
+                    <li class="flex items-start space-x-3"><span class="text-emerald-400 shrink-0 mt-0.5">✅</span><span class="text-sm text-cream-soft/85 font-light leading-relaxed">Deine Feinfühligkeit als Stärke zu leben &ndash; nicht als Schwäche zu bekämpfen</span></li>
+                </ul>
+                <p class="font-serif italic gold-shine text-base font-medium pt-1">Du bist nicht zu sensibel. Du bist nicht zu viel. Du bist nicht falsch.</p>
+                <div class="space-y-3 pt-1">
+                    <button onclick="openModal()" class="gold-button px-8 h-12 font-medium text-xs tracking-wider uppercase rounded-full">
+                        Jetzt das Workbook kostenlos sichern
+                    </button>
+                    <div class="text-roseWarm/85"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 5. EINWAND -->
     <section class="py-20 bg-cream-soft">
-        <div class="max-w-3xl mx-auto px-6 text-center space-y-6">
-            <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep">„Noch ein Ratgeber, <span class="gold-shine italic font-semibold">der nichts ändert?“</span></h2>
-            <div class="gold-divider"></div>
-            <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed">Verständlich &ndash; du hast wahrscheinlich schon viel gelesen und analysiert. Genau deshalb ist dieses Workbook anders: <strong class="text-burgundy-medium">kein Ratgeber zum Durchblättern, sondern ein Begleiter zum Eintragen, Spüren und Verstehen.</strong></p>
-            <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed">Du schreibst direkt hinein &ndash; am Handy oder Computer. Und alles, was du hineinschreibst, gehört nur dir. Es nimmt deine Erfahrung ernst, ohne dich zu vertrösten.</p>
-            <p class="font-serif italic text-lg text-burgundy-medium">Es geht nicht darum, ihn zurückzubekommen. Es geht darum, DICH zurückzubekommen.</p>
-            <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
-                Workbook kostenlos anfordern
-            </button>
-        </div>
-    </section>
-
-    <!-- 6. ÜBER SUSANNE -->
-    <section class="py-20 bg-cream-dark">
-        <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-12 gap-10 items-center">
-            <div class="md:col-span-4">
-                <div class="relative rounded-2xl overflow-hidden border border-gold/30 shadow-xl">
-                    <img src="assets/images/susanne-portrait-blazer.webp" alt="Susanne Wachter" class="w-full h-[360px] object-cover" style="object-position: center 18%;" loading="lazy">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-5">
+                <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep leading-tight">„Noch ein Ratgeber, <span class="gold-shine italic font-semibold">der nichts ändert?“</span></h2>
+                <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed"><strong class="text-burgundy-medium">Verständlich &ndash; und genau deshalb ist es kein Ratgeber.</strong></p>
+                <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed">Du liest nicht nur &ndash; du schreibst direkt hinein: am Handy, am Computer oder ausgedruckt. Deine Gedanken bekommen endlich einen Platz außerhalb deines Kopfes.</p>
+                <p class="text-sm md:text-base text-burgundy-deep/85 font-light leading-relaxed">Und alles, was du hineinschreibst, gehört nur dir. Es nimmt deine Erfahrung ernst, ohne dich zu vertrösten.</p>
+                <p class="font-serif italic text-lg text-burgundy-medium">Es geht nicht darum, ihn zurückzubekommen. Es geht darum, DICH zurückzubekommen.</p>
+                <div class="space-y-3">
+                    <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
+                        Jetzt das Workbook kostenlos sichern
+                    </button>
+                    <div class="text-burgundy-deep/70"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
                 </div>
             </div>
-            <div class="md:col-span-8 space-y-4">
-                <span class="text-xs uppercase tracking-[0.25em] text-burgundy-medium font-semibold">Deine Begleitung</span>
-                <h2 class="text-3xl font-serif font-light text-burgundy-deep">Hi, ich bin <span class="gold-shine italic font-semibold">Susanne</span>.</h2>
-                <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">Seit meiner Kindheit nehme ich die feinen Zwischentöne wahr &ndash; und genau deshalb erkenne ich schnell die Muster und Dynamiken hinter scheinbar unerklärlichen Verbindungen. Ich weiß aus eigener Erfahrung, wie es ist, sich in einer Verbindung selbst zu verlieren.</p>
-                <p class="text-sm text-burgundy-deep/90 font-light leading-relaxed">Heute begleite ich feinfühlige Frauen, die sich nach emotionaler Freiheit sehnen, ohne ihr Herz verschließen zu müssen.</p>
-                <p class="font-serif italic gold-shine text-base font-medium">Du bist nicht zu sensibel. Du bist nicht zu viel. Du bist nicht falsch.</p>
-                <button onclick="openModal()" class="gold-button px-8 h-12 font-medium text-xs tracking-wider uppercase rounded-full">
-                    Jetzt kostenlos das Workbook holen
-                </button>
+            <div>
+                <img src="assets/images/seelenverbindung-workbook-cover.webp" alt="Das Cover des Workbooks" class="w-full max-w-sm mx-auto h-auto rounded-xl shadow-2xl border border-gold/20" loading="lazy" width="700" height="990">
             </div>
         </div>
     </section>
 
-    <!-- 7. ABSCHLUSS-CTA -->
+    <!-- 6. VERGLEICH -->
+    <section class="py-20 bg-cream-dark">
+        <div class="max-w-4xl mx-auto px-6 space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl md:text-4xl font-serif font-light text-burgundy-deep">Noch ein Ratgeber vs. <span class="gold-shine italic font-semibold">dein Workbook</span></h2>
+                <div class="gold-divider"></div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse rounded-xl overflow-hidden shadow-sm text-sm">
+                    <thead>
+                        <tr>
+                            <th class="bg-white text-left p-4 font-medium text-burgundy-deep w-1/4"></th>
+                            <th class="bg-burgundy-medium/90 text-cream-soft p-4 font-medium">Ratgeber &amp; Videos</th>
+                            <th class="bg-gold text-burgundy-deep p-4 font-medium">Dein Workbook</th>
+                        </tr>
+                    </thead>
+                    <tbody class="font-light">
+                        <tr class="border-b border-gold/15">
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Was du tust</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ Durchlesen, nicken, vergessen</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Eintragen, spüren, verstehen</td>
+                        </tr>
+                        <tr class="border-b border-gold/15">
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Deine Gedanken</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ Kreisen weiter im Kopf</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Bekommen einen Platz außerhalb deines Kopfes</td>
+                        </tr>
+                        <tr class="border-b border-gold/15">
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Deine Verbindung</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ Wird kleingeredet oder überhöht</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Wird ernst genommen &ndash; und du bleibst bei dir</td>
+                        </tr>
+                        <tr class="border-b border-gold/15">
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Aufwand</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ Stundenlanges Suchen nach der einen Antwort</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Zehn ruhige Minuten am Abend, in deinem Tempo</td>
+                        </tr>
+                        <tr>
+                            <td class="bg-white p-4 font-medium text-burgundy-deep">Danach</td>
+                            <td class="bg-roseWarm/10 p-4 text-burgundy-deep/80">✕ Noch mehr Wissen, noch mehr Fragen</td>
+                            <td class="bg-emerald-50 p-4 text-burgundy-deep/90">✓ Klarheit, die bleibt &ndash; weil sie von dir kommt</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center space-y-3">
+                <button onclick="openModal()" class="gold-button px-10 h-14 font-medium text-sm tracking-widest uppercase rounded-full">
+                    Jetzt das Workbook kostenlos sichern
+                </button>
+                <div class="text-burgundy-deep/70"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ABSCHLUSS -->
     <section class="py-20 bg-burgundy-deep text-cream-soft relative overflow-hidden text-center">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gold/5 blur-[150px] pointer-events-none"></div>
         <div class="max-w-2xl mx-auto px-6 relative z-10 space-y-8">
@@ -296,9 +353,12 @@
             </h2>
             <div class="gold-divider"></div>
             <p class="text-sm md:text-base text-cream-soft/80 font-light leading-relaxed">Du musst diese Verbindung nicht kleinreden, um weiterzugehen. Du darfst sie ernst nehmen &ndash; und trotzdem zu dir zurückkommen. Das Workbook zeigt dir, wie dieser Weg beginnt.</p>
-            <button onclick="openModal()" class="w-full max-w-md h-14 gold-button font-medium text-sm tracking-widest uppercase rounded-full mx-auto flex items-center justify-center gap-2">
-                <i data-lucide="book-open" class="w-4 h-4"></i> Workbook kostenlos anfordern
-            </button>
+            <div class="space-y-3">
+                <button onclick="openModal()" class="w-full max-w-md h-14 gold-button font-medium text-sm tracking-widest uppercase rounded-full mx-auto flex items-center justify-center gap-2">
+                    <i data-lucide="book-open" class="w-4 h-4"></i> Jetzt das Workbook kostenlos sichern
+                </button>
+                <div class="text-roseWarm/85"><a href="https://www.trustpilot.com/review/www.your-balance.at" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 text-xs font-light tracking-wide hover:opacity-80 transition-opacity"><span class="text-emerald-500 text-base leading-none">★</span><span>Schau dir unsere <strong>echten Bewertungen</strong> auf Trustpilot an</span></a></div>
+            </div>
             <p class="text-xs text-roseWarm/70 font-light italic">P.S. Nimm dir heute Abend zehn ruhige Minuten dafür &ndash; mit einer Tasse Tee. Mehr braucht der Anfang nicht.</p>
         </div>
     </section>
