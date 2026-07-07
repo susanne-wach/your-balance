@@ -460,7 +460,8 @@
 
     <script>
         lucide.createIcons();
-        function openModal() { document.getElementById('registration-modal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+        /* Gratis-Produkt liegt in ThriveCart Learn — Anmeldung MUSS über den ThriveCart-Checkout laufen (erzeugt den Kurszugang). Popup bleibt ungenutzt im Code. */
+        function openModal() { window.location.href = 'https://your-balance.thrivecart.com/landingpage-3-tage-seelenpartner-magie/'; }
         function closeModal() { document.getElementById('registration-modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
         document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
     </script>
