@@ -413,6 +413,7 @@
                 <input type="hidden" name="act" value="sub" />
                 <input type="hidden" name="v" value="2" />
                 <input type="hidden" name="or" value="22eb7c5f-6011-416d-8f17-572e37bd801b" />
+                <input type="hidden" name="field[31]" id="utm-anzeige" value="" />
                 <div class="_form-content">
                     <div class="_form_element _full_width">
                         <label for="firstname" class="_form-label">Vorname<span class="field-required">*</span></label>
@@ -564,5 +565,18 @@
     })();
     </script>
 
+<script>
+/* Meta-Ads-Tracking: schreibt utm_content (Anzeigen-Code) ins versteckte AC-Feld UTM_ANZEIGE */
+(function () {
+    try {
+        var params = new URLSearchParams(window.location.search);
+        var code = params.get('utm_content') || '';
+        if (code) { sessionStorage.setItem('yb_utm_anzeige', code); }
+        else { code = sessionStorage.getItem('yb_utm_anzeige') || ''; }
+        var feld = document.getElementById('utm-anzeige');
+        if (feld && code) { feld.value = code.substring(0, 100); }
+    } catch (e) { /* Tracking darf das Formular nie stören */ }
+})();
+</script>
 </body>
 </html>
