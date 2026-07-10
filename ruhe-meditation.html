@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deine 3-Minuten-Meditation – Gratis | Your Balance</title>
     <meta name="description" content="Eine kurze, geführte Meditation, die dein Inneres in 3 Minuten beruhigt – für Frauen, die innerlich nicht von ihm loskommen. Kostenlos von Susanne Wachter.">
+    <link rel="canonical" href="https://your-balance.at/ruhe-meditation.html">
     <link rel="icon" type="image/png" href="assets/images/favicon-180.png">
 
     <!-- GA4 -->
@@ -566,7 +567,7 @@
         </div>
         <div class="hero-image">
             <span class="badge-gratis">Gratis</span>
-            <img src="Bilder/soft_warm_golden-hour_portrait_of_a_woman_positioned_in_the_lower_third_of_the_frame_leaving_a_large_89a171af-053f-4210-95a8-cf7b882d0394 (1).webp" alt="Herz&ouml;ffnungs-Kompass Workbook von Susanne Wachter" style="object-fit: cover; height: 460px; object-position: center 35%;">
+            <img src="Bilder/soft_warm_golden-hour_portrait_of_a_woman_positioned_in_the_lower_third_of_the_frame_leaving_a_large_89a171af-053f-4210-95a8-cf7b882d0394 (1).webp" alt="Ruhige Frau im warmen Abendlicht – 3-Minuten-Meditation von Susanne Wachter" style="object-fit: cover; height: 460px; object-position: center 35%;">
         </div>
     </div>
 </section>
@@ -665,7 +666,7 @@
         </div>
 
         <div class="form-wrapper">
-            <!-- WICHTIG: Dies ist noch dein Workbook-Formular (29). Lege in ActiveCampaign ein NEUES Formular fuer die Meditation an (Tag LEAD_RUHE_MEDITATION, Auslieferung = HALT-3-Min-Audio, Redirect auf danke-ruhe-meditation.html) und ersetze u/f/or + field[]-Werte unten. -->
+            <!-- ActiveCampaign-Formular 33 = Ruhe-Meditation -->
             <form method="POST" action="https://your-balance61093.activehosted.com/proc.php" id="_form_33_" class="_form _form_33 _inline-form _dark" novalidate data-styles-version="5">
                 <input type="hidden" name="u" value="33" />
                 <input type="hidden" name="f" value="33" />
@@ -713,7 +714,7 @@ window._show_thank_you = function(id, message, trackcmp_url, email) {
     form.style.display = 'none';
     var privacyNote = formWrapper.querySelector('.form-privacy');
     if (privacyNote) privacyNote.style.display = 'none';
-    thank_you.innerHTML = '<div style="padding:24px;text-align:center;"><h3 style="font-family:Cormorant Garamond,Georgia,serif;font-size:1.6rem;margin-bottom:12px;color:#C9A84C;">Wundersch\u00f6n, dass du dabei bist!</h3><p style="color:#6B5D4A;line-height:1.7;">Dein Workbook ist auf dem Weg in dein Postfach.<br>Schau bitte auch im Spam-Ordner nach.</p></div>';
+    thank_you.innerHTML = '<div style="padding:24px;text-align:center;"><h3 style="font-family:Cormorant Garamond,Georgia,serif;font-size:1.6rem;margin-bottom:12px;color:#C9A84C;">Wundersch\u00f6n, dass du dabei bist!</h3><p style="color:#6B5D4A;line-height:1.7;">Deine Meditation ist auf dem Weg in dein Postfach.<br>Schau bitte auch im Spam-Ordner nach.</p></div>';
     thank_you.style.display = 'block';
     // GA4 Lead Event
     if (typeof gtag === 'function') { gtag('event', 'generate_lead', { currency: 'EUR', value: 0 }); }
@@ -758,9 +759,9 @@ window._load_script = function(url, callback, isSubmit) {
     script.onerror = function() {
         if (isSubmit) {
             if (script.src.length > 10000) {
-                _show_error("29", "Deine Anmeldung konnte nicht gesendet werden. Bitte k\u00fcrze deine Eingaben und versuche es erneut.");
+                _show_error("33", "Deine Anmeldung konnte nicht gesendet werden. Bitte k\u00fcrze deine Eingaben und versuche es erneut.");
             } else {
-                _show_error("29", "Deine Anmeldung konnte nicht gesendet werden. Bitte versuche es erneut.");
+                _show_error("33", "Deine Anmeldung konnte nicht gesendet werden. Bitte versuche es erneut.");
             }
             submitButton.disabled = false;
             submitButton.classList.remove('processing');

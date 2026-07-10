@@ -178,7 +178,7 @@
             <div class="gold-divider"></div>
             <!-- ===========================================================
                  HIER deine ECHTEN Trustpilot-Bewertungen einsetzen
-                 (von https://www.trustpilot.com/review/www.your-balance.at).
+                 (von https://de.trustpilot.com/review/your-balance.at).
                  Pro Karte: Bewertungstext + Vorname. Nur echte verwenden.
                  Ersetze die [[…]]-Platzhalter.
             ============================================================ -->
@@ -361,6 +361,7 @@
                 var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
                 form.querySelector('._form-content').style.display = 'none';
                 thank_you.innerHTML = message; thank_you.style.display = 'block';
+                if (window.fbq) fbq('track','Lead');
                 const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
                 var visitorObject = window[vgoAlias];
                 if (email && typeof visitorObject !== 'undefined') { visitorObject('setEmail', email); visitorObject('update'); }
@@ -427,7 +428,7 @@
         lucide.createIcons();
         // Modal
         const modal = document.getElementById('yb-modal');
-        function openModal(){ modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow='hidden'; if(window.fbq)fbq('track','Lead'); }
+        function openModal(){ modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow='hidden'; }
         function closeModal(){ modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow=''; }
         document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
         // Platzhalter-Submit (wird durch AC-Embed ersetzt)
