@@ -10,11 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
   ---------------------------------------------------------- */
   const loader = document.querySelector('.loader');
   if (loader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => loader.classList.add('hidden'), 800);
-    });
-    // Fallback
-    setTimeout(() => loader.classList.add('hidden'), 2500);
+    // Loader nur beim ersten Seitenaufruf der Sitzung zeigen
+    let loaderSeen = false;
+    try { loaderSeen = sessionStorage.getItem('ybLoaderShown') === '1'; } catch (e) {}
+    if (loaderSeen) {
+      loader.classList.add('hidden');
+    } else {
+      try { sessionStorage.setItem('ybLoaderShown', '1'); } catch (e) {}
+      window.addEventListener('load', () => {
+        setTimeout(() => loader.classList.add('hidden'), 800);
+      });
+      // Fallback
+      setTimeout(() => loader.classList.add('hidden'), 2500);
+    }
   }
 
   /* ----------------------------------------------------------

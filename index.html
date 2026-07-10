@@ -55,7 +55,6 @@
   <meta name="twitter:description" content="Nervensystem Coaching mit Susanne Wachter: wieder abschalten, zur Ruhe kommen und emotional stabil werden – online oder vor Ort in Vorarlberg. Jetzt Erstgespräch anfragen." />
   <meta name="twitter:image"       content="https://your-balance.at/assets/images/og-image.jpg" />
 
-    <link rel="icon" type="image/png" href="assets/images/favicon-neu.png" />
   <link rel="icon" type="image/png" href="assets/images/favicon-neu.png" />
   <link rel="apple-touch-icon" href="assets/images/favicon-neu.png" />
   <link rel="preload" as="image" href="assets/images/susanne-portrait.webp" fetchpriority="high" />
@@ -318,7 +317,7 @@
       /* Results image: keep blob but cap height on tablet */
       .results-image img { max-height: 480px; }
       /* Trustpilot badge: bring inside image on small screens */
-      .results-image > div { right: 0 !important; bottom: -16px !important; }
+      .results-image > a { right: 0 !important; bottom: -16px !important; }
     }
 
     /* Hero alignment fix */
@@ -485,8 +484,9 @@
       <li><a href="einzeltermine.html" class="nav-link">Termin buchen</a></li>
       <li><a href="blog.html" class="nav-link">Blog</a></li>
       <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+      <li><a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener" class="nav-link">Kurs-Login</a></li>
     </ul>
-    <a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener" class="btn btn-gold nav-cta" data-magnetic>Deine Kurse</a>
+    <a href="https://calendly.com/your-balance/info-gesprach-telefon" target="_blank" rel="noopener" class="btn btn-gold nav-cta" data-magnetic>Erstgespräch</a>
     <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
   </div>
 </nav>
@@ -807,14 +807,14 @@
       <!-- Image -->
       <div class="results-image" data-reveal="left">
         <img src="assets/images/susanne-sunset.webp" alt="Klientin nach Nervensystem-Coaching mit Susanne Wachter" width="848" height="1131" loading="lazy" decoding="async" style="height:auto;" />
-        <div style="position:absolute;bottom:32px;right:-20px;background:var(--white);border-radius:16px;padding:24px 28px;box-shadow:0 8px 40px rgba(91,42,74,0.12);min-width:200px;">
+        <a href="https://de.trustpilot.com/review/your-balance.at" target="_blank" rel="noopener" style="display:block;text-decoration:none;position:absolute;bottom:32px;right:-20px;background:var(--white);border-radius:16px;padding:24px 28px;box-shadow:0 8px 40px rgba(91,42,74,0.12);min-width:200px;">
           <p style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 8px;">Trustpilot · 4.9 ★ aus 54 Bewertungen</p>
           <div class="tp-stars" style="font-size:18px;margin-bottom:4px;">★★★★★</div>
           <div style="font-family:var(--sans);font-size:13px;color:var(--text-mid);">
             <strong style="color:var(--text);">54 Bewertungen</strong><br />
             <span style="color:var(--text-light);">Exzellent · 4.9 / 5</span>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- Text -->
@@ -1036,7 +1036,7 @@
 
     <!-- Trustpilot badge -->
     <div style="margin-top:40px;text-align:center;" data-reveal data-delay="3">
-      <a href="https://de.trustpilot.com" target="_blank" rel="noopener" class="trustpilot-badge">
+      <a href="https://de.trustpilot.com/review/your-balance.at" target="_blank" rel="noopener" class="trustpilot-badge">
         <span class="tp-stars">★★★★★</span>
         <span><strong>4.9 / 5</strong> – 54 Bewertungen auf</span>
         <span class="tp-label">Trustpilot</span>
@@ -1055,11 +1055,11 @@
       <span class="eyebrow" data-reveal>Dein nächster Schritt</span>
       <div class="gold-line gold-line-center" data-reveal data-delay="1"></div>
       <h2 class="h2" data-reveal data-delay="2">
-        Zwei Wege.<br /><em>Ein Ziel.</em>
+        Drei Wege.<br /><em>Ein Ziel.</em>
       </h2>
     </div>
 
-    <div class="cta-tiles-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:80px;" data-stagger>
+    <div class="cta-tiles-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:80px;" data-stagger>
 
       <!-- Tile 1: Persönliche Begleitung -->
       <div style="background:var(--cream-dark);border-radius:4px;padding:56px 48px;display:flex;flex-direction:column;min-height:360px;">
@@ -1083,6 +1083,19 @@
           über dich, über ihn, über die Verbindung.
         </p>
         <a href="seelenpartner.html" class="btn btn-ghost btn-arrow" data-magnetic style="align-self:flex-start;" rel="noopener">Ich möchte Klarheit</a>
+      </div>
+
+      <!-- Tile 3: Zurück zur Ruhe (Meditationen) -->
+      <div style="background:var(--gold-ultra);border-radius:4px;padding:56px 48px;display:flex;flex-direction:column;min-height:360px;">
+        <h3 style="font-family:var(--serif);font-size:clamp(28px,3vw,40px);font-weight:300;color:var(--text);margin-bottom:24px;line-height:1.2;">„Zurück zur Ruhe“ · <em>Meditationen</em></h3>
+        <p class="body" style="color:var(--text-mid);flex:1;margin-bottom:16px;">
+          Für den Start in deinem Tempo:<br />
+          13 geführte Meditationen,<br />
+          mit denen dein System abends<br />
+          wieder abschalten lernt.
+        </p>
+        <p style="font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:28px;">Sofort verfügbar · 69 €</p>
+        <a href="https://your-balance.thrivecart.com/endlich-wieder-ruhig-einschlafen/" target="_blank" rel="noopener" class="btn btn-gold btn-arrow" data-magnetic style="align-self:flex-start;">Ich möchte Ruhe</a>
       </div>
 
     </div>
@@ -1161,35 +1174,35 @@
   <div class="container">
     <div class="newsletter-inner">
       <div class="newsletter-text">
-        <span class="newsletter-label">Newsletter</span>
-        <h2 class="newsletter-title">Inspiration für deine innere Balance</h2>
-        <p class="newsletter-desc">Impulse zu Nervensystem, Selbstregulation und energetischer Arbeit – direkt in dein Postfach.<br>Kein Spam. Nur das, was wirklich zählt.</p>
+        <span class="newsletter-label">Kostenlos für dich</span>
+        <h2 class="newsletter-title">Wenn dein Kopf abends nicht aufhört: Deine 3-Minuten-Meditation</h2>
+        <p class="newsletter-desc">Eine kurze geführte Übung zum Runterkommen – kostenlos per E-Mail.<br>Dazu bekommst du meine Impulse zu Nervensystem und innerer Balance. Kein Spam.</p>
       </div>
       <div class="newsletter-form-wrap">
         <form class="newsletter-form" id="newsletter-form" novalidate>
-          <input type="hidden" name="u" value="21" />
-          <input type="hidden" name="f" value="21" />
+          <input type="hidden" name="u" value="33" />
+          <input type="hidden" name="f" value="33" />
           <input type="hidden" name="s" value="" />
           <input type="hidden" name="c" value="0" />
           <input type="hidden" name="m" value="0" />
           <input type="hidden" name="act" value="sub" />
           <input type="hidden" name="v" value="2" />
-          <input type="hidden" name="or" value="6bb9e1df-c751-4e00-a614-7ee38f6c3c8a" />
+          <input type="hidden" name="or" value="04f2182a-1e98-4071-9568-6667f8c15334" />
           <div class="newsletter-fields">
-            <input type="text" name="fullname" placeholder="Dein Name" aria-label="Dein Name" class="newsletter-input" autocomplete="name" />
-            <input type="email" name="email" placeholder="Deine E-Mail-Adresse" aria-label="Deine E-Mail-Adresse" class="newsletter-input" required autocomplete="email" />
-            <button type="submit" class="btn btn-gold newsletter-btn">Anmelden ✦</button>
+            <input type="text" name="firstname" placeholder="Dein Vorname *" aria-label="Dein Vorname" class="newsletter-input" required autocomplete="given-name" />
+            <input type="email" name="email" placeholder="Deine E-Mail-Adresse *" aria-label="Deine E-Mail-Adresse" class="newsletter-input" required autocomplete="email" />
+            <button type="submit" class="btn btn-gold newsletter-btn">Meditation anfordern ✦</button>
           </div>
           <label class="newsletter-consent">
             <input type="checkbox" name="consent" required />
-            <span>Ich stimme der Verarbeitung meiner Daten für den Newsletter zu. Abmeldung jederzeit möglich. <a href="datenschutz.html">Datenschutz</a></span>
+            <span>Ich stimme der Verarbeitung meiner Daten zu. Abmeldung jederzeit möglich. <a href="datenschutz.html">Datenschutz</a></span>
           </label>
-          <div class="newsletter-error" id="newsletter-error" style="display:none;">Bitte E-Mail ausfüllen und Datenschutz bestätigen.</div>
+          <div class="newsletter-error" id="newsletter-error" style="display:none;">Bitte Vorname und E-Mail ausfüllen und Datenschutz bestätigen.</div>
         </form>
         <div class="newsletter-success" id="newsletter-success" style="display:none;">
           <p class="newsletter-success-icon">✦</p>
-          <p class="newsletter-success-title">Danke!</p>
-          <p class="newsletter-success-text">Bitte bestätige deine Anmeldung per E-Mail.</p>
+          <p class="newsletter-success-title">Fast geschafft!</p>
+          <p class="newsletter-success-text">Schau in dein Postfach und bestätige kurz deine Anmeldung – dann kommt die Meditation direkt zu dir.</p>
         </div>
       </div>
     </div>
@@ -1203,9 +1216,10 @@
   if (!form) return;
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+    var firstname = form.querySelector('input[name="firstname"]');
     var email = form.querySelector('input[name="email"]');
     var consent = form.querySelector('input[name="consent"]');
-    if (!email.value || !email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) || !consent.checked) {
+    if (!firstname.value.trim() || !email.value || !email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) || !consent.checked) {
       error.style.display = 'block';
       return;
     }
@@ -1272,7 +1286,7 @@
         <ul class="footer-links">
           <li><a href="tel:+4368120739923" class="footer-link">+43 681 2073 9923</a></li>
           <li><a href="mailto:susanne@your-balance.at" class="footer-link">susanne@your-balance.at</a></li>
-          <li class="footer-link" style="color:rgba(255,255,255,0.2);">Österreich · auch online</a></li>
+          <li class="footer-link" style="color:rgba(255,255,255,0.2);">Österreich · auch online</li>
         </ul>
         <div style="margin-top:28px;">
           <div class="footer-col-title">Jetzt starten</div>
