@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Serien-Spickzettel</title>
+<style>
+  :root{--gold:#cfac5e;--goldl:#e8cd8c;--pink:#dd3089;--bg:#150b13;--karte:#2a1522;--hell:#f5eee6}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,'Jost',sans-serif;background:
+    radial-gradient(30rem 30rem at -10% -10%,rgba(221,48,137,.12),transparent 60%),
+    radial-gradient(26rem 26rem at 110% 30%,rgba(91,42,74,.4),transparent 65%),var(--bg);
+    color:var(--hell);padding:18px 14px 80px;line-height:1.55}
+  h1{font-family:Georgia,serif;font-weight:500;font-size:26px;margin:8px 0 2px;
+    background:linear-gradient(120deg,#e8cd8c,#cfac5e 55%,#f2dea9);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .unter{font-size:12.5px;color:rgba(245,238,230,.6);margin:0 0 18px}
+  #gate{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:9;padding:30px;text-align:center}
+  #gate input{font-size:20px;padding:12px 16px;border-radius:12px;border:1px solid rgba(207,172,94,.5);background:rgba(0,0,0,.3);color:#fff;text-align:center;width:220px}
+  #gate button{font-size:16px;font-weight:600;padding:12px 26px;border-radius:999px;border:none;background:linear-gradient(120deg,#c22578,#dd3089);color:#fff}
+  .ep{background:linear-gradient(160deg,rgba(58,26,48,.95),rgba(28,13,24,.97));border:1px solid rgba(207,172,94,.35);border-radius:16px;margin:0 0 12px;padding:2px 14px;box-shadow:0 14px 34px -16px rgba(0,0,0,.7)}
+  summary{padding:12px 2px;cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:2px}
+  summary::-webkit-details-marker{display:none}
+  .ed{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  summary b{font-family:Georgia,serif;font-weight:600;font-size:16.5px;color:#faf4ea}
+  .heute summary b::after{content:" · HEUTE";color:var(--pink);font-size:11px;letter-spacing:.1em}
+  .meta{font-size:12.5px;color:rgba(245,238,230,.65);margin:2px 0 8px}
+  .slot{border-top:1px dashed rgba(207,172,94,.25);padding:10px 0 4px;margin-top:4px}
+  .zeit{display:inline-block;background:linear-gradient(120deg,#b8933f,#cfac5e);color:#1d0f1a;font-weight:700;font-size:12px;border-radius:999px;padding:2px 12px;margin-bottom:6px}
+  .story{margin:0 0 10px}
+  .kam{display:block;font-size:11.5px;color:rgba(245,238,230,.55);margin-bottom:3px}
+  .sprech{margin:4px 0;font-size:16.5px;color:#fff;background:rgba(0,0,0,.25);border-left:3px solid var(--pink);border-radius:0 10px 10px 0;padding:8px 12px}
+  .stext{margin:4px 0;font-size:13.5px;color:var(--goldl)}
+  .stick{margin:4px 0;font-size:13.5px;color:#e8a5b8}
+  .ritual{font-size:13px;color:#8fc7a4;border-top:1px dashed rgba(207,172,94,.25);padding:10px 0 12px;margin:6px 0 0}
+  .hinweis{font-size:12px;color:rgba(245,238,230,.5);margin-top:24px;text-align:center}
+</style>
+</head>
+<body>
+<div id="gate"><h1>Serien-Spickzettel</h1><p class="unter">Nur für Susanne 💛</p>
+<input id="code" type="tel" placeholder="Code" autocomplete="off"><button onclick="pruef()">Öffnen</button></div>
+<h1>Der Weg zurück zu dir</h1>
+<p class="unter">Staffel 1 · alle Sprechtexte &amp; Anweisungen · 🎤 = sprechen · 📷 = Szene · 📱 = Sticker (kommt auch per Mail)</p>
+<details class="ep" data-datum="2026-07-12"><summary><span class="ed">Sonntag, 12.07.</span><b>Episode 1 · Vielleicht bist du gar nicht so allein, wie du denkst</b></summary>
+<p class="meta">❤️ Erleichterung &nbsp;·&nbsp; 🎯 Die Zuschauerin soll sich zum ersten Mal gesehen fühlen.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Tee wird langsam eingegossen. · Fenster offen. · Vogelstimmen. · Kein Gesprochenes.</span><p class="stext">📝 Manchmal beginnt Veränderung<br>mit einer einzigen Frage.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · 2 Sekunden nicht sprechen. · Erst lächeln. · Dann beginnen.</span><p class="sprech">🎤 Guten Morgen. 💛<br>Ich musste heute Morgen an eine Frage denken, die mir unglaublich oft gestellt wird.<br>(Pause)<br>Warum fällt Loslassen eigentlich so schwer?</p><p class="stext">📝 Kennst du diese Frage?</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Die Kamera zeigt den Weg.</span><p class="sprech">🎤 Vielleicht glaubst du gerade, dass mit dir etwas nicht stimmt.<br>(Pause)<br>Darf ich dir heute einen anderen Gedanken schenken?</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Vielleicht ist mit dir gar nichts falsch.<br>Vielleicht versucht dein Herz gerade nur, mit etwas umzugehen, das unglaublich weh tut.</p><p class="stext">📝 💛 Mit dir ist nichts falsch.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Umfrage-Sticker: Hast du dich das schon einmal gefragt? · ❤️ Ja. · 🌿 Sehr oft.</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Eine Seite wird langsam aufgeschlagen.</span><p class="sprech">🎤 Genau deshalb habe ich angefangen, all diese Gedanken aufzuschreiben.</p><p class="stext">📝 Manchmal hilft es, die eigenen Gedanken auf Papier zu sehen.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze. · Abend.</span><p class="sprech">🎤 Bevor dein Tag endet, möchte ich dir noch einen Satz mitgeben.<br>Du musst heute nichts lösen.<br>Es reicht, wenn du heute freundlich mit dir bist.</p><p class="stext">📝 🌿 Heute reicht.</p></div>
+<div class="story"><span class="kam">📷 Schwarzer Hintergrund.</span><p class="stext">📝 Morgen erzähle ich dir, warum dein Herz manchmal länger braucht als dein Kopf.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Lege heute Abend eine Hand auf dein Herz. Atme einmal tief durch. Und sage dir: Ich darf mir Zeit lassen.</p>
+</details>
+<details class="ep" data-datum="2026-07-13"><summary><span class="ed">Montag, 13.07.</span><b>Episode 2 · Warum dein Herz nicht auf Knopfdruck loslassen kann</b></summary>
+<p class="meta">❤️ Verständnis &nbsp;·&nbsp; 🎯 Druck rausnehmen.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Tee am Fenster. · Leichter Regen.</span><p class="stext">📝 Darf ich dir heute etwas zeigen?</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Viele Frauen sagen zu mir:<br>&quot;Ich verstehe mich selbst nicht mehr.&quot;<br>(Pause)<br>Und genau darüber möchte ich heute sprechen.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Langsame Schritte.</span><p class="sprech">🎤 Stell dir vor, dein Herz hätte seine eigene Uhr.<br>Und diese Uhr läuft manchmal langsamer als dein Kopf.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Dein Kopf weiß vielleicht längst, dass die Beziehung vorbei ist.<br>Dein Herz braucht manchmal noch Zeit.</p><p class="stext">📝 Beides darf gleichzeitig wahr sein.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Emoji-Slider-Sticker: Wie geduldig bist du gerade mit dir?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Stift.</span><p class="sprech">🎤 Heute habe ich mir selbst eine Frage beantwortet.</p><p class="stext">📝 Was brauche ich heute?</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Selfie. · Kerze.</span><p class="sprech">🎤 Vielleicht musst du heute gar nicht loslassen.<br>Vielleicht reicht heute, wenn du verstehst, warum es gerade schwer ist.</p></div>
+<div class="story"><p class="stext">📝 Morgen sprechen wir darüber, warum Gefühle nicht dein Feind sind.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreib heute auf: Was brauche ich heute wirklich?</p>
+</details>
+<details class="ep" data-datum="2026-07-14"><summary><span class="ed">Dienstag, 14.07.</span><b>Episode 3 · Gefühle sind keine Schwäche</b></summary>
+<p class="meta">❤️ Erleichterung &nbsp;·&nbsp; 🎯 Gefühle normalisieren.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Morgenlicht. · Fenster. · Keine Stimme.</span><p class="stext">📝 Gefühle wollen nicht bekämpft werden.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Weißt du, was ich ganz oft höre?<br>&quot;Ich müsste doch langsam darüber hinweg sein.&quot;<br>(Pause)<br>Aber wer bestimmt eigentlich dieses &quot;langsam&quot;?</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang.</span><p class="sprech">🎤 Gefühle haben keinen Kalender.<br>Sie kommen.<br>Sie gehen.<br>Und manchmal bleiben sie etwas länger.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Das macht dich nicht schwach.<br>Das macht dich menschlich.</p><p class="stext">📝 💛 Du musst dich dafür nicht schämen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Welches Gefühl begleitet dich heute?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Hand auf dem Papier.</span><p class="sprech">🎤 Ich habe heute drei Worte aufgeschrieben.<br>Angst.<br>Hoffnung.<br>Vertrauen.</p><p class="stext">📝 Welches Wort steht heute bei dir?</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Danke, dass du heute wieder hier warst.<br>Morgen wartet eine Geschichte auf dich, die ich nie vergessen habe.</p></div>
+<div class="story"><p class="stext">📝 Bis morgen. 💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Bevor du schlafen gehst, frage dich: Welches Gefühl braucht heute keine Lösung, sondern einfach ein bisschen Raum? 📖 LAUNCH STORY BOOK Staffel 1 – Der Weg zurück zu dir</p>
+</details>
+<details class="ep" data-datum="2026-07-15"><summary><span class="ed">Mittwoch, 15.07.</span><b>Episode 4 · Vielleicht musst du heute gar nichts schaffen</b></summary>
+<p class="meta">❤️ Druck loslassen &nbsp;·&nbsp; 🎯 Die Zuschauerin soll sich erlauben, einen Tag lang nicht funktionieren zu müssen.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Regentropfen am Fenster. · Keine Stimme.</span><p class="stext">📝 Und wenn heute einfach nur ein schwerer Tag ist?</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Zwei Sekunden Stille.</span><p class="sprech">🎤 Guten Morgen. 💛<br>Heute möchte ich dir keine Lösung schenken.<br>(Pause.)<br>Sondern Erlaubnis.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Langsame Schritte.</span><p class="sprech">🎤 Wir leben in einer Welt, in der wir ständig das Gefühl haben, stärker werden zu müssen.<br>Schneller loslassen zu müssen.<br>Endlich weitermachen zu müssen.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Aber was, wenn dein einziger Job heute wäre...<br>(Pause.)<br>einfach freundlich mit dir zu sein?</p><p class="stext">📝 Heute musst du nichts beweisen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Umfrage-Sticker: Fällt es dir schwer, dir Pausen zu erlauben? · ❤️ Ja · 🌿 Ich lerne es</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Tee. · Workbook. · Kerze.</span><p class="sprech">🎤 Ich glaube, Selbstfürsorge beginnt oft nicht mit einer großen Entscheidung.<br>Sondern mit fünf Minuten Ruhe.</p><p class="stext">📝 🌿 Fünf Minuten reichen.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Bevor du schlafen gehst, möchte ich dir einen Satz dalassen.<br>Du bist nicht zu langsam.<br>Du bist auf deinem Weg.</p></div>
+<div class="story"><p class="stext">📝 Morgen erzähle ich dir, warum Hoffnung manchmal ganz leise beginnt.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Stell dir heute einen Timer auf fünf Minuten. Kein Handy. Keine Aufgabe. Nur du.</p>
+</details>
+<details class="ep" data-datum="2026-07-16"><summary><span class="ed">Donnerstag, 16.07.</span><b>Episode 5 · Hoffnung sieht selten spektakulär aus</b></summary>
+<p class="meta">❤️ Zuversicht &nbsp;·&nbsp; 🎯 Kleine Fortschritte sichtbar machen.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Sonnenstrahlen durch das Fenster.</span><p class="stext">📝 Hoffnung ist manchmal ganz leise.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Oft glauben wir, Veränderung müsste sich riesig anfühlen.<br>(Pause.)<br>Ich glaube etwas anderes.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Blumen am Weg.</span><p class="sprech">🎤 Vielleicht hast du heute Morgen einmal gelächelt.<br>Vielleicht hast du heute besser geschlafen.<br>Vielleicht hast du ihm heute nicht geschrieben.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Weißt du was?<br>Das sind keine Kleinigkeiten.<br>Das ist Veränderung.</p><p class="stext">📝 Jeder kleine Schritt zählt.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Was war heute dein kleiner Erfolg?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Ein Satz wird markiert.</span><p class="sprech">🎤 Ich schreibe mir solche Momente immer auf.<br>Sonst vergesse ich sie.</p><p class="stext">📝 Kleine Schritte verdienen Aufmerksamkeit.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Abendlicht.</span><p class="sprech">🎤 Ich hoffe, du nimmst heute wenigstens einen kleinen Erfolg mit in den Abend.</p></div>
+<div class="story"><p class="stext">📝 Morgen sprechen wir darüber, warum Erinnerungen manchmal lauter sind als die Wirklichkeit.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe heute drei Dinge auf, die heute ein kleines bisschen leichter waren als gestern.</p>
+</details>
+<details class="ep" data-datum="2026-07-17"><summary><span class="ed">Freitag, 17.07.</span><b>Episode 6 · Nicht jede Erinnerung erzählt die ganze Wahrheit</b></summary>
+<p class="meta">❤️ Erkenntnis &nbsp;·&nbsp; 🎯 Die Zuschauerin beginnt, Erinnerungen differenzierter zu betrachten.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Fotoalbum auf dem Tisch. · Geschlossen.</span><p class="stext">📝 Erinnerungen können wunderschön sein.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Kennst du das?<br>Plötzlich fällt dir nur noch das Schöne ein.<br>(Pause.)<br>Das erste Date.<br>Das Lachen.<br>Die Umarmung.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Fotoalbum wird langsam geöffnet. · Ohne Fotos deutlich zu zeigen.</span><p class="sprech">🎤 Unser Gehirn speichert nicht immer die ganze Geschichte.<br>Oft erinnert es sich zuerst an die schönsten Momente.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Deshalb frage ich Frauen manchmal:<br>Erinnerst du dich genauso gut an die Tage, an denen du geweint hast?<br>(Pause.)<br>Beide gehören zur Wahrheit.</p><p class="stext">📝 Die ganze Geschichte zählt.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Welche Erinnerung kommt dir gerade als Erstes?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Zwei Spalten.</span><p class="sprech">🎤 Ich lade dich heute zu einer kleinen Übung ein.</p><p class="stext">📝 Links:<br>Was war schön?<br>Rechts:<br>Was war schwer?</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Vielleicht musst du heute nichts entscheiden.<br>Vielleicht reicht es, das ganze Bild zu sehen.</p></div>
+<div class="story"><p class="stext">📝 Am Sonntag wartet eine Frage auf dich, die alles verändern kann. 💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Nimm dir heute fünf Minuten. Schreibe beide Seiten der Geschichte auf. Nicht, um zu urteilen. Sondern um liebevoll auf deine Wahrheit zu schauen. 📖 LAUNCH STORY BOOK Staffel 1 – Der Weg zurück zu dir</p>
+</details>
+<details class="ep" data-datum="2026-07-18"><summary><span class="ed">Samstag, 18.07.</span><b>Episode 7 · Mit dir ist nichts falsch</b></summary>
+<p class="meta">❤️ Erleichterung &nbsp;·&nbsp; 🎯 Den größten Glaubenssatz der Community verändern. Nicht: Ich bin falsch. Sondern: Ich reagiere menschlich.</p>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Tee wird eingegossen. · Sonnenlicht. · Keine Stimme.</span><p class="stext">📝 Vielleicht brauchst du diesen Satz heute.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Langsam beginnen.</span><p class="sprech">🎤 Ich weiß nicht, ob dir das schon einmal jemand gesagt hat.<br>(Pause.)<br>Aber ich möchte es heute tun.<br>🕚 11:00 Uhr</p></div>
+<div class="story"><span class="kam">📷 Spaziergang. · Blick nach vorne.</span><p class="sprech">🎤 Mit dir ist nichts falsch.<br>(Pause.)<br>Du hast geliebt.<br>Du hast gehofft.<br>Du hast vertraut.</p><p class="stext">📝 Das ist nichts, wofür du dich schämen musst.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Dass dein Herz noch festhält, bedeutet nicht, dass du schwach bist.<br>Es bedeutet, dass dir etwas wichtig war.<br>🕑 14:00 Uhr</p></div>
+<div class="story"><p class="stick">📱 Umfrage-Sticker: Hat dir das schon einmal jemand gesagt? · ❤️ Ja · 🌿 Noch nie</p></div>
+<div class="story"><span class="kam">📷 Workbook. · Eine Seite mit dem Satz: · Mit dir ist nichts falsch.</span><p class="sprech">🎤 Diesen Satz habe ich mir selbst unzählige Male gesagt.</p><p class="stext">📝 Vielleicht darf er heute auch deiner sein.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Wenn du heute nur einen Gedanken mitnimmst, dann diesen.<br>Du musst dich nicht reparieren.</p><p class="stext">📝 💛 Du darfst einfach da sein.</p></div>
+<div class="story"><p class="stext">📝 Morgen möchte ich dir zeigen, warum Selbstmitgefühl oft der erste Schritt zurück zu dir ist.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schau heute einmal in den Spiegel. Und sage dir ganz bewusst: Mit mir ist nichts falsch.</p>
+</details>
+<details class="ep" data-datum="2026-07-19"><summary><span class="ed">Sonntag, 19.07.</span><b>Episode 8 · Würdest du so mit deiner besten Freundin sprechen?</b></summary>
+<p class="meta">❤️ Selbstmitgefühl &nbsp;·&nbsp; 🎯 Den inneren Kritiker entlarven.</p>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Welchen Satz würdest du deiner besten Freundin heute sagen?</p></div>
+<div class="story"><span class="kam">📷 Kerze. · Workbook.</span><p class="sprech">🎤 Vielleicht liest du dir diesen Satz heute Abend selbst vor.</p><p class="stext">📝 Freundlichkeit beginnt bei dir.</p></div>
+<div class="story"><span class="kam">📷 Schwarzer Hintergrund.</span><p class="stext">📝 Morgen beginnt eine neue Woche.<br>Und ich verspreche dir:<br>Sie wird etwas verändern.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe dir heute selbst eine Nachricht, als wärst du deine beste Freundin.</p>
+</details>
+<details class="ep" data-datum="2026-07-20"><summary><span class="ed">Montag, 20.07.</span><b>Episode 9 · Heute beginnt etwas Neues</b></summary>
+<p class="meta">❤️ Hoffnung &nbsp;·&nbsp; 🎯 Die zweite Woche bewusst einleiten. Neugierig machen.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Fenster öffnen. · Morgenlicht.</span><p class="stext">📝 Neue Woche.<br>Neue Gedanken.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Lächeln.</span><p class="sprech">🎤 Ich freue mich, dass wir gemeinsam in diese neue Woche starten.<br>Und ich glaube, sie wird anders.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang.</span><p class="sprech">🎤 Letzte Woche haben wir viel darüber gesprochen, warum Loslassen so schwer ist.<br>Diese Woche geht es um etwas anderes.<br>Um dich.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Ich wünsche mir, dass du dich in den nächsten Tagen wieder ein kleines Stück besser kennenlernst.</p><p class="stext">📝 Der Weg zurück beginnt bei dir.<br>🕜 13:30 Uhr</p></div>
+<div class="story"><p class="stick">📱 Emoji-Slider-Sticker: Wie neugierig bist du auf diese Woche?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Neue Seite.</span><p class="sprech">🎤 Ich habe heute Morgen ein neues Kapitel aufgeschlagen.<br>Und ich glaube, es wird ein ganz besonderes.</p><p class="stext">📝 Kapitel 2 beginnt.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Morgen sprechen wir darüber, warum wir oft viel liebevoller zu anderen sind als zu uns selbst.</p><p class="stext">📝 Ich freue mich, wenn wir uns morgen wiedersehen. 💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Nimm dir heute Abend drei Minuten Zeit und beantworte nur diese Frage: Was wünsche ich mir eigentlich für mich – unabhängig von jemand anderem? 📖 LAUNCH STORY BOOK Staffel 1 – Der Weg zurück zu dir</p>
+</details>
+<details class="ep" data-datum="2026-07-21"><summary><span class="ed">Dienstag, 21.07.</span><b>Episode 10 · Wann hast du dich selbst zuletzt gefragt, wie es dir geht?</b></summary>
+<p class="meta">❤️ Selbstwahrnehmung &nbsp;·&nbsp; 🎯 Die Aufmerksamkeit vom Außen wieder nach innen lenken.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Fenster öffnen. · Frische Morgenluft. · Keine Stimme.</span><p class="stext">📝 Heute geht es einmal nicht um ihn.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Kurze Pause.</span><p class="sprech">🎤 Guten Morgen. 💛<br>Darf ich dir heute eine ganz einfache Frage stellen?</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Langsame Schritte.</span><p class="sprech">🎤 Wann hast du dich zuletzt ehrlich gefragt:<br>(Pause.)<br>Wie geht es eigentlich mir?</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Nicht deiner Familie.<br>Nicht deinen Kindern.<br>Nicht deinen Freunden.<br>Sondern dir.</p><p class="stext">📝 ❤️ Du darfst dich wichtig nehmen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Wie geht es dir heute – in einem Wort?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Eine leere Seite.</span><p class="sprech">🎤 Heute habe ich einfach nur drei Minuten geschrieben.<br>Ohne Ziel.<br>Nur für mich.</p><p class="stext">📝 Schreiben schafft oft Klarheit.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Vielleicht musst du heute noch keine Antworten haben.<br>Vielleicht reicht es,<br>dir die richtigen Fragen zu stellen.</p></div>
+<div class="story"><p class="stext">📝 Morgen sprechen wir darüber,<br>warum dein Körper oft früher merkt,<br>was du brauchst.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Bevor du schlafen gehst, frage dich: Was brauche ich heute Abend wirklich?</p>
+</details>
+<details class="ep" data-datum="2026-07-22"><summary><span class="ed">Mittwoch, 22.07.</span><b>Episode 11 · Dein Körper spricht mit dir</b></summary>
+<p class="meta">❤️ Achtsamkeit &nbsp;·&nbsp; 🎯 Sie soll lernen, auf Körpersignale zu achten.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Tee. · Hände an der Tasse.</span><p class="stext">📝 Nicht nur dein Kopf spricht mit dir.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Kennst du dieses Gefühl,<br>dass dein Bauch schon wusste,<br>was dein Kopf noch nicht verstanden hat?</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Hand streicht über Gräser.</span><p class="sprech">🎤 Unser Körper sendet oft kleine Signale.<br>Müdigkeit.<br>Enge.<br>Ruhe.<br>Leichtigkeit.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Und manchmal übergehen wir sie,<br>weil wir glauben,<br>wir müssten funktionieren.</p><p class="stext">📝 🌿 Vielleicht darfst du heute einmal zuhören.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Emoji-Slider-Sticker: Wie gut hörst du gerade auf dich?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Hand auf dem Herzen.</span><p class="sprech">🎤 Ich habe mir heute bewusst fünf Minuten genommen.<br>Kein Handy.<br>Keine Ablenkung.<br>Nur atmen.</p><p class="stext">📝 Ruhe ist kein Luxus.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Abendlicht.</span><p class="sprech">🎤 Vielleicht sagt dir dein Körper heute etwas,<br>das dein Kopf noch gar nicht hören wollte.</p></div>
+<div class="story"><p class="stext">📝 Morgen erzähle ich dir,<br>warum kleine Grenzen große Veränderungen bewirken.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Lege heute vor dem Schlafengehen beide Hände auf dein Herz. Atme fünfmal bewusst ein und aus. Mehr musst du heute nicht tun.</p>
+</details>
+<details class="ep" data-datum="2026-07-23"><summary><span class="ed">Donnerstag, 23.07.</span><b>Episode 12 · Ein Nein kann ein Ja zu dir sein</b></summary>
+<p class="meta">❤️ Selbstachtung &nbsp;·&nbsp; 🎯 Grenzen liebevoll neu definieren.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Haustür wird langsam geschlossen.</span><p class="stext">📝 Heute sprechen wir über ein kleines Wort.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Früher dachte ich,<br>Nein sagen wäre egoistisch.<br>(Pause.)<br>Heute denke ich etwas anderes.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Gartenzaun. · Blumen.</span><p class="sprech">🎤 Ein Garten braucht einen Zaun,<br>damit die Blumen wachsen können.<br>Nicht,<br>um die Welt auszusperren.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Grenzen bedeuten nicht,<br>dass du andere weniger liebst.<br>Sondern,<br>dass du dich selbst nicht vergisst.</p><p class="stext">📝 ❤️ Ein Nein kann ein Ja zu dir sein.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Umfrage-Sticker: Fällt dir Nein sagen schwer? · ❤️ Ja. · 🌿 Ich übe.</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Der Satz wird unterstrichen.</span><p class="sprech">🎤 Heute habe ich mir einen Satz aufgeschrieben.<br>Ich darf freundlich Grenzen setzen.</p><p class="stext">📝 Freundlich. Klar. Ohne Schuldgefühl.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Vielleicht brauchst du heute keine große Veränderung.<br>Vielleicht reicht ein einziges liebevolles Nein.</p></div>
+<div class="story"><p class="stext">📝 Morgen wartet eine Geschichte auf dich,<br>die ich nie vergessen habe.<br>💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Überlege heute: Wo wünsche ich mir gerade eine liebevolle Grenze? Schreibe sie auf. Noch musst du nichts verändern. Nur wahrnehmen. 📖 LAUNCH STORY BOOK Staffel 1 – Der Weg zurück zu dir</p>
+</details>
+<details class="ep" data-datum="2026-07-24"><summary><span class="ed">Freitag, 24.07.</span><b>Episode 13 · Die Nachricht, die ich nie vergessen werde</b></summary>
+<p class="meta">❤️ Verbundenheit &nbsp;·&nbsp; 🎯 Eine persönliche Geschichte erzählen, damit die Community merkt: &quot;Sie versteht mich wirklich.&quot;</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Kaffeetasse auf dem Tisch. · Hand legt ein Handy daneben. · Keine Stimme.</span><p class="stext">📝 Manche Nachrichten bleiben für immer.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Kurz schweigen.</span><p class="sprech">🎤 Guten Morgen. 💛<br>Heute möchte ich dir von einer Nachricht erzählen…<br>…die ich bis heute nicht vergessen habe.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Blick nach unten.</span><p class="sprech">🎤 Eine Frau schrieb mir:<br>&quot;Ich funktioniere jeden Tag.<br>Aber innerlich fühle ich gar nichts mehr.&quot;<br>(Pause.)</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Dieser Satz hat mich tief berührt.<br>Nicht, weil er außergewöhnlich war.<br>Sondern weil ihn so viele Frauen fühlen.</p><p class="stext">📝 Du bist nicht die Einzige.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Umfrage-Sticker: Kennst du dieses Gefühl? · ❤️ Ja · 🌿 Zum Glück nicht</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Eine Seite mit der Überschrift: · &quot;Heute darf ich fühlen.&quot;</span><p class="sprech">🎤 Gefühle verschwinden nicht,<br>wenn wir sie wegdrücken.<br>Sie warten.</p><p class="stext">📝 Gefühle wollen gesehen werden.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Vielleicht ist heute nicht der Tag,<br>an dem du alles veränderst.<br>Vielleicht ist heute der Tag,<br>an dem du dich wieder spürst.</p></div>
+<div class="story"><p class="stext">📝 Morgen zeige ich dir,<br>warum Heilung manchmal mit einer Pause beginnt.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Lege heute dein Handy für zehn Minuten weg. Setz dich mit einer Tasse Tee hin. Frag dich nur: Was fühle ich gerade wirklich?</p>
+</details>
+<details class="ep" data-datum="2026-07-25"><summary><span class="ed">Samstag, 25.07.</span><b>Episode 14 · Du musst nicht immer stark sein</b></summary>
+<p class="meta">❤️ Erlaubnis &nbsp;·&nbsp; 🎯 Den Druck nehmen, immer funktionieren zu müssen.</p>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Regen am Fenster.</span><p class="stext">📝 Vielleicht bist du müde vom Starksein.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Weißt du…<br>Stark sein bedeutet nicht,<br>nie zu weinen.<br>🕚 11:00 Uhr</p></div>
+<div class="story"><span class="kam">📷 Spaziergang. · Regenschirm.</span><p class="sprech">🎤 Für mich bedeutet Stärke heute etwas anderes.<br>Ehrlich zu sagen:<br>&quot;Heute geht es mir nicht gut.&quot;</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Das ist keine Schwäche.<br>Das ist Mut.</p><p class="stext">📝 Ehrlichkeit ist Stärke.<br>🕑 14:00 Uhr</p></div>
+<div class="story"><p class="stick">📱 Frage-Sticker: Wann hast du zuletzt ehrlich gesagt, wie es dir geht?</p></div>
+<div class="story"><span class="kam">📷 Workbook. · Notiz wird geschrieben.</span><p class="sprech">🎤 Heute schreibe ich nur einen Satz.<br>Ich muss heute niemandem etwas beweisen.</p><p class="stext">📝 Heute reicht mein Bestes.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Danke,<br>dass wir diesen Weg gemeinsam gehen.</p></div>
+<div class="story"><p class="stext">📝 Morgen schließen wir die zweite Woche gemeinsam ab.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Heute darfst du einen Satz streichen: Ich muss stark sein. Und ihn ersetzen durch: Ich darf ehrlich sein.</p>
+</details>
+<details class="ep" data-datum="2026-07-26"><summary><span class="ed">Sonntag, 26.07.</span><b>Episode 15 · Schau einmal zurück</b></summary>
+<p class="meta">❤️ Stolz &nbsp;·&nbsp; 🎯 Die erste Veränderung sichtbar machen.</p>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Was war deine wichtigste Erkenntnis dieser Woche?</p></div>
+<div class="story"><span class="kam">📷 Kerze. · Workbook.</span><p class="sprech">🎤 Ich bin unglaublich dankbar,<br>dass du dir jeden Tag ein paar Minuten schenkst.</p></div>
+<div class="story"><span class="kam">📷 Schwarzer Hintergrund.</span><p class="stext">📝 Morgen beginnt Kapitel 3.<br>Und ich verspreche dir:<br>Jetzt geht es noch mehr um dich.<br>💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe heute drei Dinge auf: • Was habe ich über mich gelernt? • Worauf bin ich stolz? • Was möchte ich in die nächste Woche mitnehmen?</p>
+</details>
+<details class="ep" data-datum="2026-07-27"><summary><span class="ed">Montag, 27.07.</span><b>Episode 16 · Wer warst du, bevor du angefangen hast, dich zu verlieren?</b></summary>
+<p class="meta">❤️ Neugier &nbsp;·&nbsp; 🎯 Den Fokus erstmals komplett auf die eigene Identität richten.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Fenster öffnen. · Morgensonne. · Vogelstimmen.</span><p class="stext">📝 Neue Woche.<br>Neue Frage.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Guten Morgen. 💛<br>Heute möchte ich dir eine Frage stellen, die mich selbst lange beschäftigt hat.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Langsame Schritte.</span><p class="sprech">🎤 Weißt du noch, wer du warst, bevor sich so vieles nur noch um diese Beziehung gedreht hat?<br>(Pause.)</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Welche Träume hattest du?<br>Was hat dich begeistert?<br>Worüber hast du gelacht?</p><p class="stext">📝 Vielleicht wartet diese Frau noch auf dich.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Was hast du früher geliebt?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Neue Seite. · Überschrift: · &quot;Ich erinnere mich...&quot;</span><p class="sprech">🎤 Ich habe heute drei Dinge aufgeschrieben, die ich früher unglaublich gern gemacht habe.</p><p class="stext">📝 Vielleicht fallen dir heute auch drei ein.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Vielleicht musst du diese Frau gar nicht neu erschaffen.<br>Vielleicht darfst du sie einfach wieder kennenlernen.</p></div>
+<div class="story"><p class="stext">📝 Morgen erzähle ich dir, warum wir uns oft Stück für Stück verlieren.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe drei Dinge auf, die dir früher Freude gemacht haben. Nicht bewerten. Nur erinnern.</p>
+</details>
+<details class="ep" data-datum="2026-07-28"><summary><span class="ed">Dienstag, 28.07.</span><b>Episode 17 · Man verliert sich selten an einem einzigen Tag</b></summary>
+<p class="meta">❤️ Verständnis &nbsp;·&nbsp; 🎯 Die Zuschauerin erkennt, dass Selbstverlust ein schleichender Prozess ist.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Tee. · Fenster. · Keine Stimme.</span><p class="stext">📝 Niemand verliert sich über Nacht.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Oft passiert es ganz leise.<br>Ein kleines Nein zu sich selbst.<br>Noch eins.<br>Und irgendwann merkt man,<br>dass man sich selbst kaum noch hört.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Blätter.</span><p class="sprech">🎤 Nicht eine große Entscheidung verändert uns.<br>Sondern viele kleine.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Und genau deshalb<br>dürfen wir uns auch<br>in kleinen Schritten wiederfinden.</p><p class="stext">📝 🌿 Kleine Schritte verändern viel.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Umfrage-Sticker: Hast du dich manchmal selbst vergessen? · ❤️ Ja. · 🌿 Leider oft.</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Eine Liste entsteht.</span><p class="sprech">🎤 Heute habe ich mir aufgeschrieben:<br>Wo sage ich zu oft Ja,<br>obwohl ich Nein meine?</p><p class="stext">📝 Ehrlichkeit beginnt bei dir.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Morgen machen wir gemeinsam eine kleine Übung.<br>Ich glaube,<br>sie wird dich überraschen.</p></div>
+<div class="story"><p class="stext">📝 Bis morgen. 💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Achte heute nur einmal bewusst darauf, wann du automatisch Ja sagst.</p>
+</details>
+<details class="ep" data-datum="2026-07-29"><summary><span class="ed">Mittwoch, 29.07.</span><b>Episode 18 · Schließ für einen Moment die Augen</b></summary>
+<p class="meta">❤️ Ruhe &nbsp;·&nbsp; 🎯 Die erste echte Achtsamkeitsübung.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Kerze. · Leises Morgenlicht. · Keine Stimme.</span><p class="stext">📝 Heute brauchst du nur eine Minute.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Sehr ruhig.</span><p class="sprech">🎤 Ich wünsche mir heute nichts von dir.<br>Nur eine Minute.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Wenn du magst,<br>schließ jetzt einmal die Augen.<br>Atme tief ein.<br>Und langsam wieder aus.</p></div>
+<div class="story"><span class="kam">📷 B-Roll. · Bäume. · Wind.</span><p class="sprech">🎤 Frag dich jetzt nur:<br>Wie geht es mir gerade wirklich?<br>(Pause.)</p><p class="stext">📝 Ohne etwas verändern zu wollen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Welches Wort beschreibt dein Gefühl gerade?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Nur ein Wort wird geschrieben.</span><p class="sprech">🎤 Mehr musst du heute gar nicht tun.</p><p class="stext">📝 Ein Wort reicht.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Abendlicht.</span><p class="sprech">🎤 Vielleicht war genau diese eine Minute<br>heute dein wichtigster Moment.</p></div>
+<div class="story"><p class="stext">📝 Morgen erzähle ich dir,<br>warum kleine Veränderungen oft die größten sind.<br>💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Bevor du schlafen gehst: Schreibe nur ein einziges Wort in dein Workbook. Nicht mehr. Das Gefühl, das heute am stärksten da war. 📖 LAUNCH STORY BOOK Staffel 1 – Der Weg zurück zu dir Kapitel 4 Ich darf mir wieder vertrauen</p>
+</details>
+<details class="ep" data-datum="2026-07-30"><summary><span class="ed">Donnerstag, 30.07.</span><b>Episode 19 · Du musst heute nicht alles wissen</b></summary>
+<p class="meta">❤️ Vertrauen &nbsp;·&nbsp; 🎯 Den Druck nehmen, sofort Antworten finden zu müssen.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Morgensonne. · Tee am Fenster.</span><p class="stext">📝 Nicht jede Frage braucht heute eine Antwort.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Guten Morgen. 💛<br>Kennst du dieses Gefühl, unbedingt endlich Klarheit haben zu wollen?<br>(Pause.)<br>Ich kenne das gut.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Ein Weg gabelt sich.</span><p class="sprech">🎤 Früher dachte ich, ich müsste sofort wissen, wie es weitergeht.<br>Heute weiß ich:<br>Der nächste Schritt reicht.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Vertrauen entsteht nicht, weil wir alles wissen.<br>Sondern weil wir lernen, den nächsten Schritt zu gehen.</p><p class="stext">📝 🌿 Schritt für Schritt.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Emoji-Slider-Sticker: Wie leicht fällt dir Vertrauen gerade?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Neue Seite.</span><p class="sprech">🎤 Heute habe ich nur einen Satz geschrieben.<br>Ich muss den ganzen Weg noch gar nicht kennen.</p><p class="stext">📝 Der nächste Schritt genügt.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Vielleicht darf heute genau dieser Gedanke mit dir schlafen gehen.</p></div>
+<div class="story"><p class="stext">📝 Morgen sprechen wir darüber, warum dein Gefühl oft früher Bescheid weiß als dein Kopf.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Frage dich heute Abend: Welcher kleine Schritt fühlt sich morgen richtig an? Nicht mehr.</p>
+</details>
+<details class="ep" data-datum="2026-07-31"><summary><span class="ed">Freitag, 31.07.</span><b>Episode 20 · Dein Gefühl ist nicht dein Gegner</b></summary>
+<p class="meta">❤️ Sicherheit &nbsp;·&nbsp; 🎯 Das Vertrauen in die eigene Intuition stärken.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Fenster. · Wind bewegt den Vorhang.</span><p class="stext">📝 Dein Gefühl spricht oft ganz leise.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Wie oft hast du schon gedacht:<br>&quot;Eigentlich hatte ich von Anfang an ein komisches Gefühl.&quot;</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Bäume.</span><p class="sprech">🎤 Unser Gefühl schreit selten.<br>Es flüstert.<br>Und genau deshalb hören wir oft nicht hin.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Vielleicht geht es heute gar nicht darum, deinem Gefühl blind zu folgen.<br>Sondern ihm wieder zuzuhören.</p><p class="stext">📝 ❤️ Dein Gefühl darf wieder einen Platz bekommen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Wann hat dein Bauchgefühl dich zuletzt überrascht?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Hand auf dem Herzen.</span><p class="sprech">🎤 Manchmal lege ich einfach kurz meine Hand aufs Herz.<br>Und frage mich:<br>Was brauche ich gerade?</p><p class="stext">📝 Hör dir heute selbst zu.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Abendspaziergang.</span><p class="sprech">🎤 Dein Gefühl muss heute nichts beweisen.<br>Es darf einfach da sein.</p></div>
+<div class="story"><p class="stext">📝 Morgen wartet eine kleine Überraschung auf dich.<br>💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Bevor du heute eine Entscheidung triffst, halte kurz inne. Frage dich: Was sagt mein Gefühl?</p>
+</details>
+<details class="ep" data-datum="2026-08-01"><summary><span class="ed">Samstag, 01.08.</span><b>Episode 21 · Ich möchte dir heute etwas schenken</b></summary>
+<p class="meta">❤️ Dankbarkeit &nbsp;·&nbsp; 🎯 Workbook und Community emotional miteinander verbinden.</p>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Geschenkband um das Workbook. · Nahaufnahme.</span><p class="stext">📝 Heute habe ich etwas für dich.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Lächeln.</span><p class="sprech">🎤 In den letzten Wochen habt ihr mir so viele Nachrichten geschickt.<br>Jede einzelne hat mich berührt.<br>🕚 11:00 Uhr</p></div>
+<div class="story"><span class="kam">📷 Workbook durchblättern. · Markierte Seiten.</span><p class="sprech">🎤 Deshalb möchte ich dir heute eine Seite daraus zeigen,<br>die mir persönlich besonders wichtig ist.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Dort steht nur ein Satz.<br>(Pause.)<br>Vertraue dir einen kleinen Schritt mehr als gestern.</p><p class="stext">📝 Mehr braucht es heute nicht.<br>🕑 14:00 Uhr</p></div>
+<div class="story"><p class="stick">📱 Frage-Sticker: Welcher Satz aus den letzten Wochen hat dich am meisten begleitet?</p></div>
+<div class="story"><span class="kam">📷 Tee. · Workbook. · Kerze.</span><p class="sprech">🎤 Danke,<br>dass wir diesen Weg gemeinsam gehen.<br>Ohne eure Offenheit<br>wäre diese Reise nicht dieselbe.</p><p class="stext">📝 💛 Danke, dass du hier bist.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Sonnenuntergang.</span><p class="sprech">🎤 Morgen schließen wir dieses Kapitel gemeinsam ab.<br>Und ich glaube,<br>du wirst merken,<br>wie weit du schon gekommen bist.</p></div>
+<div class="story"><p class="stext">📝 Morgen wartet eine besondere Rückschau.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Blättere heute noch einmal durch dein Workbook. Markiere die eine Seite, die dich bisher am meisten berührt hat.</p>
+</details>
+<details class="ep" data-datum="2026-08-02"><summary><span class="ed">Sonntag, 02.08.</span><b>Episode 22 · Schau mal, wie weit du schon gekommen bist</b></summary>
+<p class="meta">❤️ Stolz &amp; Hoffnung &nbsp;·&nbsp; 🎯 Die Zuschauerin erkennt ihre ersten Veränderungen.</p>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Worauf bist du diese Woche stolz?</p></div>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Ich bin stolz auf dich.<br>Auch wenn wir uns vielleicht nie persönlich begegnet sind.<br>Ich sehe, wie mutig du jeden Tag einen kleinen Schritt gehst.</p></div>
+<div class="story"><p class="stext">📝 Morgen beginnt ein neues Kapitel.<br>Und ich glaube, es wird dein Lieblingskapitel. 💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe heute drei Dinge auf, auf die du stolz bist. Auch wenn sie noch so klein erscheinen.</p>
+</details>
+<details class="ep" data-datum="2026-08-03"><summary><span class="ed">Montag, 03.08.</span><b>Episode 23 · Heute reden wir einmal nicht über ihn</b></summary>
+<p class="meta">❤️ Befreiung &nbsp;·&nbsp; 🎯 Den Fokus bewusst auf die Zuschauerin lenken.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Blumen. · Morgenlicht.</span><p class="stext">📝 Heute geht es nur um dich.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Lächeln.</span><p class="sprech">🎤 Darf ich dich heute zu etwas einladen?<br>Lass uns heute einen ganzen Tag verbringen,<br>ohne über ihn zu sprechen.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Blumen am Weg.</span><p class="sprech">🎤 Stattdessen möchte ich dich fragen:<br>Was hat dir heute schon ein kleines Lächeln geschenkt?</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Vielleicht war es dein Kaffee.<br>Die Sonne.<br>Ein Lied.<br>Ein lieber Mensch.</p><p class="stext">📝 Freude darf wieder Platz bekommen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Was hat dir heute gutgetan?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Neue Seite.</span><p class="sprech">🎤 Heute schreibe ich nur schöne Momente auf.</p><p class="stext">📝 Heute sammle ich Licht.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Abendspaziergang.</span><p class="sprech">🎤 Vielleicht merkst du heute:<br>Dein Leben besteht aus mehr<br>als dieser einen Geschichte.</p></div>
+<div class="story"><p class="stext">📝 Morgen erzähle ich dir,<br>warum Lachen manchmal Überwindung kostet.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Mach heute ein Foto von etwas, das dir gutgetan hat. Nicht posten. Nur behalten.</p>
+</details>
+<details class="ep" data-datum="2026-08-04"><summary><span class="ed">Dienstag, 04.08.</span><b>Episode 24 · Du darfst wieder lachen</b></summary>
+<p class="meta">❤️ Leichtigkeit &nbsp;·&nbsp; 🎯 Schuldgefühle gegenüber Freude lösen.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Kaffee. · Fenster. · Sonne.</span><p class="stext">📝 Darf ich dir heute etwas erlauben?</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Viele Frauen erzählen mir,<br>dass sie sich schlecht fühlen,<br>wenn sie plötzlich wieder lachen.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Park. · Kinder spielen. · Natur.</span><p class="sprech">🎤 Als wäre Freude ein Verrat.<br>Aber weißt du was?<br>Das ist sie nicht.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Deine Freude macht die Liebe nicht kleiner.<br>Sie zeigt nur,<br>dass dein Herz langsam wieder lebt.</p><p class="stext">📝 ❤️ Freude ist erlaubt.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Emoji-Slider-Sticker: Wie leicht fällt dir Freude gerade?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Ein kleiner Smiley wird gemalt.</span><p class="sprech">🎤 Heute habe ich bewusst etwas gemacht,<br>das mir früher Freude gemacht hat.</p><p class="stext">📝 Was wäre das bei dir?</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Sonnenuntergang.</span><p class="sprech">🎤 Vielleicht schenkst du dir morgen<br>wieder einen kleinen schönen Moment.</p></div>
+<div class="story"><p class="stext">📝 Morgen sprechen wir darüber,<br>warum deine Zukunft nicht aussehen muss wie deine Vergangenheit.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Mach heute bewusst etwas, das dir früher Freude gemacht hat. Nur fünf Minuten.</p>
+</details>
+<details class="ep" data-datum="2026-08-05"><summary><span class="ed">Mittwoch, 05.08.</span><b>Episode 25 · Vielleicht musst du gar nicht wieder die Alte werden</b></summary>
+<p class="meta">❤️ Erleichterung &nbsp;·&nbsp; 🎯 Den Gedanken lösen, dass Heilung bedeutet, wieder die „Alte“ sein zu müssen.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Morgenlicht. · Ein Weg im Wald.</span><p class="stext">📝 Vielleicht wartet gar nicht deine alte Version auf dich.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Ruhige Stimmung.</span><p class="sprech">🎤 Eine Frau hat mir einmal geschrieben:<br>&quot;Ich möchte einfach wieder die Alte sein.&quot;<br>(Pause.)<br>Und dieser Satz hat mich lange beschäftigt.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Blick in die Ferne.</span><p class="sprech">🎤 Was wäre, wenn du gar nicht zurückmusst?<br>Was wäre, wenn gerade eine Frau entsteht, die sich selbst viel besser kennt?</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Vielleicht wirst du nicht wieder die Alte.<br>Vielleicht wirst du liebevoller.<br>Klarer.<br>Freier.</p><p class="stext">📝 Veränderung bedeutet nicht, zurückzugehen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Welche Eigenschaft möchtest du in Zukunft stärken?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Neue Überschrift: · Meine neue Version von mir</span><p class="sprech">🎤 Heute schreibe ich nicht auf, wer ich war.<br>Sondern, wer ich werden möchte.</p><p class="stext">📝 🌿 Neue Seiten dürfen beschrieben werden.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Abendlicht.</span><p class="sprech">🎤 Vielleicht beginnt Veränderung genau heute.<br>Nicht, weil alles anders ist.<br>Sondern, weil du anders auf dich schaust.</p></div>
+<div class="story"><p class="stext">📝 Morgen sprechen wir darüber, warum Selbstvertrauen in ganz kleinen Momenten wächst.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe drei Eigenschaften auf, die dein zukünftiges Ich ausmachen sollen.</p>
+</details>
+<details class="ep" data-datum="2026-08-06"><summary><span class="ed">Donnerstag, 06.08.</span><b>Episode 26 · Selbstvertrauen wächst nicht an großen Tagen</b></summary>
+<p class="meta">❤️ Mut &nbsp;·&nbsp; 🎯 Selbstvertrauen neu definieren.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Tee. · Morgensonne.</span><p class="stext">📝 Selbstvertrauen beginnt oft ganz leise.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Viele glauben, Selbstvertrauen entsteht, wenn etwas Großes passiert.<br>Ich glaube das nicht.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Nahaufnahme der Schritte.</span><p class="sprech">🎤 Es wächst,<br>wenn du dir selbst immer wieder zeigst:<br>Ich bin für mich da.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Vielleicht war dein größter Erfolg heute,<br>dass du nicht sofort reagiert hast.<br>Oder dass du dir eine Pause erlaubt hast.</p><p class="stext">📝 Jeder kleine Schritt stärkt dein Vertrauen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Emoji-Slider-Sticker: Wie sehr vertraust du dir heute?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Ein Haken hinter einer kleinen Aufgabe.</span><p class="sprech">🎤 Ich feiere heute bewusst einen kleinen Erfolg.</p><p class="stext">📝 Kleine Siege zählen.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Selbstvertrauen wächst,<br>wenn wir unsere kleinen Schritte sehen.</p></div>
+<div class="story"><p class="stext">📝 Morgen wartet eine Frage, die vielleicht alles verändert.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Beantworte heute: Worauf bin ich heute stolz?</p>
+</details>
+<details class="ep" data-datum="2026-08-07"><summary><span class="ed">Freitag, 07.08.</span><b>Episode 27 · Wenn dein jüngeres Ich dich heute sehen könnte …</b></summary>
+<p class="meta">❤️ Berührung &nbsp;·&nbsp; 🎯 Selbstmitgefühl und Stolz verbinden.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Altes Fotoalbum. · Nicht direkt zeigen.</span><p class="stext">📝 Stell dir eine Frage.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Wenn dein jüngeres Ich dich heute sehen könnte…<br>Was würde es über dich sagen?</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Blumen.</span><p class="sprech">🎤 Vielleicht würde es sagen:<br>&quot;Du bist mutiger geworden.&quot;<br>&quot;Du gibst nicht auf.&quot;<br>&quot;Du gehst weiter.&quot;</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Wir sehen oft nur,<br>was noch fehlt.<br>Und vergessen,<br>wie weit wir schon gegangen sind.</p><p class="stext">📝 🌸 Du bist weiter, als du glaubst.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Was würde dein jüngeres Ich an dir bewundern?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Ein Brief wird begonnen.</span><p class="sprech">🎤 Heute schreibe ich einen Brief.<br>Nicht an ihn.<br>An mich.</p><p class="stext">📝 Liebe jüngere Susanne …</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Sonnenuntergang.</span><p class="sprech">🎤 Ich wünsche dir,<br>dass du heute mit etwas mehr Mitgefühl einschläfst.</p></div>
+<div class="story"><p class="stext">📝 Morgen schließen wir diese Woche gemeinsam ab.<br>Und ich glaube, du wirst überrascht sein, wie sehr du dich schon verändert hast. 💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe heute den ersten Satz eines Briefes: Liebe jüngere Version von mir… Mehr musst du heute nicht schreiben. 📖 LAUNCH STORY BOOK Staffel 1 – Der Weg zurück zu dir Kapitel 5 Ich beginne wieder zu leben</p>
+</details>
+<details class="ep" data-datum="2026-08-08"><summary><span class="ed">Samstag, 08.08.</span><b>Episode 28 · Du bist nicht stehen geblieben</b></summary>
+<p class="meta">❤️ Stolz &nbsp;·&nbsp; 🎯 Die Zuschauerin erkennt ihre Entwicklung und hört auf, sich mit ihrem Schmerz zu identifizieren.</p>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Sonnenlicht fällt auf den Frühstückstisch. · Tee dampft. · Keine Stimme.</span><p class="stext">📝 Veränderung passiert oft, während wir glauben, dass nichts passiert.</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Ruhige Stimme.</span><p class="sprech">🎤 Weißt du, woran ich heute Morgen denken musste?<br>(Pause.)<br>Wie oft wir nur sehen, was noch fehlt.<br>🕚 11:00 Uhr</p></div>
+<div class="story"><span class="kam">📷 Spaziergang. · Schritte auf einem Waldweg.</span><p class="sprech">🎤 Aber fast nie, wie weit wir schon gegangen sind.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Vor ein paar Wochen hat sich vielleicht jeder Gedanke um ihn gedreht.<br>Heute gibt es Momente, in denen du wieder an dich denkst.</p><p class="stext">📝 🌿 Das ist Wachstum.<br>🕑 14:00 Uhr</p></div>
+<div class="story"><p class="stick">📱 Frage-Sticker: Woran merkst du, dass sich etwas verändert?</p></div>
+<div class="story"><span class="kam">📷 Workbook. · Die Seiten werden langsam durchgeblättert.</span><p class="sprech">🎤 Ich liebe es, ältere Einträge zu lesen.<br>Sie erinnern mich daran, wie viel sich bereits verändert hat.</p><p class="stext">📝 Manchmal sehen wir Fortschritt erst rückblickend.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Heute wünsche ich dir, dass du stolz auf dich bist.<br>Nicht irgendwann.<br>Heute.</p></div>
+<div class="story"><p class="stext">📝 Morgen wartet eine neue Woche.<br>Und sie wird alles verändern.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Blättere durch dein Workbook. Lies den ersten Eintrag noch einmal. Und vergleiche ihn mit heute.</p>
+</details>
+<details class="ep" data-datum="2026-08-09"><summary><span class="ed">Sonntag, 09.08.</span><b>Episode 29 · Vielleicht beginnt dein neues Leben leiser, als du dachtest</b></summary>
+<p class="meta">❤️ Hoffnung &nbsp;·&nbsp; 🎯 Die neue Woche mit Zuversicht beginnen.</p>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><p class="stick">📱 Umfrage-Sticker: Glaubst du, dass Veränderung schon begonnen hat? · ❤️ Ja · 🌿 Ich hoffe es</p></div>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Morgen beginnt ein Kapitel, auf das ich mich ganz besonders freue.</p><p class="stext">📝 Morgen sprechen wir über Zukunft.</p></div>
+<div class="story"><span class="kam">📷 Schwarzer Hintergrund.</span><p class="stext">📝 Kapitel 6 beginnt.<br>💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe heute einen Satz: In drei Monaten wünsche ich mir... Nicht nachdenken. Einfach schreiben. 📖 Kapitel 6 Ich schaue wieder nach vorne</p>
+</details>
+<details class="ep" data-datum="2026-08-10"><summary><span class="ed">Montag, 10.08.</span><b>Episode 30 · Worauf möchtest du dich wieder freuen?</b></summary>
+<p class="meta">❤️ Vorfreude &nbsp;·&nbsp; 🎯 Den Blick bewusst in die Zukunft lenken.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Fenster öffnen. · Sonne. · Frische Luft.</span><p class="stext">📝 Heute schauen wir nach vorne.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Darf ich dir heute eine ungewöhnliche Frage stellen?<br>Nicht:<br>Was vermisst du?<br>Sondern:<br>Worauf freust du dich?</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Weite Landschaft.</span><p class="sprech">🎤 Vielleicht fällt dir gerade nichts ein.<br>Das ist vollkommen okay.<br>Dann beginnen wir heute damit.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Zukunft beginnt nicht,<br>wenn alle Antworten da sind.<br>Sondern wenn wir uns erlauben, wieder zu träumen.</p><p class="stext">📝 💛 Du darfst wieder träumen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Worauf möchtest du dich dieses Jahr wieder freuen?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Neue Seite.</span><p class="sprech">🎤 Heute schreibe ich keine Ziele auf.<br>Sondern Wünsche.</p><p class="stext">📝 Wünsche sind erlaubt.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Abendspaziergang.</span><p class="sprech">🎤 Vielleicht beginnt Zukunft genau dort,<br>wo Hoffnung wieder Platz bekommt.</p></div>
+<div class="story"><p class="stext">📝 Morgen erzähle ich dir, warum kleine Träume oft die größten Veränderungen auslösen.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe heute drei Dinge auf, auf die du dich in den nächsten Wochen freuen möchtest. Nicht müssen. Nur freuen.</p>
+</details>
+<details class="ep" data-datum="2026-08-11"><summary><span class="ed">Dienstag, 11.08.</span><b>Episode 31 · Es gibt wieder etwas, worauf du dich freuen darfst</b></summary>
+<p class="meta">❤️ Vorfreude &nbsp;·&nbsp; 🎯 Der Community wieder erlauben, sich auf die Zukunft zu freuen.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 B-Roll. · Kaffee. · Fenster. · Sonne.</span><p class="stext">📝 Vorfreude ist ein wunderschönes Gefühl.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Weißt du, was nach einer schweren Zeit oft als Erstes verschwindet?<br>(Pause.)<br>Vorfreude.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang. · Blumen.</span><p class="sprech">🎤 Man hört auf, Pläne zu machen.<br>Man hört auf, sich auf Wochenenden zu freuen.<br>Auf Urlaub.<br>Auf kleine Dinge.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Und genau deshalb wünsche ich mir,<br>dass wir sie heute ein kleines Stück zurückholen.</p><p class="stext">📝 🌸 Du darfst dich wieder freuen.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Worauf freust du dich in den nächsten Tagen?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Neue Seite.</span><p class="sprech">🎤 Heute schreibe ich nur Dinge auf,<br>auf die ich mich freue.</p><p class="stext">📝 Vorfreude ist erlaubt.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Abendspaziergang.</span><p class="sprech">🎤 Vielleicht ist genau das<br>dein erster Schritt Richtung Zukunft.</p></div>
+<div class="story"><p class="stext">📝 Morgen möchte ich dir erzählen,<br>woran ich gerade arbeite.<br>💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Plane heute bewusst einen kleinen schönen Moment für diese Woche.</p>
+</details>
+<details class="ep" data-datum="2026-08-12"><summary><span class="ed">Mittwoch, 12.08.</span><b>Episode 32 · Ich arbeite gerade an etwas Besonderem</b></summary>
+<p class="meta">❤️ Neugier &nbsp;·&nbsp; 🎯 Der erste ganz zarte Hinweis auf den kostenlosen Abend. Noch ohne Details.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Schreibtisch. · Laptop. · Workbook. · Kerze.</span><p class="stext">📝 In den letzten Tagen entsteht hier etwas…</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Lächeln.</span><p class="sprech">🎤 Ich freue mich gerade unglaublich,<br>weil ich an etwas arbeite,<br>das mir sehr am Herzen liegt.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Notebook. · Post-its. · Workbook. · Keine Inhalte lesbar.</span><p class="sprech">🎤 Ich sammle gerade Gedanken,<br>Fragen<br>und Übungen…<br>Weil ich etwas vorbereite.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Noch verrate ich nicht alles.<br>Aber ich glaube,<br>es wird richtig schön.</p><p class="stext">📝 ✨ Ich freue mich schon sehr.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Emoji-Slider-Sticker: Magst du Behind the Scenes?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Viele Post-its.</span><p class="sprech">🎤 Heute habe ich gefühlt<br>zehnmal alles wieder umgestellt.<br>Weil ich möchte,<br>dass es sich leicht anfühlt.</p><p class="stext">📝 Mit ganz viel Herz.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Morgen erzähle ich dir,<br>warum ich das überhaupt mache.</p></div>
+<div class="story"><p class="stext">📝 Bis morgen. 💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Überlege heute: Was würdest du gerne endlich verstehen?</p>
+</details>
+<details class="ep" data-datum="2026-08-13"><summary><span class="ed">Donnerstag, 13.08.</span><b>Episode 33 · Warum ich das alles mache</b></summary>
+<p class="meta">❤️ Verbindung &nbsp;·&nbsp; 🎯 Das &quot;Warum&quot; erzählen – nicht das Angebot.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Tee. · Schreibtisch. · Morgenlicht.</span><p class="stext">📝 Heute möchte ich dir etwas Persönliches erzählen.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Gestern habe ich erzählt,<br>dass ich an etwas arbeite.<br>Heute möchte ich dir sagen,<br>warum.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Spaziergang.</span><p class="sprech">🎤 In den letzten Wochen<br>haben mich so viele Nachrichten erreicht.<br>Viele Frauen schreiben fast dieselben Sätze.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Und irgendwann dachte ich:<br>Wir brauchen einen Raum,<br>in dem wir gemeinsam darüber sprechen können.</p><p class="stext">📝 Gemeinsam ist leichter.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Welche Frage beschäftigt dich gerade am meisten?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Notizen.</span><p class="sprech">🎤 Genau eure Fragen<br>begleiten mich gerade jeden Tag.</p><p class="stext">📝 Danke für euer Vertrauen. 💛</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Morgen nehme ich dich mit<br>hinter die Kulissen.</p></div>
+<div class="story"><p class="stext">📝 Ich freue mich, wenn wir uns morgen wiedersehen.</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Beende den Tag mit dieser Frage: Welche Antwort wünsche ich mir gerade am meisten?</p>
+</details>
+<details class="ep" data-datum="2026-08-14"><summary><span class="ed">Freitag, 14.08.</span><b>Episode 34 · Ich nehme dich heute mit hinter die Kulissen</b></summary>
+<p class="meta">❤️ Neugier &nbsp;·&nbsp; 🎯 Die Community soll merken, dass etwas Besonderes vorbereitet wird.</p>
+<div class="slot"><span class="zeit">07:30</span>
+<div class="story"><span class="kam">📷 Schreibtisch. · Workbook. · Laptop. · Viele Notizzettel.</span><p class="stext">📝 Heute nehme ich dich mal mit…</p></div>
+<div class="story"><span class="kam">📷 Selfie. · Lächeln.</span><p class="sprech">🎤 Guten Morgen. 💛<br>Ich sitze gerade schon seit dem frühen Morgen an etwas…<br>Und ich freue mich so darauf.</p></div>
+</div>
+<div class="slot"><span class="zeit">10:30</span>
+<div class="story"><span class="kam">📷 Laptop. · Zoom geöffnet. · (Nichts Persönliches zeigen.)</span><p class="sprech">🎤 Gerade entsteht ein Abend,<br>auf den ich mich unglaublich freue.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Ich möchte, dass jede Frau danach mit mehr Hoffnung nach Hause geht,<br>als sie gekommen ist.</p><p class="stext">📝 Genau dafür bereite ich alles vor.</p></div>
+</div>
+<div class="slot"><span class="zeit">13:30</span>
+<div class="story"><p class="stick">📱 Frage-Sticker: Wenn wir einen Abend zusammen hätten… · Worüber würdest du unbedingt sprechen wollen?</p></div>
+</div>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><span class="kam">📷 Workbook. · Post-its. · Marker.</span><p class="sprech">🎤 Eure Antworten landen übrigens alle hier.<br>Ich lese wirklich jede einzelne.</p><p class="stext">📝 Danke für euer Vertrauen. 💛</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Morgen erzähle ich dir,<br>warum dieser Abend anders wird als alles,<br>was ich bisher gemacht habe.</p></div>
+<div class="story"><p class="stext">📝 Bis morgen. 🌿</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Frage dich heute: Welche Frage wünsche ich mir endlich beantwortet?</p>
+</details>
+<details class="ep" data-datum="2026-08-15"><summary><span class="ed">Samstag, 15.08.</span><b>Episode 35 · Ich möchte keinen Vortrag halten</b></summary>
+<p class="meta">❤️ Nähe &nbsp;·&nbsp; 🎯 Den kostenlosen Abend emotional positionieren.</p>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Tee. · Sofa. · Decke.</span><p class="stext">📝 Darf ich dir etwas verraten?</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Ich möchte keinen Vortrag halten.<br>Und ehrlich gesagt…<br>auch kein klassisches Webinar.<br>🕚 11:00 Uhr</p></div>
+<div class="story"><span class="kam">📷 Spaziergang.</span><p class="sprech">🎤 Ich wünsche mir,<br>dass es sich eher anfühlt,<br>wie ein Abend unter Frauen.</p></div>
+<div class="story"><span class="kam">📷 Selfie.</span><p class="sprech">🎤 Ein Abend,<br>an dem niemand perfekt sein muss.<br>Sondern einfach ehrlich.</p><p class="stext">📝 Ehrlich.<br>Echt.<br>Gemeinsam.<br>🕑 14:00 Uhr</p></div>
+<div class="story"><p class="stick">📱 Umfrage-Sticker: Wärst du bei so einem Abend gerne dabei? · ❤️ Unbedingt · 🌿 Klingt schön</p></div>
+<div class="story"><span class="kam">📷 Workbook. · Eine Seite mit Übungen.</span><p class="sprech">🎤 Ich glaube,<br>gemeinsam fällt vieles leichter.</p><p class="stext">📝 Genau das wünsche ich mir.</p></div>
+</div>
+<div class="slot"><span class="zeit">20:30</span>
+<div class="story"><span class="kam">📷 Abendlicht.</span><p class="sprech">🎤 Morgen verrate ich dir,<br>wann dieser Abend stattfinden wird.</p></div>
+<div class="story"><p class="stext">📝 Ich freue mich schon so darauf. 💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Schreibe heute auf: Was wünsche ich mir von diesem Abend?</p>
+</details>
+<details class="ep" data-datum="2026-08-16"><summary><span class="ed">Sonntag, 16.08.</span><b>Episode 36 · Jetzt kann ich es endlich erzählen</b></summary>
+<p class="meta">❤️ Vorfreude &nbsp;·&nbsp; 🎯 Den kostenlosen Abend offiziell ankündigen.</p>
+<div class="slot"><span class="zeit">17:00</span>
+<div class="story"><p class="stick">📱 Link-Sticker-Sticker: Sichere dir deinen Platz.</p></div>
+<div class="story"><span class="kam">📷 Kerze.</span><p class="sprech">🎤 Ich würde mich riesig freuen,<br>wenn wir diesen Abend gemeinsam verbringen.</p></div>
+<div class="story"><span class="kam">📷 Schwarzer Hintergrund.</span><p class="stext">📝 Morgen erzähle ich dir,<br>was dich dort erwartet.<br>💛</p></div>
+</div>
+<p class="ritual">🌿 Mini-Ritual: Wenn du heute spürst, &quot;Das könnte mir guttun.&quot; Dann folge diesem Gefühl. 📖 LAUNCH STORY BOOK Staffel 1 – Der Weg zurück zu dir Kapitel 8 Der Abend rückt näher 📖 Launch Story Book NEUE VERSION Episode 37 Montag | 17.08. &quot;Ich glaube, ich muss euch etwas verraten …&quot; ❤️ Ziel Neugier. Noch keine Anmeldung pushen. 07:30 Story 1 Selfie Ich habe heute Nacht kaum geschlafen. (Pause) Nicht weil etwas Schlimmes passiert ist. Story 2 Sondern weil ich plötzlich gemerkt habe… In einer Woche sitzen wir gemeinsam in einem Raum. 10:30 Story 3 B-Roll Notebook Post-its Tee Ich bereite diesen Abend seit Wochen vor. Story 4 Selfie Und plötzlich fühlt sich das alles unglaublich echt an. 13:30 Frage-Sticker Wenn wir nur einen Abend hätten… Welche Frage müsste unbedingt beantwortet werden? 17:00 Workbook Eure Fragen landen genau hier. (Workbook zeigen) 20:30 Kerze Morgen erzähle ich euch, warum ich diesen Abend überhaupt kostenlos mache. Keine Anmeldung. Kein Link. Nur Neugier. Episode 38 Dienstag &quot;Warum kostenlos?&quot; ❤️ Ziel Vertrauen. 07:30 Selfie Ehrlich gesagt… Ich habe lange überlegt. 10:30 Spaziergang Warum schenke ich diesen Abend einfach? Selfie Weil ich weiß, wie schwer der erste Schritt manchmal ist. 13:30 Umfrage Wärst du grundsätzlich gerne dabei? ❤️ Ja 🌿 Ich überlege noch 17:00 Workbook Eine Übung zeigen. Nicht erklären. Nur zeigen. 20:30 Selfie Morgen öffne ich endlich die Anmeldung. Episode 39 Mittwoch &quot;Jetzt darf ich es endlich sagen.&quot; ❤️ Ziel Anmeldung öffnen. 07:30 Selfie Mit einem riesigen Lächeln. Endlich. Ich darf euch einladen. 10:30 Story Laptop. Zoom. Am [Datum] findet unser kostenloser Live-Abend statt. Story Selfie. Kein Webinar. Kein Verkaufsabend. Sondern ein Abend, an dem du nicht alleine bist. 13:30 Link Sichere dir deinen Platz. 17:00 FAQ Muss ich live dabei sein? Antwort. 20:30 Countdown Sticker Episode 40 Donnerstag &quot;Ich möchte dir drei Frauen vorstellen.&quot; ❤️ Ziel Social Proof Story 1 Screenshot (anonym) &quot;Ich habe mich angemeldet.&quot; Story 2 Screenshot (anonym) &quot;Ich traue mich endlich.&quot; Story 3 Screenshot (anonym) &quot;Ich habe richtig Gänsehaut.&quot; Story 4 Selfie Genau deshalb liebe ich diese Arbeit. Story 5 Frage Bist du schon dabei? Story 6 Link Episode 41 Freitag &quot;Die häufigsten Fragen&quot; ❤️ Ziel Einwände abbauen. Story 1 Ich beantworte heute eure Fragen. Story 2 Muss ich meine Kamera anmachen? Nein. Story 3 Muss ich sprechen? Nein. Story 4 Muss ich etwas vorbereiten? Nur Tee. Und vielleicht Taschentücher. 💛 Story 5 Kann ich auch teilnehmen, wenn ich gerade erst getrennt bin? Ja. Story 6 Link. Episode 42 Samstag &quot;Pack deine Tasche.&quot; ❤️ Ziel Mentale Vorbereitung. Story Flatlay. ☑ Tee ☑ Workbook ☑ Stift ☑ Decke ☑ Taschentücher Selfie Genau so wünsche ich mir unseren Abend. Frage Was steht bei dir noch auf der Packliste? Countdown Episode 43 Sonntag &quot;Morgen sehen wir uns.&quot; ❤️ Ziel Maximale Vorfreude. Morgens. Morgen ist unser Abend. Mittags. Behind the Scenes. Nachmittags. Zoom testen. Abends. Selfie. Ich freue mich einfach. Link. Countdown. Episode 44 Montag LIVE-TAG ❤️ Ziel Teilnahme. 07:30 Heute ist unser Abend. 11:00 Tee. Notebook. 15:00 Alles aufgebaut. 17:30 Noch 90 Minuten. 18:30 Noch 30 Minuten. 18:50 Noch 10 Minuten. 19:00 Bis gleich. 💛 21:00 Nach Live. Selfie. Tränen. Nicht perfekt. Danke. Mehr kann ich gerade gar nicht sagen. Episode 45 Dienstag &quot;Ich musste heute Morgen weinen.&quot; ❤️ Ziel Energie des Live-Abends halten. Screenshot Kommentare. Selfie Ich habe heute Morgen alle Nachrichten gelesen. Zitat (anonym) &quot;Zum ersten Mal seit Monaten fühle ich Hoffnung.&quot; Selfie Genau deshalb mache ich diese Arbeit. Dann. Erst jetzt. Viele haben gefragt, wie es weitergeht. Episode 46 Mittwoch &quot;Vielleicht war das gestern erst der Anfang.&quot; ❤️ Ziel Kurs öffnen. Morgens. Spaziergang. Gestern Abend hat mich eine Frage nicht losgelassen. Mittags. Selfie. Was passiert eigentlich, wenn man diesen Weg nicht alleine weitergehen möchte? Nachmittags. Workbook. Kursunterlagen. Genau dafür ist From Heartbreak to Her entstanden. Nicht als Kurs. Sondern als Begleitung. Abends. Kerze. Egal, wie du dich entscheidest. Danke, dass du diese Reise mit mir gegangen bist. Und vergiss bitte nie: Mit dir ist nichts falsch. 💛 📖 LAUNCH STORY BOOK Staffel 1 – Der Weg zurück zu dir Kapitel 6 — Ich schaue wieder nach vorne (von Susanne nachgeliefert am 11.07.2026 — Original-Wortlaut) Vorbemerkung: Jetzt beginnt die Phase, die den Launch später fast von alleine tragen wird. Bis hierher ging es um inneres Ankommen und Selbstvertrauen. Ab jetzt entsteht langsam: Neugier. Vorfreude. &quot;Ich möchte weitergehen.&quot; Und genau deshalb erwähnen wir den kostenlosen Abend immer noch nicht direkt.</p>
+</details>
+<p class="hinweis">Gefilmte Clips per AirDrop an den Mac in „Aufnahmen zum Posten" — Claude macht den Rest.</p>
+<script>
+function pruef(){
+  if(document.getElementById("code").value.trim()==="2026"){
+    sessionStorage.setItem("sb_ok","1");document.getElementById("gate").style.display="none";
+  }
+}
+if(sessionStorage.getItem("sb_ok")==="1")document.getElementById("gate").style.display="none";
+document.getElementById("code").addEventListener("keydown",function(e){if(e.key==="Enter")pruef();});
+/* Heutige Episode markieren + aufklappen */
+var heute=new Date(),iso=heute.getFullYear()+"-"+String(heute.getMonth()+1).padStart(2,"0")+"-"+String(heute.getDate()).padStart(2,"0");
+var el=document.querySelector('.ep[data-datum="'+iso+'"]');
+if(el){el.classList.add("heute");el.open=true;el.scrollIntoView();}
+</script>
+</body>
+</html>
