@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Willkommen · HerzErinnerung · Your Balance</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="assets/images/favicon-180.png">
+
+<!-- GA4 – direkt, kein Cookiebot auf Danke-Seiten -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NPPS5VX6GB');
+  gtag('event', 'purchase', { currency: 'EUR', value: 47, transaction_id: Date.now().toString() });
+</script>
+
+<!-- META PIXEL – Purchase = das Kauf-Ereignis, auf das die Meta-Kampagne optimiert -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','626079095228912');
+  fbq('track','PageView');
+  fbq('track','Purchase', {currency: 'EUR', value: 47, content_name: 'HerzErinnerung'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=626079095228912&ev=Purchase&noscript=1"/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream:       #FBF5EC;
+  --cream-dark:  #F3EBDC;
+  --nude:        #E8DDD0;
+  --dark:        #5B2A4A;
+  --dark-deep:   #3D1A30;
+  --dark-deeper: #2A0F20;
+  --gold:        #CFAC5E;
+  --gold-pale:   #E9D7A4;
+  --text:        #5B2A4A;
+  --text-mid:    #7E5E72;
+  --text-light:  #A98FA0;
+  --white:       #FFFFFF;
+  --serif:       'Cormorant Garamond', Georgia, serif;
+  --sans:        'Montserrat', sans-serif;
+  --gold-grad:   linear-gradient(135deg,#9A7A10 0%,#C9A224 30%,#E8CE7A 60%,#C9A224 80%,#9A7A10 100%);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-deep) 60%, var(--dark-deeper) 100%);
+  padding: 80px 0 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 700px;
+  background: radial-gradient(ellipse, rgba(207,172,94,0.13) 0%, transparent 68%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0; height: 90px;
+  background: linear-gradient(to top, var(--cream) 0%, transparent 100%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; padding: 0 32px; }
+.hero-logo { display: block; height: 48px; width: auto; margin: 0 auto 44px; opacity: 0.9; }
+.gold-line { width: 36px; height: 1.5px; background: linear-gradient(90deg, var(--gold), var(--gold-pale)); border-radius: 2px; margin: 0 auto 28px; }
+.hero-preheader { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 22px; }
+.hero h1 { font-family: var(--serif); font-size: clamp(32px, 4.5vw, 54px); font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 14px; }
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-subline { font-family: var(--serif); font-size: clamp(17px, 2vw, 21px); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.6); margin-bottom: 32px; line-height: 1.5; }
+.hero-body { font-family: var(--sans); font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.95; }
+.hero-body strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+/* ── SECTIONS ── */
+.section { padding: 72px 0; }
+.section--alt { background: var(--cream-dark); }
+.inner { max-width: 640px; margin: 0 auto; padding: 0 32px; }
+.section-label { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 20px; }
+.section-ornament { display: flex; align-items: center; gap: 16px; max-width: 160px; margin: 52px auto 0; }
+.orn-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(207,172,94,0.3), transparent); }
+.orn-dot { color: var(--gold-pale); font-size: 6px; letter-spacing: 5px; }
+
+/* ── KARTE ── */
+.karte {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 40px 36px;
+  box-shadow: 0 12px 48px rgba(91,42,74,0.1);
+  border: 1px solid rgba(207,172,94,0.14);
+  position: relative;
+  text-align: center;
+}
+.karte::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-pale), var(--gold)); border-radius: 20px 20px 0 0; }
+.karte h2 { font-family: var(--serif); font-size: clamp(24px, 3vw, 36px); font-weight: 300; color: var(--text); line-height: 1.2; margin-bottom: 8px; }
+.karte-meta { font-family: var(--sans); font-size: 12px; color: var(--text-light); letter-spacing: 1px; margin-bottom: 24px; }
+.karte-desc { font-family: var(--sans); font-size: 14px; color: var(--text-mid); line-height: 1.85; margin-bottom: 20px; }
+.karte-desc em { font-style: italic; font-family: var(--serif); font-size: 16px; }
+.schritte-box { background: var(--cream-dark); border-radius: 12px; padding: 18px 22px; text-align: left; margin-top: 4px; }
+.schritte-box .ueber { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 8px; }
+.schritte-box p { font-family: var(--sans); font-size: 13.5px; color: var(--text-mid); line-height: 1.8; }
+.schritte-box strong { color: var(--text); }
+
+/* ── TIMELINE ── */
+.timeline { display: flex; flex-direction: column; gap: 0; margin: 28px 0; }
+.timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 0 24px; position: relative; padding-bottom: 32px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item:not(:last-child)::after { content: ''; position: absolute; left: 131px; top: 36px; bottom: 0; width: 1px; background: linear-gradient(to bottom, rgba(207,172,94,0.4), rgba(207,172,94,0.05)); }
+.timeline-time { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); padding-top: 2px; text-align: right; line-height: 1.5; }
+.timeline-dot { width: 10px; height: 10px; background: var(--gold); border-radius: 50%; position: absolute; left: 127px; top: 5px; box-shadow: 0 0 0 3px rgba(207,172,94,0.15); }
+.timeline-content { font-family: var(--sans); font-size: 14px; color: var(--text-mid); line-height: 1.85; }
+.timeline-content strong { color: var(--text); font-weight: 600; }
+
+/* ── GESPRÄCHS-BOX (dunkel) ── */
+.gespraech-box {
+  background: linear-gradient(160deg, var(--dark) 0%, var(--dark-deep) 100%);
+  border-radius: 20px;
+  padding: 44px 44px 40px;
+  text-align: center;
+  box-shadow: 0 12px 48px rgba(91,42,74,0.22);
+}
+.gespraech-eyebrow { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold-pale); display: block; margin-bottom: 20px; }
+.gespraech-quote { font-family: var(--serif); font-size: clamp(20px, 2.5vw, 28px); font-weight: 300; font-style: italic; color: var(--white); line-height: 1.5; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(207,172,94,0.2); }
+.gespraech-quote em { font-style: normal; color: var(--gold); }
+.gespraech-body { font-family: var(--sans); font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.9; margin-bottom: 28px; }
+.gespraech-body strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+.cta-primaer {
+  display: inline-block; font-family: var(--sans); font-weight: 700; font-size: 15px;
+  text-decoration: none; border-radius: 100px; padding: 17px 36px; text-align: center;
+  line-height: 1.35; background: var(--gold-grad); color: var(--dark);
+  box-shadow: 0 10px 26px rgba(154,122,16,.32);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cta-primaer:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(154,122,16,.42); }
+.gespraech-hinweis { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 16px; letter-spacing: .3px; }
+
+/* ── PRAKTISCHES ── */
+.praktisches-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+.praktisches-item { display: flex; align-items: flex-start; gap: 16px; background: var(--white); border-radius: 12px; padding: 18px 22px; box-shadow: 0 2px 12px rgba(91,42,74,0.05); }
+.praktisches-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+.praktisches-item p { font-family: var(--sans); font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+.praktisches-item p strong { color: var(--text); font-weight: 600; }
+.praktisches-item p a { color: var(--gold); text-decoration: none; }
+.praktisches-item p a:hover { text-decoration: underline; }
+
+/* ── PERSÖNLICH ── */
+.personal-wrap { text-align: center; }
+.personal-photo { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; object-position: top; border: 3px solid rgba(207,172,94,0.3); box-shadow: 0 6px 24px rgba(91,42,74,0.12); margin: 0 auto 28px; display: block; }
+.personal-text { font-family: var(--serif); font-size: clamp(18px, 2.2vw, 24px); font-weight: 300; line-height: 1.7; color: var(--text-mid); margin-bottom: 20px; }
+.personal-text em { font-style: italic; color: var(--dark); }
+.personal-signature { font-family: var(--serif); font-size: clamp(20px, 2.5vw, 28px); font-style: italic; color: var(--dark); display: block; }
+
+/* ── FOOTER ── */
+.footer { background: var(--dark-deeper); padding: 28px 0 24px; text-align: center; margin-top: auto; }
+.footer-inner { max-width: 640px; margin: 0 auto; padding: 0 32px; }
+.footer-info { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.8; }
+.footer-info a { color: var(--gold-pale); text-decoration: none; }
+.footer-info a:hover { color: var(--gold); }
+.footer-copy { font-family: var(--sans); font-size: 11px; color: rgba(255,255,255,0.2); margin-top: 8px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .hero { padding: 60px 0 80px; }
+  .hero-inner, .inner, .footer-inner { padding: 0 20px; }
+  .section { padding: 52px 0; }
+  .karte { padding: 28px 22px; }
+  .gespraech-box { padding: 32px 22px; }
+  .cta-primaer { padding: 15px 24px; font-size: 14px; }
+  .timeline-item { grid-template-columns: 90px 1fr; gap: 0 28px; }
+  .timeline-item:not(:last-child)::after { left: 103px; }
+  .timeline-dot { left: 99px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 01 · WÜRDIGUNG
+     ══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <img src="assets/images/logo-neu-dunkel.webp" alt="Your Balance" class="hero-logo">
+    <div class="gold-line"></div>
+    <span class="hero-preheader">Dein Zugang &middot; Bestätigt</span>
+    <h1><span id="anrede">Du hast dich gerade</span><br><em>für dich entschieden.</em></h1>
+    <p class="hero-subline">Und das war kein kleiner Schritt.</p>
+    <p class="hero-body">
+      Vielleicht hast du gezögert, bevor du auf den Button geklickt hast.<br>
+      Vielleicht hat eine Stimme in dir gesagt:<br>
+      <strong>„Hilft mir das wirklich? Schaffe ich das?"</strong><br><br>
+      Und du hast es trotzdem getan.<br>
+      Das ist genau die Bewegung, um die es in HerzErinnerung geht: <strong>nicht auf ihn warten — für dich handeln.</strong>
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 02 · DEIN ERSTER SCHRITT
+     ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="inner">
+    <span class="section-label">Jetzt gleich</span>
+
+    <div class="karte">
+      <h2>Dein Anker<br>ist unterwegs zu dir.</h2>
+      <p class="karte-meta">Zugang per E-Mail &middot; in den nächsten Minuten</p>
+      <p class="karte-desc">
+        Du bekommst gerade eine E-Mail mit deinem persönlichen Zugangslink zu HerzErinnerung. Sobald du drin bist, mach als Erstes eine einzige Sache:<br><br>
+        <em>Speichere dir die Notfallkarte aufs Handy.</em><br><br>
+        Damit sie da ist, <strong>bevor</strong> der nächste Moment kommt — nicht erst danach.
+      </p>
+      <div class="schritte-box">
+        <p class="ueber">So kommst du rein</p>
+        <p>
+          <strong>1.</strong> Schau in deinen Posteingang — auch in den Spam-Ordner.<br>
+          <strong>2.</strong> Klick auf den Link in der E-Mail → du landest direkt in deinem Bereich.<br>
+          <strong>3.</strong> Notfallkarte speichern. Dann darfst du das Handy weglegen.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-ornament">
+      <div class="orn-line"></div>
+      <span class="orn-dot">• • •</span>
+      <div class="orn-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 03 · SO GEHT ES WEITER
+     ══════════════════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="inner">
+    <span class="section-label">Wie du HerzErinnerung nutzt</span>
+    <h2 style="font-family:var(--serif); font-size:clamp(24px,3vw,36px); font-weight:300; line-height:1.2; color:var(--text); margin-bottom:8px;">
+      Du musst nichts durcharbeiten.
+    </h2>
+    <p style="font-family:var(--serif); font-size:clamp(16px,1.8vw,20px); font-style:italic; color:var(--text-mid); margin-bottom:32px;">
+      HerzErinnerung ist ein Werkzeug, kein Kurs. So passt es in dein Leben:
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">Heute</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <strong>Notfallkarte aufs Handy.</strong> Und wenn du magst: das SOS-Audio <em style="font-family:var(--serif); font-style:italic;">&bdquo;Ich halte mich&ldquo;</em> einmal in Ruhe anhören — damit deine Stimme-in-der-Tasche dir schon vertraut ist, wenn du sie brauchst.
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">Im Moment</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <strong>Er zieht sich zurück. Du merkst die Unruhe.</strong> Statt zum Chat: Karte auf, Audio an, Hand aufs Herz, atmen. Fünf Minuten. Nichts muss danach gelöst sein — nur du bist wieder da.
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">In ruhigen Stunden</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          Die <strong>drei Module</strong>, die Meditation <em style="font-family:var(--serif); font-style:italic;">&bdquo;Rückkehr in deine Ruhe&ldquo;</em> und der 7-Tage-Praxisplan. In deinem Tempo, in beliebiger Reihenfolge.
+        </div>
+      </div>
+    </div>
+
+    <div class="section-ornament">
+      <div class="orn-line"></div>
+      <span class="orn-dot">• • •</span>
+      <div class="orn-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 04 · DAS GESPRÄCH
+     ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="inner">
+    <div class="gespraech-box">
+      <span class="gespraech-eyebrow">Falls du das nicht allein durchgehen willst</span>
+      <p class="gespraech-quote">
+        Manchmal reicht ein Werkzeug.<br>
+        Und manchmal braucht es <em>jemanden, der zuhört.</em>
+      </p>
+      <p class="gespraech-body">
+        Wenn du beim Lesen der Seite gemerkt hast, dass du mit alldem nicht allein bleiben willst: <strong>Ich nehme mir 15 Minuten für dich.</strong> Am Telefon, kostenfrei, ohne Verpflichtung.<br><br>
+        Du erzählst mir, wo du gerade stehst. Ich höre zu und sage dir ehrlich, was ich sehe — und ob und wie ich dich weiter begleiten kann.
+      </p>
+      <a href="https://calendly.com/your-balance/info-gesprach-telefon" target="_blank" rel="noopener" class="cta-primaer">Meine 15 Minuten mit Susanne sichern</a>
+      <p class="gespraech-hinweis">Kostenfrei &middot; 15 Minuten &middot; du wählst die Zeit, ich bin am Telefon für dich da</p>
+    </div>
+
+    <div class="section-ornament">
+      <div class="orn-line"></div>
+      <span class="orn-dot">• • •</span>
+      <div class="orn-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 05 · PRAKTISCHES
+     ══════════════════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="inner">
+    <span class="section-label">Falls du etwas brauchst</span>
+
+    <div class="praktisches-list">
+      <div class="praktisches-item">
+        <div class="praktisches-dot"></div>
+        <p><strong>Keine E-Mail bekommen?</strong> Bitte schau in den Spam- oder Junk-Ordner. Die Zugangs-E-Mail kommt von Your Balance oder direkt von ThriveCart.</p>
+      </div>
+      <div class="praktisches-item">
+        <div class="praktisches-dot"></div>
+        <p><strong>Login:</strong> Deine Login-E-Mail ist die, mit der du gekauft hast. Der direkte Link steht in der Zugangs-E-Mail.</p>
+      </div>
+      <div class="praktisches-item">
+        <div class="praktisches-dot"></div>
+        <p><strong>Etwas funktioniert nicht?</strong> Schreib mir kurz an <a href="mailto:susanne@your-balance.at">susanne@your-balance.at</a> — ich melde mich persönlich.</p>
+      </div>
+    </div>
+
+    <div class="section-ornament">
+      <div class="orn-line"></div>
+      <span class="orn-dot">• • •</span>
+      <div class="orn-line"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SEKTION 06 · PERSÖNLICH
+     ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="inner">
+    <div class="personal-wrap">
+      <img src="assets/images/susanne-smile.webp" alt="Susanne Wachter" class="personal-photo">
+      <p class="personal-text">
+        Ich freue mich, dass du da bist. <em>Wirklich.</em><br><br>
+        Du kannst nicht entscheiden, ob er sich meldet. Aber du hast gerade entschieden, wie du die nächsten fünf Minuten erlebst — und das ist mehr, als die meisten je tun.<br><br>
+        Geh sanft mit dir.
+      </p>
+      <span class="personal-signature">— Susanne</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-info">
+      Your Balance &middot; Susanne Wachter &middot; Nüziders, Vorarlberg<br>
+      <a href="impressum.html">Impressum</a> &middot;
+      <a href="datenschutz.html">Datenschutz</a> &middot;
+      <a href="agb.html">AGB</a> &middot;
+      <a href="widerruf.html">Widerruf</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Your Balance. Alle Rechte vorbehalten.</div>
+  </div>
+</footer>
+
+<script>
+  // Vorname aus dem ThriveCart-Link (?firstname={first_name}) in die Anrede setzen
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    var name = (params.get('firstname') || params.get('first_name') || params.get('name') || '').trim();
+    if (name && name.indexOf('{') === -1 && name.length < 40) {
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      document.getElementById('anrede').textContent = name + ', du hast dich gerade';
+    }
+  })();
+</script>
+
+</body>
+</html>
