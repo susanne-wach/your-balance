@@ -398,10 +398,15 @@ In der Blog-Übersicht eine neue Karte hinzufügen (bestehende Karte kopieren un
 ```xml
 <url>
   <loc>https://your-balance.at/blog-DATEINAME.html</loc>
-  <lastmod>2026-XX-XX</lastmod>
+  <lastmod>HEUTIGES-DATUM</lastmod>
   <priority>0.8</priority>
 </url>
 ```
+
+> ⚠️ **`lastmod` = das Datum, an dem die Datei gebaut bzw. zuletzt geändert wird (heute) —
+> NIEMALS das geplante Erscheinungsdatum.** Das Erscheinen steuert allein `data-publish` in
+> `blog.html` und `datePublished` im Artikel. Ein `lastmod` in der Zukunft verwirft Google und
+> schwächt das Frische-Signal der ganzen Sitemap (festgestellt im SEO-Watcher KW36–KW38, 2026).
 
 **Schritt 6: Pushen**
 ```bash
