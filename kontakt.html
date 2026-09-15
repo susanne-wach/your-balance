@@ -516,7 +516,7 @@
   </script>
 
   <!-- ═══ GOOGLE reCAPTCHA v3 ═══ -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6Ld1M_0sAAAAAFiBSD87ppRy8AeCZe1Py-ya5NDV"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdXdL0tAAAAAF1JCbE4nEBnz13-X-L4bVbnE-qs"></script>
 </head>
 <body>
 
@@ -880,7 +880,7 @@ window.cfields = {"17":"thema","18":"nachricht","19":"format"};
 
     // ── reCAPTCHA v3 Token holen ──────────────────────────
     grecaptcha.ready(function() {
-      grecaptcha.execute('6Ld1M_0sAAAAAFiBSD87ppRy8AeCZe1Py-ya5NDV', {action: 'contact'}).then(function(token) {
+      grecaptcha.execute('6LdXdL0tAAAAAF1JCbE4nEBnz13-X-L4bVbnE-qs', {action: 'contact'}).then(function(token) {
 
         var payload = { token: token, elapsed: Date.now() - _formLoadTime };
         ['firstname', 'lastname', 'email', 'field[17]', 'field[18]', 'field[19]', 'hp_website'].forEach(function(n) {

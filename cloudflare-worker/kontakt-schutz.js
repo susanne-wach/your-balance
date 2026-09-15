@@ -66,7 +66,12 @@ export default {
       && verify.action === 'contact'
       && verify.score >= MIN_SCORE
       && ['your-balance.at', 'www.your-balance.at'].includes(verify.hostname);
-    if (!human) return reply({ ok: false, message: FALLBACK }, 403, cors);
+    if (!human) {
+      const debug = verify
+        ? { errors: verify['error-codes'], score: verify.score, action: verify.action, hostname: verify.hostname, secretSet: Boolean(env.RECAPTCHA_SECRET) }
+        : { errors: ['verify-request-failed'], secretSet: Boolean(env.RECAPTCHA_SECRET) };
+      return reply({ ok: false, message: FALLBACK, debug }, 403, cors);
+    }
 
     const params = new URLSearchParams({
       u: env.AC_FORM_ID,
