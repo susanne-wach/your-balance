@@ -77,7 +77,7 @@ Für neue Seiten immer `danke-kontakt.html` oder `danke-emotional-stability.html
 
 ### ActiveCampaign (JSONP via proc.php)
 - Newsletter: `u=21 / f=21`
-- Kontakt: `u=23 / f=23`
+- Kontakt: Formular `51`, NICHT direkt über proc.php – `kontakt.html` sendet an den Cloudflare Worker `https://kontakt-schutz.susanne-204.workers.dev` (Code: `cloudflare-worker/kontakt-schutz.js`, prüft Honeypot/Zeit/reCAPTCHA v3 und leitet dann an AC weiter). Formular 23 wurde wegen Bot-Spam gelöscht. reCAPTCHA-Websiteschlüssel: `6LdXdL0tAAAAAF1JCbE4nEBnz13-X-L4bVbnE-qs`; geheimer Schlüssel + `AC_FORM_ID` liegen nur im Worker (Settings → Variables and Secrets). Worker-Code kann nur Susanne im Cloudflare-Editor einfügen.
 - Seelenverbindung Workbook: `u=1 / f=1`
 - Herzöffnungs-Kompass: `u=29 / f=29`
 - Basis: `https://your-balance61093.activehosted.com/`
