@@ -616,16 +616,7 @@
           Als Energetikerin in Vorarlberg melde ich mich persönlich bei dir und wir schauen gemeinsam, was sinnvoll ist.
         </p>
 
-        <form class="kontakt-form" action="https://your-balance61093.activehosted.com/proc.php" method="POST" id="_form_23_" novalidate>
-          <!-- ActiveCampaign hidden fields -->
-          <input type="hidden" name="u" value="23" />
-          <input type="hidden" name="f" value="23" />
-          <input type="hidden" name="s" value="" />
-          <input type="hidden" name="c" value="0" />
-          <input type="hidden" name="m" value="0" />
-          <input type="hidden" name="act" value="sub" />
-          <input type="hidden" name="v" value="2" />
-          <input type="hidden" name="or" value="474cb6e1-c906-4c37-8b20-c89871964cb4" />
+        <form class="kontakt-form" id="_form_23_" novalidate>
           <!-- Honeypot – für Menschen unsichtbar, Bots füllen es aus -->
           <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;height:0;width:0;" aria-hidden="true">
             <label for="hp_website">Website (nicht ausfüllen)</label>
@@ -855,6 +846,7 @@ window.cfields = {"17":"thema","18":"nachricht","19":"format"};
     btn.parentNode.insertBefore(err, btn.nextSibling);
   };
 
+  var KONTAKT_WORKER_URL = 'https://kontakt-schutz.susanne-204.workers.dev';
   var form = document.getElementById('_form_23_');
   if (!form) return;
 
@@ -890,23 +882,26 @@ window.cfields = {"17":"thema","18":"nachricht","19":"format"};
     grecaptcha.ready(function() {
       grecaptcha.execute('6Ld1M_0sAAAAAFiBSD87ppRy8AeCZe1Py-ya5NDV', {action: 'contact'}).then(function(token) {
 
-        // Formulardaten serialisieren (Honeypot + reCAPTCHA-Token ausschließen)
-        var params = [];
-        Array.from(form.elements).forEach(function(el) {
-          if (!el.name || el.name === 'hp_website' || el.name === 'g-recaptcha-response') return;
-          if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) return;
-          params.push(encodeURIComponent(el.name) + '=' + encodeURIComponent(el.value));
+        var payload = { token: token, elapsed: Date.now() - _formLoadTime };
+        ['firstname', 'lastname', 'email', 'field[17]', 'field[18]', 'field[19]', 'hp_website'].forEach(function(n) {
+          var el = form.querySelector('[name="' + n + '"]');
+          payload[n] = el ? el.value : '';
         });
 
-        // JSONP-Request an ActiveCampaign
-        var script = document.createElement('script');
-        script.src = 'https://your-balance61093.activehosted.com/proc.php?' + params.join('&') + '&jsonp=true';
-        script.onerror = function() {
-          btn.disabled = false;
-          btn.textContent = 'Termin anfragen';
-          window._show_error('23', 'Verbindungsfehler – bitte versuche es erneut.');
-        };
-        document.head.appendChild(script);
+        // Prüf-Skript bei Cloudflare leitet erst nach bestandener Prüfung an ActiveCampaign weiter
+        fetch(KONTAKT_WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+          .then(function(r) { return r.json(); })
+          .then(function(res) {
+            if (res.ok) { window._show_thank_you(); }
+            else { window._show_error('23', res.message); }
+          })
+          .catch(function() {
+            window._show_error('23', 'Verbindungsfehler – bitte versuche es erneut oder schreib mir direkt an susanne@your-balance.at.');
+          });
 
       }).catch(function() {
         btn.disabled = false;
