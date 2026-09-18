@@ -443,6 +443,81 @@
       color: #4A2139;
     }
 
+    /* ── Paket Nervensystem-Reset (seit 18.09.2026) ───── */
+    .et-paket {
+      margin-top: 56px;
+    }
+    .et-paket__label {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .et-paket__card {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 40px;
+      background: linear-gradient(135deg, rgba(207,172,94,0.10) 0%, rgba(255,255,255,0.04) 55%);
+      border: 1px solid rgba(207,172,94,0.45);
+      border-radius: 20px;
+      padding: 44px 40px;
+    }
+    .et-paket__intro {
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.72);
+      margin: 0;
+    }
+    .et-paket__right {
+      display: flex;
+      flex-direction: column;
+    }
+    .et-paket .et-card__list {
+      margin-bottom: 20px;
+    }
+    .et-paket .et-card__list strong {
+      color: #fff;
+      font-weight: 600;
+    }
+    .et-paket__hinweis {
+      font-family: var(--sans);
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      margin: 0 0 24px;
+    }
+    .et-paket__cta {
+      margin-top: auto;
+      align-self: flex-start;
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #4A2139;
+      background: linear-gradient(135deg, #B89243 0%, #CFAC5E 35%, #E9D7A4 60%, #CFAC5E 80%, #B89243 100%);
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      transition: filter 0.3s, transform 0.3s;
+    }
+    .et-paket__cta:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+    @media (max-width: 860px) {
+      .et-paket__card { grid-template-columns: 1fr; gap: 8px; padding: 36px 24px; }
+      .et-paket__intro { margin-bottom: 8px; }
+      .et-paket__cta { align-self: stretch; }
+    }
+
     /* ── Beziehungsdynamik ────────────────────────────── */
     .et-beziehung {
       padding: 80px 0;
@@ -807,7 +882,8 @@
       "itemListElement": [
         {"@type":"Offer","itemOffered":{"@type":"Service","name":"ThetaHealing® Einzeltermin","description":"Online – Arbeit mit inneren Mustern auf Theta-Wellenebene"}},
         {"@type":"Offer","itemOffered":{"@type":"Service","name":"Akasha Reading","description":"Online – Klarheit auf Seelenebene"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Bioresonanz","description":"Vor Ort in Nüziders, Vorarlberg – körperliche Frequenz-Regulation"}}
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Bioresonanz","description":"Vor Ort in Nüziders, Vorarlberg – körperliche Frequenz-Regulation"}},
+        {"@type":"Offer","url":"https://your-balance.at/nervensystem-reset.html","price":"330","priceCurrency":"EUR","itemOffered":{"@type":"Service","name":"Nervensystem-Reset","description":"Online – drei Sitzungen in vier Wochen: Wo der Alarm sitzt, das Muster dahinter, Boden halten"}}
       ]
     }
     },
@@ -867,6 +943,7 @@
         <a href="angebote.html" class="nav-link">Angebote ▾</a>
         <ul class="nav-sub">
           <li><a href="einzeltermine.html">Persönlicher Termin</a></li>
+          <li><a href="nervensystem-reset.html">Nervensystem-Reset</a></li>
           <li><a href="online-kurse-fuer-innere-regulation-beziehungsklaerung.html">Online-Kurse</a></li>
           <li><a href="online-kurse-seelenpartner-beziehungsprozesse.html">Seelenpartner-Kurse</a></li>
         </ul>
@@ -1059,6 +1136,29 @@
         <a href="https://calendly.com/your-balance/bioresonanz" target="_blank" rel="noopener" class="et-card__cta">Termin buchen – wir schauen gemeinsam, was sinnvoll ist</a>
       </div>
 
+    </div>
+
+    <!-- Paket: Nervensystem-Reset (seit 18.09.2026) -->
+    <div class="et-paket">
+      <span class="et-paket__label">Wenn ein Termin nicht reicht</span>
+      <div class="et-paket__card">
+        <div>
+          <span class="et-card__badge">Online · 3 × 60 Min</span>
+          <h3 class="et-card__title">Nervensystem-Reset</h3>
+          <h4 style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 10px;">Drei Sitzungen in vier Wochen · online</h4>
+          <p class="et-card__when">Wenn der Kopf es verstanden hat, aber der Körper nicht zur Ruhe kommt.</p>
+          <p class="et-paket__intro">Für Frauen und Männer, die schlecht schlafen, erschöpft sind oder unter Dauerstress stehen. Eine Stunde nur für dich, dreimal in vier Wochen, bequem von zu Hause aus.</p>
+        </div>
+        <div class="et-paket__right">
+          <ul class="et-card__list">
+            <li><strong>Sitzung 1 · Wo der Alarm sitzt.</strong> Was hält dich wach, was spannt dich an? Und eine erste Regulation, damit du mit einem spürbaren Unterschied aus der Stunde gehst.</li>
+            <li><strong>Sitzung 2 · Das Muster dahinter.</strong> Prägungen und Überzeugungen, die den Alarm füttern, mit ThetaHealing® oder Kinesiologie.</li>
+            <li><strong>Sitzung 3 · Boden halten.</strong> Handgriffe und eine Abendroutine für deinen Alltag, dazu drei Audios für zu Hause.</li>
+          </ul>
+          <p class="et-paket__hinweis">Im Paket günstiger als drei Einzeltermine.</p>
+          <a href="nervensystem-reset.html" class="et-paket__cta">Mehr zum Nervensystem-Reset</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
