@@ -179,6 +179,95 @@
   .ybl .hero-karte-wrap{flex:1 1 44%}
 }
 </style>
+
+  <!-- ═══ STRUCTURED DATA: SERVICE + FAQPAGE ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+    {
+    "@type": "Service",
+    "@id": "https://your-balance.at/nervensystem-reset.html#service",
+    "name": "Nervensystem-Reset – Drei Sitzungen in vier Wochen",
+    "description": "Nervensystem-Reset mit Susanne Wachter: drei persönliche Sitzungen à 60 Minuten innerhalb von vier Wochen, online über Zoom, für Menschen, deren Körper abends nicht zur Ruhe kommt. Mit Kinesiologie und ThetaHealing®, Handgriffen für den Alltag und drei Audios.",
+    "serviceType": "Energetische Einzelbegleitung",
+    "category": "Coaching & Energiearbeit",
+    "url": "https://your-balance.at/nervensystem-reset.html",
+    "image": "https://your-balance.at/assets/images/og-image.jpg",
+    "provider": {
+      "@type": "Person",
+      "@id": "https://your-balance.at/ueber-mich.html#person",
+      "name": "Susanne Wachter",
+      "jobTitle": "Dipl. Energetikerin & Dipl. Kinesiologin",
+      "url": "https://your-balance.at/ueber-mich.html"
+    },
+    "areaServed": [
+      {"@type":"Country","name":"Österreich"},
+      {"@type":"Country","name":"Deutschland"},
+      {"@type":"Country","name":"Schweiz"}
+    ],
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceLocation": {"@type":"VirtualLocation","name":"Online über Zoom"}
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Menschen mit Schlafproblemen, Erschöpfung, Dauerstress und innerer Anspannung, die eine Einzelbegleitung statt einer Gruppe suchen"
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "Nervensystem-Reset · 3 Sitzungen im Paket",
+      "description": "Drei Sitzungen à 60 Minuten innerhalb von vier Wochen, online über Zoom, inklusive drei Audios für den Alltag. Einzeln gebucht kosten drei Sitzungen 360 €.",
+      "price": "330",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://your-balance.at/nervensystem-reset.html"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Methoden im Nervensystem-Reset",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kinesiologie","description":"Regulation über den Körper – online"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"ThetaHealing®","description":"Arbeit an Prägungen und Überzeugungen, die den Alarm füttern – online"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Einzelsitzung","description":"Einzelne Sitzung à 60 Minuten, 120 € – auf Anfrage per Mail"}}
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "56",
+      "bestRating": "5"
+    }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://your-balance.at/nervensystem-reset.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Funktioniert das auch online?",
+          "acceptedAnswer": {"@type":"Answer","text":"Ja. Online arbeite ich mit Kinesiologie und ThetaHealing®. Du bist dabei zu Hause, sparst dir die Anfahrt und kannst nach der Sitzung in Ruhe nachwirken lassen. Du brauchst nur einen ruhigen Ort und eine stabile Internetverbindung."}
+        },
+        {
+          "@type": "Question",
+          "name": "Wie buche ich meine Termine?",
+          "acceptedAnswer": {"@type":"Answer","text":"Deinen ersten Termin wählst du direkt bei der Buchung im Kalender aus und bezahlst dort die 330 € für alle drei Sitzungen. Den Zoom-Link bekommst du mit der Terminbestätigung per Mail. Die zwei weiteren Termine machen wir persönlich miteinander aus, am einfachsten gleich in der ersten Sitzung. So verteilen sich die drei Sitzungen gut über vier Wochen."}
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich zuerst eine einzelne Sitzung machen?",
+          "acceptedAnswer": {"@type":"Answer","text":"Ja, eine Einzelsitzung kostet 120 €. Schreib mir dafür einfach an susanne@your-balance.at. Wenn du spürst, dass eine Stunde nicht reicht, ist das Paket der bessere Weg, weil die drei Sitzungen aufeinander aufbauen."}
+        },
+        {
+          "@type": "Question",
+          "name": "Ist das eine Therapie?",
+          "acceptedAnswer": {"@type":"Answer","text":"Nein. Die Sitzungen ersetzen keine Therapie und keine ärztliche Behandlung. Sie sind eine energetische Begleitung für deinen Alltag."}
+        }
+      ]
+    }
+    ]
+  }
+  </script>
 </head>
 <body>
 <div class="ybl">
