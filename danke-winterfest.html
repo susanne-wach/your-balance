@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du bist winterfest · Winterfest · Your Balance</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="https://your-balance.at/assets/images/logo-neu-icon.webp">
+
+    <!-- GA4 mit Kauf-Ereignis, wie danke-zurueck-auf-den-boden.html -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NPPS5VX6GB');
+      gtag('event', 'purchase', { currency: 'EUR', value: 690, transaction_id: Date.now().toString(), items: [{ item_name: 'Winterfest', price: 690, quantity: 1 }] });
+    </script>
+    <!-- Meta-Pixel mit Purchase -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init','626079095228912');
+      fbq('track','PageView');
+      fbq('track','Purchase', {currency: 'EUR', value: 690, content_name: 'Winterfest'});
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=626079095228912&ev=Purchase&noscript=1"/></noscript>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: {
+            fontFamily: { sans:['"Plus Jakarta Sans"','sans-serif'], serif:['"Cormorant Garamond"','serif'] },
+            colors: { burgundy:{deep:'#2D0A1F',medium:'#5B2A4A',dark:'#1F0514'}, gold:{DEFAULT:'#CFAC5E',light:'#E5C383',dark:'#B89243'}, roseWarm:'#E8A5B8', cream:{soft:'#FBF5EC',dark:'#F3EAE0'} }
+        } } }
+    </script>
+    <style>
+        .gold-button{background:linear-gradient(135deg,#CFAC5E 0%,#B89243 100%);color:#2D0A1F;box-shadow:0 4px 20px rgba(207,172,94,.25);transition:all .3s cubic-bezier(.23,1,.32,1);}
+        .gold-button:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(207,172,94,.45);}
+        .gold-divider{width:70px;height:2px;background:linear-gradient(90deg,transparent,#CFAC5E,transparent);margin:22px auto;border:none;}
+    </style>
+</head>
+<body class="bg-cream-soft text-burgundy-deep font-sans antialiased">
+    <section class="min-h-screen flex items-center justify-center px-6 py-16">
+        <div class="max-w-xl w-full bg-burgundy-deep text-cream-soft rounded-3xl shadow-2xl px-8 md:px-12 py-12 text-center">
+            <img src="https://your-balance.at/assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance · Susanne Wachter" class="h-12 w-auto mx-auto mb-6">
+            <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold/15 text-gold mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-serif font-light text-cream-soft">Dein Winter hat einen Platz<span id="name-gruss"></span></h1>
+            <p class="text-roseWarm font-serif italic text-lg mt-2">Danke, dass du dich winterfest machst.</p>
+            <div class="gold-divider"></div>
+
+            <p class="text-cream-soft/90 font-light leading-relaxed">
+                Zwölf Wochen vom
+                <span class="text-gold">2. November 2026 bis 24. Januar 2027</span>:
+                drei Einzeltermine mit Susanne, drei Live-Abende, jeden Sonntag eine Meditation in ihrer Stimme und Montag bis Freitag ein Impuls am Morgen.
+            </p>
+
+            <div class="mt-7 text-left bg-gold/10 border border-gold/20 rounded-2xl px-6 py-5">
+                <p class="text-sm text-gold uppercase tracking-widest mb-2">Dein erster Schritt</p>
+                <p class="text-sm text-cream-soft/90 leading-relaxed">
+                    Wähle jetzt deinen Termin für die erste Standortbestimmung: 45 Minuten mit Susanne, online, am besten noch vor dem 2. November. Dort schaut ihr gemeinsam, wo dein Alarm sitzt und womit du beginnst.
+                </p>
+                <a href="https://calendly.com/your-balance/standortbestimmung-winterfest-online" class="inline-flex mt-4 h-12 px-7 gold-button font-medium text-sm tracking-widest uppercase rounded-full items-center justify-center">Termin wählen</a>
+                <p class="text-xs text-cream-soft/60 mt-3">Den zweiten Termin nach vier Wochen und den Abschlusstermin im Januar buchst du über denselben Link, Susanne erinnert dich rechtzeitig.</p>
+            </div>
+
+            <div class="bg-burgundy-medium/60 border border-gold/20 rounded-2xl px-6 py-5 mt-6 text-left">
+                <p class="text-sm text-gold uppercase tracking-widest mb-2">Deine drei Live-Abende</p>
+                <p class="text-sm text-cream-soft/90">Donnerstag, 5. November 2026 · 19:00 Uhr</p>
+                <p class="text-sm text-cream-soft/90 mt-1">Donnerstag, 3. Dezember 2026 · 19:00 Uhr</p>
+                <p class="text-sm text-cream-soft/90 mt-1">Donnerstag, 7. Januar 2027 · 19:00 Uhr</p>
+                <p class="text-sm text-cream-soft/70 mt-2">je 60 Minuten, live über Zoom, mit Aufzeichnung</p>
+            </div>
+
+            <div class="mt-6 text-left bg-burgundy-medium/40 border border-gold/20 rounded-2xl px-6 py-5">
+                <p class="text-sm text-cream-soft/90 leading-relaxed">
+                    <span class="text-gold">So geht es weiter:</span> Du bekommst gleich deine Kaufbestätigung und eine Willkommensmail von Susanne. Alles Weitere kommt per Mail: am 1. November die erste Sonntagsmeditation, ab dem 2. November jeden Morgen dein Impuls, vor jedem Live-Abend der Zoom-Link und danach die Aufzeichnung. In Woche 1, 6 und 12 fragt dich ein kurzer Bogen nach zwei Zahlen, damit du deine Veränderung schwarz auf weiß siehst. Schau bitte auch kurz im <span class="text-gold">Spam-Ordner</span> nach, falls nichts ankommt.
+                </p>
+            </div>
+
+            <p class="text-cream-soft/85 font-light leading-relaxed mt-6">
+                Wenn du Fragen hast, schreib mir an <a href="mailto:susanne@your-balance.at" class="text-gold underline underline-offset-4">susanne@your-balance.at</a>. Ich lese jede Nachricht selbst.
+            </p>
+
+            <a href="https://www.your-balance.at" class="inline-flex mt-7 h-12 px-8 border border-gold/50 text-gold font-medium text-sm tracking-widest uppercase rounded-full items-center justify-center hover:bg-gold/10 transition">Zurück zur Startseite</a>
+
+            <p class="text-xs text-cream-soft/60 font-light mt-8 leading-relaxed">
+                Ich freue mich auf dich, ab dem 2. November.<br>Von Herzen, Susanne · Your Balance
+            </p>
+        </div>
+    </section>
+    <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var name = (params.get('firstname') || params.get('first_name') || params.get('name') || '').trim();
+      if (name && name.indexOf('{') === -1) {
+        var el = document.getElementById('name-gruss');
+        if (el) el.textContent = ', ' + name;
+      }
+    })();
+    </script>
+</body>
+</html>
