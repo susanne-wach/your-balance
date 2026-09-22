@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deine zwei Zahlen · Winterfest · Your Balance</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="https://your-balance.at/assets/images/logo-neu-icon.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: {
+            fontFamily: { sans:['"Plus Jakarta Sans"','sans-serif'], serif:['"Cormorant Garamond"','serif'] },
+            colors: { burgundy:{deep:'#2D0A1F',medium:'#5B2A4A',dark:'#1F0514'}, gold:{DEFAULT:'#CFAC5E',light:'#E5C383',dark:'#B89243'}, roseWarm:'#E8A5B8', cream:{soft:'#FBF5EC',dark:'#F3EAE0'} }
+        } } }
+    </script>
+    <style>
+        .gold-button{background:linear-gradient(135deg,#CFAC5E 0%,#B89243 100%);color:#2D0A1F;box-shadow:0 4px 20px rgba(207,172,94,.25);transition:all .3s cubic-bezier(.23,1,.32,1);}
+        .gold-button:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(207,172,94,.45);}
+        .gold-button:disabled{opacity:.6;transform:none;cursor:wait;}
+        .gold-divider{width:70px;height:2px;background:linear-gradient(90deg,transparent,#CFAC5E,transparent);margin:22px auto;border:none;}
+        input[type=range]{-webkit-appearance:none;width:100%;height:6px;border-radius:999px;background:linear-gradient(90deg,#CFAC5E var(--p,50%),rgba(255,255,255,.18) var(--p,50%));outline:none;}
+        input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:#CFAC5E;border:3px solid #2D0A1F;box-shadow:0 2px 10px rgba(0,0,0,.35);cursor:pointer;}
+        input[type=range]::-moz-range-thumb{width:30px;height:30px;border-radius:50%;background:#CFAC5E;border:3px solid #2D0A1F;cursor:pointer;}
+        .feld{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(207,172,94,.35);border-radius:12px;padding:12px 14px;color:#FBF5EC;font-size:16px;}
+        .feld:focus{outline:none;border-color:#CFAC5E;}
+        .feld::placeholder{color:rgba(251,245,236,.45);}
+        .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;}
+    </style>
+</head>
+<body class="bg-cream-soft text-burgundy-deep font-sans antialiased">
+    <section class="min-h-screen flex items-center justify-center px-6 py-12">
+        <div class="max-w-xl w-full bg-burgundy-deep text-cream-soft rounded-3xl shadow-2xl px-7 md:px-12 py-10 md:py-12">
+            <img src="https://your-balance.at/assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance · Susanne Wachter" class="h-12 w-auto mx-auto mb-6">
+            <p class="text-gold text-xs tracking-[0.25em] uppercase text-center" id="wochen-label">Winterfest · Woche 1</p>
+            <h1 class="text-3xl md:text-4xl font-serif font-light text-cream-soft text-center mt-2">Deine zwei Zahlen</h1>
+            <p class="text-roseWarm font-serif italic text-lg mt-2 text-center">Ehrlich, nicht schön. Zwei Minuten.</p>
+            <div class="gold-divider"></div>
+
+            <form id="zahlen-form" class="space-y-7" novalidate>
+                <p class="text-cream-soft/80 text-sm leading-relaxed">Denk an die letzten sieben Tage, nicht an heute Morgen. Es gibt keine richtigen Zahlen, nur deine. Susanne bekommt sie auch, damit ihr sie in deiner Sitzung ansehen könnt.</p>
+
+                <div>
+                    <div class="flex items-baseline justify-between mb-2">
+                        <label for="anspannung" class="font-serif text-xl">Anspannung im Alltag</label>
+                        <span class="font-serif text-3xl text-gold" id="anspannung-wert">5</span>
+                    </div>
+                    <input type="range" id="anspannung" min="0" max="10" step="1" value="5" aria-describedby="anspannung-hilfe">
+                    <div class="flex justify-between text-[11px] tracking-wider uppercase text-cream-soft/50 mt-2" id="anspannung-hilfe"><span>0 · ganz ruhig</span><span>10 · dauernd unter Strom</span></div>
+                </div>
+
+                <div>
+                    <div class="flex items-baseline justify-between mb-2">
+                        <label for="erholung" class="font-serif text-xl">Erholung nach dem Schlaf</label>
+                        <span class="font-serif text-3xl text-gold" id="erholung-wert">5</span>
+                    </div>
+                    <input type="range" id="erholung" min="0" max="10" step="1" value="5" aria-describedby="erholung-hilfe">
+                    <div class="flex justify-between text-[11px] tracking-wider uppercase text-cream-soft/50 mt-2" id="erholung-hilfe"><span>0 · wie gerädert</span><span>10 · richtig erholt</span></div>
+                </div>
+
+                <div class="grid gap-4 md:grid-cols-2">
+                    <div>
+                        <label for="vorname" class="block text-xs tracking-widest uppercase text-gold mb-2">Vorname</label>
+                        <input class="feld" type="text" id="vorname" name="vorname" autocomplete="given-name" required placeholder="Dein Vorname">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-xs tracking-widest uppercase text-gold mb-2">E-Mail-Adresse</label>
+                        <input class="feld" type="email" id="email" name="email" autocomplete="email" required placeholder="wie bei deiner Anmeldung">
+                    </div>
+                </div>
+                <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <p class="text-cream-soft/60 text-xs leading-relaxed">Die E-Mail-Adresse braucht es nur, damit deine drei Werte aus Woche 1, 6 und 12 zusammenfinden. Sie bleibt bei Susanne.</p>
+
+                <p id="fehler" class="hidden text-roseWarm text-sm"></p>
+                <button type="submit" id="senden" class="w-full h-13 py-4 gold-button font-medium text-sm tracking-widest uppercase rounded-full">Meine Zahlen festhalten</button>
+            </form>
+
+            <div id="ergebnis" class="hidden">
+                <div class="bg-burgundy-medium/60 border border-gold/20 rounded-2xl px-6 py-6 text-center">
+                    <p class="text-gold text-xs tracking-[0.25em] uppercase">Festgehalten</p>
+                    <div class="grid grid-cols-2 gap-4 mt-4" id="ergebnis-werte"></div>
+                    <div id="verlauf" class="mt-5 text-left text-sm text-cream-soft/85 leading-relaxed"></div>
+                </div>
+                <p class="text-cream-soft/85 text-sm leading-relaxed mt-6" id="ergebnis-text"></p>
+                <p class="text-roseWarm font-serif italic text-lg mt-5 text-center">Von Herzen, Susanne</p>
+            </div>
+
+            <p class="text-cream-soft/50 text-xs text-center mt-8">Fragen? <a href="mailto:susanne@your-balance.at" class="text-gold underline underline-offset-4">susanne@your-balance.at</a></p>
+        </div>
+    </section>
+
+    <script>
+    (function () {
+        var params = new URLSearchParams(location.search);
+        var woche = parseInt(params.get('woche') || '1', 10);
+        if ([1, 6, 12].indexOf(woche) < 0) woche = 1;
+        document.getElementById('wochen-label').textContent = 'Winterfest · Woche ' + woche;
+        try { var m = localStorage.getItem('wf-zahlen-mail'); var v = localStorage.getItem('wf-zahlen-vorname'); if (m) document.getElementById('email').value = m; if (v) document.getElementById('vorname').value = v; } catch (e) {}
+
+        function slider(id) {
+            var el = document.getElementById(id), out = document.getElementById(id + '-wert');
+            function zeig() { out.textContent = el.value; el.style.setProperty('--p', (el.value * 10) + '%'); }
+            el.addEventListener('input', zeig); zeig();
+        }
+        slider('anspannung'); slider('erholung');
+
+        var form = document.getElementById('zahlen-form');
+        form.addEventListener('submit', function (ev) {
+            ev.preventDefault();
+            var fehler = document.getElementById('fehler'); fehler.classList.add('hidden');
+            var vorname = document.getElementById('vorname').value.trim();
+            var email = document.getElementById('email').value.trim();
+            if (!vorname || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+                fehler.textContent = 'Bitte Vornamen und eine gültige E-Mail-Adresse eintragen.'; fehler.classList.remove('hidden'); return;
+            }
+            var daten = { woche: woche, anspannung: parseInt(document.getElementById('anspannung').value, 10),
+                          erholung: parseInt(document.getElementById('erholung').value, 10), vorname: vorname, email: email,
+                          website: form.querySelector('[name=website]').value };
+            var knopf = document.getElementById('senden'); knopf.disabled = true; knopf.textContent = 'Einen Moment …';
+            fetch('https://bruecke.your-balance.at/winterfest-zahlen.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(daten) })
+                .then(function (r) { return r.json(); })
+                .then(function (antwort) {
+                    if (!antwort || !antwort.ok) throw new Error(antwort && antwort.fehler ? antwort.fehler : 'keine Antwort');
+                    try { localStorage.setItem('wf-zahlen-mail', email); localStorage.setItem('wf-zahlen-vorname', vorname); } catch (e) {}
+                    zeigeErgebnis(daten, antwort.verlauf || []);
+                })
+                .catch(function () {
+                    knopf.disabled = false; knopf.textContent = 'Meine Zahlen festhalten';
+                    fehler.innerHTML = 'Das Festhalten hat gerade nicht geklappt. Schick deine zwei Zahlen bitte kurz per Mail an <a class="underline" href="mailto:susanne@your-balance.at?subject=Meine%20zwei%20Zahlen%20Woche%20' + woche + '&body=Anspannung%20' + daten.anspannung + '%2C%20Erholung%20' + daten.erholung + '">susanne@your-balance.at</a>.';
+                    fehler.classList.remove('hidden');
+                });
+        });
+
+        function zeigeErgebnis(daten, verlauf) {
+            form.classList.add('hidden');
+            var werte = document.getElementById('ergebnis-werte');
+            werte.innerHTML = '<div><p class="font-serif text-5xl text-gold">' + daten.anspannung + '</p><p class="text-xs tracking-widest uppercase text-cream-soft/60 mt-1">Anspannung</p></div>' +
+                              '<div><p class="font-serif text-5xl text-gold">' + daten.erholung + '</p><p class="text-xs tracking-widest uppercase text-cream-soft/60 mt-1">Erholung</p></div>';
+            var v = document.getElementById('verlauf');
+            var fruehere = verlauf.filter(function (e) { return e.woche !== daten.woche; });
+            if (fruehere.length) {
+                v.innerHTML = '<p class="text-gold text-xs tracking-[0.2em] uppercase mb-2">Dein Verlauf</p>' + fruehere.map(function (e) {
+                    return '<p>Woche ' + e.woche + ': Anspannung ' + e.anspannung + ', Erholung ' + e.erholung + '</p>';
+                }).join('') + '<p>Woche ' + daten.woche + ': Anspannung ' + daten.anspannung + ', Erholung ' + daten.erholung + '</p>';
+            }
+            var t = document.getElementById('ergebnis-text');
+            if (daten.woche === 1) t.textContent = 'Das ist dein Startwert. Nicht gut, nicht schlecht, einfach dein Jetzt. In Woche 6 fragst du dich dasselbe, dann siehst du hier beide Zahlen nebeneinander.';
+            else if (daten.woche === 6) t.textContent = 'Halbzeit. Was sich bewegt hat, gehört dir. Was sich noch nicht bewegt hat, ist der Stoff für die zweite Hälfte. Susanne hat deine Zahlen und nimmt sie mit in deine nächste Sitzung.';
+            else t.textContent = 'Drei Werte, zwölf Wochen. Nimm sie mit in deine Abschlusssitzung, dort schaut ihr sie gemeinsam an. Und was auch immer dort steht: Du bist geblieben.';
+            document.getElementById('ergebnis').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    })();
+    </script>
+</body>
+</html>
