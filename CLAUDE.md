@@ -114,3 +114,4 @@ git add DATEI.html && git commit -m "Beschreibung" && git push
 | `bestaetigt.html` | Bestätigung Seelenpartner-Newsletter |
 | `seelenverbindung-workbook.html` | Freebie-Landingpage Seelenverbindung-Workbook |
 | `herzoeffnungs-kompass.html` | Freebie-Landingpage Herzöffnungs-Kompass |
+| `winterfest.html` / `winterhaus.html` | Verkaufsseiten Winterfest (ThriveCart 152/153) und Das Winterhaus (151), Nov. 2026 bis Jan. 2027. **Nicht von Hand ändern:** werden aus `07_Claude/projects/begleitung-3-monate/verkaufsseiten/bau_homepage_seiten.py` gebaut; Menü, Winter-Band (Marker `WINTER-BAND` in index/angebote/kurse) und Sitemap setzt `homepage_verlinken.py` (`--entfernen` nach dem Winter) |
