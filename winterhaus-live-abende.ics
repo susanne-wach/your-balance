@@ -1,0 +1,84 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Your Balance//Winter 2026//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Das Winterhaus · Live-Abende mit Susanne
+X-WR-TIMEZONE:Europe/Vienna
+BEGIN:VTIMEZONE
+TZID:Europe/Vienna
+BEGIN:STANDARD
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:20261221T1900-winterhaus@your-balance.at
+DTSTAMP:20260923T185857Z
+DTSTART;TZID=Europe/Vienna:20261221T190000
+DTEND;TZID=Europe/Vienna:20261221T200000
+SUMMARY:Das Winterhaus · Eröffnung zur Sonnwende
+DESCRIPTION:Das alte Jahr loslassen. Danach die 13 Wünsche. 60 Minuten\,
+  live über Zoom\, mit Aufzeichnung. Den Zoom-Link bekommst du am Tag des
+  Abends per Mail von Susanne. Fragen: susanne@your-balance.at
+LOCATION:Online über Zoom
+URL:https://your-balance.at
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT1H
+DESCRIPTION:In einer Stunde: Das Winterhaus · Eröffnung zur Sonnwende
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20261230T1900-winterhaus@your-balance.at
+DTSTAMP:20260923T185857Z
+DTSTART;TZID=Europe/Vienna:20261230T190000
+DTEND;TZID=Europe/Vienna:20261230T200000
+SUMMARY:Das Winterhaus · Trance-Reise durch deine zwölf Monate
+DESCRIPTION:Danach die Jahrestür: zwölf Sätze für das neue Jahr. 60 M
+ inuten\, live über Zoom\, mit Aufzeichnung. Den Zoom-Link bekommst du am
+  Tag des Abends per Mail von Susanne. Fragen: susanne@your-balance.at
+LOCATION:Online über Zoom
+URL:https://your-balance.at
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT1H
+DESCRIPTION:In einer Stunde: Das Winterhaus · Trance-Reise durch deine z
+ wölf Monate
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20270105T1900-winterhaus@your-balance.at
+DTSTAMP:20260923T185857Z
+DTSTART;TZID=Europe/Vienna:20270105T190000
+DTEND;TZID=Europe/Vienna:20270105T200000
+SUMMARY:Das Winterhaus · Abschluss und dein Jahresbuch
+DESCRIPTION:Das Haus steht offen\, dein Jahresbuch liegt bereit. 60 Minut
+ en\, live über Zoom\, mit Aufzeichnung. Den Zoom-Link bekommst du am Tag
+  des Abends per Mail von Susanne. Fragen: susanne@your-balance.at
+LOCATION:Online über Zoom
+URL:https://your-balance.at
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT1H
+DESCRIPTION:In einer Stunde: Das Winterhaus · Abschluss und dein Jahresb
+ uch
+END:VALARM
+END:VEVENT
+END:VCALENDAR
