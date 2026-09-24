@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Your Balance//Winter 2026//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Abend mit Susanne · 20. Oktober 2026
+X-WR-TIMEZONE:Europe/Vienna
+BEGIN:VTIMEZONE
+TZID:Europe/Vienna
+BEGIN:STANDARD
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:20261020T1900-winter@your-balance.at
+DTSTAMP:20260924T062749Z
+DTSTART;TZID=Europe/Vienna:20261020T190000
+DTEND;TZID=Europe/Vienna:20261020T200000
+SUMMARY:Kostenloser Abend mit Susanne · Durch die dunkle Zeit\, ohne in 
+ ihr zu versinken
+DESCRIPTION:Warum das Nervensystem im November lauter wird\, eine Übung 
+ zum Mitnehmen\, ein Blick ins Winterfest. 60 Minuten\, live über Zoom\, 
+ mit Aufzeichnung. Den Zoom-Link bekommst du am Tag des Abends per Mail vo
+ n Susanne. Fragen: susanne@your-balance.at
+LOCATION:Online über Zoom
+URL:https://your-balance.at
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-PT1H
+DESCRIPTION:In einer Stunde: Kostenloser Abend mit Susanne · Durch die d
+ unkle Zeit\, ohne in ihr zu versinken
+END:VALARM
+END:VEVENT
+END:VCALENDAR
