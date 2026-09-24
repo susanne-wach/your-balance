@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ein Abend, bevor es dunkel wird · Your Balance</title>
+    <meta name="description" content="Kostenloser Abend mit Susanne Wachter am 20. Oktober 2026, 19 Uhr, live über Zoom: Durch die dunkle Zeit, ohne in ihr zu versinken.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="https://your-balance.at/assets/images/logo-neu-icon.webp">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPPS5VX6GB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NPPS5VX6GB');
+    </script>
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init','626079095228912');
+      fbq('track','PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=626079095228912&ev=PageView&noscript=1"/></noscript>
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "x8vul66ruu");
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: {
+            fontFamily: { sans:['"Plus Jakarta Sans"','sans-serif'], serif:['"Cormorant Garamond"','serif'] },
+            colors: { burgundy:{deep:'#2D0A1F',medium:'#5B2A4A',dark:'#1F0514'}, gold:{DEFAULT:'#CFAC5E',light:'#E5C383',dark:'#B89243'}, roseWarm:'#E8A5B8', cream:{soft:'#FBF5EC',dark:'#F3EAE0'} }
+        } } }
+    </script>
+    <style>
+        .gold-button{background:linear-gradient(135deg,#CFAC5E 0%,#B89243 100%);color:#2D0A1F;box-shadow:0 4px 20px rgba(207,172,94,.25);transition:all .3s cubic-bezier(.23,1,.32,1);border:0;cursor:pointer;}
+        .gold-button:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(207,172,94,.45);}
+        .gold-button:disabled{opacity:.55;cursor:wait;transform:none;}
+        .gold-divider{width:70px;height:2px;background:linear-gradient(90deg,transparent,#CFAC5E,transparent);margin:22px auto;border:none;}
+        .inp{width:100%;padding:14px 18px;border:1.5px solid rgba(207,172,94,.45);border-radius:14px;font-size:16px;color:#2D0A1F;background:#FBF5EC;outline:none;}
+        .inp:focus{border-color:#CFAC5E;box-shadow:0 0 0 3px rgba(207,172,94,.25);}
+        ._error{display:block;font-size:13px;color:#F3B7C8;margin:-6px 0 10px;text-align:left;}
+        ._error-arrow{display:none;}
+        ._form_error{font-size:14px;color:#F3B7C8;margin:0 0 12px;}
+        .seg{background:rgba(91,42,74,.75);border:1px solid rgba(207,172,94,.25);border-radius:14px;padding:12px 8px;min-width:68px;}
+        .seg .num{font-size:30px;line-height:1;color:#FBF5EC;font-family:'Cormorant Garamond',serif;font-weight:600;}
+        .seg .lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#CFAC5E;margin-top:6px;display:block;}
+    </style>
+</head>
+<body class="bg-cream-soft text-burgundy-deep font-sans antialiased">
+    <section class="min-h-screen flex items-center justify-center px-5 py-12">
+        <div class="max-w-xl w-full bg-burgundy-deep text-cream-soft rounded-3xl shadow-2xl px-6 md:px-12 py-12 text-center">
+            <img src="https://your-balance.at/assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance · Susanne Wachter" class="h-12 w-auto mx-auto mb-6">
+            <p class="text-xs text-gold uppercase tracking-[0.25em] mb-3" id="state-label">Dienstag, 20. Oktober 2026 · 19:00 Uhr · live über Zoom</p>
+            <h1 class="text-3xl md:text-4xl font-serif font-light text-cream-soft leading-tight">Durch die dunkle Zeit, ohne in ihr zu versinken.</h1>
+            <p class="text-roseWarm font-serif italic text-lg mt-3">Ein kostenloser Abend mit Susanne, 60 Minuten, mit Aufzeichnung.</p>
+            <div class="gold-divider"></div>
+
+            <div class="flex justify-center gap-2 md:gap-3 mb-7" id="countdown">
+                <div class="seg"><span class="num" id="d">00</span><span class="lbl">Tage</span></div>
+                <div class="seg"><span class="num" id="h">00</span><span class="lbl">Stunden</span></div>
+                <div class="seg"><span class="num" id="m">00</span><span class="lbl">Minuten</span></div>
+                <div class="seg"><span class="num" id="s">00</span><span class="lbl">Sekunden</span></div>
+            </div>
+
+            <div id="anmeldung">
+                <div class="text-left bg-gold/10 border border-gold/20 rounded-2xl px-6 py-5 mb-7">
+                    <p class="text-sm text-gold uppercase tracking-widest mb-2">Was dich erwartet</p>
+                    <p class="text-sm text-cream-soft/90 leading-relaxed">Warum das Nervensystem im November lauter wird und was es wirklich braucht, um zur Ruhe zu kommen. Eine Übung, die du am selben Abend mitnimmst. Und am Ende ein ehrlicher Blick ins Winterfest, mit Zeit für deine Fragen.</p>
+                </div>
+                <p class="text-cream-soft/90 font-light leading-relaxed mb-5" id="lead-text">Trag dich ein, dann bekommst du den Zoom-Link am Dienstag um 17 Uhr per Mail und danach die Aufzeichnung.</p>
+                <form method="POST" action="https://your-balance61093.activehosted.com/proc.php" id="_form_52_" class="_form _form_52 _inline-form _dark max-w-md mx-auto text-left" novalidate data-styles-version="5">
+                    <input type="hidden" name="u" value="52" />
+                    <input type="hidden" name="f" value="52" />
+                    <input type="hidden" name="s" />
+                    <input type="hidden" name="c" value="0" />
+                    <input type="hidden" name="m" value="0" />
+                    <input type="hidden" name="act" value="sub" />
+                    <input type="hidden" name="v" value="2" />
+                    <input type="hidden" name="or" value="ee3603fb-da0c-4041-a81b-0374bce0a111" />
+                    <div class="_form-content">
+                        <label class="block text-xs text-gold uppercase tracking-widest mb-1" for="firstname">Dein Vorname</label>
+                        <input class="inp mb-4" type="text" name="firstname" id="firstname" placeholder="Vorname" autocomplete="given-name" required />
+                        <label class="block text-xs text-gold uppercase tracking-widest mb-1" for="email">Deine E-Mail</label>
+                        <input class="inp mb-5" type="text" name="email" id="email" placeholder="name@beispiel.at" inputmode="email" autocomplete="email" required />
+                        <button class="gold-button w-full h-13 px-8 py-4 font-medium text-sm tracking-widest uppercase rounded-full" id="_form_52_submit" type="submit">Ja, ich bin dabei</button>
+                    </div>
+                    <div class="_form-thank-you" style="display:none;"></div>
+                </form>
+                <p class="text-xs text-cream-soft/60 mt-4">Kostenlos. Kein Verkaufsdruck, du kannst jederzeit gehen. Deine Daten bleiben bei mir.</p>
+            </div>
+
+            <div id="danke" style="display:none;">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold/15 text-gold mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </div>
+                <p class="text-2xl font-serif font-light">Du bist dabei<span id="name-gruss"></span>.</p>
+                <p class="text-cream-soft/90 font-light leading-relaxed mt-4">Am Dienstag, 20. Oktober, um 17 Uhr bekommst du den Zoom-Link per Mail, um 18:45 Uhr noch einmal. Die Aufzeichnung kommt am Donnerstag danach. Schau bitte kurz im Spam-Ordner nach, falls nichts ankommt.</p>
+                <a href="winter-abend.ics" class="inline-flex mt-6 h-12 px-7 gold-button font-medium text-sm tracking-widest uppercase rounded-full items-center justify-center">In den Kalender eintragen</a>
+                <p class="text-xs text-cream-soft/60 mt-3">Apple, Outlook, Google. Mit Erinnerung eine Stunde vorher.</p>
+                <p class="text-sm text-cream-soft/85 font-light leading-relaxed mt-7">Bis dahin: ruhiger Platz, eine Tasse Tee, Stift und Zettel. Dieser Abend gehört dir.</p>
+            </div>
+
+            <p class="text-xs text-cream-soft/60 font-light mt-9 leading-relaxed">Ich freue mich auf dich.<br>Von Herzen, Susanne · Your Balance</p>
+            <p class="text-xs text-cream-soft/45 mt-4"><a href="https://www.your-balance.at/impressum.html" class="underline underline-offset-4">Impressum</a> · <a href="https://www.your-balance.at/datenschutz.html" class="underline underline-offset-4">Datenschutz</a></p>
+        </div>
+    </section>
+
+<script>
+  var target = new Date("2026-10-20T19:00:00+02:00").getTime();
+  function pad(n){ return (n<10?"0":"")+n; }
+  function tick(){
+    var diff = target - Date.now();
+    if(diff <= 0){
+      document.getElementById("countdown").style.display="none";
+      document.getElementById("state-label").textContent="Jetzt live · der Zoom-Link steht in deiner Mail";
+      var lt=document.getElementById("lead-text"); if(lt) lt.textContent="Wir sind live. Wenn du dich jetzt einträgst, bekommst du den Zoom-Link sofort per Mail und danach die Aufzeichnung.";
+      clearInterval(iv); return;
+    }
+    document.getElementById("d").textContent=pad(Math.floor(diff/86400000));
+    document.getElementById("h").textContent=pad(Math.floor(diff%86400000/3600000));
+    document.getElementById("m").textContent=pad(Math.floor(diff%3600000/60000));
+    document.getElementById("s").textContent=pad(Math.floor(diff%60000/1000));
+  }
+  var iv=setInterval(tick,1000); tick();
+  function dankeZeigen(name){
+    document.getElementById("anmeldung").style.display="none";
+    document.getElementById("danke").style.display="block";
+    if(name && name.indexOf("{")===-1){ document.getElementById("name-gruss").textContent=", "+name; }
+    if(typeof gtag==="function"){ gtag('event','generate_lead',{event_category:'winter-abend'}); }
+  }
+  (function(){
+    var p=new URLSearchParams(window.location.search);
+    if(p.get("danke")==="1"){ dankeZeigen((p.get("firstname")||"").trim()); }
+  })();
+  window._form_callback = function(id){
+    var fn=document.getElementById("firstname"); dankeZeigen(fn ? fn.value.trim() : "");
+  };
+</script>
+
+<!-- ActiveCampaign-Formular 52: Vorname + E-Mail, Tag WINTERABEND_ANGEMELDET (Aktion im Formular) -->
+<script>
+window.cfields = [];
+window._show_thank_you = function(id, message, trackcmp_url, email) {
+    var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+    form.querySelector('._form-content').style.display = 'none';
+    thank_you.innerHTML = message;
+    thank_you.style.display = 'none';
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') { visitorObject('setEmail', email); visitorObject('update'); }
+    else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) { _load_script(trackcmp_url); }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+};
+window._show_error = function(id, message, html) {
+    var form = document.getElementById('_form_' + id + '_'), err = document.createElement('div'),
+        button = form.querySelector('button[type="submit"]'), old_error = form.querySelector('._form_error');
+    if (old_error) old_error.parentNode.removeChild(old_error);
+    err.innerHTML = message; err.className = '_error-inner _form_error _no_arrow';
+    var wrapper = document.createElement('div'); wrapper.className = '_form-inner _show_be_error'; wrapper.appendChild(err);
+    button.parentNode.insertBefore(wrapper, button);
+    var submitButton = form.querySelector('[id^="_form"][id$="_submit"]');
+    submitButton.disabled = false; submitButton.classList.remove('processing');
+    if (html) { var div = document.createElement('div'); div.className = '_error-html'; div.innerHTML = html; err.appendChild(div); }
+};
+window._load_script = function(url, callback, isSubmit) {
+    var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+    var submitButton = document.querySelector('#_form_52_submit');
+    script.charset = 'utf-8'; script.src = url;
+    if (callback) { script.onload = script.onreadystatechange = function() { if (!r && (!this.readyState || this.readyState == 'complete')) { r = true; callback(); } }; }
+    script.onerror = function() { if (isSubmit) { _show_error("52", "Deine Anmeldung konnte nicht gesendet werden. Bitte versuche es noch einmal."); submitButton.disabled = false; submitButton.classList.remove('processing'); } };
+    head.appendChild(script);
+};
+(function() {
+    if (window.location.search.search("excludeform") !== -1) return false;
+    var addEvent = function(element, event, func) { if (element.addEventListener) { element.addEventListener(event, func); } else { var oldFunc = element['on' + event]; element['on' + event] = function() { oldFunc.apply(this, arguments); func.apply(this, arguments); }; } };
+    var form_to_submit = document.getElementById('_form_52_');
+    if (!form_to_submit) return;
+    var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+    var getUrlParam = function(name) { var params = new URLSearchParams(window.location.search); return params.get(name) || false; };
+    for (var i = 0; i < allInputs.length; i++) { allInputs[i].dataset.name = allInputs[i].name; var fieldVal = getUrlParam(allInputs[i].dataset.name); if (fieldVal && allInputs[i].type === 'text') { allInputs[i].value = fieldVal; } }
+    var remove_tooltips = function() { for (var i = 0; i < tooltips.length; i++) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); } tooltips = []; };
+    var remove_tooltip = function(elem) { for (var i = 0; i < tooltips.length; i++) { if (tooltips[i].elem === elem) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); tooltips.splice(i, 1); return; } } };
+    var create_tooltip = function(elem, text) { var tooltip = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {}; tooltip.className = '_error'; inner.className = '_error-inner'; inner.innerHTML = text; tooltip.appendChild(inner); elem.parentNode.appendChild(tooltip); new_tooltip.tip = tooltip; new_tooltip.elem = elem; tooltips.push(new_tooltip); return new_tooltip; };
+    var validate_field = function(elem, remove) {
+        var value = elem.value, no_error = true;
+        remove ? remove_tooltip(elem) : false;
+        elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+        if (elem.getAttribute('required') !== null) { if (value === undefined || value === null || value === '') { elem.className = elem.className + ' _has_error'; no_error = false; create_tooltip(elem, "Bitte fülle dieses Feld aus."); } }
+        if (no_error && elem.name == 'email') { if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) { elem.className = elem.className + ' _has_error'; no_error = false; create_tooltip(elem, "Bitte gib eine gültige E-Mail-Adresse ein."); } }
+        return no_error;
+    };
+    var needs_validate = function(el) { return el.getAttribute('required') !== null || (el.name === 'email' && el.value !== ""); };
+    var validate_form = function(e) {
+        var no_error = true;
+        if (!submitted) { submitted = true; for (var i = 0, len = allInputs.length; i < len; i++) { var input = allInputs[i]; if (needs_validate(input) && (input.type == 'text')) { addEvent(input, 'blur', function() { this.value = this.value.trim(); validate_field(this, true); }); addEvent(input, 'input', function() { validate_field(this, true); }); } } }
+        remove_tooltips();
+        for (var i = 0, len = allInputs.length; i < len; i++) { var elem = allInputs[i]; if (needs_validate(elem)) { elem.value = elem.value.trim(); validate_field(elem) ? true : no_error = false; } }
+        if (!no_error && e) e.preventDefault();
+        return no_error;
+    };
+    var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
+    var form_submit = function(e) {
+        e.preventDefault();
+        if (validate_form()) {
+            var submitButton = e.target.querySelector('#_form_52_submit');
+            submitButton.disabled = true; submitButton.classList.add('processing');
+            var serialized = _form_serialize(document.getElementById('_form_52_')).replace(/%0A/g, '\\n');
+            _load_script('https://your-balance61093.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
+        }
+        return false;
+    };
+    addEvent(form_to_submit, 'submit', form_submit);
+})();
+</script>
+</body>
+</html>
