@@ -28,8 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ----------------------------------------------------------
      2. CUSTOM CURSOR
   ---------------------------------------------------------- */
-  const cursorDot  = document.querySelector('.cursor-dot');
-  const cursorRing = document.querySelector('.cursor-ring');
+  // Kreis-Cursor seit 19.10.2026 abgeschaltet (Susanne): die Elemente werden nicht mehr bewegt, CSS blendet sie aus.
+  const cursorDot  = null;
+  const cursorRing = null;
 
   if (cursorDot && cursorRing) {
     let mx = -100, my = -100;
@@ -263,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
      14. CURSOR: POINTER STYLE FOR LINKS inside dark sections
   ---------------------------------------------------------- */
   document.querySelectorAll('a[href], .btn').forEach(el => {
-    el.style.cursor = 'none';
+    el.style.cursor = 'pointer';
   });
 
   /* ----------------------------------------------------------
