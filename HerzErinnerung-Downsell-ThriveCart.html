@@ -1,0 +1,226 @@
+<!-- ═══════════════════════════════════════════════
+     HERZERINNERUNG → DIE LOSLASS-ANALYSE DOWNSELL
+     ThriveCart Upsell/Downsell Page – Custom Header
+     Branding: .ybl Design System (Your Balance)
+     ═══════════════════════════════════════════════ -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.ybl-ds *{box-sizing:border-box;margin:0;padding:0}
+.ybl-ds{
+  font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:16px;line-height:1.85;color:#4A3F4E;background:#F9F5EE;
+  -webkit-font-smoothing:antialiased;
+  width:100vw;margin-left:calc(-50vw + 50%);overflow-x:hidden;
+}
+.ybl-ds img{max-width:100%;height:auto;display:block}
+.ybl-ds a{color:#3A2E3D;text-decoration:none}
+.ybl-ds h1,.ybl-ds h2,.ybl-ds h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;line-height:1.15;color:#3A2E3D}
+.ybl-ds h1{font-size:clamp(34px,5vw,52px)}
+.ybl-ds h2{font-size:clamp(26px,3.5vw,40px)}
+.ybl-ds p{margin:0 0 1rem}
+.ybl-ds strong{font-weight:600;color:#3A2E3D}
+
+/* Layout */
+.ybl-ds .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.ybl-ds .schmal{max-width:760px;margin:0 auto;padding:0 24px}
+.ybl-ds section{padding:84px 0}
+.ybl-ds .bg-cream{background:#F9F5EE}
+.ybl-ds .bg-weiss{background:#FFFFFF}
+.ybl-ds .zentriert{text-align:center}
+
+/* Label */
+.ybl-ds .label{
+  font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:3px;text-transform:uppercase;color:#CFAC5E;
+  margin-bottom:16px;display:block;
+}
+
+/* Ornament */
+.ybl-ds .ornament{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px 0}
+.ybl-ds .ornament span{display:block;width:72px;height:1px}
+.ybl-ds .ornament span:first-child{background:linear-gradient(90deg,transparent,#CFAC5E)}
+.ybl-ds .ornament span:last-child{background:linear-gradient(270deg,transparent,#CFAC5E)}
+.ybl-ds .ornament b{color:#CFAC5E;font-style:normal;font-size:10px;font-weight:400}
+
+/* Lead */
+.ybl-ds .lead{font-size:1.12rem;color:#7E6B84;line-height:1.8}
+
+/* ─── KOPF ─── */
+.ybl-ds .kopf{background:#5B2A4A;border-bottom:1px solid rgba(207,172,94,.3)}
+.ybl-ds .kopf .wrap{display:flex;align-items:center;justify-content:center;padding-top:14px;padding-bottom:14px}
+.ybl-ds .logo-link{display:inline-block;text-decoration:none!important;cursor:pointer;line-height:0}
+.ybl-ds .logo-link img{height:54px;width:auto;display:block}
+@media(max-width:600px){.ybl-ds .logo-link img{height:42px}}
+
+/* ─── HERO ─── */
+.ybl-ds .hero{
+  background:linear-gradient(rgba(91,42,74,.78),rgba(91,42,74,.85)),
+    url('https://www.your-balance.at/assets/images/couple-stars-moon.webp') center/cover no-repeat;
+  padding:56px 0 64px;
+}
+.ybl-ds .hero-grid{display:flex;flex-direction:column;gap:36px;align-items:center}
+.ybl-ds .hero-text{width:100%}
+.ybl-ds .hero h1{margin-bottom:14px;color:#FFFFFF}
+.ybl-ds .hero h1 em{font-style:italic;color:#E9CF8E}
+.ybl-ds .hero .claim{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;font-size:1.4rem;color:rgba(255,255,255,.85);margin-bottom:20px;line-height:1.45}
+.ybl-ds .hero p{color:rgba(255,255,255,.78);font-size:1.06rem;line-height:1.8}
+.ybl-ds .hero strong{color:#E9CF8E}
+.ybl-ds .hero-bild-wrap{order:-1;width:100%;max-width:300px}
+.ybl-ds .hero-bild{width:100%;filter:drop-shadow(0 18px 44px rgba(0,0,0,.35))}
+
+/* ─── Produkt-Karte ─── */
+.ybl-ds .produkt-karte{
+  background:#FFFFFF;border:1px solid #E7DAD5;border-radius:14px;
+  padding:48px 38px;box-shadow:0 14px 40px rgba(91,42,74,.08);margin-top:38px;
+}
+
+/* Feature-Liste */
+.ybl-ds .feature-liste{
+  border-top:1px solid #E7DAD5;border-bottom:1px solid #E7DAD5;
+  padding:26px 0;margin:32px 0;list-style:none;display:grid;gap:12px;
+}
+.ybl-ds .feature-liste li{
+  padding-left:30px;position:relative;font-size:.97rem;color:#4A3F4E;
+}
+.ybl-ds .feature-liste li::before{
+  content:"";position:absolute;left:0;top:7px;
+  width:16px;height:16px;border-radius:50%;background:#CFAC5E;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 11.5L3 8l1-1 2.5 2.5L12 4l1 1z' fill='%23fff'/%3E%3C/svg%3E");
+  background-size:contain;
+}
+
+/* Preis-Box */
+.ybl-ds .preis-highlight{
+  background:#5B2A4A;color:rgba(255,255,255,.74);border-radius:14px;
+  padding:42px 28px;text-align:center;margin:34px 0;
+  box-shadow:0 14px 40px rgba(91,42,74,.16);
+}
+.ybl-ds .preis-highlight .label{color:#CFAC5E}
+.ybl-ds .preis-highlight .alt-preis{font-size:1.15rem;color:rgba(255,255,255,.5);margin-bottom:6px}
+.ybl-ds .preis-highlight .alt-preis s{text-decoration:line-through}
+.ybl-ds .preis-highlight .preis-zahl{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;
+  font-size:4rem;color:#FFFFFF;line-height:1;margin:10px 0 4px;
+}
+.ybl-ds .preis-highlight .preis-info{color:#E9CF8E;margin-bottom:14px;letter-spacing:.5px;font-size:.95rem}
+.ybl-ds .preis-highlight .hinweis{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;
+  color:rgba(255,255,255,.55);font-size:1rem;max-width:520px;margin:0 auto;line-height:1.5;
+}
+
+/* Kern-Satz */
+.ybl-ds .kern-satz{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;
+  font-size:1.4rem;color:#3A2E3D;text-align:center;margin-top:32px;line-height:1.4;
+}
+
+/* Signatur */
+.ybl-ds .signatur{margin-top:44px;font-size:.97rem;color:#7E6B84;line-height:1.75;text-align:center}
+.ybl-ds .signatur .herz{
+  font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+  font-size:1.12rem;color:#3A2E3D;margin-top:16px;
+}
+
+/* Responsive */
+@media(min-width:760px){
+  .ybl-ds .hero-grid{flex-direction:row;align-items:center;gap:48px}
+  .ybl-ds .hero-text{flex:1 1 55%}
+  .ybl-ds .hero-bild-wrap{order:0;flex:1 1 45%;max-width:none}
+}
+@media(max-width:600px){
+  .ybl-ds .produkt-karte{padding:32px 22px}
+  .ybl-ds .preis-highlight{padding:30px 20px}
+  .ybl-ds .preis-highlight .preis-zahl{font-size:3rem}
+  .ybl-ds .hero{padding:40px 0 48px}
+}
+</style>
+
+<!-- ═══ HTML START ═══ -->
+
+<div class="ybl-ds">
+
+<!-- ──── KOPF ──── -->
+<div class="kopf">
+  <div class="wrap">
+    <a class="logo-link" href="https://www.your-balance.at" target="_blank">
+      <img src="https://www.your-balance.at/assets/images/logo-neu-quer-hell.webp" alt="Your Balance">
+    </a>
+  </div>
+</div>
+
+<!-- ──── HERO ──── -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="label">Bevor du weitergehst &hellip;</span>
+        <h1>Vielleicht brauchst du gerade noch keinen <em>21-Tage-Prozess.</em></h1>
+        <p class="claim">Aber vielleicht m&ouml;chtest du endlich verstehen, warum du emotional immer wieder an denselben Punkt zur&uuml;ckkehrst.</p>
+      </div>
+      <div class="hero-bild-wrap">
+        <img class="hero-bild" src="https://www.your-balance.at/assets/images/loslass-analyse-mockup.webp" alt="Die Loslass-Analyse &ndash; Verstehe, was dich wirklich festh&auml;lt">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──── INHALT ──── -->
+<section class="bg-cream">
+  <div class="schmal">
+
+    <p style="font-size:1.08rem;line-height:1.8;">Viele Frauen wissen l&auml;ngst, dass ihnen eine Verbindung nicht guttut.</p>
+
+    <p style="font-size:1.08rem;line-height:1.8;">Und trotzdem warten sie. Hoffen. Analysieren. Verlieren sich immer wieder in denselben Gedankenschleifen.</p>
+
+    <p style="font-size:1.08rem;line-height:1.8;">Nicht, weil sie schwach sind. Sondern weil sie noch nicht verstanden haben, <strong>was sie wirklich festh&auml;lt.</strong></p>
+
+    <!-- Produkt-Karte -->
+    <div class="produkt-karte">
+
+      <div class="zentriert">
+        <span class="label">Dein n&auml;chster kleiner Schritt</span>
+        <h2>Die Loslass-Analyse</h2>
+        <p class="lead" style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.2rem;">Verstehe, was dich wirklich festh&auml;lt.</p>
+        <div class="ornament"><span></span><b>&#9830;</b><span></span></div>
+      </div>
+
+      <p style="font-size:1.08rem;line-height:1.8;">In dieser Analyse findest du heraus:</p>
+
+      <ul class="feature-liste">
+        <li>Warum du emotional nicht loslassen kannst</li>
+        <li>Welcher Mechanismus dich wirklich bindet</li>
+        <li>Warum Loslassen bisher so schwer war</li>
+        <li>Was dein Nervensystem damit zu tun hat</li>
+        <li>Welcher erste Schritt dir sofort Erleichterung bringen kann</li>
+        <li>Eine 3-Minuten-Soforthilfe f&uuml;r akute Momente</li>
+      </ul>
+
+      <p style="font-size:1.08rem;line-height:1.8;">Vielleicht musst du heute noch nichts loslassen.</p>
+
+      <p style="font-size:1.15rem;line-height:1.65;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;"><strong style="font-family:'Montserrat',sans-serif;font-style:normal;">Vielleicht darfst du zuerst verstehen, warum du &uuml;berhaupt festh&auml;ltst.</strong></p>
+
+      <!-- Preis-Box -->
+      <div class="preis-highlight">
+        <span class="label">Nur auf dieser Seite verf&uuml;gbar</span>
+        <p class="alt-preis">Regul&auml;r: <s>67 &euro;</s></p>
+        <div class="preis-zahl">47 &euro;</div>
+        <p class="preis-info">einmalig &middot; kein Abo &middot; sofortiger Zugriff</p>
+        <p class="hinweis">Dieses Angebot erscheint nur einmal direkt nach deinem Kauf. Wenn du diese Seite verl&auml;sst oder ablehnst, ist dieser Spezialpreis nicht erneut verf&uuml;gbar.</p>
+      </div>
+
+      <p class="kern-satz">Ein kleiner Schritt. Aber vielleicht genau der Moment, in dem du beginnst, dich selbst besser zu verstehen.</p>
+
+    </div>
+
+    <div class="signatur">
+      <p>Egal, wie du dich entscheidest: Du hast heute bereits etwas Wichtiges getan. Du hast begonnen, dich selbst nicht l&auml;nger allein zu lassen.</p>
+      <p class="herz">Von Herz zu Herz,<br><strong>Susanne</strong></p>
+    </div>
+
+  </div>
+</section>
+
+</div>
+<!-- ENDE DOWNSELL -->
