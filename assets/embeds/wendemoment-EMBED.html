@@ -1,0 +1,397 @@
+<!-- ════════════════════════════════════════════════════════════════════════
+     WENDEMOMENT · 23 Lieder vom Warten zurück zu dir (Verkaufsseite für ThriveCart)
+     Your Balance · Susanne Wachter · 27 € einmalig · sofortiger Zugang · Stand 26.10.2026
+     Einfügen unter: ThriveCart > Produkt > Checkout > Editor > Block CUSTOM HTML
+     Alle Aufrufe scrollen zu #zum-checkout (echter Warenkorb darunter). Stimmen: nur echte Trustpilot-Bewertungen, wörtlich.
+     ════════════════════════════════════════════════════════════════════════ -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+:root{
+  --cream:#F9F5EE;--cream-dark:#FFFFFF;--nude:#E7DAD5;--weiss:#FFFFFF;--gold:#CFAC5E;--gold-pale:#E9CF8E;
+  --magenta:#DD3089;--dark:#5B2A4A;--dark-mid:#6E3A5C;--text:#4A3F4E;--text-dark:#3A2E3D;--text-mid:#7E6B84;--text-light:#9C8DA2;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --gold-grad:linear-gradient(135deg,#9A7A10 0%,#C9A224 30%,#E8CE7A 60%,#C9A224 80%,#9A7A10 100%);
+  --radius:14px;--schatten:0 4px 20px rgba(91,42,74,.07);--schatten-tief:0 14px 40px rgba(91,42,74,.16);
+}
+.ybl *{box-sizing:border-box;margin:0;padding:0}
+.ybl{font-family:var(--sans);font-size:16px;line-height:1.85;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased;width:100vw;margin-left:calc(-50vw + 50%);overflow-x:hidden}
+.ybl img{max-width:100%;height:auto;display:block}
+.ybl a{color:var(--text-dark);text-decoration:none}
+.ybl h1,.ybl h2,.ybl h3{font-family:var(--serif);font-weight:300;line-height:1.15;color:var(--text-dark)}
+.ybl h1{font-size:clamp(36px,5.2vw,60px)}
+.ybl h2{font-size:clamp(29px,4vw,46px)}
+.ybl h3{font-size:clamp(20px,2.5vw,27px);font-weight:400}
+.ybl .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.ybl .schmal{max-width:760px;margin:0 auto;padding:0 24px}
+.ybl section{padding:84px 0}
+.ybl .bg-cream{background:var(--cream)}
+.ybl .bg-cream-dark{background:var(--cream-dark)}
+.ybl .zentriert,.ybl .zentriert p,.ybl .zentriert h2,.ybl .zentriert .lead{text-align:center!important}
+.ybl .label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
+.ybl .lead{font-size:1.12rem;color:var(--text-mid);line-height:1.8}
+.ybl p{margin:0 0 1rem}
+.ybl .cta-primaer{display:inline-block;font-family:var(--sans)!important;font-weight:700;font-size:1rem;text-decoration:none!important;border-radius:100px;padding:17px 38px;text-align:center;line-height:1.35;letter-spacing:.3px;cursor:pointer;border:none;background:var(--gold-grad);color:var(--dark)!important;box-shadow:0 10px 26px rgba(154,122,16,.32);transition:transform .15s ease,box-shadow .15s ease}
+.ybl .cta-primaer:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(154,122,16,.42)}
+.ybl .cta-leise{display:inline-block;font-family:var(--sans)!important;font-weight:600;font-size:.95rem;text-decoration:none!important;border-radius:100px;padding:15px 30px;text-align:center;border:1px solid var(--gold);color:var(--dark)!important;background:transparent}
+.ybl .mikro-trust{font-size:.86rem;color:var(--text-light);margin-top:14px;letter-spacing:.2px}
+.ybl .kopf{background:var(--dark);border-bottom:1px solid rgba(207,172,94,.3)}
+.ybl .kopf .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;gap:18px}
+.ybl .logo-link{display:inline-block;text-decoration:none!important;cursor:pointer;line-height:0}
+.ybl .logo-link img{height:54px;width:auto;display:block}
+.ybl .kopf .cta-primaer{padding:11px 24px;font-size:.82rem;text-transform:uppercase;letter-spacing:1.5px;flex-shrink:0}
+@media(max-width:600px){.ybl .logo-link img{height:42px}.ybl .kopf .cta-primaer{padding:9px 18px;font-size:.72rem;letter-spacing:1px}}
+.ybl .hero{background:linear-gradient(rgba(91,42,74,.74),rgba(91,42,74,.80)),url('https://d2xsxph8kpxj0f.cloudfront.net/310519663617561957/jrAQxj7uJAShPbbCHzzA2Z/hero_bg-GShGpUEFC7g5LBMuDiDaFP.webp') center/cover no-repeat;padding:60px 0 66px}
+.ybl .hero-grid{display:flex;flex-direction:column;gap:36px;align-items:center}
+.ybl .hero-text{width:100%}
+.ybl .hero h1{margin-bottom:18px;color:var(--weiss)}
+.ybl .hero h1 em{font-style:italic;color:var(--gold-pale)}
+.ybl .hero .claim{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.5rem;color:var(--weiss);margin-bottom:18px;line-height:1.4}
+.ybl .hero-cta{display:flex;flex-direction:column;gap:12px;margin-bottom:14px}
+.ybl .hero .mikro-trust{color:rgba(255,255,255,.66)}
+.ybl .proof-strip{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:22px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18)}
+.ybl .proof-strip span{font-size:.9rem;color:rgba(255,255,255,.78);display:flex;align-items:center;gap:8px}
+.ybl .haken{color:var(--gold);font-weight:700}
+.ybl .hero-karte-wrap{width:100%;max-width:440px}
+.ybl .termin-karte{background:rgba(255,255,255,.07);border:1px solid rgba(207,172,94,.5);border-radius:18px;padding:30px 28px 26px;box-shadow:0 18px 44px rgba(0,0,0,.28)}
+.ybl .termin-karte .label{margin-bottom:8px}
+.ybl .termin{display:grid;grid-template-columns:96px 1fr;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.ybl .termin:last-of-type{border-bottom:none}
+.ybl .termin .tag{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);line-height:1.4}
+.ybl .termin .thema{color:rgba(255,255,255,.9);font-family:var(--serif);font-size:1.35rem;line-height:1.25}
+.ybl .termin-fuss{color:rgba(255,255,255,.7);font-size:.88rem;margin:14px 0 0!important}
+.ybl .video-wrap{width:100%;max-width:340px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.35);border:1px solid rgba(207,172,94,.5);background:#0b0a1f}
+.ybl .video-wrap video{width:100%;height:auto;display:block;aspect-ratio:9/16;background:#0b0a1f}
+.ybl .video-fuss{text-align:center!important;color:rgba(255,255,255,.7);font-size:.88rem;margin:12px 0 0!important}
+.ybl .highlight-box{background:rgba(207,172,94,.08);border:1px solid rgba(207,172,94,.32);border-radius:16px;padding:26px 28px;margin:30px 0}
+.ybl .highlight-box p{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.22rem;color:var(--text);line-height:1.5}
+.ybl .highlight-box p:last-child{margin-bottom:0}
+.ybl .highlight-box strong{font-style:normal;font-family:var(--sans);font-weight:600;font-size:1.02rem}
+.ybl .vergleich{display:grid;gap:20px;margin-top:34px}
+.ybl .vergleich-spalte{background:var(--weiss);border:1px solid var(--nude);border-radius:var(--radius);padding:28px;box-shadow:var(--schatten)}
+.ybl .vergleich-spalte h3{margin-bottom:14px}
+.ybl .vergleich-spalte ul{list-style:none}
+.ybl .vergleich-spalte li{padding:7px 0 7px 28px;position:relative}
+.ybl .ist li::before{content:"\2726";position:absolute;left:0;color:var(--gold)}
+.ybl .ist-nicht li::before{content:"\2013";position:absolute;left:0;color:var(--text-light);font-weight:700}
+.ybl .outcome-liste{list-style:none;margin-top:30px;display:grid;gap:14px}
+.ybl .outcome-liste li{background:var(--weiss);border:1px solid var(--nude);border-radius:var(--radius);padding:18px 22px 18px 56px;position:relative;box-shadow:var(--schatten)}
+.ybl .outcome-liste li::before{content:"\2726";position:absolute;left:20px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:1.15rem}
+.ybl .kern-satz{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.5rem;color:var(--text-dark);text-align:center!important;margin-top:32px;line-height:1.4}
+.ybl .phasen{display:grid;gap:20px;margin-top:36px}
+.ybl .phase{background:var(--weiss);border:1px solid var(--nude);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--schatten);text-align:center}
+.ybl .phase .phase-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px}
+.ybl .phase h3{margin-bottom:14px;color:var(--dark)}
+.ybl .phase ul{list-style:none;display:grid;gap:6px}
+.ybl .phase li{color:var(--text-mid);font-size:.97rem}
+.ybl .zeitplan{list-style:none;margin-top:34px;display:grid;gap:12px}
+.ybl .zeitplan li{background:var(--weiss);border:1px solid var(--nude);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--schatten);display:grid;gap:4px}
+.ybl .zeitplan .wann{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.ybl .zeitplan .was{font-family:var(--serif);font-size:1.25rem;color:var(--text-dark);line-height:1.3}
+.ybl .zeitplan .wie{color:var(--text-mid);font-size:.97rem}
+.ybl .raeume{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.ybl .raum{position:relative;border-radius:12px;overflow:hidden;box-shadow:var(--schatten);background:var(--dark)}
+.ybl .raum img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.ybl .raum span{position:absolute;left:0;right:0;bottom:0;padding:44px 6px 9px;background:linear-gradient(0deg,rgba(30,10,25,.94) 0%,rgba(30,10,25,.8) 40%,rgba(30,10,25,0) 100%);color:var(--weiss);font-family:var(--serif);font-size:.98rem;line-height:1.15;text-align:center}
+.ybl .raum span small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-pale);margin-bottom:4px}
+.ybl .susanne-grid{display:flex;flex-direction:column;gap:30px;align-items:center}
+.ybl .susanne-bild{width:100%;max-width:330px;border-radius:var(--radius);box-shadow:var(--schatten-tief)}
+.ybl .quali{list-style:none;padding:0;margin:14px 0 22px;display:grid;gap:6px}
+.ybl .quali li{padding-left:24px;position:relative;color:var(--text-dark)}
+.ybl .quali li::before{content:"\2726";position:absolute;left:0;color:var(--gold);font-weight:700}
+.ybl .stack-liste{list-style:none;margin-top:32px;display:grid;gap:14px}
+.ybl .stack-liste li{background:var(--weiss);border:1px solid var(--nude);border-radius:var(--radius);padding:22px 24px 22px 56px;position:relative;box-shadow:var(--schatten)}
+.ybl .stack-liste li::before{content:"\2726";position:absolute;left:22px;top:22px;color:var(--gold);font-size:1.2rem}
+.ybl .stack-liste li strong{font-family:var(--serif);font-style:normal;font-weight:400;font-size:1.2rem;color:var(--text-dark);display:block}
+.ybl .stack-liste li em{display:block;font-style:italic;font-family:var(--serif);color:var(--dark);font-size:1.05rem;margin-top:6px}
+.ybl .preis-box{background:var(--dark);color:rgba(255,255,255,.74);border-radius:var(--radius);padding:48px 34px;text-align:center;margin-top:38px;box-shadow:var(--schatten-tief)}
+.ybl .preis-box p{text-align:center!important}
+.ybl .preis-box .label{color:var(--gold)}
+.ybl .preis-zahl{font-family:var(--serif);font-weight:300;font-size:4.2rem;color:var(--weiss);line-height:1;margin:14px 0 4px}
+.ybl .preis-box .preis-info{color:var(--gold-pale);margin-bottom:4px;letter-spacing:.5px}
+.ybl .preis-anker{font-size:.92rem;letter-spacing:.3px;margin:0 0 22px!important}
+.ybl .preis-box .preis-anker{color:rgba(255,255,255,.62)}
+.ybl .preis-box .kontext{font-family:var(--serif);font-style:italic;font-weight:300;color:rgba(255,255,255,.62);font-size:1.05rem;max-width:520px;margin:0 auto 22px}
+.ybl .trust-badge{display:inline-flex;align-items:center;gap:10px;background:var(--weiss);border:1px solid var(--nude);border-radius:100px;padding:10px 22px;box-shadow:var(--schatten);margin-top:6px}
+.ybl .trust-badge .sterne{color:var(--gold);letter-spacing:2px}
+.ybl .trust-badge span{font-size:.92rem;color:var(--text-mid)}
+.ybl .stimmen{display:grid;gap:20px;margin-top:36px}
+.ybl .stimme{background:var(--weiss);border:1px solid var(--nude);border-radius:var(--radius);padding:28px;box-shadow:var(--schatten);text-align:left}
+.ybl .stimme .sterne{color:var(--gold);letter-spacing:2px;margin-bottom:12px}
+.ybl .stimme p{font-family:var(--serif);font-style:italic;font-size:1.14rem;color:var(--text);line-height:1.5;margin-bottom:14px;text-align:left!important}
+.ybl .stimme .name{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)}
+.ybl .tueren{display:grid;gap:20px;margin-top:36px}
+.ybl .tuer{background:var(--weiss);border:1px solid var(--nude);border-radius:18px;padding:32px 26px;box-shadow:var(--schatten);text-align:center;display:flex;flex-direction:column}
+.ybl .tuer.anker{border:2px solid var(--gold);box-shadow:var(--schatten-tief);position:relative}
+.ybl .tuer .tuer-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px}
+.ybl .tuer h3{color:var(--dark);margin-bottom:6px}
+.ybl .tuer .tuer-was{color:var(--text-mid);font-size:.95rem;margin-bottom:16px;min-height:0}
+.ybl .tuer ul{list-style:none;text-align:left;margin:0 auto 20px;display:grid;gap:6px;max-width:300px}
+.ybl .tuer li{padding-left:22px;position:relative;font-size:.93rem;color:var(--text)}
+.ybl .tuer li::before{content:"\2726";position:absolute;left:0;color:var(--gold)}
+.ybl .tuer .tuer-preis{font-family:var(--serif);font-weight:300;font-size:2.6rem;color:var(--text-dark);line-height:1;margin-top:auto}
+.ybl .tuer .tuer-preis-info{color:var(--text-mid);font-size:.9rem;margin:6px 0 2px}
+.ybl .tuer .tuer-danach{color:var(--text-light);font-size:.82rem;margin-bottom:18px}
+.ybl .tuer .cta-primaer,.ybl .tuer .cta-leise{width:100%;padding-left:16px;padding-right:16px}
+.ybl .tuer .du-bist-hier{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold-grad);color:var(--dark);font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;white-space:nowrap}
+.ybl .faq-liste{margin-top:34px;display:grid;gap:12px}
+.ybl .faq-item{background:var(--weiss);border:1px solid var(--nude);border-radius:var(--radius);box-shadow:var(--schatten);overflow:hidden}
+.ybl .faq-frage{width:100%;text-align:left;background:none!important;border:none;cursor:pointer;padding:22px 56px 22px 26px;font-family:var(--serif);font-size:1.22rem;font-weight:400;color:var(--text-dark)!important;position:relative;line-height:1.3}
+.ybl .faq-frage::after{content:"+";position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--gold)}
+.ybl .faq-item.offen .faq-frage::after{content:"\2013"}
+.ybl .faq-antwort{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.ybl .faq-antwort-inner{padding:0 26px 24px}
+.ybl .faq-antwort-inner p{margin-bottom:.6rem;color:var(--text-mid)}
+.ybl .faq-antwort-inner p:last-child{margin-bottom:0}
+.ybl .kaufbereich{background:var(--cream);text-align:center}
+.ybl .kaufbereich p{text-align:center!important}
+.ybl .kaufbereich .satz-gross{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.6rem;color:var(--text-dark);margin:18px 0 8px;line-height:1.4}
+.ybl .kauf-karte{background:var(--weiss);border:1px solid var(--nude);border-radius:18px;box-shadow:var(--schatten-tief);padding:42px 32px;margin-top:36px;max-width:640px;margin-left:auto;margin-right:auto}
+.ybl .kauf-karte .preis-zahl{font-family:var(--serif);font-weight:300;font-size:4rem;color:var(--text-dark);line-height:1;margin:12px 0 2px}
+.ybl .kauf-karte .preis-info{color:var(--text-mid);letter-spacing:.5px;margin-bottom:4px}
+.ybl .kauf-karte .preis-anker{color:var(--text-light)}
+.ybl .kauf-recap{list-style:none;text-align:left;max-width:440px;margin:0 auto 26px;display:grid;gap:7px}
+.ybl .kauf-recap li{padding-left:26px;position:relative;font-size:.95rem;color:var(--text-mid)}
+.ybl .kauf-recap li::before{content:"\2726";position:absolute;left:0;color:var(--gold)}
+.ybl .ps-box{max-width:620px;margin:34px auto 0;text-align:left;background:rgba(207,172,94,.08);border:1px solid rgba(207,172,94,.32);border-radius:16px;padding:24px 26px}
+.ybl .ps-box p{text-align:left!important;margin:0 0 .8rem;font-size:.98rem;color:var(--text)}
+.ybl .ps-box p:last-child{margin-bottom:0}
+.ybl .ps-box a{color:var(--dark)!important;font-weight:600;text-decoration:underline!important;text-underline-offset:3px}
+.ybl .scroll-hinweis{text-align:center;padding:40px 24px;background:var(--cream);border-top:3px solid var(--gold)}
+.ybl .scroll-hinweis p{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--text-dark);margin:0;text-align:center!important}
+@media(min-width:760px){
+  .ybl section{padding:104px 0}
+  .ybl .phasen{grid-template-columns:repeat(3,1fr)}
+  .ybl .vergleich{grid-template-columns:1fr 1fr}
+  .ybl .stimmen{grid-template-columns:1fr 1fr}
+  .ybl .hero-cta{flex-direction:row}
+  .ybl .susanne-grid{flex-direction:row;align-items:flex-start;gap:44px}
+  .ybl .susanne-bild{flex:0 0 310px}
+  .ybl .raeume{grid-template-columns:repeat(4,1fr);gap:16px}
+  .ybl .raum span{font-size:1.1rem;padding:28px 10px 12px}
+  .ybl .zeitplan li{grid-template-columns:200px 1fr;column-gap:22px;align-items:start}
+  .ybl .zeitplan .wann{padding-top:6px}
+  .ybl .zeitplan .wie{grid-column:2}
+}
+@media(min-width:980px){
+  .ybl .hero-grid{flex-direction:row;align-items:center;gap:56px}
+  .ybl .hero-text{flex:1 1 56%}
+  .ybl .hero-karte-wrap{flex:1 1 44%}
+  .ybl .tueren{grid-template-columns:repeat(3,1fr);align-items:stretch}
+}
+</style>
+
+<style>
+.ybl .phasen.fuenf{grid-template-columns:1fr}
+.ybl .phase.ph{text-align:left}
+.ybl .phase.ph h3{margin-bottom:6px}
+.ybl .phase.ph .phase-satz{font-family:var(--serif);font-style:italic;color:var(--text-mid);font-size:1.05rem;margin-bottom:12px;line-height:1.4}
+.ybl .phase.ph ul{gap:4px}
+.ybl .phase.ph li{font-size:.92rem}
+.ybl .phase.ph li span{color:var(--text-light);font-size:.8rem}
+.ybl .hoerprobe{display:grid;gap:12px;margin-top:30px}
+.ybl .probe{background:var(--weiss);border:1px solid var(--nude);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--schatten);display:grid;gap:8px}
+.ybl .probe .probe-kopf{display:flex;flex-direction:column;gap:2px}
+.ybl .probe .probe-kopf strong{font-family:var(--serif);font-weight:400;font-size:1.15rem;color:var(--text-dark)}
+.ybl .probe .probe-kopf span{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.ybl .probe audio{width:100%;height:40px}
+.ybl .cover-wrap{width:100%;max-width:420px;margin:0 auto}
+.ybl .cover-wrap img{width:100%;border-radius:18px;box-shadow:0 18px 44px rgba(0,0,0,.35);border:1px solid rgba(207,172,94,.5)}
+.ybl .cover-fuss{text-align:center!important;color:rgba(255,255,255,.7);font-size:.88rem;margin:12px 0 0!important}
+@media(min-width:760px){.ybl .phasen.fuenf{grid-template-columns:repeat(2,1fr)}.ybl .hoerprobe{grid-template-columns:repeat(2,1fr)}.ybl .probe .probe-kopf{flex-direction:row;justify-content:space-between;align-items:baseline;gap:12px}}
+@media(min-width:980px){.ybl .phasen.fuenf{grid-template-columns:repeat(3,1fr)}}
+</style>
+<div class="ybl">
+
+<div class="kopf"><div class="wrap">
+  <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="logo-link" aria-label="Your Balance"><img src="https://your-balance.at/assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance · Susanne Wachter"></a>
+  <a href="#" onclick="document.getElementById('zum-checkout').scrollIntoView({behavior:'smooth'});return false;" class="cta-primaer">Die Lieder holen</a>
+</div></div>
+
+<!-- ===== 1 · HERO ===== -->
+<section class="hero" id="start"><div class="wrap"><div class="hero-grid">
+  <div class="hero-text">
+    <span class="label">Susannes Klangwelt · 23 Lieder in fünf Phasen · sofort hören</span>
+    <h1>Wendemoment. <em>23 Lieder vom Warten zurück zu dir.</em></h1>
+    <p class="claim">Für die Nächte, in denen du auf eine Nachricht starrst. Und für den Moment, in dem du aufhörst.</p>
+    <p style="color:rgba(249,245,238,.84)">Fünf Phasen, von Warten über Sehnsucht und Wendemoment bis Wahrheit und Zurückkommen zu dir. Jedes Lied kennt die Stelle, an der du gerade stehst, und geht mit dir einen Schritt weiter. Zum Hören am Handy, zum Behalten als Download, mit einer Frage zu jedem Lied.</p>
+    <div class="hero-cta"><a href="#" onclick="document.getElementById('zum-checkout').scrollIntoView({behavior:'smooth'});return false;" class="cta-primaer">Ja, ich will die Lieder ↓</a></div>
+    <p class="mikro-trust"><strong>27&nbsp;€</strong> einmalig · sofortiger Zugang · kein Abo</p>
+    <div class="proof-strip">
+      <span><span class="haken">✦</span> 23 Lieder, fünf Phasen, eine Reihenfolge, die trägt</span>
+      <span><span class="haken">✦</span> Texte aus Susannes Praxis, keine Sprüche von der Stange</span>
+      <span><span class="haken">✦</span> Hören im Player, herunterladen, behalten</span>
+    </div>
+  </div>
+  <div class="hero-karte-wrap">
+    <div class="cover-wrap"><img src="https://your-balance.at/assets/images/wendemoment/wendemoment-cover-900.webp" alt="Wendemoment, das Album: 23 Lieder vom Warten zurück zu dir" width="900" height="900"></div>
+    <p class="cover-fuss">Unten kannst du in jede Phase hineinhören.</p>
+  </div>
+</div></div></section>
+
+<!-- ===== TRUST-STRIP ===== -->
+<section class="bg-cream-dark" style="padding:30px 0"><div class="schmal">
+  <div style="display:grid;gap:12px">
+    <p style="margin:0;color:var(--text-dark)"><span style="color:var(--gold);font-weight:700">✔</span>&nbsp; Gleich nach dem Kauf: Zugang per Mail, am Handy und am Rechner</p>
+    <p style="margin:0;color:var(--text-dark)"><span style="color:var(--gold);font-weight:700">✔</span>&nbsp; Alle Lieder als MP3 zum Herunterladen, dazu der Hörbegleiter als PDF</p>
+    <p style="margin:0;color:var(--text-dark)"><span style="color:var(--gold);font-weight:700">✔</span>&nbsp; Als Bonus 30 Instrumentals aus derselben Klangwelt</p>
+  </div>
+</div></section>
+
+<!-- ===== 2 · PROBLEM ===== -->
+<section class="bg-cream"><div class="schmal">
+  <div class="zentriert"><span class="label">Kennst du das?</span><h2>Du hast alles gelesen. Und nachts um eins liegst du trotzdem wach und schaust, ob er online ist.</h2></div>
+  <p style="margin-top:26px">Dein Kopf weiß längst, dass sein Rückzug nichts über deinen Wert sagt. Du hast es in Büchern gelesen, in Reels gehört, vielleicht in einer Sitzung verstanden. Dein Körper weiß es nicht. Der hört nachts um eins immer noch auf das Handy, und wenn es vibriert, springt das Herz, bevor du denken kannst.</p>
+  <div class="highlight-box">
+    <p><strong>Worte erreichen den Kopf. Musik erreicht den Körper.</strong> Deshalb kannst du Lieder von vor zwanzig Jahren noch mitsingen, und deshalb bleibt ein Satz, der gesungen wird, an einer Stelle hängen, an die kein gelesener Satz kommt.</p>
+  </div>
+  <p>Diese 23 Lieder sind für genau die Stelle gemacht, an der du stehst. Sie reden dir das Gefühl nicht aus. Sie gehen mit dir hindurch, vom Warten über die Sehnsucht bis zu dem Abend, an dem ein Satz hängen bleibt: Halt. Was mach ich hier?</p>
+</div></section>
+
+<!-- ===== 3 · WUNSCHBILD ===== -->
+<section class="bg-cream-dark"><div class="schmal">
+  <div class="zentriert"><span class="label">Stell dir vor</span><h2>Ein Abend mit Kopfhörern, der etwas verändert</h2></div>
+  <ul class="outcome-liste">
+    <li><strong>Du legst dich hin, Kopfhörer rein,</strong> und zum ersten Mal hört jemand das Warten mit dir aus, statt es dir auszureden.</li>
+    <li><strong>Die Sehnsucht bekommt ein Lied,</strong> und du musst sie nicht mehr wegdrücken, um durch den Abend zu kommen.</li>
+    <li><strong>Irgendwann bleibt ein Satz hängen:</strong> Halt. Was mach ich hier? Das ist der Wendemoment. Er kommt nicht als Vorwurf, sondern als Refrain.</li>
+    <li><strong>Die Wahrheit über Nähe, Distanz und dein Nervensystem</strong> kommt nicht als Vortrag, sondern als Zeile, die du am nächsten Tag summst.</li>
+    <li><strong>Und am Ende ein Lied, das heißt: Nach Hause.</strong> Nicht zu ihm. Zu dir.</li>
+  </ul>
+</div></section>
+
+<!-- ===== 4 · HÖR REIN ===== -->
+<section class="bg-cream"><div class="wrap" style="max-width:900px">
+  <div class="zentriert"><span class="label">Hör rein</span><h2>Fünf Phasen, fünf Hörproben</h2>
+  <p class="lead" style="max-width:640px;margin:16px auto 0">Je 30 Sekunden, ein Lied aus jeder Phase. Kopfhörer lohnen sich.</p></div>
+  <div class="hoerprobe"><div class="probe"><div class="probe-kopf"><strong>Online</strong><span>Phase 1 · Warten</span></div><audio controls preload="none" controlsList="nodownload"><source src="https://your-balance.at/assets/audio/wendemoment/phase-1-online.mp3" type="audio/mpeg"></audio></div><div class="probe"><div class="probe-kopf"><strong>Wellen</strong><span>Phase 2 · Sehnsucht</span></div><audio controls preload="none" controlsList="nodownload"><source src="https://your-balance.at/assets/audio/wendemoment/phase-2-wellen.mp3" type="audio/mpeg"></audio></div><div class="probe"><div class="probe-kopf"><strong>23 Uhr (Halt)</strong><span>Phase 3 · Wendemoment</span></div><audio controls preload="none" controlsList="nodownload"><source src="https://your-balance.at/assets/audio/wendemoment/phase-3-23-uhr-halt.mp3" type="audio/mpeg"></audio></div><div class="probe"><div class="probe-kopf"><strong>Nicht zu viel</strong><span>Phase 4 · Wahrheit erkennen</span></div><audio controls preload="none" controlsList="nodownload"><source src="https://your-balance.at/assets/audio/wendemoment/phase-4-nicht-zu-viel.mp3" type="audio/mpeg"></audio></div><div class="probe"><div class="probe-kopf"><strong>Nach Hause</strong><span>Phase 5 · Zurückkommen zu dir</span></div><audio controls preload="none" controlsList="nodownload"><source src="https://your-balance.at/assets/audio/wendemoment/phase-5-nach-hause.mp3" type="audio/mpeg"></audio></div></div>
+  <div class="hero-cta" style="justify-content:center;display:flex;margin-top:32px"><a href="#" onclick="document.getElementById('zum-checkout').scrollIntoView({behavior:'smooth'});return false;" class="cta-primaer">Ja, ich will die Lieder ↓</a></div>
+</div></section>
+
+<!-- ===== 5 · DIE FÜNF PHASEN ===== -->
+<section class="bg-cream-dark"><div class="wrap" style="max-width:1100px">
+  <div class="zentriert"><span class="label">Die Reise</span><h2>Fünf Phasen, 23 Lieder</h2>
+  <p class="lead" style="max-width:680px;margin:16px auto 0">Die Reihenfolge ist kein Zufall. Sie folgt dem Weg, den Susanne in ihrer Praxis seit Jahren sieht: vom Warten über die Sehnsucht zum Wendemoment, von dort zur Wahrheit und zurück zu dir.</p></div>
+  <div class="phasen fuenf"><div class="phase ph"><span class="phase-label">Phase 1</span><h3>Warten</h3><p class="phase-satz">Nachts auf eine Nachricht starren. Das Herz wird laut, wenn es still ist.</p><ul><li>Sieben nach Eins <span>· Lo-Fi R&B</span></li><li>Online <span>· Dark Electro Pop</span></li><li>Stiller Raum <span>· Ambient Dream Pop</span></li><li>Vibration <span>· Melodic Organic House</span></li></ul></div><div class="phase ph"><span class="phase-label">Phase 2</span><h3>Sehnsucht</h3><p class="phase-satz">Vermissen, ohne sich zu verstricken. Das Hin und Her, das kein Ende findet.</p><ul><li>Halb bei dir <span>· Melodic Pop R&B</span></li><li>Wellen <span>· Cinematic Pop Ballad</span></li><li>Nicht mehr deins <span>· Neo-Soul R&B</span></li><li>Push and Pull <span>· Melodic Trap Pop</span></li><li>Erinnerst du dich <span>· Indie Folk Pop</span></li></ul></div><div class="phase ph"><span class="phase-label">Phase 3</span><h3>Wendemoment</h3><p class="phase-satz">Halt. Was mach ich hier? Der Moment, in dem du das Muster siehst.</p><ul><li>23 Uhr (Halt) <span>· Cinematic Indie Pop</span></li><li>Notizbuch <span>· Singer-Songwriter Ballad</span></li><li>Nicht geantwortet <span>· Dark R&B Pop</span></li><li>Aufwachen <span>· Electronic Dream Pop</span></li><li>Das Muster <span>· Trip Hop</span></li></ul></div><div class="phase ph"><span class="phase-label">Phase 4</span><h3>Wahrheit erkennen</h3><p class="phase-satz">Sehnsucht ist kein Beweis. Was dein Nervensystem wirklich sagt.</p><ul><li>Sehnsucht ist kein Beweis <span>· Indie Pop mit Strings</span></li><li>Nicht zu viel <span>· Empowerment Pop</span></li><li>Biologie <span>· Atmospheric Pop</span></li><li>Hingabe heißt nicht warten <span>· Soul Ballad</span></li><li>Erst Körper <span>· Modern Folk Pop</span></li></ul></div><div class="phase ph"><span class="phase-label">Phase 5</span><h3>Zurückkommen zu dir</h3><p class="phase-satz">Nach Hause. Zu dir. Und von dort aus empfangen.</p><ul><li>Ich empfang <span>· Warm Folk Pop, soulful</span></li><li>Liebe ist hier <span>· Smooth R&B Neo-Soul</span></li><li>Nach Hause <span>· Cinematic Pop Anthem</span></li><li>Frequenz <span>· Organic Electronic Pop</span></li></ul></div></div>
+</div></section>
+
+<!-- ===== 6 · WAS DAZUGEHÖRT ===== -->
+<section class="bg-cream"><div class="schmal">
+  <div class="zentriert"><span class="label">Was dazugehört</span><h2>Das bekommst du mit Wendemoment</h2></div>
+  <ul class="stack-liste">
+    <li><strong>23 Lieder in fünf Phasen</strong>Als MP3 in voller Länge, zum Herunterladen und Behalten.<em>Nicht zum Nebenbeihören gemacht, sondern für den Abend, an dem du sie brauchst.</em></li>
+    <li><strong>Dein Hör-Bereich am Handy</strong>Alle Lieder in der richtigen Reihenfolge, ohne App, ohne Suchen.<em>Du drückst auf Phase 1 und gehst los.</em></li>
+    <li><strong>Der Hörbegleiter</strong>Zu jedem Lied ein Satz, wofür es da ist, und eine Frage an dich. Als PDF, ohne die Liedtexte, die bleiben im Lied.<em>Damit aus dem Hören ein Hinschauen wird, wenn du magst.</em></li>
+    <li><strong>30 Instrumentals als Bonus</strong>Aus derselben Klangwelt, ohne Worte.<em>Für die Momente, in denen du nur Klang brauchst: einschlafen, atmen, schreiben.</em></li>
+    <li><strong>Alles bleibt bei dir</strong>Kein Abo, nichts läuft ab.<em>Die Lieder gehören dir, solange du sie hören willst.</em></li>
+  </ul>
+  <div class="highlight-box"><p><strong>Offen gesagt.</strong> Die Texte sind Susannes. Die Musik und die Stimmen sind mit KI entstanden, in Stilen, die sie ausgewählt hat. Du hörst ihre Worte, in Klang gesetzt.</p></div>
+</div></section>
+
+<!-- ===== 7 · STIMMEN ===== -->
+<section class="bg-cream-dark"><div class="wrap zentriert">
+  <span class="label">Was Menschen über Susanne sagen</span><h2>Echte Stimmen</h2>
+  <div class="stimmen"><div class="stimme"><div class="sterne">★★★★★</div><p>„Ich konnte viele Antworten auf meine Fragen finden, Altes loslassen und mich selbst besser kennenlernen und allem voran Vertrauen in mich und das Leben wieder gewinnen.“</p><div class="name">Daniela · Trustpilot</div></div><div class="stimme"><div class="sterne">★★★★★</div><p>„Bei Susanne bin ich bestens aufgehoben, wenn es in meinem Leben wieder mal nicht ganz rund läuft. Die letzte Sitzung brachte Klarheit, und es durfte etwas gehen, was nicht mehr zu mir gehört.“</p><div class="name">Karin M. · Trustpilot</div></div><div class="stimme"><div class="sterne">★★★★★</div><p>„Deine Energiearbeit berührt mich jedes Mal aufs Neue. Ich fühle mich leichter, klarer und voller Energie.“</p><div class="name">Elfriede H. · Trustpilot</div></div><div class="stimme"><div class="sterne">★★★★★</div><p>„Susanne begleitet mich seit Jahren in den verschiedensten Prozessen, humorvoll, herzlich, aber auch seriös, wenn es die Lage erfordert. Von Beziehungsproblemen über berufliche Themen.“</p><div class="name">Jennifer D. · Trustpilot</div></div></div>
+  <a href="https://de.trustpilot.com/review/your-balance.at" target="_blank" rel="noopener" class="trust-badge" style="margin-top:30px"><span class="sterne">★★★★★</span><span>4,7 von 5 · 56 Bewertungen auf Trustpilot</span></a>
+</div></section>
+
+<!-- ===== 8 · FÜR WEN ===== -->
+<section class="bg-cream"><div class="schmal">
+  <div class="zentriert"><span class="label">Passt das zu dir?</span><h2>Für wen Wendemoment gemacht ist</h2></div>
+  <div class="vergleich">
+    <div class="vergleich-spalte ist">
+      <h3>Für dich, wenn …</h3>
+      <ul>
+        <li>du in einer Verbindung steckst, die dich mehr kostet als trägt, und Worte nicht mehr reichen</li>
+        <li>du beim Hören mehr spürst als beim Lesen</li>
+        <li>du etwas willst, das du nachts um eins einschalten kannst, ohne jemanden zu wecken</li>
+      </ul>
+    </div>
+    <div class="vergleich-spalte ist-nicht">
+      <h3>Nicht für dich, wenn …</h3>
+      <ul>
+        <li>du Hintergrundmusik zum Arbeiten suchst. Diese Lieder wollen gehört werden.</li>
+        <li>du erwartest, dass ein Lied ihn zurückbringt. Darum geht es hier nicht.</li>
+        <li>du eine medizinische Behandlung suchst oder gerade in einer akuten Krise steckst</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="bg-cream-dark"><div class="wrap" style="max-width:1040px">
+  <div class="susanne-grid">
+    <img class="susanne-bild" src="https://your-balance.at/assets/images/susanne-portrait-blazer.webp" alt="Susanne Wachter" loading="lazy">
+    <div class="susanne-text">
+      <span class="label">Wer dich begleitet</span>
+      <h2>Warum ich Lieder gemacht habe</h2>
+      <p style="margin-top:16px">Ich bin Susanne Wachter. In meiner Praxis sitze ich seit Jahren Frauen gegenüber, die alles über ihre Verbindung wissen und nachts trotzdem nicht loslassen können. Irgendwann habe ich angefangen, die Sätze aus den Sitzungen zu Liedern zu machen. Was gesungen wird, bleibt, wo Erklärungen längst weg sind.</p>
+      <p>Die Texte stammen aus meiner Arbeit. Die Musik ist mit KI entstanden, in Stilen, die ich ausgewählt habe, von Lo-Fi R&amp;B bis Cinematic Pop. Ich sage das offen, weil ich will, dass du weißt, was du hörst: meine Worte, in Klang gesetzt. Ich arbeite mit Akasha-Readings, ThetaHealing® und Kinesiologie, online und in meiner Praxis.</p>
+      <ul class="quali">
+        <li>Dipl. Energetikerin und Dipl. Kinesiologin</li>
+        <li>ThetaHealing® Practitioner</li>
+        <li>Akasha-Readings, online und in der Praxis in Nüziders, Vorarlberg</li>
+      </ul>
+      <p style="font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--text-dark)">Susanne Wachter · Your Balance</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ===== 9 · PREIS ===== -->
+<section class="bg-cream"><div class="schmal">
+  <div class="zentriert"><span class="label">Das bekommst du</span><h2>Wendemoment</h2></div>
+  <ul class="stack-liste">
+    <li><strong>23 Lieder in fünf Phasen</strong>MP3, zum Herunterladen und Behalten</li>
+    <li><strong>Dein Hör-Bereich</strong>am Handy und am Rechner, in der richtigen Reihenfolge</li>
+    <li><strong>Der Hörbegleiter</strong>zu jedem Lied ein Satz und eine Frage, als PDF</li>
+    <li><strong>30 Instrumentals</strong>als Bonus, ohne Worte</li>
+  </ul>
+  <div class="preis-box">
+    <span class="label">Deine Investition</span>
+    <p class="kontext">Einmal zahlen, behalten</p>
+    <div class="preis-zahl">27&nbsp;€</div>
+    <p class="preis-info">einmalig · sofortiger Zugang</p>
+    <p class="preis-anker">Eine einzelne Meditation kostet bei mir 11&nbsp;€. Hier bekommst du 23 Lieder, den Hörbegleiter und 30 Instrumentals, für weniger als drei davon.</p>
+    <div class="hero-cta" style="justify-content:center;display:flex"><a href="#" onclick="document.getElementById('zum-checkout').scrollIntoView({behavior:'smooth'});return false;" class="cta-primaer">Ja, ich will die Lieder ↓</a></div>
+    <p class="mikro-trust" style="color:var(--gold-pale)">Kein Abo. Nichts läuft ab. Die Lieder bleiben bei dir.</p>
+  </div>
+</div></section>
+
+<!-- ===== 10 · FAQ ===== -->
+<section class="bg-cream-dark"><div class="schmal">
+  <div class="zentriert"><span class="label">Noch Fragen?</span><h2>Häufige Fragen</h2></div>
+  <div class="faq-liste"><div class="faq-item"><button type="button" class="faq-frage" aria-expanded="false" onclick="var i=this.parentElement,a=i.querySelector('.faq-antwort'),o=i.classList.contains('offen'),l=i.parentElement.querySelectorAll('.faq-item.offen');for(var k=0;k<l.length;k++){l[k].classList.remove('offen');l[k].querySelector('.faq-antwort').style.maxHeight=null;l[k].querySelector('.faq-frage').setAttribute('aria-expanded','false');}if(!o){i.classList.add('offen');a.style.maxHeight=a.scrollHeight+'px';this.setAttribute('aria-expanded','true');}return false;">Singt Susanne selbst?</button><div class="faq-antwort"><div class="faq-antwort-inner"><p>Nein. Die Texte sind Susannes, aus ihrer Praxis und ihrer Welt. Die Musik und die Stimmen sind mit KI entstanden, in Stilen, die sie ausgesucht hat, von Lo-Fi R&amp;B bis Cinematic Pop. Das steht hier offen, weil du wissen sollst, was du hörst: ihre Worte, in Klang gesetzt.</p></div></div></div><div class="faq-item"><button type="button" class="faq-frage" aria-expanded="false" onclick="var i=this.parentElement,a=i.querySelector('.faq-antwort'),o=i.classList.contains('offen'),l=i.parentElement.querySelectorAll('.faq-item.offen');for(var k=0;k<l.length;k++){l[k].classList.remove('offen');l[k].querySelector('.faq-antwort').style.maxHeight=null;l[k].querySelector('.faq-frage').setAttribute('aria-expanded','false');}if(!o){i.classList.add('offen');a.style.maxHeight=a.scrollHeight+'px';this.setAttribute('aria-expanded','true');}return false;">Wie bekomme ich die Lieder?</button><div class="faq-antwort"><div class="faq-antwort-inner"><p>Gleich nach dem Kauf kommt eine Mail mit deinem Zugang. Dort hörst du alle Lieder im Player, am Handy und am Rechner, und lädst sie als MP3 herunter. Dazu der Hörbegleiter als PDF.</p></div></div></div><div class="faq-item"><button type="button" class="faq-frage" aria-expanded="false" onclick="var i=this.parentElement,a=i.querySelector('.faq-antwort'),o=i.classList.contains('offen'),l=i.parentElement.querySelectorAll('.faq-item.offen');for(var k=0;k<l.length;k++){l[k].classList.remove('offen');l[k].querySelector('.faq-antwort').style.maxHeight=null;l[k].querySelector('.faq-frage').setAttribute('aria-expanded','false');}if(!o){i.classList.add('offen');a.style.maxHeight=a.scrollHeight+'px';this.setAttribute('aria-expanded','true');}return false;">Kann ich die Lieder aufs Handy laden?</button><div class="faq-antwort"><div class="faq-antwort-inner"><p>Ja. Du bekommst jedes Lied als MP3 und kannst es in jede Musik-App legen, auch offline.</p></div></div></div><div class="faq-item"><button type="button" class="faq-frage" aria-expanded="false" onclick="var i=this.parentElement,a=i.querySelector('.faq-antwort'),o=i.classList.contains('offen'),l=i.parentElement.querySelectorAll('.faq-item.offen');for(var k=0;k<l.length;k++){l[k].classList.remove('offen');l[k].querySelector('.faq-antwort').style.maxHeight=null;l[k].querySelector('.faq-frage').setAttribute('aria-expanded','false');}if(!o){i.classList.add('offen');a.style.maxHeight=a.scrollHeight+'px';this.setAttribute('aria-expanded','true');}return false;">Muss ich die Reihenfolge einhalten?</button><div class="faq-antwort"><div class="faq-antwort-inner"><p>Beim ersten Mal lohnt sie sich: Die fünf Phasen bauen aufeinander auf, vom Warten bis zum Zurückkommen. Danach hörst du, was der Abend braucht.</p></div></div></div><div class="faq-item"><button type="button" class="faq-frage" aria-expanded="false" onclick="var i=this.parentElement,a=i.querySelector('.faq-antwort'),o=i.classList.contains('offen'),l=i.parentElement.querySelectorAll('.faq-item.offen');for(var k=0;k<l.length;k++){l[k].classList.remove('offen');l[k].querySelector('.faq-antwort').style.maxHeight=null;l[k].querySelector('.faq-frage').setAttribute('aria-expanded','false');}if(!o){i.classList.add('offen');a.style.maxHeight=a.scrollHeight+'px';this.setAttribute('aria-expanded','true');}return false;">Gibt es die Lieder auch auf Spotify?</button><div class="faq-antwort"><div class="faq-antwort-inner"><p>Einzelne Lieder erscheinen nach und nach als Singles. Das ganze Album mit allen 23 Liedern, dem Hörbegleiter und den Instrumentals gibt es nur hier.</p></div></div></div><div class="faq-item"><button type="button" class="faq-frage" aria-expanded="false" onclick="var i=this.parentElement,a=i.querySelector('.faq-antwort'),o=i.classList.contains('offen'),l=i.parentElement.querySelectorAll('.faq-item.offen');for(var k=0;k<l.length;k++){l[k].classList.remove('offen');l[k].querySelector('.faq-antwort').style.maxHeight=null;l[k].querySelector('.faq-frage').setAttribute('aria-expanded','false');}if(!o){i.classList.add('offen');a.style.maxHeight=a.scrollHeight+'px';this.setAttribute('aria-expanded','true');}return false;">Ist das auch etwas für Männer?</button><div class="faq-antwort"><div class="faq-antwort-inner"><p>Die Lieder sind aus der Sicht einer Frau geschrieben, die in einer Verbindung festhängt. Wer sich in dem Thema wiederfindet, ist willkommen.</p></div></div></div><div class="faq-item"><button type="button" class="faq-frage" aria-expanded="false" onclick="var i=this.parentElement,a=i.querySelector('.faq-antwort'),o=i.classList.contains('offen'),l=i.parentElement.querySelectorAll('.faq-item.offen');for(var k=0;k<l.length;k++){l[k].classList.remove('offen');l[k].querySelector('.faq-antwort').style.maxHeight=null;l[k].querySelector('.faq-frage').setAttribute('aria-expanded','false');}if(!o){i.classList.add('offen');a.style.maxHeight=a.scrollHeight+'px';this.setAttribute('aria-expanded','true');}return false;">Darf ich die Lieder in eigenen Videos verwenden?</button><div class="faq-antwort"><div class="faq-antwort-inner"><p>Für dich privat ja, so oft du willst. Für Veröffentlichungen, Reels, Kurse oder Werbung nicht. Die Rechte bleiben bei Your Balance.</p></div></div></div><div class="faq-item"><button type="button" class="faq-frage" aria-expanded="false" onclick="var i=this.parentElement,a=i.querySelector('.faq-antwort'),o=i.classList.contains('offen'),l=i.parentElement.querySelectorAll('.faq-item.offen');for(var k=0;k<l.length;k++){l[k].classList.remove('offen');l[k].querySelector('.faq-antwort').style.maxHeight=null;l[k].querySelector('.faq-frage').setAttribute('aria-expanded','false');}if(!o){i.classList.add('offen');a.style.maxHeight=a.scrollHeight+'px';this.setAttribute('aria-expanded','true');}return false;">Was, wenn ich nicht alles gleich höre?</button><div class="faq-antwort"><div class="faq-antwort-inner"><p>Nichts. Die Lieder bleiben bei dir, als Download und im Player. Es gibt kein Abo und nichts, was abläuft.</p></div></div></div></div>
+</div></section>
+
+<!-- ===== BEVOR DU GEHST ===== -->
+<section style="background:var(--dark)"><div class="schmal zentriert">
+  <span class="label">Bevor du gehst</span>
+  <p class="kern-satz" style="color:var(--weiss);margin-top:0">Die Nacht kommt so oder so. Die Frage ist nur, was du einschaltest, wenn sie da ist.</p>
+  <p style="max-width:600px;margin:0 auto;color:rgba(255,255,255,.78)">23 Lieder, die mit dir warten, sich sehnen, aufwachen und zurückkommen. Und die danach bleiben.</p>
+</div></section>
+
+<!-- ===== 11 · KAUFBEREICH + PS ===== -->
+<section class="kaufbereich"><div class="schmal">
+  <span class="label">Wendemoment</span>
+  <p class="satz-gross">23 Lieder vom Warten zurück zu dir</p>
+  <div class="kauf-karte">
+    <ul class="kauf-recap">
+      <li>23 Lieder in fünf Phasen, als MP3 zum Behalten</li>
+      <li>Hör-Bereich am Handy und der Hörbegleiter als PDF</li>
+      <li>30 Instrumentals als Bonus</li>
+    </ul>
+    <span class="label">Einmalig</span>
+    <div class="preis-zahl">27&nbsp;€</div>
+    <p class="preis-info">sofortiger Zugang · kein Abo</p>
+    <p class="preis-anker">Download zum Behalten, am Handy und am Rechner</p>
+    <div class="hero-cta" style="justify-content:center;display:flex"><a href="#" onclick="document.getElementById('zum-checkout').scrollIntoView({behavior:'smooth'});return false;" class="cta-primaer">Ja, ich will die Lieder ↓</a></div>
+  </div>
+  <div class="ps-box">
+    <p><strong>P.S.</strong> Du bist unsicher, ob die Lieder zu dir passen? Hör oben in die fünf Proben hinein. Und wenn du eine Frage hast, schreib mir an <a href="mailto:susanne@your-balance.at" style="white-space:nowrap">susanne@your-balance.at</a>. Ich lese jede Nachricht selbst.</p>
+  </div>
+</div></section>
+
+<div class="scroll-hinweis"><p>Hol dir unten deine 23 Lieder ↓</p></div>
+<div id="zum-checkout"></div>
+
+</div>
+<!-- ENDE -->
