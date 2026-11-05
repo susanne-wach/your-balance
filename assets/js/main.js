@@ -265,7 +265,22 @@ document.addEventListener('DOMContentLoaded', () => {
           ? 'display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:rgba(28,18,8,0.97);padding:32px 24px;gap:20px;z-index:999;'
           : '';
       }
-      if (navCta) navCta.style.display = isOpen ? 'block' : '';
+      // Der Erstgespräch-Knopf steht im offenen Menü als letzter Punkt, nicht mehr über dem Logo (5.11.2026)
+      if (navCta && navLinks) {
+        const alt = navLinks.querySelector('.nav-mobile-cta');
+        if (isOpen && !alt) {
+          const li = document.createElement('li');
+          li.className = 'nav-mobile-cta';
+          const a = navCta.cloneNode(true);
+          a.className = 'btn btn-gold btn-sm';
+          a.removeAttribute('data-magnetic');
+          a.style.cssText = 'display:inline-flex;margin-top:8px;';
+          li.appendChild(a);
+          navLinks.appendChild(li);
+        } else if (!isOpen && alt) {
+          alt.remove();
+        }
+      }
     };
     burger.addEventListener('click', () => setMenuOpen(!burger.classList.contains('open')));
     document.addEventListener('keydown', (e) => {

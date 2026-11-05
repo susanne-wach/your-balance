@@ -37,6 +37,7 @@
 </style>
 </head>
 <body>
+<main id="main">
 <div id="gate"><h1>Serien-Spickzettel</h1><p class="unter">Nur für Susanne 💛</p>
 <input id="code" type="tel" placeholder="Code" autocomplete="off"><button onclick="pruef()">Öffnen</button></div>
 <h1>Der Weg zurück zu dir</h1>
@@ -749,5 +750,7 @@ var heute=new Date(),iso=heute.getFullYear()+"-"+String(heute.getMonth()+1).padS
 var el=document.querySelector('.ep[data-datum="'+iso+'"]');
 if(el){el.classList.add("heute");el.open=true;el.scrollIntoView();}
 </script>
+</main>
+
 </body>
 </html>

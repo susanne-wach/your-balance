@@ -1462,6 +1462,14 @@ main:focus { outline: none; }
   .newsletter-input, .form-input { font-size: 1rem; }
 }
 
+/* Umbruch (Runde 3, 5.11.2026): Überschriften ausgewogen, Absätze ohne einzelnes Wort in der letzten Zeile,
+   erzwungene Zeilenumbrüche in Überschriften gelten nur am großen Bildschirm */
+h1, h2, h3, .h1, .h2, .h3, .newsletter-title { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+@media (max-width: 600px) {
+  h1 br, h2 br, h3 br, .h1 br, .h2 br, .h3 br { display: none; }
+}
+
 /* Reduzierte Bewegung (Systemeinstellung): keine Animationen, Inhalte sofort sichtbar */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
