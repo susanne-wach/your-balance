@@ -85,11 +85,11 @@
     }
     .pb-hero__label {
       font-family: var(--sans);
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 3px;
+      letter-spacing: 0.27em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--gold-text);
       display: block;
       margin-bottom: 24px;
     }
@@ -128,15 +128,15 @@
     .pb-hero__meta {
       margin-top: 16px;
       font-family: var(--sans);
-      font-size: 10px;
-      letter-spacing: 3px;
+      font-size: 11px;
+      letter-spacing: 0.27em;
       text-transform: uppercase;
-      color: rgba(91,42,74,0.4);
+      color: var(--text-mid);
     }
 
     /* Gold Band */
     .pb-gold-band {
-      background: linear-gradient(135deg, #9A7A10 0%, #C9A224 30%, #E8CE7A 60%, #C9A224 80%, #9A7A10 100%);
+      background: linear-gradient(135deg, #C9A224 0%, #E8CE7A 50%, #C9A224 100%); /* Variante A, 5.11.2026 */
       padding: 72px 0;
       text-align: center;
       position: relative;
@@ -150,7 +150,7 @@
       transform: translateX(-50%);
       font-family: var(--serif);
       font-size: 20rem;
-      color: rgba(255,255,255,0.06);
+      color: rgba(74,33,57,0.05);
       line-height: 1;
       pointer-events: none;
     }
@@ -159,7 +159,7 @@
       font-size: clamp(22px, 3vw, 36px);
       font-weight: 300;
       font-style: italic;
-      color: var(--white);
+      color: var(--text-dark);
       max-width: 800px;
       margin: 0 auto;
       line-height: 1.5;
@@ -169,11 +169,12 @@
     }
     .pb-gold-band__author {
       font-family: var(--sans);
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 3px;
+      letter-spacing: 0.27em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+      color: var(--text-dark);
+      opacity: 0.85;
       margin-top: 24px;
       position: relative;
       z-index: 1;
@@ -193,7 +194,7 @@
     .method-card-bottom { padding: 24px 36px 32px; border-top: 1px solid rgba(207,172,94,0.1); }
     .method-num { font-family: var(--serif); font-size: 80px; font-weight: 300; color: rgba(207,172,94,0.15); line-height: 0.8; margin-bottom: 20px; }
     .for-who { background: var(--cream); border-radius: 12px; padding: 24px; margin-top: 16px; }
-    .for-who-title { font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .for-who-title { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 12px; }
 
     .symptom-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .symptom-item { display: flex; align-items: flex-start; gap: 14px; padding: 20px; background: var(--white); border-radius: 12px; border: 1px solid rgba(207,172,94,0.1); }
@@ -211,6 +212,7 @@
       .symptom-grid { grid-template-columns: 1fr; }
       .rahmen-grid { grid-template-columns: 1fr; gap: 40px; }
       .pb-hero__content { padding-block: 7rem 4rem; }
+      .pb-gold-band__quote { font-weight: 400; } /* Light-Schnitt erst ab 28 px */
     }
     @media (hover: none) {
       body { cursor: auto !important; }
@@ -242,9 +244,9 @@
 
     /* Nav – dunkle Schrift für hellen Hero */
     .nav .nav-link { color: var(--text-dark); }
-    .nav .nav-link.active { color: var(--gold); }
+    .nav .nav-link.active { color: var(--gold-text); }
     @media (hover: hover) {
-      .nav .nav-link:hover { color: var(--gold); }
+      .nav .nav-link:hover { color: var(--gold-text); }
     }
 
   </style>
@@ -388,7 +390,7 @@
     </p>
     <a href="https://calendly.com/your-balance/info-gesprach-telefon" target="_blank" rel="noopener" class="btn btn-gold btn-arrow btn-lg" data-magnetic>Erstgespräch – ohne Druck</a>
     <p class="pb-hero__meta">ruhig · persönlich · online oder vor Ort</p>
-    <p style="font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:18px 0 0;">Innere Anspannung lösen · online weltweit &amp; vor Ort in Vorarlberg</p>
+    <p style="font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-text);margin:18px 0 0;">Innere Anspannung lösen · online weltweit &amp; vor Ort in Vorarlberg</p>
   </div>
 </section>
 
@@ -510,8 +512,8 @@
         <div class="method-card-top">
           <div class="method-num">01</div>
           <h3 class="h4" style="margin-bottom:6px;">ThetaHealing®</h3>
-          <p style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 12px;">Innere Anspannung an der Wurzel lösen</p>
-          <p class="body-sm" style="color:var(--gold);margin-bottom:16px;">Arbeit mit inneren Mustern & deren Auswirkungen · online</p>
+          <p style="font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-text);margin:0 0 12px;">Innere Anspannung an der Wurzel lösen</p>
+          <p class="body-sm" style="color:var(--gold-text);margin-bottom:16px;">Arbeit mit inneren Mustern & deren Auswirkungen · online</p>
           <p class="body-sm" style="margin-bottom:20px;">
             Du merkst: Du reagierst immer wieder gleich – obwohl du längst verstanden hast, warum. Und obwohl du es verstehst, ändert sich nichts. ThetaHealing® arbeitet genau dort – tiefer als der Verstand reicht. Ohne Analyse. Ohne Graben. In einem Zustand tiefer Stille, in dem sich Festgefahrenes sanft auflösen darf.
           </p>
@@ -535,7 +537,7 @@
         <div class="method-card-top">
           <div class="method-num" style="color:rgba(207,172,94,0.2);">02</div>
           <h3 class="h4" style="margin-bottom:6px;color:var(--white);">Akasha Reading</h3>
-          <p style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-pale);margin:0 0 12px;">Klarheit auf Seelenebene</p>
+          <p style="font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-pale);margin:0 0 12px;">Klarheit auf Seelenebene</p>
           <p class="body-sm" style="color:var(--gold-pale);margin-bottom:16px;">Klarheit, Einordnung & innere Ausrichtung · online</p>
           <p class="body-sm" style="color:rgba(255,255,255,0.6);margin-bottom:20px;">
             Manche Themen tauchen immer wieder auf – egal wie viel du darüber nachgedacht hast. Du fragst dich: Warum komme ich immer wieder an diesen Punkt? Ein Akasha Reading macht sichtbar, was unter der Oberfläche steuert. Nicht als Vorhersage. Sondern als Klarheit, die etwas in dir aufatmen lässt.
@@ -550,7 +552,7 @@
           </div>
         </div>
         <div class="method-card-bottom" style="border-color:rgba(255,255,255,0.08);">
-          <p class="body-sm" style="font-style:italic;color:rgba(255,255,255,0.4);margin-bottom:16px;">„Ich weiß jetzt, warum ich immer wieder an diesem Punkt stehe." Und das allein verändert schon etwas.</p>
+          <p class="body-sm" style="font-style:italic;color:rgba(255,255,255,0.65);margin-bottom:16px;">„Ich weiß jetzt, warum ich immer wieder an diesem Punkt stehe." Und das allein verändert schon etwas.</p>
           <a href="https://calendly.com/your-balance/akasha_reading" target="_blank" rel="noopener" class="btn btn-ghost btn-arrow btn-sm" data-magnetic>Termin buchen</a>
         </div>
       </div>
@@ -560,8 +562,8 @@
         <div class="method-card-top">
           <div class="method-num">03</div>
           <h3 class="h4" style="margin-bottom:6px;">Bioresonanz</h3>
-          <p style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 12px;">Körperliche Anspannung direkt lösen</p>
-          <p class="body-sm" style="color:var(--gold);margin-bottom:16px;">Direkte körperliche & energetische Regulation · vor Ort</p>
+          <p style="font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-text);margin:0 0 12px;">Körperliche Anspannung direkt lösen</p>
+          <p class="body-sm" style="color:var(--gold-text);margin-bottom:16px;">Direkte körperliche & energetische Regulation · vor Ort</p>
           <p class="body-sm" style="margin-bottom:20px;">
             Du warst vielleicht schon bei Ärzten. Und trotzdem bleibt dieses Gefühl: Da stimmt etwas nicht. Kein Befund. Und trotzdem diese Schwere, diese Erschöpfung, dieses Ziehen. Bioresonanz macht sichtbar, was dein Körper schon lange zeigt – und gibt deinem System den Impuls, selbst wieder in seine natürliche Balance zu finden.
           </p>
@@ -614,7 +616,7 @@
           Dein System zeigt, was gerade da ist. Ich begleite dich von dort.
         </p>
         <div class="frame-box" data-reveal data-delay="4" style="margin-bottom:36px;">
-          <p style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 14px;">Der Rahmen deiner Begleitung</p>
+          <p style="font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-text);margin:0 0 14px;">Der Rahmen deiner Begleitung</p>
           <ul class="spark-list">
             <li>Alle Begleitungen sind online möglich – innere Anspannung lösen funktioniert digital genauso wie vor Ort</li>
             <li>Bioresonanz vor Ort in meiner Praxis in Vorarlberg</li>
@@ -675,14 +677,14 @@
     <p class="body-lg" data-reveal data-delay="3" style="color:rgba(255,255,255,0.6);max-width:520px;margin:0 auto 12px;">
       Dann ist das oft genau der Moment, an dem innere Anspannung beginnt, sich zu lösen.
     </p>
-    <p class="body" data-reveal data-delay="3" style="font-family:var(--serif);font-style:italic;font-size:18px;color:rgba(255,255,255,0.45);max-width:480px;margin:0 auto 48px;line-height:1.7;">
+    <p class="body" data-reveal data-delay="3" style="font-family:var(--serif);font-style:italic;font-size:18px;color:rgba(255,255,255,0.7);max-width:480px;margin:0 auto 48px;line-height:1.7;">
       Dein System reagiert.<br />
       Das ist genug.
     </p>
     <a href="https://calendly.com/your-balance/thetahealing-persoenliche-begleitung" target="_blank" rel="noopener" class="btn btn-gold btn-arrow btn-lg" data-reveal data-delay="4" data-magnetic>
       Termin buchen
     </a>
-    <p style="margin-top:20px;font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.25);" data-reveal data-delay="5">
+    <p style="margin-top:20px;font-family:var(--sans);font-size:11px;letter-spacing:0.27em;text-transform:uppercase;color:rgba(255,255,255,0.6);" data-reveal data-delay="5">
       ruhig · persönlich · online oder vor Ort
     </p>
   </div>

@@ -95,7 +95,7 @@ body {
 .hero-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; padding: 0 32px; }
 .hero-logo { display: block; height: 48px; width: auto; margin: 0 auto 44px; opacity: 0.9; }
 .gold-line { width: 36px; height: 1.5px; background: linear-gradient(90deg, var(--gold), var(--gold-pale)); border-radius: 2px; margin: 0 auto 28px; }
-.hero-preheader { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 22px; }
+.hero-preheader { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: var(--gold-text); display: block; margin-bottom: 22px; }
 .hero h1 { font-family: var(--serif); font-size: clamp(32px, 4.5vw, 54px); font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 14px; }
 .hero h1 em { font-style: italic; color: var(--gold); }
 .hero-subline { font-family: var(--serif); font-size: clamp(17px, 2vw, 21px); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.6); margin-bottom: 32px; line-height: 1.5; }
@@ -106,7 +106,7 @@ body {
 .section { padding: 72px 0; }
 .section--alt { background: var(--cream-dark); }
 .inner { max-width: 640px; margin: 0 auto; padding: 0 32px; }
-.section-label { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 20px; }
+.section-label { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.5em; text-transform: uppercase; color: var(--gold-text); display: block; margin-bottom: 20px; }
 .section-ornament { display: flex; align-items: center; gap: 16px; max-width: 160px; margin: 52px auto 0; }
 .orn-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(207,172,94,0.3), transparent); }
 .orn-dot { color: var(--gold-pale); font-size: 6px; letter-spacing: 5px; }
@@ -136,7 +136,7 @@ body {
 .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 0 24px; position: relative; padding-bottom: 32px; }
 .timeline-item:last-child { padding-bottom: 0; }
 .timeline-item:not(:last-child)::after { content: ''; position: absolute; left: 131px; top: 36px; bottom: 0; width: 1px; background: linear-gradient(to bottom, rgba(207,172,94,0.4), rgba(207,172,94,0.05)); }
-.timeline-time { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); padding-top: 2px; text-align: right; line-height: 1.5; }
+.timeline-time { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-text); padding-top: 2px; text-align: right; line-height: 1.5; }
 .timeline-dot { width: 10px; height: 10px; background: var(--gold); border-radius: 50%; position: absolute; left: 127px; top: 5px; box-shadow: 0 0 0 3px rgba(207,172,94,0.15); }
 .timeline-content { font-family: var(--sans); font-size: 14px; color: var(--text-mid); line-height: 1.85; }
 .timeline-content strong { color: var(--text); font-weight: 600; }
@@ -162,7 +162,7 @@ body {
   transition: transform .15s ease, box-shadow .15s ease;
 }
 .cta-primaer:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(154,122,16,.42); }
-.gespraech-hinweis { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 16px; letter-spacing: .3px; }
+.gespraech-hinweis { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 16px; letter-spacing: .3px; }
 
 /* ── PRAKTISCHES ── */
 .praktisches-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
@@ -183,10 +183,10 @@ body {
 /* ── FOOTER ── */
 .footer { background: var(--dark-deeper); padding: 28px 0 24px; text-align: center; margin-top: auto; }
 .footer-inner { max-width: 640px; margin: 0 auto; padding: 0 32px; }
-.footer-info { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.8; }
+.footer-info { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.8; }
 .footer-info a { color: var(--gold-pale); text-decoration: none; }
 .footer-info a:hover { color: var(--gold); }
-.footer-copy { font-family: var(--sans); font-size: 11px; color: rgba(255,255,255,0.2); margin-top: 8px; }
+.footer-copy { font-family: var(--sans); font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 8px; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {

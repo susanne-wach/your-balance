@@ -23,7 +23,9 @@
   --text:         #5B2A4A;
   --text-dark:    #4A2139;
   --text-mid:     #7E5E72;
-  --text-light:   #A98FA0;
+  --text-light:   #846078;  /* seit 5.11.2026 dunkler: 4,5:1 auf Creme, Creme-dunkel und Weiß (vorher #A98FA0) */
+  --gold-text:    #846625;  /* Gold für kleine Schrift auf hellem Grund (5.11.2026) */
+  --gold-em:      #A3833D;  /* Gold für große kursive Wörter in Überschriften (5.11.2026) */
   --white:        #FFFFFF;
 
   /* Typography */
@@ -163,13 +165,13 @@ button { cursor: pointer; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px; /* 5.11.2026: 11 px Schrift mit engerer Sperrung, Breite wie das alte 10-px-Menü */
 }
 .nav-link {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 1.8px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--white);
   position: relative;
@@ -191,20 +193,22 @@ button { cursor: pointer; }
 @media (hover: hover) {
   .nav-link:hover::after { width: 100%; }
   .nav-link:hover { color: var(--gold); }
-  .nav.scrolled .nav-link:hover { color: var(--gold); }
+  .nav.scrolled .nav-link:hover { color: var(--gold-text); }
 }
+/* Aktiver Menüpunkt auf hellem Balken: dunkles Gold (5.11.2026), schlägt die Seiten-Regel .nav .nav-link.active */
+.nav.scrolled .nav-link.active { color: var(--gold-text); }
 
 .nav-cta {
   padding: 11px 22px;
   border-radius: 50px;
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.15em;
   white-space: nowrap;
   text-transform: uppercase;
   background: linear-gradient(135deg, var(--gold), #B89243);
-  color: var(--white);
+  color: var(--text-dark);
   transition: all var(--t-fast) var(--ease);
   border: none;
   box-shadow: 0 4px 20px rgba(207, 172, 94, 0.35);
@@ -348,11 +352,11 @@ button { cursor: pointer; }
   align-items: center;
   gap: 16px;
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 0.27em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   margin-top: 32px;
   opacity: 0;
   animation: fadeUp 1s var(--ease-out) 1.4s forwards;
@@ -373,11 +377,11 @@ button { cursor: pointer; }
 }
 .hero-scroll-text {
   font-family: var(--sans);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 4px;
+  letter-spacing: 0.36em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   writing-mode: vertical-rl;
 }
 .hero-scroll-line {
@@ -429,7 +433,7 @@ button { cursor: pointer; }
 
 .btn-gold {
   background: linear-gradient(135deg, var(--gold), #B89243);
-  color: var(--white);
+  color: var(--text-dark); /* seit 5.11.2026 Aubergine statt Weiß: 6,2:1 statt 2,2:1 */
   box-shadow: 0 6px 28px rgba(207, 172, 94, 0.4);
 }
 @media (hover: hover) {
@@ -442,7 +446,7 @@ button { cursor: pointer; }
   border: 1.5px solid var(--gold);
 }
 @media (hover: hover) {
-  .btn-outline:hover { background: var(--gold); color: var(--white); }
+  .btn-outline:hover { background: var(--gold); color: var(--text-dark); }
 }
 
 .btn-light {
@@ -465,7 +469,7 @@ button { cursor: pointer; }
   .btn-ghost:hover { background: rgba(255,255,255,0.16); }
 }
 
-.btn-sm { padding: 13px 32px; font-size: 10px; }
+.btn-sm { padding: 13px 32px; font-size: 11px; }
 .btn-lg { padding: 22px 60px; font-size: 12px; }
 
 .btn-arrow::after {
@@ -504,11 +508,11 @@ button { cursor: pointer; }
    ---------------------------------------------------------------- */
 .eyebrow {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 4px;
+  letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   display: block;
   margin-bottom: 16px;
 }
@@ -562,7 +566,9 @@ button { cursor: pointer; }
   font-weight: 400;
 }
 
-em, .italic { font-style: italic; color: var(--gold); }
+em, .italic { font-style: italic; color: var(--gold-em); }
+/* Auf dunklem Grund bleibt das helle Gold (5.11.2026) */
+.hero em, .page-hero em, .section-dark em, .newsletter-section em, .footer em { color: var(--gold); }
 
 .body-lg { font-size: 18px; line-height: 1.85; color: var(--text-mid); }
 .body { font-size: 16px; line-height: 1.85; color: var(--text-mid); }
@@ -573,7 +579,7 @@ em, .italic { font-style: italic; color: var(--gold); }
   font-size: 36px;
   font-style: italic;
   font-weight: 300;
-  color: var(--gold);
+  color: var(--gold-em);
   line-height: 1;
 }
 
@@ -639,13 +645,13 @@ em, .italic { font-style: italic; color: var(--gold); }
 }
 .marquee-text {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 0.27em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
+  color: var(--text-dark);
 }
-.marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.4); flex-shrink: 0; }
+.marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(74,33,57,0.35); flex-shrink: 0; }
 
 /* ----------------------------------------------------------------
    12. TWO-COLUMN GRID
@@ -697,7 +703,7 @@ em, .italic { font-style: italic; color: var(--gold); }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color: var(--text-dark);
   text-align: center;
   box-shadow: 0 8px 30px rgba(207,172,94,0.4);
   z-index: 2;
@@ -714,7 +720,7 @@ em, .italic { font-style: italic; color: var(--gold); }
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
+  color: rgba(74,33,57,0.85);
   line-height: 1.3;
   text-align: center;
   margin-top: 4px;
@@ -765,11 +771,11 @@ em, .italic { font-style: italic; color: var(--gold); }
 }
 .quote-author {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 0.27em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   position: relative;
   z-index: 1;
 }
@@ -926,7 +932,7 @@ em, .italic { font-style: italic; color: var(--gold); }
   background: linear-gradient(135deg, var(--gold), var(--gold-pale));
   display: flex; align-items: center; justify-content: center;
   font-size: 11px;
-  color: var(--white);
+  color: var(--text-dark);
   flex-shrink: 0;
   margin-top: 1px;
 }
@@ -938,9 +944,9 @@ em, .italic { font-style: italic; color: var(--gold); }
 .form-label {
   display: block;
   font-family: var(--sans);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 0.23em;
   text-transform: uppercase;
   color: var(--text-light);
   margin-bottom: 8px;
@@ -989,9 +995,9 @@ textarea.form-input { resize: vertical; min-height: 140px; }
 }
 .newsletter-label {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 0.27em;
   text-transform: uppercase;
   color: var(--gold);
   display: block;
@@ -1009,7 +1015,7 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   font-family: var(--sans);
   font-size: 12px;
   line-height: 1.7;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.65);
 }
 .newsletter-form-wrap { }
 .newsletter-fields {
@@ -1031,7 +1037,7 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   box-sizing: border-box;
   width: 100%;
 }
-.newsletter-input::placeholder { color: rgba(255,255,255,0.35); }
+.newsletter-input::placeholder { color: rgba(255,255,255,0.6); }
 .newsletter-input:focus { border-color: rgba(207,172,94,0.5); }
 .newsletter-btn {
   white-space: nowrap;
@@ -1057,7 +1063,7 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   font-family: var(--sans);
   font-size: 11px;
   line-height: 1.5;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.65);
 }
 .newsletter-consent span a {
   color: var(--gold);
@@ -1088,7 +1094,7 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   font-family: var(--sans);
   font-size: 12px;
   line-height: 1.6;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.65);
 }
 @media (max-width: 900px) {
   .newsletter-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -1112,20 +1118,20 @@ textarea.form-input { resize: vertical; min-height: 140px; }
 .footer-logo img { height: 60px; width: auto; margin-bottom: 16px; }
 .footer-tagline {
   font-family: var(--sans);
-  font-size: 10px;
-  letter-spacing: 3px;
+  font-size: 11px;
+  letter-spacing: 0.27em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.6);
   margin-bottom: 16px;
 }
-.footer-desc { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.8; max-width: 280px; }
+.footer-desc { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 280px; }
 .footer-social { display: flex; gap: 10px; margin-top: 24px; }
 .footer-social-link {
   width: 38px; height: 38px;
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.12);
   display: flex; align-items: center; justify-content: center;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   font-size: 14px;
   transition: all var(--t-fast);
 }
@@ -1134,17 +1140,17 @@ textarea.form-input { resize: vertical; min-height: 140px; }
 }
 .footer-col-title {
   font-family: var(--sans);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 0.27em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 20px;
 }
 .footer-links { display: flex; flex-direction: column; gap: 12px; }
-.footer-link { font-size: 14px; color: rgba(255,255,255,0.4); transition: color var(--t-fast); }
+.footer-link { font-size: 14px; color: rgba(255,255,255,0.7); transition: color var(--t-fast); }
 @media (hover: hover) {
-  .footer-link:hover { color: rgba(255,255,255,0.8); }
+  .footer-link:hover { color: rgba(255,255,255,1); }
 }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.06);
@@ -1153,12 +1159,12 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   align-items: center;
   justify-content: space-between;
 }
-.footer-copy { font-size: 13px; color: rgba(255,255,255,0.25); }
+.footer-copy { font-size: 13px; color: rgba(255,255,255,0.6); }
 .footer-copy span { color: var(--gold); }
 .footer-legal { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
-.footer-legal a { font-size: 12px; color: rgba(255,255,255,0.25); transition: color var(--t-fast); letter-spacing: 0.5px; }
+.footer-legal a { font-size: 12px; color: rgba(255,255,255,0.6); transition: color var(--t-fast); letter-spacing: 0.5px; }
 @media (hover: hover) {
-  .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+  .footer-legal a:hover { color: rgba(255,255,255,0.9); }
 }
 .footer-legal a[href="widerruf.html"] {
   display: inline-block;
@@ -1282,7 +1288,7 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   width: 56px; height: 56px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--gold), #B89243);
-  color: var(--white);
+  color: var(--text-dark);
   font-family: var(--serif);
   font-size: 22px;
   font-weight: 500;
@@ -1326,11 +1332,11 @@ textarea.form-input { resize: vertical; min-height: 140px; }
 .blog-card-body { padding: 28px 28px 32px; }
 .blog-card-date {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   margin-bottom: 12px;
 }
 .blog-card-title {
@@ -1382,6 +1388,13 @@ textarea.form-input { resize: vertical; min-height: 140px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* Unter 1270 px passen Logo, acht Menüpunkte und Knopf nicht nebeneinander (gemessen 5.11.2026):
+   dort erscheint das Menü-Symbol wie am Handy */
+@media (max-width: 1270px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-burger { display: flex; }
+}
+
 @media (max-width: 900px) {
   :root { --section: 80px; --section-sm: 60px; }
   .nav-links, .nav-cta { display: none; }
@@ -1397,7 +1410,7 @@ textarea.form-input { resize: vertical; min-height: 140px; }
 
 @media (max-width: 600px) {
   .hero-headline { font-size: clamp(36px, 10vw, 56px); }
-  .btn { padding: 16px 32px; font-size: 10px; }
+  .btn { padding: 16px 32px; font-size: 11px; }
   .process-grid { grid-template-columns: 1fr; }
 }
 
