@@ -81,7 +81,7 @@
     .pb-hero__content {
       position: relative;
       z-index: 2;
-      padding: 8rem 0 5rem;
+      padding-block: 8rem 5rem; /* nur oben/unten, der Seitenabstand des .container bleibt (5.11.2026) */
     }
     .pb-hero__label {
       font-family: var(--sans);
@@ -186,7 +186,9 @@
       background: var(--white); border: 1px solid rgba(207,172,94,0.12);
       transition: transform 0.4s var(--ease), box-shadow 0.4s;
     }
-    .method-card:hover { transform: translateY(-8px); box-shadow: 0 24px 64px rgba(91,42,74,0.12); }
+    @media (hover: hover) {
+      .method-card:hover { transform: translateY(-8px); box-shadow: 0 24px 64px rgba(91,42,74,0.12); }
+    }
     .method-card-top { padding: 48px 36px 32px; }
     .method-card-bottom { padding: 24px 36px 32px; border-top: 1px solid rgba(207,172,94,0.1); }
     .method-num { font-family: var(--serif); font-size: 80px; font-weight: 300; color: rgba(207,172,94,0.15); line-height: 0.8; margin-bottom: 20px; }
@@ -208,15 +210,13 @@
       .methods-grid { grid-template-columns: 1fr; }
       .symptom-grid { grid-template-columns: 1fr; }
       .rahmen-grid { grid-template-columns: 1fr; gap: 40px; }
-      .pb-hero__content { padding: 7rem 0 4rem; }
+      .pb-hero__content { padding-block: 7rem 4rem; }
     }
     @media (hover: none) {
       body { cursor: auto !important; }
       .cursor-dot, .cursor-ring { display: none !important; }
     }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-    }
+    /* Reduzierte Bewegung: Regel liegt seit 5.11.2026 in assets/css/style.css und gilt für alle Seiten. */
 
     /* Dropdown nav */
     .nav-has-dropdown { position: relative; }
@@ -236,11 +236,16 @@
       font-size: 13px; color: rgba(255,255,255,0.75); text-decoration: none;
       transition: color 0.2s, background 0.2s; white-space: nowrap;
     }
-    .nav-sub li a:hover { color: var(--gold); background: rgba(255,255,255,0.04); }
+    @media (hover: hover) {
+      .nav-sub li a:hover { color: var(--gold); background: rgba(255,255,255,0.04); }
+    }
 
     /* Nav – dunkle Schrift für hellen Hero */
     .nav .nav-link { color: var(--text-dark); }
-    .nav .nav-link:hover, .nav .nav-link.active { color: var(--gold); }
+    .nav .nav-link.active { color: var(--gold); }
+    @media (hover: hover) {
+      .nav .nav-link:hover { color: var(--gold); }
+    }
 
   </style>
 
@@ -321,6 +326,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
 <div class="loader" id="loader">
   <img class="loader-logo" src="assets/images/logo-neu-dunkel.webp" alt="Your Balance" />
   <div class="loader-line"></div>
@@ -332,7 +339,7 @@
 <nav class="nav scrolled" id="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img class="nav-logo--top" src="assets/images/logo-neu-quer-dunkel.webp" alt="Your Balance" /><img class="nav-logo--scrolled" src="assets/images/logo-neu-quer-hell.webp" alt="Your Balance" /></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="persoenliche-begleitung.html" class="nav-link active">Begleitung</a></li>
       <li><a href="seelenpartner.html" class="nav-link">Seelenpartner</a></li>
       <li class="nav-has-dropdown">
@@ -353,9 +360,11 @@
       <li><a href="https://your-balance.thrivecart.com/l/" target="_blank" rel="noopener" class="nav-link">Kurs-Login</a></li>
     </ul>
     <a href="https://calendly.com/your-balance/info-gesprach-telefon" target="_blank" rel="noopener" class="btn btn-gold nav-cta" data-magnetic>Erstgespräch</a>
-    <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+    <button type="button" class="nav-burger" id="burger" aria-label="Menü" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+<main id="main" tabindex="-1">
 
 <!-- HERO -->
 <section class="pb-hero">
@@ -379,7 +388,7 @@
     </p>
     <a href="https://calendly.com/your-balance/info-gesprach-telefon" target="_blank" rel="noopener" class="btn btn-gold btn-arrow btn-lg" data-magnetic>Erstgespräch – ohne Druck</a>
     <p class="pb-hero__meta">ruhig · persönlich · online oder vor Ort</p>
-    <h6 style="font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:18px 0 0;">Innere Anspannung lösen · online weltweit &amp; vor Ort in Vorarlberg</h6>
+    <p style="font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:18px 0 0;">Innere Anspannung lösen · online weltweit &amp; vor Ort in Vorarlberg</p>
   </div>
 </section>
 
@@ -501,7 +510,7 @@
         <div class="method-card-top">
           <div class="method-num">01</div>
           <h3 class="h4" style="margin-bottom:6px;">ThetaHealing®</h3>
-          <h4 style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 12px;">Innere Anspannung an der Wurzel lösen</h4>
+          <p style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 12px;">Innere Anspannung an der Wurzel lösen</p>
           <p class="body-sm" style="color:var(--gold);margin-bottom:16px;">Arbeit mit inneren Mustern & deren Auswirkungen · online</p>
           <p class="body-sm" style="margin-bottom:20px;">
             Du merkst: Du reagierst immer wieder gleich – obwohl du längst verstanden hast, warum. Und obwohl du es verstehst, ändert sich nichts. ThetaHealing® arbeitet genau dort – tiefer als der Verstand reicht. Ohne Analyse. Ohne Graben. In einem Zustand tiefer Stille, in dem sich Festgefahrenes sanft auflösen darf.
@@ -526,7 +535,7 @@
         <div class="method-card-top">
           <div class="method-num" style="color:rgba(207,172,94,0.2);">02</div>
           <h3 class="h4" style="margin-bottom:6px;color:var(--white);">Akasha Reading</h3>
-          <h4 style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-pale);margin:0 0 12px;">Klarheit auf Seelenebene</h4>
+          <p style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-pale);margin:0 0 12px;">Klarheit auf Seelenebene</p>
           <p class="body-sm" style="color:var(--gold-pale);margin-bottom:16px;">Klarheit, Einordnung & innere Ausrichtung · online</p>
           <p class="body-sm" style="color:rgba(255,255,255,0.6);margin-bottom:20px;">
             Manche Themen tauchen immer wieder auf – egal wie viel du darüber nachgedacht hast. Du fragst dich: Warum komme ich immer wieder an diesen Punkt? Ein Akasha Reading macht sichtbar, was unter der Oberfläche steuert. Nicht als Vorhersage. Sondern als Klarheit, die etwas in dir aufatmen lässt.
@@ -551,7 +560,7 @@
         <div class="method-card-top">
           <div class="method-num">03</div>
           <h3 class="h4" style="margin-bottom:6px;">Bioresonanz</h3>
-          <h4 style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 12px;">Körperliche Anspannung direkt lösen</h4>
+          <p style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 12px;">Körperliche Anspannung direkt lösen</p>
           <p class="body-sm" style="color:var(--gold);margin-bottom:16px;">Direkte körperliche & energetische Regulation · vor Ort</p>
           <p class="body-sm" style="margin-bottom:20px;">
             Du warst vielleicht schon bei Ärzten. Und trotzdem bleibt dieses Gefühl: Da stimmt etwas nicht. Kein Befund. Und trotzdem diese Schwere, diese Erschöpfung, dieses Ziehen. Bioresonanz macht sichtbar, was dein Körper schon lange zeigt – und gibt deinem System den Impuls, selbst wieder in seine natürliche Balance zu finden.
@@ -605,7 +614,7 @@
           Dein System zeigt, was gerade da ist. Ich begleite dich von dort.
         </p>
         <div class="frame-box" data-reveal data-delay="4" style="margin-bottom:36px;">
-          <h5 style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 14px;">Der Rahmen deiner Begleitung</h5>
+          <p style="font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 14px;">Der Rahmen deiner Begleitung</p>
           <ul class="spark-list">
             <li>Alle Begleitungen sind online möglich – innere Anspannung lösen funktioniert digital genauso wie vor Ort</li>
             <li>Bioresonanz vor Ort in meiner Praxis in Vorarlberg</li>
@@ -701,15 +710,17 @@
           <input type="hidden" name="v" value="2" />
           <input type="hidden" name="or" value="04f2182a-1e98-4071-9568-6667f8c15334" />
           <div class="newsletter-fields">
-            <input type="text" name="firstname" placeholder="Dein Vorname *" aria-label="Dein Vorname" class="newsletter-input" required autocomplete="given-name" />
-            <input type="email" name="email" placeholder="Deine E-Mail-Adresse *" aria-label="Deine E-Mail-Adresse" class="newsletter-input" required autocomplete="email" />
+            <label for="nl-firstname" class="sr-only">Dein Vorname</label>
+            <input type="text" id="nl-firstname" name="firstname" placeholder="Dein Vorname *" class="newsletter-input" required autocomplete="given-name" aria-describedby="newsletter-error" />
+            <label for="nl-email" class="sr-only">Deine E-Mail-Adresse</label>
+            <input type="email" id="nl-email" name="email" placeholder="Deine E-Mail-Adresse *" class="newsletter-input" required autocomplete="email" aria-describedby="newsletter-error" />
             <button type="submit" class="btn btn-gold newsletter-btn">Meditation anfordern ✦</button>
           </div>
           <label class="newsletter-consent">
-            <input type="checkbox" name="consent" required />
+            <input type="checkbox" id="nl-consent" name="consent" required aria-describedby="newsletter-error" />
             <span>Ich stimme der Verarbeitung meiner Daten zu. Abmeldung jederzeit möglich. <a href="datenschutz.html">Datenschutz</a></span>
           </label>
-          <div class="newsletter-error" id="newsletter-error" style="display:none;">Bitte Vorname und E-Mail ausfüllen und Datenschutz bestätigen.</div>
+          <div class="newsletter-error" id="newsletter-error" role="alert"></div>
         </form>
         <div class="newsletter-success" id="newsletter-success" style="display:none;">
           <p class="newsletter-success-icon">✦</p>
@@ -731,10 +742,18 @@
     var firstname = form.querySelector('input[name="firstname"]');
     var email = form.querySelector('input[name="email"]');
     var consent = form.querySelector('input[name="consent"]');
-    if (!firstname.value.trim() || !email.value || !email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) || !consent.checked) {
-      error.style.display = 'block'; return;
+    // Fehler ansagen (role="alert"), ungültige Felder markieren, erstes ungültiges Feld fokussieren (5.11.2026)
+    var invalid = [];
+    if (!firstname.value.trim()) invalid.push(firstname);
+    if (!email.value || !email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) invalid.push(email);
+    if (!consent.checked) invalid.push(consent);
+    [firstname, email, consent].forEach(function(f) { f.setAttribute('aria-invalid', invalid.indexOf(f) !== -1 ? 'true' : 'false'); });
+    if (invalid.length) {
+      error.textContent = 'Bitte Vorname und E-Mail ausfüllen und Datenschutz bestätigen.';
+      invalid[0].focus();
+      return;
     }
-    error.style.display = 'none';
+    error.textContent = '';
     var btn = form.querySelector('.newsletter-btn');
     btn.disabled = true; btn.textContent = 'Wird gesendet …';
     var serialized = Array.from(new FormData(form)).map(function(p){return encodeURIComponent(p[0])+'='+encodeURIComponent(p[1]);}).join('&');
@@ -746,6 +765,8 @@
 })();
 </script>
 
+</main>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -754,14 +775,14 @@
         <div class="footer-tagline">Susanne Wachter · Innere Anspannung lösen</div>
         <p class="footer-desc">Du bist richtig hier.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/YourBalanceSusanne" class="footer-social-link" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <a href="https://www.facebook.com/YourBalanceSusanne" class="footer-social-link" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="https://www.instagram.com/your.balance.at" class="footer-social-link" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <a href="https://www.instagram.com/your.balance.at" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
-          <a href="https://www.youtube.com/channel/UCdzkl65FEgZ6rUauSJAxz2w" class="footer-social-link" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42A2.78 2.78 0 0 0 20.6 4.48C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          <a href="https://www.youtube.com/channel/UCdzkl65FEgZ6rUauSJAxz2w" class="footer-social-link" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22.54 6.42A2.78 2.78 0 0 0 20.6 4.48C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
           </a>
         </div>
       </div>
@@ -798,8 +819,8 @@
   </div>
 </footer>
 
-<button class="scroll-top" id="scrollTop">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+<button class="scroll-top" id="scrollTop" type="button" aria-label="Nach oben">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
 <script src="assets/js/main.js"></script>

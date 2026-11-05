@@ -5,6 +5,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Systemeinstellung „Bewegung reduzieren“ (seit 5.11.2026 beachtet)
+  const reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  const scrollBehavior = reduceMotion ? 'auto' : 'smooth';
+
   /* ----------------------------------------------------------
      1. PAGE LOADER
   ---------------------------------------------------------- */
@@ -98,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
      4. SMOOTH SCROLL (internal links)
   ---------------------------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
+    if (a.classList.contains('skip-link')) return; // Sprunglink: Browser setzt den Fokus selbst auf <main>
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
       if (id === '#') return;
@@ -105,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!target) return;
       e.preventDefault();
       const offset = 80;
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: scrollBehavior });
     });
   });
 
@@ -113,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
      5. SCROLL-TO-TOP
   ---------------------------------------------------------- */
   if (scrollTopBtn) {
-    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: scrollBehavior }));
   }
 
   /* ----------------------------------------------------------
@@ -147,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
      8. PARALLAX HERO
   ---------------------------------------------------------- */
   const heroBg = document.querySelector('.hero-bg');
-  if (heroBg) {
+  if (heroBg && !reduceMotion) {
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
       heroBg.style.transform = `translateY(${y * 0.4}px)`;
@@ -158,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
      9. MAGNETIC BUTTONS
   ---------------------------------------------------------- */
   document.querySelectorAll('[data-magnetic]').forEach(el => {
+    if (reduceMotion) return;
     el.addEventListener('mousemove', e => {
       const rect = el.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
@@ -250,12 +256,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const navCta = document.querySelector('.nav-cta');
 
   if (burger) {
-    burger.addEventListener('click', () => {
-      const isOpen = burger.classList.toggle('open');
-      if (navLinks) navLinks.style.display = isOpen ? 'flex' : '';
+    // Seit 5.11.2026 ein echter <button> mit aria-expanded; Escape schließt und gibt den Fokus zurück
+    const setMenuOpen = (isOpen) => {
+      burger.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (navLinks) {
+        navLinks.style.cssText = isOpen
+          ? 'display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:rgba(28,18,8,0.97);padding:32px 24px;gap:20px;z-index:999;'
+          : '';
+      }
       if (navCta) navCta.style.display = isOpen ? 'block' : '';
-      if (isOpen && navLinks) {
-        navLinks.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:rgba(28,18,8,0.97);padding:32px 24px;gap:20px;z-index:999;';
+    };
+    burger.addEventListener('click', () => setMenuOpen(!burger.classList.contains('open')));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && burger.classList.contains('open')) {
+        setMenuOpen(false);
+        burger.focus();
       }
     });
   }
